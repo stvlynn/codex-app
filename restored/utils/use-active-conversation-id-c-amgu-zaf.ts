@@ -6,9 +6,15 @@ function normalizeConversationId(id: string): string {
 }
 
 export function useActiveConversationId(): string | null {
-  const localRoute = useParams<{ conversationId: string }>("/local/:conversationId");
-  const remoteRoute = useParams<{ conversationId: string }>("/remote/:conversationId");
-  const hotkeyRoute = useParams<{ conversationId: string }>("/hotkey-window/thread/:conversationId");
+  const localRoute = useParams<{ conversationId: string }>(
+    "/local/:conversationId",
+  );
+  const remoteRoute = useParams<{ conversationId: string }>(
+    "/remote/:conversationId",
+  );
+  const hotkeyRoute = useParams<{ conversationId: string }>(
+    "/hotkey-window/thread/:conversationId",
+  );
 
   const conversationId =
     localRoute?.params.conversationId ??

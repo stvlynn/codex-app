@@ -33,7 +33,9 @@ export async function transcribeAudioFile(
     [Sn]: "1",
   };
 
-  const response = await l.getInstance().post("/transcribe", encodedBody, headers);
+  const response = await l
+    .getInstance()
+    .post("/transcribe", encodedBody, headers);
   return (response.body as { text: string }).text;
 }
 
@@ -81,9 +83,7 @@ async function buildMultipartBody({
   if (language) {
     parts.push(encoder.encode(`--${boundary}\r\n`));
     parts.push(
-      encoder.encode(
-        'Content-Disposition: form-data; name="language"\r\n\r\n',
-      ),
+      encoder.encode('Content-Disposition: form-data; name="language"\r\n\r\n'),
     );
     parts.push(encoder.encode(`${language}\r\n`));
   }

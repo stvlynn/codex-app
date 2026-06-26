@@ -60,7 +60,8 @@ export function Tabs({
   const containerClasses = clsx(
     "bg-token-surface-secondary border-token-border flex items-center rounded-lg border",
     isToolbar && "flex min-w-0 items-center gap-0.5",
-    isUnderline && "border-token-border flex min-w-0 items-start gap-8 border-b",
+    isUnderline &&
+      "border-token-border flex min-w-0 items-start gap-8 border-b",
     scrollable && "hide-scrollbar overflow-x-auto overflow-y-hidden",
     className,
   );
@@ -69,7 +70,8 @@ export function Tabs({
     ? (event: React.WheelEvent<HTMLDivElement>) => {
         const delta = event.deltaX || event.deltaY;
         if (delta !== 0) {
-          event.currentTarget.scrollLeft = event.currentTarget.scrollLeft + delta;
+          event.currentTarget.scrollLeft =
+            event.currentTarget.scrollLeft + delta;
         }
       }
     : undefined;
@@ -89,8 +91,18 @@ export function Tabs({
           : "relative flex-1 rounded-none px-4 py-1.5",
       !isToolbar && !isUnderline && isFirst && "rounded-l-md",
       !isToolbar && !isUnderline && isLast && "rounded-r-md",
-      isSelected && (isToolbar ? "bg-token-bg-primary" : isUnderline ? "" : "bg-token-radio-active-foreground/25 text-token-text-primary"),
-      !isSelected && (isToolbar ? "hover:bg-token-bg-primary" : isUnderline ? "hover:text-token-text-primary" : "hover:bg-token-radio-active-foreground/5"),
+      isSelected &&
+        (isToolbar
+          ? "bg-token-bg-primary"
+          : isUnderline
+            ? ""
+            : "bg-token-radio-active-foreground/25 text-token-text-primary"),
+      !isSelected &&
+        (isToolbar
+          ? "hover:bg-token-bg-primary"
+          : isUnderline
+            ? "hover:text-token-text-primary"
+            : "hover:bg-token-radio-active-foreground/5"),
     );
 
     return (

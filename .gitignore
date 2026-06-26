@@ -1,6 +1,13 @@
 # Generated artifacts
 ref/
-restored/
+
+# Deobfuscation workspace: intermediate checkpoints, manifest, ledger, symbols.
+# The promoted output under restored/ is committed; the hidden workspace is not.
+restored/.deobfuscate-javascript/
+
+# Large data-asset folders that can be regenerated from the app bundle.
+restored/locales/
+restored/themes/
 
 # Deobfuscation skill dependencies
 .agents/skills/deobfuscate-javascript/node_modules/

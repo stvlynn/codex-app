@@ -5,5 +5,3 @@
 // public exports through this typed facade; the implementation is left as
 // an opaque runtime module.
 /* eslint-disable @typescript-eslint/no-explicit-any */
-
-

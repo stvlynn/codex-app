@@ -25,7 +25,10 @@ interface ToastConfig {
 type ToastLevel = "info" | "success" | "warning" | "danger";
 
 interface ToastState {
-  content?: (props: { close: () => void; level: ToastLevel }) => React.ReactNode;
+  content?: (props: {
+    close: () => void;
+    level: ToastLevel;
+  }) => React.ReactNode;
   description?: string;
   duration: number;
   hasCloseButton: boolean;
@@ -37,7 +40,10 @@ interface ToastState {
 
 interface ToastOptions {
   id?: string;
-  content?: (props: { close: () => void; level: ToastLevel }) => React.ReactNode;
+  content?: (props: {
+    close: () => void;
+    level: ToastLevel;
+  }) => React.ReactNode;
   description?: string;
   duration?: number;
   hasCloseButton?: boolean;
@@ -80,7 +86,10 @@ export const toastStateMapAtom = atom(getAtom, () => defaultToastConfig);
 
 const removeCallbacks = new Map<string, () => void>();
 
-function addToast(store: any, payload: { customId?: string; id: string; toast: ToastState }): void {
+function addToast(
+  store: any,
+  payload: { customId?: string; id: string; toast: ToastState },
+): void {
   const order = store.get(toastOrderAtom);
 
   if (payload.customId != null) {
@@ -97,17 +106,25 @@ function addToast(store: any, payload: { customId?: string; id: string; toast: T
 
   store.set(toastIdCounterAtom, (prev: number) => prev + 1);
   store.set(toastStateMapAtom, payload.id, payload.toast);
-  store.set(toastOrderAtom, [payload.id, ...order.filter((id) => id !== payload.id)]);
+  store.set(toastOrderAtom, [
+    payload.id,
+    ...order.filter((id) => id !== payload.id),
+  ]);
 }
 
 function hideToast(store: any, id: string): void {
-  store.set(toastStateMapAtom, id, (prev: ToastState) => ({ ...prev, isShown: false }));
+  store.set(toastStateMapAtom, id, (prev: ToastState) => ({
+    ...prev,
+    isShown: false,
+  }));
 }
 
 export function removeToast(store: any, id: string): void {
   removeCallbacks.get(id)?.();
   removeCallbacks.delete(id);
-  store.set(toastOrderAtom, (prev: string[]) => prev.filter((existingId) => existingId !== id));
+  store.set(toastOrderAtom, (prev: string[]) =>
+    prev.filter((existingId) => existingId !== id),
+  );
 }
 
 function closeAllToasts(store: any): void {

@@ -78,7 +78,14 @@ function getMaxHeightClass(maxHeight: string): string | undefined {
 
 export function SearchIcon(props: ComponentPropsWithoutRef<"svg">) {
   return (
-    <svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <svg
+      width={16}
+      height={16}
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -94,8 +101,15 @@ interface DropdownTriggerProps extends ComponentPropsWithoutRef<"button"> {
   disabled?: boolean;
 }
 
-export function DropdownTrigger({ ref, disabled, className, ...rest }: DropdownTriggerProps) {
-  const disabledClass = disabled ? "cursor-default opacity-25" : "cursor-interaction";
+export function DropdownTrigger({
+  ref,
+  disabled,
+  className,
+  ...rest
+}: DropdownTriggerProps) {
+  const disabledClass = disabled
+    ? "cursor-default opacity-25"
+    : "cursor-interaction";
   const finalClass = clsx("outline-hidden", disabledClass, className);
   return (
     <DropdownMenuTriggerPrimitive
@@ -134,8 +148,10 @@ export function DropdownContent({
     className,
   );
   const finalStyle = {
-    maxWidth: "min(var(--radix-dropdown-menu-content-available-width), calc(100vw - 16px))",
-    maxHeight: "min(var(--radix-dropdown-menu-content-available-height), calc(100vh - 16px))",
+    maxWidth:
+      "min(var(--radix-dropdown-menu-content-available-width), calc(100vw - 16px))",
+    maxHeight:
+      "min(var(--radix-dropdown-menu-content-available-height), calc(100vh - 16px))",
     ...style,
   };
   return (
@@ -223,7 +239,9 @@ export function DropdownItem({
 
   const rightIconEl =
     rightIcon ??
-    (RightIcon ? <RightIcon className={clsx(rightIconClassName, styles.icon)} /> : null);
+    (RightIcon ? (
+      <RightIcon className={clsx(rightIconClassName, styles.icon)} />
+    ) : null);
 
   const rightContent =
     keyboardShortcut || rightIconEl ? (
@@ -245,25 +263,40 @@ export function DropdownItem({
           data-tooltip-overflow-target={
             tooltipOpenWhen === "trigger-overflows" ? "" : undefined
           }
-          className={clsx("flex-1 min-w-0", allowWrap ? "whitespace-normal" : "truncate")}
+          className={clsx(
+            "flex-1 min-w-0",
+            allowWrap ? "whitespace-normal" : "truncate",
+          )}
         >
           {mainContent}
         </span>
         {rightContent}
       </div>
     ) : (
-      <div className={leftIconEl == null ? styles.content : styles.contentWithIconAndSubText}>
+      <div
+        className={
+          leftIconEl == null ? styles.content : styles.contentWithIconAndSubText
+        }
+      >
         {leftIconEl}
         <div className="flex min-w-0 flex-1 flex-col">
           <span
             data-tooltip-overflow-target={
               tooltipOpenWhen === "trigger-overflows" ? "" : undefined
             }
-            className={clsx("min-w-0", allowWrap ? "whitespace-normal" : "truncate")}
+            className={clsx(
+              "min-w-0",
+              allowWrap ? "whitespace-normal" : "truncate",
+            )}
           >
             {mainContent}
           </span>
-          <span className={clsx("min-w-0", subTextAllowWrap ? "whitespace-normal" : "truncate")}>
+          <span
+            className={clsx(
+              "min-w-0",
+              subTextAllowWrap ? "whitespace-normal" : "truncate",
+            )}
+          >
             {SubText}
           </span>
         </div>
@@ -304,7 +337,9 @@ export function DropdownItem({
       disabled={tooltipDisabled}
       tooltipContent={
         tooltipText ? (
-          <div className={clsx("max-w-64 text-pretty", tooltipTextClassName)}>{tooltipText}</div>
+          <div className={clsx("max-w-64 text-pretty", tooltipTextClassName)}>
+            {tooltipText}
+          </div>
         ) : null
       }
       closeOnTriggerBlur={!tooltipInteractive}
@@ -325,7 +360,14 @@ interface ItemIconProps {
 }
 
 export function ItemIcon({ children, className, size }: ItemIconProps) {
-  const sizeClass = size === undefined ? "icon-sm" : size === "xs" ? "icon-xs" : size === "md" ? "icon-md" : "icon-sm";
+  const sizeClass =
+    size === undefined
+      ? "icon-sm"
+      : size === "xs"
+        ? "icon-xs"
+        : size === "md"
+          ? "icon-md"
+          : "icon-sm";
   const finalClass = clsx(
     "inline-flex items-center justify-center leading-none",
     sizeClass,
@@ -352,7 +394,14 @@ export function Input({ onKeyDown, className, ...rest }: InputProps) {
     }
     onKeyDown?.(event);
   };
-  return <input className={finalClass} autoFocus onKeyDown={handleKeyDown} {...rest} />;
+  return (
+    <input
+      className={finalClass}
+      autoFocus
+      onKeyDown={handleKeyDown}
+      {...rest}
+    />
+  );
 }
 
 interface SearchInputProps extends ComponentPropsWithoutRef<"input"> {
@@ -374,7 +423,9 @@ export function SearchInput({
     "px-[var(--padding-row-x)] py-[var(--padding-row-y)]",
     className,
   );
-  const searchIcon = <SearchIcon className="icon-2xs shrink-0 text-token-text-tertiary" />;
+  const searchIcon = (
+    <SearchIcon className="icon-2xs shrink-0 text-token-text-tertiary" />
+  );
   const inputClass = clsx(
     "!w-auto flex-1 appearance-none !rounded-none !border-none bg-transparent !px-0 !py-0 text-token-foreground placeholder:text-token-input-placeholder-foreground",
     inputClassName,
@@ -391,7 +442,9 @@ export function SearchInput({
       }
     }
   };
-  const trailing = trailingContent ? <div className="shrink-0">{trailingContent}</div> : null;
+  const trailing = trailingContent ? (
+    <div className="shrink-0">{trailingContent}</div>
+  ) : null;
 
   return (
     <div className={wrapperClass}>
@@ -408,9 +461,7 @@ function focusNextMenuItem(
 ): boolean {
   const menu = element.closest('[role="menu"]');
   if (menu == null) return false;
-  const items = Array.from(
-    menu.querySelectorAll('input, [role="menuitem"]'),
-  );
+  const items = Array.from(menu.querySelectorAll('input, [role="menuitem"]'));
   const nextItems = items
     .slice(items.indexOf(element) + 1)
     .filter(
@@ -430,8 +481,15 @@ interface SeparatorProps {
   paddingClassName?: string;
 }
 
-export function Separator({ className, paddingClassName = "py-1" }: SeparatorProps) {
-  const finalClass = clsx("w-full px-[var(--padding-row-x)]", paddingClassName, className);
+export function Separator({
+  className,
+  paddingClassName = "py-1",
+}: SeparatorProps) {
+  const finalClass = clsx(
+    "w-full px-[var(--padding-row-x)]",
+    paddingClassName,
+    className,
+  );
   return (
     <div className={finalClass}>
       <div className="h-[1px] w-full bg-token-menu-border" />
@@ -445,10 +503,7 @@ interface SectionLabelProps {
 }
 
 export function SectionLabel({ children, className }: SectionLabelProps) {
-  const finalClass = clsx(
-    sectionStyles.sectionLabel,
-    className,
-  );
+  const finalClass = clsx(sectionStyles.sectionLabel, className);
   return <div className={finalClass}>{children}</div>;
 }
 
@@ -469,7 +524,9 @@ export function Message({
 }: MessageProps) {
   const padding = compact ? "py-2" : "py-3";
   const colorClass =
-    tone === "error" ? "text-token-error-foreground" : "text-token-description-foreground";
+    tone === "error"
+      ? "text-token-error-foreground"
+      : "text-token-description-foreground";
   const centerClass = centered && "self-center text-center";
   const finalClass = clsx(
     sectionStyles.messageBase,
@@ -509,9 +566,15 @@ interface SubmenuItemProps {
   isDefaultOpen?: boolean;
 }
 
-export function SubmenuItem({ trigger, children, isDefaultOpen = false }: SubmenuItemProps) {
+export function SubmenuItem({
+  trigger,
+  children,
+  isDefaultOpen = false,
+}: SubmenuItemProps) {
   const isDisabled = trigger.props.disabled ?? false;
-  const [isOpen, setIsOpen] = React.useState(isDisabled ? false : isDefaultOpen);
+  const [isOpen, setIsOpen] = React.useState(
+    isDisabled ? false : isDefaultOpen,
+  );
   const isExpanded = isOpen && !isDisabled;
 
   const handleSelect = (event: Event) => {
@@ -524,7 +587,10 @@ export function SubmenuItem({ trigger, children, isDefaultOpen = false }: Submen
   };
 
   const rotation = isExpanded ? 90 : 0;
-  const chevronClass = clsx(trigger.props.rightIconClassName ?? "icon-xs", styles.icon);
+  const chevronClass = clsx(
+    trigger.props.rightIconClassName ?? "icon-xs",
+    styles.icon,
+  );
   const chevron = <ChevronRightIcon className={chevronClass} />;
 
   const clonedTrigger = React.cloneElement(trigger, {
@@ -604,7 +670,9 @@ export function FlyoutSubmenuItem({
           "bg-token-dropdown-background/90 text-token-foreground ring-token-border z-50 m-px flex min-w-[180px] select-none flex-col overflow-y-auto rounded-xl px-1 py-1 shadow-xl-spread ring-[0.5px] backdrop-blur-sm",
         );
 
-  const disabledClass = disabled ? "cursor-default opacity-50" : styles.itemInteractive;
+  const disabledClass = disabled
+    ? "cursor-default opacity-50"
+    : styles.itemInteractive;
   const triggerClass = clsx(
     styles.itemBase,
     "flex w-full items-center",
@@ -623,11 +691,16 @@ export function FlyoutSubmenuItem({
   const defaultTrigger = triggerContent ?? (
     <div className={styles.content}>
       {LeftIcon ? (
-        <LeftIcon className={clsx(leftIconClassName ?? "icon-xs", styles.icon)} />
+        <LeftIcon
+          className={clsx(leftIconClassName ?? "icon-xs", styles.icon)}
+        />
       ) : null}
       <span className="min-w-0 flex-1 truncate">{label}</span>
       <ChevronRightIcon
-        className={clsx("icon-xs text-token-input-placeholder-foreground", styles.icon)}
+        className={clsx(
+          "icon-xs text-token-input-placeholder-foreground",
+          styles.icon,
+        )}
       />
     </div>
   );
@@ -659,8 +732,10 @@ export function FlyoutSubmenuItem({
   const maxSize = alignToParentBottom
     ? { maxHeight: "calc(100vh - 16px)" }
     : {
-        maxWidth: "min(var(--radix-dropdown-menu-content-available-width), calc(100vw - 16px))",
-        maxHeight: "min(var(--radix-dropdown-menu-content-available-height), calc(100vh - 16px))",
+        maxWidth:
+          "min(var(--radix-dropdown-menu-content-available-width), calc(100vw - 16px))",
+        maxHeight:
+          "min(var(--radix-dropdown-menu-content-available-height), calc(100vh - 16px))",
       };
   const finalStyle = {
     ...maxSize,
@@ -669,7 +744,11 @@ export function FlyoutSubmenuItem({
 
   const subContent = (
     <DropdownMenuSubContent
-      className={clsx(contentClass, alignToParentBottom && "parent-bottom-aligned", contentClassName)}
+      className={clsx(
+        contentClass,
+        alignToParentBottom && "parent-bottom-aligned",
+        contentClassName,
+      )}
       collisionPadding={6}
       avoidCollisions={avoidCollisions}
       sideOffset={4}
@@ -779,8 +858,7 @@ export function Dropdown({
           contentClassName,
         )}
         style={{
-          zoom:
-            portalContainer == null && zoom !== 1 ? zoom : undefined,
+          zoom: portalContainer == null && zoom !== 1 ? zoom : undefined,
         }}
       >
         {children}
@@ -789,7 +867,12 @@ export function Dropdown({
   ) : null;
 
   return (
-    <DropdownMenuRoot dir={dir} modal={false} open={isOpen} onOpenChange={handleOpenChange}>
+    <DropdownMenuRoot
+      dir={dir}
+      modal={false}
+      open={isOpen}
+      onOpenChange={handleOpenChange}
+    >
       {trigger}
       {content}
     </DropdownMenuRoot>

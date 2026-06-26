@@ -45,7 +45,9 @@ export function makePendingWorktreeKey(pendingWorktreeId: string): string {
   return `${PENDING_WORKTREE_PREFIX}${pendingWorktreeId}`;
 }
 
-export function parseSidebarThreadKey(key: string | null | undefined): SidebarThreadKey | null {
+export function parseSidebarThreadKey(
+  key: string | null | undefined,
+): SidebarThreadKey | null {
   if (key == null) return null;
 
   if (key.startsWith(LOCAL_PREFIX)) {
@@ -86,7 +88,9 @@ export function buildSidebarThreadKey(options: {
   return null;
 }
 
-export function extractLocalConversationId(key: string | null | undefined): string | null {
+export function extractLocalConversationId(
+  key: string | null | undefined,
+): string | null {
   const parsed = parseSidebarThreadKey(key);
   return parsed?.kind === "local" ? parsed.conversationId : null;
 }
@@ -104,7 +108,9 @@ export function extractThreadId(key: string | null | undefined): string | null {
   }
 }
 
-export function getSidebarThreadKeyForRouting(key: string | null | undefined): string | null {
+export function getSidebarThreadKeyForRouting(
+  key: string | null | undefined,
+): string | null {
   const parsed = parseSidebarThreadKey(key);
   switch (parsed?.kind) {
     case "local":

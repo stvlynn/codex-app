@@ -4,9 +4,7 @@ import { t as getStatsigUrl } from "../boundaries/statsig-url-config";
 import { CODEX_COMPUTER_USE_URL } from "../utils/links-bd-mmkun-d";
 
 // Export order must match the manifest: n, t
-export function getBrowserUseElevatedRiskLearnMoreUrl(
-  _urlId: string,
-) {
+export function getBrowserUseElevatedRiskLearnMoreUrl(_urlId: string) {
   return getStatsigUrl(_urlId, CODEX_COMPUTER_USE_URL);
 }
 

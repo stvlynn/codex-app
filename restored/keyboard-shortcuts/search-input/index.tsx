@@ -3,7 +3,10 @@
 import { useIntl, defineMessages } from "react-intl";
 import clsx from "clsx";
 import { APP_NAME } from "../../app/app-identity";
-import { hasDescription, commandMenuGroups } from "../../app-shell/electron-menu-shortcuts";
+import {
+  hasDescription,
+  commandMenuGroups,
+} from "../../app-shell/electron-menu-shortcuts";
 
 // Command title messages
 const commandMessages = defineMessages({
@@ -30,17 +33,20 @@ const commandMessages = defineMessages({
   "codex.command.toggleThreadPin": {
     id: "codex.command.toggleThreadPin",
     defaultMessage: "Toggle pin",
-    description: "Command menu item to toggle whether the current thread is pinned",
+    description:
+      "Command menu item to toggle whether the current thread is pinned",
   },
   "codex.command.copyConversationMarkdown": {
     id: "codex.command.copyConversationMarkdown",
     defaultMessage: "Copy as Markdown",
-    description: "Shortcut settings row for copying the current chat as Markdown",
+    description:
+      "Shortcut settings row for copying the current chat as Markdown",
   },
   "codex.command.openSideChat": {
     id: "codex.command.openSideChat",
     defaultMessage: "Open side chat",
-    description: "Shortcut settings row for opening the current chat as a side chat",
+    description:
+      "Shortcut settings row for opening the current chat as a side chat",
   },
   "codex.command.openControlWindow": {
     id: "codex.command.openControlWindow",
@@ -65,7 +71,8 @@ const commandMessages = defineMessages({
   "codex.command.composer.submit": {
     id: "codex.command.composer.submit",
     defaultMessage: "Send message",
-    description: "Shortcut settings row for sending the current composer message",
+    description:
+      "Shortcut settings row for sending the current composer message",
   },
   "codex.command.composer.toggleFastMode": {
     id: "codex.command.composer.toggleFastMode",
@@ -225,7 +232,8 @@ const commandMessages = defineMessages({
   "codex.command.toggleMaximizeSidePanel": {
     id: "codex.command.toggleMaximizeSidePanel",
     defaultMessage: "Toggle maximize side panel",
-    description: "Shortcut settings row for expanding or restoring the side panel",
+    description:
+      "Shortcut settings row for expanding or restoring the side panel",
   },
   "codex.command.findInThread": {
     id: "codex.command.findInThread",
@@ -404,7 +412,8 @@ const menuTitleMessages = defineMessages({
   "codex.commandMenuTitle.toggleThreadPin": {
     id: "codex.commandMenuTitle.toggleThreadPin",
     defaultMessage: "Pin/unpin chat",
-    description: "Native menu item to toggle whether the current chat is pinned",
+    description:
+      "Native menu item to toggle whether the current chat is pinned",
   },
   "codex.commandMenuTitle.composer.startDictation": {
     id: "codex.commandMenuTitle.composer.startDictation",
@@ -798,7 +807,8 @@ const descriptionMessages = defineMessages({
   "codex.commandDescription.showKeyboardShortcuts": {
     id: "codex.commandDescription.showKeyboardShortcuts",
     defaultMessage: "Show the shortcuts available right now",
-    description: "Description for the command that shows currently active shortcuts",
+    description:
+      "Description for the command that shows currently active shortcuts",
   },
   "codex.commandDescription.manageTasks": {
     id: "codex.commandDescription.manageTasks",
@@ -818,7 +828,8 @@ const descriptionMessages = defineMessages({
   "codex.commandDescription.installPrimaryRuntime": {
     id: "codex.commandDescription.installPrimaryRuntime",
     defaultMessage: "Install dependencies for advanced local features",
-    description: "Description for the Install primary runtime dependencies command",
+    description:
+      "Description for the Install primary runtime dependencies command",
   },
   "codex.commandDescription.openSkills": {
     id: "codex.commandDescription.openSkills",
@@ -927,7 +938,8 @@ const descriptionMessages = defineMessages({
   },
   "codex.commandDescription.globalDictationToggle": {
     id: "codex.commandDescription.globalDictationToggle",
-    defaultMessage: "Press once anywhere on desktop to dictate, then press again to stop",
+    defaultMessage:
+      "Press once anywhere on desktop to dictate, then press again to stop",
     description: "Description for the toggle dictation hotkey",
   },
   "codex.commandDescription.realtimeVoice": {
@@ -1124,10 +1136,7 @@ export function isCommandVisible(
   }
 }
 
-export function compareCommands(
-  a: CommandConfig,
-  b: CommandConfig,
-): number {
+export function compareCommands(a: CommandConfig, b: CommandConfig): number {
   const groupDiff = getCommandGroupIndex(a) - getCommandGroupIndex(b);
   return groupDiff === 0 ? a.id.localeCompare(b.id) : groupDiff;
 }
@@ -1190,11 +1199,7 @@ export function KeyboardShortcutsSearchInput({
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     onKeyDown?.(event);
-    if (
-      !event.defaultPrevented &&
-      event.key === "Escape" &&
-      value !== ""
-    ) {
+    if (!event.defaultPrevented && event.key === "Escape" && value !== "") {
       event.preventDefault();
       event.stopPropagation();
       onValueChange("");

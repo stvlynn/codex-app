@@ -15,7 +15,9 @@ function noopSubscribe(): () => void {
   return () => {};
 }
 
-function createEventSubscribe(isActive: boolean): (callback: () => void) => () => void {
+function createEventSubscribe(
+  isActive: boolean,
+): (callback: () => void) => () => void {
   return (callback) => {
     if (!isActive || typeof window === "undefined") {
       return noopSubscribe();

@@ -75,7 +75,11 @@ export function ThreadResourceCardItem({
     ? PADDING_CONFIG[padding].outer
     : PADDING_CONFIG[padding].inner;
 
-  const itemClasses = clsx("flex min-w-0 items-center gap-2.5 text-left", paddingClasses, className);
+  const itemClasses = clsx(
+    "flex min-w-0 items-center gap-2.5 text-left",
+    paddingClasses,
+    className,
+  );
 
   return (
     <span className={itemClasses}>
@@ -146,7 +150,9 @@ export function ThreadResourceCardTrigger({
       </span>
     </span>
   ) : (
-    <span className={clsx("flex items-center font-medium", TRIGGER_PADDING[size])}>
+    <span
+      className={clsx("flex items-center font-medium", TRIGGER_PADDING[size])}
+    >
       {label}
     </span>
   );

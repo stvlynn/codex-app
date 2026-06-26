@@ -8,7 +8,11 @@ interface FormattedMessageProps {
   defaultMessage: string;
   description?: string;
 }
-function FormattedMessage({ id, defaultMessage, description }: FormattedMessageProps): JSX.Element {
+function FormattedMessage({
+  id,
+  defaultMessage,
+  description,
+}: FormattedMessageProps): JSX.Element {
   return <>{defaultMessage}</>;
 }
 
@@ -42,7 +46,12 @@ interface ShimmerProps {
   children?: React.ReactNode;
 }
 
-export function Shimmer({ active, className, children, ...rest }: ShimmerProps): JSX.Element {
+export function Shimmer({
+  active,
+  className,
+  children,
+  ...rest
+}: ShimmerProps): JSX.Element {
   if (active === undefined || !active) {
     return (
       <span className={className} {...rest}>
@@ -63,7 +72,11 @@ interface ShimmerInnerProps {
   children?: React.ReactNode;
 }
 
-function ShimmerInner({ className, children, ...rest }: ShimmerInnerProps): JSX.Element {
+function ShimmerInner({
+  className,
+  children,
+  ...rest
+}: ShimmerInnerProps): JSX.Element {
   const statsigClient = useStatsigClient();
   const ref = useRef<HTMLSpanElement>(null);
 
@@ -79,7 +92,10 @@ function ShimmerInner({ className, children, ...rest }: ShimmerInnerProps): JSX.
   const isLegacy = isLegacyShimmer;
 
   useEffect(() => {
-    if (!isLegacy || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (
+      !isLegacy ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
       return;
     }
 
@@ -145,7 +161,11 @@ interface ThinkingShimmerProps {
   message?: React.ReactNode;
 }
 
-export function ThinkingShimmer({ className, message, ...rest }: ThinkingShimmerProps): JSX.Element {
+export function ThinkingShimmer({
+  className,
+  message,
+  ...rest
+}: ThinkingShimmerProps): JSX.Element {
   const classes = clsx(
     "text-size-chat leading-[calc(var(--codex-chat-font-size)_+_8px)] select-none truncate",
     className,

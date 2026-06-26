@@ -108,9 +108,7 @@ export function buildHookGroup(
   return {
     cwd: "",
     hooks: dedupedHooks,
-    warnings: Array.from(
-      new Set(relatedGroups.flatMap((g) => g.warnings)),
-    ),
+    warnings: Array.from(new Set(relatedGroups.flatMap((g) => g.warnings))),
     errors: dedupeErrors(relatedGroups.flatMap((g) => g.errors)),
   };
 }

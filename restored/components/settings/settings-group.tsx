@@ -21,7 +21,11 @@ interface SettingsGroupContentProps {
   className?: string;
 }
 
-export function SettingsGroup({ children, id, className }: SettingsGroupProps): JSX.Element {
+export function SettingsGroup({
+  children,
+  id,
+  className,
+}: SettingsGroupProps): JSX.Element {
   const classes = clsx("flex flex-col", className);
   return (
     <section id={id} className={classes}>
@@ -58,10 +62,14 @@ export function SettingsGroupHeader({
     <div className={headerClasses}>
       <div className={contentClasses}>
         {hasTitle && (
-          <div className="text-base font-medium text-token-text-primary">{title}</div>
+          <div className="text-base font-medium text-token-text-primary">
+            {title}
+          </div>
         )}
         {hasSubtitle && (
-          <div className="text-base font-normal text-token-text-tertiary">{subtitle}</div>
+          <div className="text-base font-normal text-token-text-tertiary">
+            {subtitle}
+          </div>
         )}
       </div>
       {actions && <div className="flex items-center gap-2">{actions}</div>}

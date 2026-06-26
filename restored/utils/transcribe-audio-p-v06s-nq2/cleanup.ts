@@ -162,7 +162,11 @@ function streamCleanupRequest(
 function parseStreamEvent(
   data: unknown,
   preserveWhitespace: boolean,
-): { delta: string | null; completedText: string | null; error: string | null } {
+): {
+  delta: string | null;
+  completedText: string | null;
+  error: string | null;
+} {
   if (typeof data !== "object" || data == null) {
     return { delta: null, completedText: null, error: null };
   }
@@ -178,17 +182,32 @@ function parseStreamEvent(
     return {
       delta: null,
       completedText: preserveWhitespace
-        ? extractResponseTextPreserveWhitespace(event.response as { output?: Array<{ content?: Array<{ text?: string }> }> })
-        : extractResponseText(event.response as { output?: Array<{ content?: Array<{ text?: string }> }> }, preserveWhitespace),
+        ? extractResponseTextPreserveWhitespace(
+            event.response as {
+              output?: Array<{ content?: Array<{ text?: string }> }>;
+            },
+          )
+        : extractResponseText(
+            event.response as {
+              output?: Array<{ content?: Array<{ text?: string }> }>;
+            },
+            preserveWhitespace,
+          ),
       error: null,
     };
   }
 
-  if (event.type === "response.output_text.delta" && typeof event.delta === "string") {
+  if (
+    event.type === "response.output_text.delta" &&
+    typeof event.delta === "string"
+  ) {
     return { delta: event.delta, completedText: null, error: null };
   }
 
-  if (event.type === "response.output_text.done" && typeof event.text === "string") {
+  if (
+    event.type === "response.output_text.done" &&
+    typeof event.text === "string"
+  ) {
     return { delta: null, completedText: event.text, error: null };
   }
 
@@ -214,9 +233,9 @@ function extractResponseText(
   return text && text.length > 0 ? text : null;
 }
 
-function extractResponseTextPreserveWhitespace(
-  response: { output?: Array<{ content?: Array<{ text?: string }> }> },
-): string | null {
+function extractResponseTextPreserveWhitespace(response: {
+  output?: Array<{ content?: Array<{ text?: string }> }>;
+}): string | null {
   const text = response.output
     ?.flatMap((item) => item.content ?? [])
     .flatMap((item) => (item.text == null ? [] : [item.text]));

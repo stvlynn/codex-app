@@ -13,7 +13,9 @@ import {
 // Constants
 // ------------------------------------------------------------------
 
-export const DICTATION_PROTOCOLS = ["codex-app", "dictation", "streaming"].join("-");
+export const DICTATION_PROTOCOLS = ["codex-app", "dictation", "streaming"].join(
+  "-",
+);
 
 const SESSION_START_TIMEOUT_MS = 10000;
 const SESSION_FINISH_TIMEOUT_MS = 8000;
@@ -27,7 +29,10 @@ const SESSION_TTL_MS = 300000;
 
 class DictationWebSocketClient {
   private websocket: WebSocket | null = null;
-  private pendingStartupAudioAppends: Array<{ type: string; audio: string }> | null = [];
+  private pendingStartupAudioAppends: Array<{
+    type: string;
+    audio: string;
+  }> | null = [];
   private finishPromise: Promise<void> | null = null;
   private resolveFinish: (() => void) | null = null;
   private rejectFinish: ((error: Error) => void) | null = null;
@@ -35,7 +40,9 @@ class DictationWebSocketClient {
   private sessionClosed = false;
   private terminalError: Error | null = null;
 
-  constructor(private readonly onEvent: (event: DictationServerEvent) => void) {}
+  constructor(
+    private readonly onEvent: (event: DictationServerEvent) => void,
+  ) {}
 
   async connect(sampleRate: number): Promise<void> {
     this.terminalError = null;
@@ -118,7 +125,10 @@ class DictationWebSocketClient {
           return;
         }
 
-        if (parsed.type === "session.updated" && parsed.session.status === "closed") {
+        if (
+          parsed.type === "session.updated" &&
+          parsed.session.status === "closed"
+        ) {
           this.sessionClosed = true;
           ws.close();
           this.resolveFinish?.();
@@ -126,7 +136,9 @@ class DictationWebSocketClient {
         }
 
         if (parsed.type === "transcript.failed") {
-          const transcriptError = new DictationStreamingError(parsed.error.message);
+          const transcriptError = new DictationStreamingError(
+            parsed.error.message,
+          );
           terminalError = transcriptError;
           this.rejectFinish?.(transcriptError);
           rejectOnce(transcriptError);
@@ -135,7 +147,9 @@ class DictationWebSocketClient {
         }
 
         if (parsed.type === "session.error" && parsed.fatal) {
-          const sessionError = new DictationStreamingError(parsed.error.message);
+          const sessionError = new DictationStreamingError(
+            parsed.error.message,
+          );
           terminalError = sessionError;
           this.rejectFinish?.(sessionError);
           rejectOnce(sessionError);
@@ -329,11 +343,13 @@ async function fetchDictationConnectInfo(): Promise<{
   websocketUrl: string;
   protocols: string | string[];
 }> {
-  const response = await l.getInstance().post(
-    "/codex/dictation-stream-connect-info",
-    undefined,
-  );
-  return response.body as { websocketUrl: string; protocols: string | string[] };
+  const response = await l
+    .getInstance()
+    .post("/codex/dictation-stream-connect-info", undefined);
+  return response.body as {
+    websocketUrl: string;
+    protocols: string | string[];
+  };
 }
 
 function buildSessionStartMessage(sampleRate: number): Record<string, unknown> {
@@ -422,7 +438,10 @@ function updateTranscriptState(
   }
 }
 
-function ensureUtteranceExists(state: TranscriptState, utteranceId: string): void {
+function ensureUtteranceExists(
+  state: TranscriptState,
+  utteranceId: string,
+): void {
   if (!(utteranceId in state.finalTextByUtteranceId)) {
     state.finalTextByUtteranceId[utteranceId] = "";
     state.orderedUtteranceIds.push(utteranceId);

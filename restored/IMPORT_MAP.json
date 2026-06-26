@@ -220,7 +220,7 @@
       "status": "done"
     },
     "sankeyLinkHorizontal-DCfEjaVP": {
-      "restored": "utils/d3-sankey-link-horizontal.tsx",
+      "restored": "boundaries/mermaid/sankey-link-horizontal.ts",
       "exports": {
         "a": "sankeyLinkHorizontalA",
         "i": "sankeyLinkHorizontalO",
@@ -330,7 +330,7 @@
       "status": "done"
     },
     "edit_files_animation-DXBLSnEM": {
-      "restored": "animations/edit-files-animation-dxbl-sn-em.ts",
+      "restored": "animations/edit-files-animation.ts",
       "exports": {
         "default": "editFilesAnimation"
       },
@@ -365,7 +365,7 @@
       "status": "done"
     },
     "local_context_animation-BzBxrXAK": {
-      "restored": "animations/local-context-animation-bz-bxr-xak.ts",
+      "restored": "animations/local-context-animation.ts",
       "exports": {
         "default": "localContextAnimation"
       },
@@ -413,7 +413,7 @@
       "status": "done"
     },
     "absolutely-light-BPRjNNJr": {
-      "restored": "themes/absolutely-light-bp-rj-nn-jr.ts",
+      "restored": "themes/absolutely-light.ts",
       "exports": {
         "bg": "absolutelyLightDefault",
         "colors": "bg",
@@ -449,7 +449,7 @@
       "status": "done"
     },
     "bg-BG-BhW0D5U1": {
-      "restored": "locales/bg-bg.ts",
+      "restored": "locales/bg.ts",
       "exports": {
         "default": "bgBGDefault",
         "greeting": "greeting"
@@ -457,7 +457,7 @@
       "status": "done"
     },
     "bn-BD-D8Owdbvl": {
-      "restored": "locales/bn-bd.ts",
+      "restored": "locales/bn.ts",
       "exports": {
         "default": "bnBDDefault",
         "greeting": "greeting"
@@ -465,7 +465,7 @@
       "status": "done"
     },
     "bs-BA-CqzEs6IN": {
-      "restored": "locales/bs-ba.ts",
+      "restored": "locales/bs.ts",
       "exports": {
         "default": "bsBADefault",
         "greeting": "greeting"
@@ -473,7 +473,7 @@
       "status": "done"
     },
     "ca-ES-z44J2uQd": {
-      "restored": "locales/ca-es.ts",
+      "restored": "locales/ca.ts",
       "exports": {
         "default": "caESDefault",
         "greeting": "greeting"
@@ -495,7 +495,7 @@
       "status": "done"
     },
     "cs-CZ-Dpt3IKAc": {
-      "restored": "locales/cs-cz.ts",
+      "restored": "locales/cs.ts",
       "exports": {
         "default": "csCZDefault",
         "greeting": "greeting"
@@ -503,7 +503,7 @@
       "status": "done"
     },
     "da-DK-DjpYQ3Ww": {
-      "restored": "locales/da-dk.ts",
+      "restored": "locales/da.ts",
       "exports": {
         "default": "daDKDefault",
         "greeting": "greeting"
@@ -511,7 +511,7 @@
       "status": "done"
     },
     "de-DE-BlIA6tJU": {
-      "restored": "locales/de-de.ts",
+      "restored": "locales/de.ts",
       "exports": {
         "default": "deDEDefault",
         "greeting": "greeting"
@@ -519,7 +519,7 @@
       "status": "done"
     },
     "el-GR-CZhyRT3v": {
-      "restored": "locales/el-gr.ts",
+      "restored": "locales/el.ts",
       "exports": {
         "default": "elGRDefault",
         "greeting": "greeting"
@@ -527,7 +527,7 @@
       "status": "done"
     },
     "es-419-D_L5ZOFq": {
-      "restored": "locales/es-419.ts",
+      "restored": "locales/es.ts",
       "exports": {
         "default": "es419Default",
         "greeting": "greeting"
@@ -535,7 +535,7 @@
       "status": "done"
     },
     "es-ES-36iB-g5u": {
-      "restored": "locales/es-es.ts",
+      "restored": "locales/es.ts",
       "exports": {
         "default": "esESDefault",
         "greeting": "greeting"
@@ -543,7 +543,7 @@
       "status": "done"
     },
     "et-EE-C4S5p0OT": {
-      "restored": "locales/et-ee.ts",
+      "restored": "locales/et.ts",
       "exports": {
         "default": "etEEDefault",
         "greeting": "greeting"
@@ -559,7 +559,7 @@
       "status": "done"
     },
     "fi-FI-6uDa3Shi": {
-      "restored": "locales/fi-fi.ts",
+      "restored": "locales/fi.ts",
       "exports": {
         "default": "fiFIDefault",
         "greeting": "greeting"
@@ -574,7 +574,7 @@
       "status": "done"
     },
     "fr-CA-BdD02lPj": {
-      "restored": "locales/fr-ca.ts",
+      "restored": "locales/fr.ts",
       "exports": {
         "default": "frCADefault",
         "greeting": "greeting"
@@ -582,7 +582,7 @@
       "status": "done"
     },
     "fr-FR-_l8AQa2a": {
-      "restored": "locales/fr-fr.ts",
+      "restored": "locales/fr.ts",
       "exports": {
         "default": "frFRDefault",
         "greeting": "greeting"
@@ -590,7 +590,7 @@
       "status": "done"
     },
     "gu-IN-xsdNPEen": {
-      "restored": "locales/gu-in.ts",
+      "restored": "locales/gu.ts",
       "exports": {
         "default": "guINDefault",
         "greeting": "greeting"
@@ -598,7 +598,7 @@
       "status": "done"
     },
     "hi-IN-B62Rrzsr": {
-      "restored": "locales/hi-in.ts",
+      "restored": "locales/hi.ts",
       "exports": {
         "default": "hiINDefault",
         "greeting": "greeting"
@@ -606,7 +606,7 @@
       "status": "done"
     },
     "hr-HR-fYfIGYfz": {
-      "restored": "locales/hr-hr.ts",
+      "restored": "locales/hr.ts",
       "exports": {
         "default": "hrHRDefault",
         "greeting": "greeting"
@@ -614,7 +614,7 @@
       "status": "done"
     },
     "hu-HU-BeLDuXUP": {
-      "restored": "locales/hu-hu.ts",
+      "restored": "locales/hu.ts",
       "exports": {
         "default": "huHUDefault",
         "greeting": "greeting"
@@ -622,7 +622,7 @@
       "status": "done"
     },
     "hy-AM-DMEWHb8i": {
-      "restored": "locales/hy-am.ts",
+      "restored": "locales/hy.ts",
       "exports": {
         "default": "hyAMDefault",
         "greeting": "greeting"
@@ -637,7 +637,7 @@
       "status": "done"
     },
     "iconResolver-DrMXO_qJ": {
-      "restored": "boundaries/pierre-trees-icon-resolver.tsx",
+      "restored": "boundaries/pierre/icon-resolver.tsx",
       "exports": {
         "i": "iconResolverR",
         "n": "iconResolverI",
@@ -647,7 +647,7 @@
       "status": "done"
     },
     "id-ID-rq_OYNd1": {
-      "restored": "locales/id-id.ts",
+      "restored": "locales/id.ts",
       "exports": {
         "default": "idIDDefault",
         "greeting": "greeting"
@@ -655,7 +655,7 @@
       "status": "done"
     },
     "is-IS-k8WGAuGD": {
-      "restored": "locales/is-is.ts",
+      "restored": "locales/is.ts",
       "exports": {
         "default": "isISDefault",
         "greeting": "greeting"
@@ -663,7 +663,7 @@
       "status": "done"
     },
     "it-IT-CKj4ut5G": {
-      "restored": "locales/it-it.ts",
+      "restored": "locales/it.ts",
       "exports": {
         "default": "itITDefault",
         "greeting": "greeting"
@@ -671,7 +671,7 @@
       "status": "done"
     },
     "ja-JP-BrhoRk2F": {
-      "restored": "locales/ja-jp.ts",
+      "restored": "locales/ja.ts",
       "exports": {
         "default": "jaJPDefault",
         "greeting": "greeting"
@@ -679,7 +679,7 @@
       "status": "done"
     },
     "ka-GE-CAO8OzIz": {
-      "restored": "locales/ka-ge.ts",
+      "restored": "locales/ka.ts",
       "exports": {
         "default": "kaGEDefault",
         "greeting": "greeting"
@@ -695,7 +695,7 @@
       "status": "done"
     },
     "kn-IN-BDcclzH9": {
-      "restored": "locales/kn-in.ts",
+      "restored": "locales/kn.ts",
       "exports": {
         "default": "knINDefault",
         "greeting": "greeting"
@@ -703,7 +703,7 @@
       "status": "done"
     },
     "ko-KR-DJ1lJReK": {
-      "restored": "locales/ko-kr.ts",
+      "restored": "locales/ko.ts",
       "exports": {
         "default": "koKRDefault",
         "greeting": "greeting"
@@ -711,7 +711,7 @@
       "status": "done"
     },
     "linear-dark-BLNhFjHH": {
-      "restored": "themes/linear-dark-bl-nh-fj-hh.ts",
+      "restored": "themes/linear-dark.ts",
       "exports": {
         "bg": "linearDarkDefault",
         "chromeTheme": "bg",
@@ -738,7 +738,7 @@
       "status": "done"
     },
     "lobster-dark-CzHMFiJk": {
-      "restored": "themes/lobster-dark-cz-hm-fi-jk.ts",
+      "restored": "themes/lobster-dark.ts",
       "exports": {
         "bg": "lobsterDarkDefault",
         "chromeTheme": "bg",
@@ -760,7 +760,7 @@
       "status": "done"
     },
     "lv-LV-t7EOIQzD": {
-      "restored": "locales/lv-lv.ts",
+      "restored": "locales/lv.ts",
       "exports": {
         "default": "lvLVDefault",
         "greeting": "greeting"
@@ -782,7 +782,7 @@
       "status": "done"
     },
     "mk-MK-Bl-4aW6M": {
-      "restored": "locales/mk-mk.ts",
+      "restored": "locales/mk.ts",
       "exports": {
         "default": "mkMKDefault",
         "greeting": "greeting"
@@ -806,7 +806,7 @@
       "status": "done"
     },
     "mr-IN-jjgIQw22": {
-      "restored": "locales/mr-in.ts",
+      "restored": "locales/mr.ts",
       "exports": {
         "default": "mrINDefault",
         "greeting": "greeting"
@@ -814,7 +814,7 @@
       "status": "done"
     },
     "ms-MY-dkDi8eIt": {
-      "restored": "locales/ms-my.ts",
+      "restored": "locales/ms.ts",
       "exports": {
         "default": "msMYDefault",
         "greeting": "greeting"
@@ -822,7 +822,7 @@
       "status": "done"
     },
     "my-MM-CeEAMvcW": {
-      "restored": "locales/my-mm.ts",
+      "restored": "locales/my.ts",
       "exports": {
         "default": "myMMDefault",
         "greeting": "greeting"
@@ -830,7 +830,7 @@
       "status": "done"
     },
     "nb-NO-DJ7nszI-": {
-      "restored": "locales/nb-no.ts",
+      "restored": "locales/nb.ts",
       "exports": {
         "default": "nbNODefault",
         "greeting": "greeting"
@@ -838,7 +838,7 @@
       "status": "done"
     },
     "nl-NL-mho2JLXC": {
-      "restored": "locales/nl-nl.ts",
+      "restored": "locales/nl.ts",
       "exports": {
         "default": "nlNLDefault",
         "greeting": "greeting"
@@ -882,7 +882,7 @@
       "status": "done"
     },
     "parsePatchFiles-Dm7PKlLE": {
-      "restored": "boundaries/parse-patch-files.tsx",
+      "restored": "boundaries/pierre/parse-patch-files.ts",
       "exports": {
         "_": "parsePatchFilesF",
         "a": "parsePatchFilesU",
@@ -905,7 +905,7 @@
       "status": "done"
     },
     "pl-PL-DyZ_95zX": {
-      "restored": "locales/pl-pl.ts",
+      "restored": "locales/pl.ts",
       "exports": {
         "default": "plPLDefault",
         "greeting": "greeting"
@@ -927,7 +927,7 @@
       "status": "done"
     },
     "pt-BR-BWE6erAK": {
-      "restored": "locales/pt-br.ts",
+      "restored": "locales/pt.ts",
       "exports": {
         "default": "ptBRDefault",
         "greeting": "greeting"
@@ -935,7 +935,7 @@
       "status": "done"
     },
     "pt-PT-BwE6VwBY": {
-      "restored": "locales/pt-pt.ts",
+      "restored": "locales/pt.ts",
       "exports": {
         "default": "ptPTDefault",
         "greeting": "greeting"
@@ -943,7 +943,7 @@
       "status": "done"
     },
     "ro-RO-DwDHb_fX": {
-      "restored": "locales/ro-ro.ts",
+      "restored": "locales/ro.ts",
       "exports": {
         "default": "roRODefault",
         "greeting": "greeting"
@@ -951,7 +951,7 @@
       "status": "done"
     },
     "ru-RU-CZ8IKHZG": {
-      "restored": "locales/ru-ru.ts",
+      "restored": "locales/ru.ts",
       "exports": {
         "default": "ruRUDefault",
         "greeting": "greeting"
@@ -973,7 +973,7 @@
       "status": "done"
     },
     "sk-SK-D6qDDlQS": {
-      "restored": "locales/sk-sk.ts",
+      "restored": "locales/sk.ts",
       "exports": {
         "default": "skSKDefault",
         "greeting": "greeting"
@@ -981,7 +981,7 @@
       "status": "done"
     },
     "sl-SI-C7PwE4wN": {
-      "restored": "locales/sl-si.ts",
+      "restored": "locales/sl.ts",
       "exports": {
         "default": "slSIDefault",
         "greeting": "greeting"
@@ -989,7 +989,7 @@
       "status": "done"
     },
     "so-SO-DaETleV5": {
-      "restored": "locales/so-so.ts",
+      "restored": "locales/so.ts",
       "exports": {
         "default": "soSODefault",
         "greeting": "greeting"
@@ -997,7 +997,7 @@
       "status": "done"
     },
     "sq-AL-C-n_ZmvG": {
-      "restored": "locales/sq-al.ts",
+      "restored": "locales/sq.ts",
       "exports": {
         "default": "sqALDefault",
         "greeting": "greeting"
@@ -1005,7 +1005,7 @@
       "status": "done"
     },
     "sr-RS-DLOU33Sa": {
-      "restored": "locales/sr-rs.ts",
+      "restored": "locales/sr.ts",
       "exports": {
         "default": "srRSDefault",
         "greeting": "greeting"
@@ -1013,14 +1013,14 @@
       "status": "done"
     },
     "store-489E8Cj_": {
-      "restored": "boundaries/pierre-trees-store.tsx",
+      "restored": "boundaries/pierre/store.ts",
       "exports": {
         "t": "Store"
       },
       "status": "done"
     },
     "sv-SE-DYt1uh98": {
-      "restored": "locales/sv-se.ts",
+      "restored": "locales/sv.ts",
       "exports": {
         "default": "svSEDefault",
         "greeting": "greeting"
@@ -1028,7 +1028,7 @@
       "status": "done"
     },
     "sw-TZ-BlQmflrx": {
-      "restored": "locales/sw-tz.ts",
+      "restored": "locales/sw.ts",
       "exports": {
         "default": "swTZDefault",
         "greeting": "greeting"
@@ -1036,7 +1036,7 @@
       "status": "done"
     },
     "ta-IN-BTdW2oMx": {
-      "restored": "locales/ta-in.ts",
+      "restored": "locales/ta.ts",
       "exports": {
         "default": "taINDefault",
         "greeting": "greeting"
@@ -1044,7 +1044,7 @@
       "status": "done"
     },
     "te-IN-coWB6CHg": {
-      "restored": "locales/te-in.ts",
+      "restored": "locales/te.ts",
       "exports": {
         "default": "teINDefault",
         "greeting": "greeting"
@@ -1065,7 +1065,7 @@
       "status": "done"
     },
     "th-TH-BPpx5F0e": {
-      "restored": "locales/th-th.ts",
+      "restored": "locales/th.ts",
       "exports": {
         "default": "thTHDefault",
         "greeting": "greeting"
@@ -1081,7 +1081,7 @@
       "status": "done"
     },
     "tr-TR-Bo4XY1n8": {
-      "restored": "locales/tr-tr.ts",
+      "restored": "locales/tr.ts",
       "exports": {
         "default": "trTRDefault",
         "greeting": "greeting"
@@ -1089,7 +1089,7 @@
       "status": "done"
     },
     "uk-UA-DPCdhLow": {
-      "restored": "locales/uk-ua.ts",
+      "restored": "locales/uk.ts",
       "exports": {
         "default": "ukUADefault",
         "greeting": "greeting"
@@ -1139,7 +1139,7 @@
       "status": "done"
     },
     "vi-VN-C7fQc0PZ": {
-      "restored": "locales/vi-vn.ts",
+      "restored": "locales/vi.ts",
       "exports": {
         "default": "viVNDefault",
         "greeting": "greeting"
@@ -1147,7 +1147,7 @@
       "status": "done"
     },
     "zh-CN-BlCYmWkQ": {
-      "restored": "locales/zh-cn.ts",
+      "restored": "locales/zh.ts",
       "exports": {
         "default": "zhCNDefault",
         "greeting": "greeting"
@@ -1155,7 +1155,7 @@
       "status": "done"
     },
     "zh-HK-BbJBOMaL": {
-      "restored": "locales/zh-hk.ts",
+      "restored": "locales/zh.ts",
       "exports": {
         "default": "zhHKDefault",
         "greeting": "greeting"
@@ -1163,7 +1163,7 @@
       "status": "done"
     },
     "zh-TW-Cb4Pd0yS": {
-      "restored": "locales/zh-tw.ts",
+      "restored": "locales/zh.ts",
       "exports": {
         "default": "zhTWDefault",
         "greeting": "greeting"
@@ -1171,7 +1171,7 @@
       "status": "done"
     },
     "animations-D8EQa7b9": {
-      "restored": "utils/animations.ts",
+      "restored": "animations/animations.ts",
       "exports": {
         "t": "animations"
       },
@@ -1956,7 +1956,7 @@
       "status": "done"
     },
     "score-query-match-DS2pZf_b": {
-      "restored": "boundaries/pierre-trees-score-query-match.tsx",
+      "restored": "boundaries/pierre/score-query-match.ts",
       "exports": {
         "t": "scoreQueryMatch"
       },
@@ -2383,49 +2383,49 @@
       "status": "done"
     },
     "cytoscape-cose-bilkent-3yd98erd": {
-      "restored": "boundaries/cytoscape-cose-bilkent.ts",
+      "restored": "utils/cytoscape-cose-bilkent.ts",
       "exports": {
         "t": "t"
       },
       "status": "done"
     },
     "arc-D3MQZVTw": {
-      "restored": "boundaries/d3-shape-arc.ts",
+      "restored": "boundaries/d3/arc.ts",
       "exports": {
         "t": "t"
       },
       "status": "done"
     },
     "cytoscape-fcose-CYmUq-SS": {
-      "restored": "boundaries/cytoscape-fcose.ts",
+      "restored": "utils/cytoscape-fcose.ts",
       "exports": {
         "t": "t"
       },
       "status": "done"
     },
     "docx-preview-Mi4H0G1I": {
-      "restored": "boundaries/docx-preview.ts",
+      "restored": "utils/docx-preview.tsx",
       "exports": {
         "renderAsync": "renderAsync"
       },
       "status": "done"
     },
     "index.umd-CqGTwgME": {
-      "restored": "boundaries/umd-package-index.ts",
+      "restored": "boundaries/index-umd.ts",
       "exports": {
         "default": "default"
       },
       "status": "done"
     },
     "line-DIsP-Yv_": {
-      "restored": "boundaries/d3-shape-line.ts",
+      "restored": "boundaries/d3/line.ts",
       "exports": {
         "t": "t"
       },
       "status": "done"
     },
     "browser-BQH2qCja": {
-      "restored": "boundaries/lottie-web-browser.ts",
+      "restored": "utils/browser.ts",
       "exports": {
         "DotLottieWorkerReact": "DotLottieWorkerReact",
         "setWasmUrl": "setWasmUrl"
@@ -2433,7 +2433,7 @@
       "status": "done"
     },
     "isEmpty-CTfqpukK": {
-      "restored": "boundaries/lodash-is-empty.ts",
+      "restored": "utils/is-empty.ts",
       "exports": {
         "i": "i",
         "n": "n",
@@ -2443,7 +2443,7 @@
       "status": "done"
     },
     "dist-eWHzKSsV": {
-      "restored": "boundaries/react-modal-dist.ts",
+      "restored": "boundaries/dist.ts",
       "exports": {
         "a": "a",
         "c": "c",
@@ -2457,24 +2457,26 @@
         "t": "t",
         "u": "u"
       },
-      "status": "done"
+      "status": "done",
+      "dependencyBoundary": true,
+      "vendor": "runtime"
     },
     "_baseEach-D1JYswpe": {
-      "restored": "boundaries/lodash-base-each.ts",
+      "restored": "boundaries/lodash/base-each.ts",
       "exports": {
         "t": "t"
       },
       "status": "done"
     },
     "_defineProperty-CjRaK4yh": {
-      "restored": "boundaries/lodash-define-property.ts",
+      "restored": "boundaries/lodash/define-property.ts",
       "exports": {
         "t": "t"
       },
       "status": "done"
     },
     "client-C1mrATqU": {
-      "restored": "boundaries/segment-analytics-client.ts",
+      "restored": "boundaries/segment-analytics/client.ts",
       "exports": {
         "t": "t"
       },
@@ -2505,7 +2507,7 @@
       "status": "done"
     },
     "is-plan-event-enabled-yBXVgx1W": {
-      "restored": "utils/is-plan-event-enabled.ts",
+      "restored": "locales/is-plan-event-enabled.ts",
       "exports": {
         "t": "isPlanEventEnabled"
       },
@@ -2837,19 +2839,21 @@
       "status": "done"
     },
     "chunk-BSJP7CBP-kgPEHQNd": {
-      "restored": "boundaries/mermaid/chunk-bsjp7cbp.ts",
+      "restored": "boundaries/mermaid/chunk-bsjp7-cbp-kg-pehqnd.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "Vendored module facade; pending full restoration",
       "exports": {
-        "i": "i",
-        "n": "n",
-        "r": "r",
-        "t": "t"
-      }
+        "i": "arrowTypeOffsets",
+        "n": "arrowHeadLengths",
+        "r": "computeLabelTransform",
+        "t": "getLineFunctionsWithOffset"
+      },
+      "vendor": "mermaid",
+      "dependencyBoundary": true
     },
     "chunk-ICPOFSXX-Dk2rFw9E": {
-      "restored": "boundaries/mermaid/chunk-icpofsxx.ts",
+      "restored": "boundaries/mermaid/chunk-icpofsxx-dk2r-fw9-e.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "Vendored module facade; pending full restoration",
@@ -2905,20 +2909,24 @@
         "x": "x",
         "y": "y",
         "z": "z"
-      }
+      },
+      "vendor": "mermaid",
+      "dependencyBoundary": true
     },
     "chunk-XPW4576I-Bqa38NHl": {
-      "restored": "boundaries/mermaid/chunk-xpw4576i.ts",
+      "restored": "boundaries/mermaid/chunk-xpw4576-i-bqa38-nhl.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "Vendored module facade; pending full restoration",
       "exports": {
-        "n": "n",
-        "t": "t"
-      }
+        "n": "load",
+        "t": "Schema"
+      },
+      "vendor": "mermaid",
+      "dependencyBoundary": true
     },
     "chunk-ABZYJK2D-8WiwWXHe": {
-      "restored": "boundaries/mermaid/chunk-abzyjk2d.ts",
+      "restored": "boundaries/mermaid/chunk-abzyjk2-d-8-wiw-wxhe.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "Vendored module facade; pending full restoration",
@@ -2973,28 +2981,34 @@
         "x": "x",
         "y": "y",
         "z": "z"
-      }
+      },
+      "vendor": "mermaid",
+      "dependencyBoundary": true
     },
     "chunk-HN2XXSSU-dadJeUL1": {
-      "restored": "boundaries/mermaid/chunk-hn2xxssu.ts",
+      "restored": "boundaries/mermaid/chunk-hn2-xxssu-dad-je-ul1.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "Vendored module facade; pending full restoration",
       "exports": {
-        "n": "n",
-        "r": "r",
-        "t": "t"
-      }
+        "n": "arrowTypeOffsets",
+        "r": "arrowHeadLengths",
+        "t": "getLineFunctionsWithOffset"
+      },
+      "vendor": "mermaid",
+      "dependencyBoundary": true
     },
     "chunk-MI3HLSF2-DUVSUh0R": {
-      "restored": "boundaries/mermaid/chunk-mi3hlsf2.ts",
+      "restored": "boundaries/mermaid/chunk-mi3-hlsf2-duvsuh0-r.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "Vendored module facade; pending full restoration",
       "exports": {
-        "n": "n",
-        "t": "t"
-      }
+        "n": "load",
+        "t": "Schema"
+      },
+      "vendor": "mermaid",
+      "dependencyBoundary": true
     },
     "highlight-code-BntQZ0HZ": {
       "restored": "boundaries/highlight-code.ts",
@@ -3065,7 +3079,7 @@
       "status": "done"
     },
     "chunk-LFPYN7LY-h_ROgi7V": {
-      "restored": "boundaries/react-router-dom.ts",
+      "restored": "boundaries/mermaid/chunk-lfpyn7-ly-h-rogi7-v.ts",
       "exports": {
         "_": "createBrowserRouter",
         "a": "createMemoryRouter",
@@ -3087,7 +3101,8 @@
       },
       "status": "boundary",
       "boundaryType": "vendored-library",
-      "note": "React Router v6 (react-router-dom) bundled facade"
+      "note": "React Router v6 (react-router-dom) bundled facade",
+      "vendor": "mermaid"
     },
     "reduced-motion-GGHfH0hr": {
       "restored": "boundaries/framer-motion/reduced-motion.ts",
@@ -3095,10 +3110,10 @@
       "boundaryType": "vendored-library",
       "note": "Framer Motion reduced-motion preference",
       "exports": {
-        "i": "i",
-        "n": "n",
-        "r": "r",
-        "t": "t"
+        "i": "reducedMotionT",
+        "n": "reducedMotionI",
+        "r": "reducedMotionN",
+        "t": "reducedMotionR"
       }
     },
     "hooks-settings-model-CesfUzEC": {
@@ -3137,7 +3152,7 @@
       "status": "done"
     },
     "vscode-api-Cc4BqLmp": {
-      "restored": "boundaries/vscode-api.ts",
+      "restored": "boundaries/tanstack-query/vscode.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "VSCode API + TanStack Query bundled runtime",
@@ -3173,7 +3188,9 @@
         "w": "w",
         "x": "x",
         "y": "y"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "runtime"
     },
     "use-element-in-view-DpAyOq4x": {
       "restored": "utils/use-element-in-view.ts",
@@ -3260,13 +3277,15 @@
       "status": "done"
     },
     "statsig-client-key-BD1sodQR": {
-      "restored": "boundaries/statsig-client-key.ts",
+      "restored": "boundaries/statsig/statsig-client.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "Statsig client key constant",
       "exports": {
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "statsig"
     },
     "service-tier-copy-Bpfjp4x4": {
       "restored": "icons/service-tier-copy",
@@ -3287,34 +3306,40 @@
       "status": "done"
     },
     "chunk-EDXVE4YY-Cs5mTzNz": {
-      "restored": "boundaries/mermaid/chunk-edxve4yy.ts",
+      "restored": "boundaries/mermaid/chunk-edxve4-yy-cs5m-tz-nz.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "Mermaid SVG viewport setup utilities",
       "exports": {
         "t": "t"
-      }
+      },
+      "vendor": "mermaid",
+      "dependencyBoundary": true
     },
     "chunk-426QAEUC-SBg7XJ-1": {
-      "restored": "utils/chunk-426-qaeuc.ts",
+      "restored": "boundaries/d3/chunk-426-qaeuc-sbg7-xj-1.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "Mermaid selectSvgElement helper",
       "exports": {
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "d3"
     },
     "chunk-EXTU4WIE-DyDLNYc8": {
-      "restored": "utils/chunk-extu4-wie.ts",
+      "restored": "boundaries/d3/chunk-extu4-wie-dy-dlnyc8.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "Mermaid selectSvgElement helper (variant D)",
       "exports": {
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "d3"
     },
     "chunk-X2U36JSP-DWvyIaf0": {
-      "restored": "boundaries/mermaid/chunk-x2u36jsp.ts",
+      "restored": "boundaries/mermaid/chunk-x2-u36-jsp-dwvy-iaf0.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "Mermaid rough.js style utilities",
@@ -3324,19 +3349,23 @@
         "n": "n",
         "r": "r",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "chunk-QN33PNHL-DvZPbBsU": {
-      "restored": "boundaries/mermaid/chunk-qn33pnhl.ts",
+      "restored": "boundaries/mermaid/chunk-qn33-pnhl-dv-zpb-bs-u.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "Mermaid SVG viewport setup utilities (variant B)",
       "exports": {
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "chunk-ATLVNIR6-D9WszxCx": {
-      "restored": "boundaries/mermaid/chunk-atlvnir6.ts",
+      "restored": "boundaries/mermaid/chunk-atlvnir6-d9-wszx-cx.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "Mermaid rough.js style utilities (variant B)",
@@ -3346,28 +3375,34 @@
         "n": "n",
         "r": "r",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "chunk-55IACEB6-CslsubLB": {
-      "restored": "utils/chunk-55-iaceb6-cslsub-lb.ts",
+      "restored": "boundaries/d3/chunk-55-iaceb6-cslsub-lb.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "Mermaid getDiagramElement helper",
       "exports": {
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "d3"
     },
     "chunk-55IACEB6-Qk_p6M41": {
-      "restored": "utils/chunk-55-iaceb6.ts",
+      "restored": "boundaries/d3/chunk-55-iaceb6-qk-p6-m41.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "Mermaid getDiagramElement helper (variant Q)",
       "exports": {
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "d3"
     },
     "chunk-S3R3BYOJ-B7UcUgIb": {
-      "restored": "utils/chunk-s3-r3-byoj.tsx",
+      "restored": "boundaries/d3/chunk-s3-r3-byoj-b7-uc-ug-ib.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "Mermaid D3 curve shims",
@@ -3389,10 +3424,12 @@
         "s": "s",
         "t": "t",
         "u": "u"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "d3"
     },
     "chunk-TZMSLE5B-BvWo7845": {
-      "restored": "utils/chunk-tzmsle5-b.tsx",
+      "restored": "boundaries/mermaid/chunk-tzmsle5-b-bv-wo7845.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "Mermaid diagram draw utilities",
@@ -3404,46 +3441,48 @@
         "r": "r",
         "s": "s",
         "t": "t"
-      }
+      },
+      "vendor": "mermaid",
+      "dependencyBoundary": true
     },
     "_baseFor-eDjxQiUL": {
-      "restored": "boundaries/lodash/_base-for.ts",
+      "restored": "boundaries/lodash/base-for.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "Lodash internal baseFor utility",
       "exports": {
-        "C": "C",
-        "D": "D",
-        "E": "E",
-        "O": "O",
-        "S": "S",
-        "T": "T",
-        "_": "_",
-        "a": "a",
-        "b": "b",
-        "c": "c",
-        "d": "d",
-        "f": "f",
-        "g": "g",
-        "h": "h",
-        "i": "i",
-        "l": "l",
-        "m": "m",
-        "n": "n",
-        "o": "o",
-        "p": "p",
-        "r": "r",
-        "s": "s",
-        "t": "t",
-        "u": "u",
-        "v": "v",
-        "w": "w",
-        "x": "x",
-        "y": "y"
+        "C": "baseForUnderscore",
+        "D": "_baseForS",
+        "E": "_baseForO",
+        "O": "baseForA",
+        "S": "baseForI",
+        "T": "baseForN",
+        "_": "_baseForT",
+        "a": "baseForC",
+        "b": "baseForD",
+        "c": "baseForE",
+        "d": "baseForO",
+        "f": "baseForS",
+        "g": "baseForT",
+        "h": "baseForB",
+        "i": "_baseForC",
+        "l": "_baseForD",
+        "m": "baseForF",
+        "n": "baseForG",
+        "o": "baseForH",
+        "p": "baseForL",
+        "r": "baseForM",
+        "s": "baseForP",
+        "t": "baseForR",
+        "u": "baseForU",
+        "v": "baseForV",
+        "w": "baseForW",
+        "x": "baseForX",
+        "y": "baseForY"
       }
     },
     "_basePickBy-X1_M8KZ0": {
-      "restored": "boundaries/lodash/_basePickBy.tsx",
+      "restored": "boundaries/lodash/base-pick-by.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "Lodash internal basePickBy utility",
@@ -3459,10 +3498,12 @@
         "s": "s",
         "t": "t",
         "u": "u"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "lodash"
     },
     "_baseUniq-C2aVs9t8": {
-      "restored": "boundaries/lodash/_base-uniq.ts",
+      "restored": "boundaries/lodash/base-uniq.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "Lodash internal baseUniq utility",
@@ -3500,65 +3541,75 @@
         "w": "w",
         "x": "x",
         "y": "y"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "lodash"
     },
     "Tableau10-BYZHCNVA": {
-      "restored": "boundaries/d3/tableau10-color-scheme.ts",
+      "restored": "boundaries/d3/tableau10.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "D3 Tableau10 color scheme",
       "exports": {
-        "n": "n",
-        "t": "t"
+        "n": "tableau10T",
+        "t": "tableau10N"
       }
     },
     "chunk-4BX2VUAB-CQ4cpB2N": {
-      "restored": "boundaries/mermaid/chunk-4bx2vuab.ts",
+      "restored": "boundaries/mermaid/chunk-4-bx2-vuab-cq4cp-b2-n.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "Mermaid populateCommonDb helper",
       "exports": {
-        "t": "t"
-      }
+        "t": "chunk4BX2VUAB"
+      },
+      "vendor": "mermaid",
+      "dependencyBoundary": true
     },
     "chunk-4BX2VUAB-Dutn5tdG": {
-      "restored": "boundaries/mermaid/populate-common-db.ts",
+      "restored": "boundaries/mermaid/chunk-4-bx2-vuab-dutn5td-g.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "Mermaid populateCommonDb helper (variant D)",
       "exports": {
         "t": "t"
-      }
+      },
+      "vendor": "mermaid",
+      "dependencyBoundary": true
     },
     "chunk-QZHKN3VN-C6aDqNWX": {
-      "restored": "boundaries/mermaid/chunk-qzhkn3vn.ts",
+      "restored": "boundaries/mermaid/chunk-qzhkn3-vn-c6a-dq-nwx.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "Mermaid ImperativeState class",
       "exports": {
-        "t": "t"
-      }
+        "t": "ChunkQZHKN3VN"
+      },
+      "vendor": "mermaid",
+      "dependencyBoundary": true
     },
     "chunk-QZHKN3VN-D8sZjzJc": {
-      "restored": "boundaries/mermaid/imperative-state.ts",
+      "restored": "boundaries/mermaid/chunk-qzhkn3-vn-d8s-zjz-jc.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "Mermaid ImperativeState class (variant D)",
       "exports": {
         "t": "t"
-      }
+      },
+      "vendor": "mermaid",
+      "dependencyBoundary": true
     },
     "treemap-CMHfdOyb": {
-      "restored": "boundaries/mermaid/treemap-cmhfdoyb.ts",
+      "restored": "boundaries/d3/treemap.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "D3 treemap layout",
       "exports": {
-        "a": "a",
-        "i": "i",
-        "n": "n",
-        "r": "r",
-        "t": "t"
+        "a": "treemapT",
+        "i": "treemapA",
+        "n": "treemapI",
+        "r": "treemapN",
+        "t": "treemapR"
       }
     },
     "Serializer-yJ_eEkxi": {
@@ -3567,123 +3618,129 @@
       "boundaryType": "vendored-library",
       "note": "Stylis CSS serializer",
       "exports": {
-        "n": "n",
-        "r": "r",
-        "t": "t"
+        "n": "serializerR",
+        "r": "serializerN",
+        "t": "serializerT"
       }
     },
     "dist-D8VrLBqU": {
-      "restored": "boundaries/dist-d8-vr-l-bq-u.ts",
+      "restored": "boundaries/sanitize-url/dist.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "sanitize-url library",
       "exports": {
-        "t": "t"
+        "t": "dist"
       }
     },
     "esm-DbqKqkZh": {
-      "restored": "boundaries/iconify/utils.ts",
+      "restored": "boundaries/iconify/esm.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "Iconify icon utilities",
       "exports": {
-        "a": "a",
-        "i": "i",
-        "n": "n",
-        "o": "o",
-        "r": "r",
-        "t": "t"
+        "a": "esmO",
+        "i": "esmA",
+        "n": "esmI",
+        "o": "esmR",
+        "r": "esmN",
+        "t": "esmT"
       }
     },
     "middleware-BDgBoOJW": {
-      "restored": "boundaries/segment/analytics-middleware.ts",
+      "restored": "boundaries/segment-analytics/middleware.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "Segment analytics.js middleware",
       "exports": {
-        "a": "a",
-        "c": "c",
-        "d": "d",
-        "f": "f",
-        "h": "h",
-        "i": "i",
-        "l": "l",
-        "m": "m",
-        "n": "n",
-        "o": "o",
-        "p": "p",
-        "r": "r",
-        "s": "s",
-        "t": "t",
-        "u": "u"
+        "a": "middlewareA",
+        "c": "middlewareT",
+        "d": "middlewareN",
+        "f": "middlewareC",
+        "h": "middlewareD",
+        "i": "middlewareF",
+        "l": "middlewareH",
+        "m": "middlewareI",
+        "n": "middlewareL",
+        "o": "middlewareM",
+        "p": "middlewareO",
+        "r": "middlewareP",
+        "s": "middlewareR",
+        "t": "middlewareS",
+        "u": "middlewareU"
       }
     },
     "src-n5zF1GB1": {
-      "restored": "boundaries/src-n5z-f1-g-b1.ts",
+      "restored": "boundaries/d3/src.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "D3 zoom and selection utilities",
       "exports": {
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "d3"
     },
     "dist-8ofUNnGK": {
-      "restored": "boundaries/dist-8of-u-nn-g-k.ts",
+      "restored": "boundaries/dist.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "use-element-size hook",
       "exports": {
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "runtime"
     },
     "dist-BDOgluP9": {
-      "restored": "boundaries/dist-b-d-oglu-p9.ts",
+      "restored": "boundaries/react-colorful/dist.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "react-colorful color picker",
       "exports": {
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "react-colorful"
     },
     "lib-CqEvD6Nn": {
-      "restored": "boundaries/lib-cq-ev-d6-nn.ts",
+      "restored": "boundaries/hast-util/lib.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "hast-util-to-string and related markdown utilities",
       "exports": {
-        "_": "_",
-        "a": "a",
-        "c": "c",
-        "d": "d",
-        "f": "f",
-        "g": "g",
-        "h": "h",
-        "i": "i",
-        "l": "l",
-        "m": "m",
-        "n": "n",
-        "o": "o",
-        "p": "p",
-        "r": "r",
-        "s": "s",
-        "t": "t",
-        "u": "u",
-        "v": "v",
-        "y": "y"
+        "_": "libT",
+        "a": "libUnderscore",
+        "c": "libA",
+        "d": "libC",
+        "f": "libD",
+        "g": "libF",
+        "h": "libG",
+        "i": "libH",
+        "l": "libI",
+        "m": "libL",
+        "n": "libM",
+        "o": "libN",
+        "p": "libO",
+        "r": "libP",
+        "s": "libR",
+        "t": "libS",
+        "u": "libU",
+        "v": "libV",
+        "y": "libY"
       }
     },
     "plan-pricing-dtn4oxxh": {
-      "restored": "boundaries/plan-pricing-formatter.ts",
+      "restored": "boundaries/plan-pricing.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "Plan pricing currency formatter",
       "exports": {
-        "n": "n",
-        "t": "t"
+        "n": "planPricingT",
+        "t": "planPricingN"
       }
     },
     "app-scope-CWE-zIhQ": {
-      "restored": "boundaries/tanstack-query.ts",
+      "restored": "boundaries/app-scope.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "TanStack Query core",
@@ -3739,38 +3796,40 @@
         "x": "x",
         "y": "y",
         "z": "z"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "runtime"
     },
     "lib-BWT6A3Q0": {
-      "restored": "boundaries/lib-b-w-t6-a3-q0.ts",
+      "restored": "boundaries/lib.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "intl-messageformat and fast-memoize",
       "exports": {
-        "a": "a",
-        "c": "c",
-        "i": "i",
-        "l": "l",
-        "n": "n",
-        "o": "o",
-        "r": "r",
-        "s": "s",
-        "t": "t"
+        "a": "libO",
+        "c": "libI",
+        "i": "libR",
+        "l": "libT",
+        "n": "libN",
+        "o": "libA",
+        "r": "libC",
+        "s": "libL",
+        "t": "libS"
       }
     },
     "modifiers.esm-BFjb-QXg": {
-      "restored": "boundaries/dnd-kit/modifiers.ts",
+      "restored": "boundaries/dnd-kit/modifiers-esm.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "dnd-kit modifiers",
       "exports": {
-        "n": "n",
-        "r": "r",
-        "t": "t"
+        "n": "modifiersEsmN",
+        "r": "modifiersEsmT",
+        "t": "modifiersEsmR"
       }
     },
     "pdf-CaT3Fa-k": {
-      "restored": "boundaries/pdfjs/pdf-cat3fa.ts",
+      "restored": "boundaries/pdf.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "PDF.js library",
@@ -3832,10 +3891,12 @@
         "x": "x",
         "y": "y",
         "z": "z"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "pdf"
     },
     "plan-management-state-oe_4sqNh": {
-      "restored": "boundaries/plan-management-state.ts",
+      "restored": "utils/plan-management-state.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "Plan management state helpers",
@@ -3853,502 +3914,502 @@
       }
     },
     "src-l0hbMZ-p": {
-      "restored": "boundaries/src-l0hb-m-z-p.ts",
+      "restored": "boundaries/src.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "Zod schema validation library",
       "exports": {
-        "$": "$",
-        "$i": "$i",
-        "$n": "$n",
-        "$r": "$r",
-        "$t": "$t",
-        "A": "A",
-        "Aa": "Aa",
-        "Ai": "Ai",
-        "An": "An",
-        "Ar": "Ar",
-        "At": "At",
-        "B": "B",
-        "Bi": "Bi",
-        "Bn": "Bn",
-        "Br": "Br",
-        "Bt": "Bt",
-        "C": "C",
-        "Ca": "Ca",
-        "Ci": "Ci",
-        "Cn": "Cn",
-        "Cr": "Cr",
-        "Ct": "Ct",
-        "D": "D",
-        "Da": "Da",
-        "Di": "Di",
-        "Dn": "Dn",
-        "Dr": "Dr",
-        "Dt": "Dt",
-        "E": "E",
-        "Ea": "Ea",
-        "Ei": "Ei",
-        "En": "En",
-        "Er": "Er",
-        "Et": "Et",
-        "F": "F",
-        "Fa": "Fa",
-        "Fi": "Fi",
-        "Fn": "Fn",
-        "Fr": "Fr",
-        "Ft": "Ft",
-        "G": "G",
-        "Gi": "Gi",
-        "Gn": "Gn",
-        "Gr": "Gr",
-        "Gt": "Gt",
-        "H": "H",
-        "Hi": "Hi",
-        "Hn": "Hn",
-        "Hr": "Hr",
-        "Ht": "Ht",
-        "I": "I",
-        "Ia": "Ia",
-        "Ii": "Ii",
-        "In": "In",
-        "Ir": "Ir",
-        "It": "It",
-        "J": "J",
-        "Ji": "Ji",
-        "Jn": "Jn",
-        "Jr": "Jr",
-        "Jt": "Jt",
-        "K": "K",
-        "Ki": "Ki",
-        "Kn": "Kn",
-        "Kr": "Kr",
-        "Kt": "Kt",
-        "L": "L",
-        "La": "La",
-        "Li": "Li",
-        "Ln": "Ln",
-        "Lr": "Lr",
-        "Lt": "Lt",
-        "M": "M",
-        "Ma": "Ma",
-        "Mi": "Mi",
-        "Mn": "Mn",
-        "Mr": "Mr",
-        "Mt": "Mt",
-        "N": "N",
-        "Na": "Na",
-        "Ni": "Ni",
-        "Nn": "Nn",
-        "Nr": "Nr",
-        "Nt": "Nt",
-        "O": "O",
-        "Oa": "Oa",
-        "Oi": "Oi",
-        "On": "On",
-        "Or": "Or",
-        "Ot": "Ot",
-        "P": "P",
-        "Pa": "Pa",
-        "Pi": "Pi",
-        "Pn": "Pn",
-        "Pr": "Pr",
-        "Pt": "Pt",
-        "Q": "Q",
-        "Qi": "Qi",
-        "Qn": "Qn",
-        "Qr": "Qr",
-        "Qt": "Qt",
-        "R": "R",
-        "Ra": "Ra",
-        "Ri": "Ri",
-        "Rn": "Rn",
-        "Rr": "Rr",
-        "Rt": "Rt",
-        "S": "S",
-        "Sa": "Sa",
-        "Si": "Si",
-        "Sn": "Sn",
-        "Sr": "Sr",
-        "St": "St",
-        "T": "T",
-        "Ta": "Ta",
-        "Ti": "Ti",
-        "Tn": "Tn",
-        "Tr": "Tr",
-        "Tt": "Tt",
-        "U": "U",
-        "Ui": "Ui",
-        "Un": "Un",
-        "Ur": "Ur",
-        "Ut": "Ut",
-        "V": "V",
-        "Vi": "Vi",
-        "Vn": "Vn",
-        "Vr": "Vr",
-        "Vt": "Vt",
-        "W": "W",
-        "Wi": "Wi",
-        "Wn": "Wn",
-        "Wr": "Wr",
-        "Wt": "Wt",
-        "X": "X",
-        "Xi": "Xi",
-        "Xn": "Xn",
-        "Xr": "Xr",
-        "Xt": "Xt",
-        "Y": "Y",
-        "Yi": "Yi",
-        "Yn": "Yn",
-        "Yr": "Yr",
-        "Yt": "Yt",
-        "Z": "Z",
-        "Zi": "Zi",
-        "Zn": "Zn",
-        "Zr": "Zr",
-        "Zt": "Zt",
-        "_": "_",
-        "_a": "_a",
-        "_i": "_i",
-        "_n": "_n",
-        "_r": "_r",
-        "_t": "_t",
-        "a": "a",
-        "aa": "aa",
-        "ai": "ai",
-        "an": "an",
-        "ar": "ar",
-        "at": "at",
-        "b": "b",
-        "ba": "ba",
-        "bi": "bi",
-        "bn": "bn",
-        "br": "br",
-        "bt": "bt",
-        "c": "c",
-        "ca": "ca",
-        "ci": "ci",
-        "cn": "cn",
-        "cr": "cr",
-        "ct": "ct",
-        "d": "d",
-        "da": "da",
-        "di": "di",
-        "dn": "dn",
-        "dr": "dr",
-        "dt": "dt",
-        "ea": "ea",
-        "ei": "ei",
-        "en": "en",
-        "er": "er",
-        "et": "et",
-        "f": "f",
-        "fa": "fa",
-        "fi": "fi",
-        "fn": "fn",
-        "fr": "fr",
-        "ft": "ft",
-        "g": "g",
-        "ga": "ga",
-        "gi": "gi",
-        "gn": "gn",
-        "gr": "gr",
-        "gt": "gt",
-        "h": "h",
-        "ha": "ha",
-        "hi": "hi",
-        "hn": "hn",
-        "hr": "hr",
-        "ht": "ht",
-        "i": "i",
-        "ia": "ia",
-        "ii": "ii",
-        "in": "in",
-        "ir": "ir",
-        "it": "it",
-        "j": "j",
-        "ja": "ja",
-        "ji": "ji",
-        "jn": "jn",
-        "jr": "jr",
-        "jt": "jt",
-        "k": "k",
-        "ka": "ka",
-        "ki": "ki",
-        "kn": "kn",
-        "kr": "kr",
-        "kt": "kt",
-        "l": "l",
-        "la": "la",
-        "li": "li",
-        "ln": "ln",
-        "lr": "lr",
-        "lt": "lt",
-        "m": "m",
-        "ma": "ma",
-        "mi": "mi",
-        "mn": "mn",
-        "mr": "mr",
-        "mt": "mt",
-        "n": "n",
-        "na": "na",
-        "ni": "ni",
-        "nn": "nn",
-        "nr": "nr",
-        "nt": "nt",
-        "o": "o",
-        "oa": "oa",
-        "oi": "oi",
-        "on": "on",
-        "or": "or",
-        "ot": "ot",
-        "p": "p",
-        "pa": "pa",
-        "pi": "pi",
-        "pn": "pn",
-        "pr": "pr",
-        "pt": "pt",
-        "q": "q",
-        "qi": "qi",
-        "qn": "qn",
-        "qr": "qr",
-        "qt": "qt",
-        "r": "r",
-        "ra": "ra",
-        "ri": "ri",
-        "rn": "rn",
-        "rr": "rr",
-        "rt": "rt",
-        "s": "s",
-        "sa": "sa",
-        "si": "si",
-        "sn": "sn",
-        "sr": "sr",
-        "st": "st",
-        "t": "t",
-        "ta": "ta",
-        "ti": "ti",
-        "tn": "tn",
-        "tr": "tr",
-        "tt": "tt",
-        "u": "u",
-        "ua": "ua",
-        "ui": "ui",
-        "un": "un",
-        "ur": "ur",
-        "ut": "ut",
-        "v": "v",
-        "va": "va",
-        "vi": "vi",
-        "vn": "vn",
-        "vr": "vr",
-        "vt": "vt",
-        "w": "w",
-        "wa": "wa",
-        "wi": "wi",
-        "wn": "wn",
-        "wr": "wr",
-        "wt": "wt",
-        "x": "x",
-        "xa": "xa",
-        "xi": "xi",
-        "xn": "xn",
-        "xr": "xr",
-        "xt": "xt",
-        "y": "y",
-        "ya": "ya",
-        "yi": "yi",
-        "yn": "yn",
-        "yr": "yr",
-        "yt": "yt",
-        "z": "z",
-        "zi": "zi",
-        "zn": "zn",
-        "zr": "zr",
-        "zt": "zt"
+        "$": "srcRa",
+        "$i": "srcJi",
+        "$n": "srcQi",
+        "$r": "_srcIa",
+        "$t": "_srcAa",
+        "A": "srcGi",
+        "Aa": "srcXi",
+        "Ai": "srcWi",
+        "An": "srcUi",
+        "Ar": "srcHi",
+        "At": "srcPi",
+        "B": "srcNi",
+        "Bi": "srcBi",
+        "Bn": "srcVi",
+        "Br": "srcRi",
+        "Bt": "srcMi",
+        "C": "srcOi",
+        "Ca": "srcAi",
+        "Ci": "_srcKi",
+        "Cn": "_srcWi",
+        "Cr": "srcCi",
+        "Ct": "_srcXi",
+        "D": "_srcBi",
+        "Da": "_srcYi",
+        "Di": "srcSi",
+        "Dn": "_srcGi",
+        "Dr": "_srcI",
+        "Dt": "_srcVi",
+        "E": "_srcMi",
+        "Ea": "_srcRi",
+        "Ei": "_srcIi",
+        "En": "_srcSi",
+        "Er": "_srcFi",
+        "Et": "_srcNi",
+        "F": "_srcEi",
+        "Fa": "_srcUi",
+        "Fi": "_srcOi",
+        "Fn": "_srcAi",
+        "Fr": "_srcLi",
+        "Ft": "srcQr",
+        "G": "srcR",
+        "Gi": "srcXr",
+        "Gn": "srcZr",
+        "Gr": "srcYr",
+        "Gt": "srcJr",
+        "H": "srcWr",
+        "Hi": "srcUr",
+        "Hn": "srcGr",
+        "Hr": "srcKr",
+        "Ht": "srcVr",
+        "I": "srcFr",
+        "Ia": "_srcBr",
+        "Ii": "srcSr",
+        "In": "srcCr",
+        "Ir": "_srcKr",
+        "It": "_srcWr",
+        "J": "srcTr",
+        "Ji": "srcEr",
+        "Jn": "srcDr",
+        "Jr": "srcOr",
+        "Jt": "_srcUr",
+        "K": "_srcPr",
+        "Ki": "_srcHr",
+        "Kn": "_srcFr",
+        "Kr": "_srcVr",
+        "Kt": "_srcYr",
+        "L": "_srcR",
+        "La": "_srcOr",
+        "Li": "_srcSr",
+        "Ln": "_srcAr",
+        "Lr": "srcZn",
+        "Lt": "_srcTr",
+        "M": "srcQn",
+        "Ma": "_srcNr",
+        "Mi": "_srcZn",
+        "Mn": "srcYn",
+        "Mr": "srcXn",
+        "Mt": "srcWn",
+        "N": "srcVn",
+        "Na": "srcUn",
+        "Ni": "srcLn",
+        "Nn": "srcKn",
+        "Nr": "srcJn",
+        "Nt": "srcIn",
+        "O": "srcHn",
+        "Oa": "srcGn",
+        "Oi": "srcBn",
+        "On": "srcN",
+        "Or": "_srcRr",
+        "Ot": "_srcIr",
+        "P": "srcFn",
+        "Pa": "srcPn",
+        "Pi": "_srcJn",
+        "Pn": "srcAn",
+        "Pr": "_srcKn",
+        "Pt": "_srcWn",
+        "Q": "srcOn",
+        "Qi": "srcTn",
+        "Qn": "_srcXn",
+        "Qr": "_srcBn",
+        "Qt": "srcSn",
+        "R": "srcCn",
+        "Ra": "_srcYn",
+        "Ri": "_srcGn",
+        "Rn": "_srcVn",
+        "Rr": "_srcN",
+        "Rt": "_srcHn",
+        "S": "_srcLn",
+        "Sa": "_srcAn",
+        "Si": "_srcOn",
+        "Sn": "_srcCn",
+        "Sr": "_srcSn",
+        "St": "_srcUn",
+        "T": "_srcMn",
+        "Ta": "_srcNn",
+        "Ti": "_srcRn",
+        "Tn": "_srcTn",
+        "Tr": "_srcEn",
+        "Tt": "srcZt",
+        "U": "srcQt",
+        "Ui": "srcT",
+        "Un": "srcXt",
+        "Ur": "srcJt",
+        "Ut": "_srcQt",
+        "V": "srcGt",
+        "Vi": "srcWt",
+        "Vn": "srcKt",
+        "Vr": "srcUt",
+        "Vt": "srcVt",
+        "W": "srcBt",
+        "Wi": "_srcZt",
+        "Wn": "srcRt",
+        "Wr": "srcLt",
+        "Wt": "srcIt",
+        "X": "srcPt",
+        "Xi": "srcNt",
+        "Xn": "srcFt",
+        "Xr": "srcMt",
+        "Xt": "srcAt",
+        "Y": "_srcJt",
+        "Yi": "_srcKt",
+        "Yn": "srcOt",
+        "Yr": "srcEt",
+        "Yt": "srcTt",
+        "Z": "_srcWt",
+        "Zi": "srcCt",
+        "Zn": "_srcRt",
+        "Zr": "_srcNt",
+        "Zt": "srcZ",
+        "_": "srcDollar",
+        "_a": "srcSt",
+        "_i": "_srcOt",
+        "_n": "_srcIt",
+        "_r": "_srcCt",
+        "_t": "_srcAt",
+        "a": "srcQ",
+        "aa": "_srcLt",
+        "ai": "_srcDt",
+        "an": "_srcT",
+        "ar": "_srcUt",
+        "at": "_srcFt",
+        "b": "_srcPt",
+        "ba": "_srcHt",
+        "bi": "_srcGt",
+        "bn": "_srcMt",
+        "br": "_srcVt",
+        "bt": "_srcYt",
+        "c": "_srcSt",
+        "ca": "_srcBt",
+        "ci": "srcY",
+        "cn": "srcX",
+        "cr": "srcJ",
+        "ct": "_srcZ",
+        "d": "srcW",
+        "da": "srcV",
+        "di": "srcU",
+        "dn": "__srcR",
+        "dr": "srcK",
+        "dt": "srcH",
+        "ea": "srcG",
+        "ei": "srcF",
+        "en": "srcB",
+        "er": "srcM",
+        "et": "__srcI",
+        "f": "__srcN",
+        "fa": "srcP",
+        "fi": "_srcV",
+        "fn": "_srcG",
+        "fr": "srcUnderscore",
+        "ft": "_srcH",
+        "g": "_srcP",
+        "ga": "_srcD",
+        "gi": "_srcU",
+        "gn": "_srcL",
+        "gr": "_srcC",
+        "gt": "_srcS",
+        "h": "__srcA",
+        "ha": "_srcO",
+        "hi": "___srcR",
+        "hn": "___srcN",
+        "hr": "___srcT",
+        "ht": "$i",
+        "i": "_srcA",
+        "ia": "srcAa",
+        "ii": "srcAr",
+        "in": "srcBr",
+        "ir": "srcC",
+        "it": "srcCa",
+        "j": "srcD",
+        "ja": "_srcDa",
+        "ji": "srcDi",
+        "jn": "srcDn",
+        "jr": "srcDt",
+        "jt": "srcE",
+        "k": "srcEa",
+        "ka": "srcEi",
+        "ki": "srcEn",
+        "kn": "srcFa",
+        "kr": "srcFi",
+        "kt": "srcHr",
+        "l": "srcHt",
+        "la": "srcIa",
+        "li": "srcIi",
+        "ln": "srcIr",
+        "lr": "srcKi",
+        "lt": "srcL",
+        "m": "srcLa",
+        "ma": "srcLi",
+        "mi": "srcLr",
+        "mn": "_srcMa",
+        "mr": "srcMn",
+        "mt": "srcMr",
+        "n": "srcNa",
+        "na": "srcNn",
+        "ni": "srcNr",
+        "nn": "srcO",
+        "nr": "srcOa",
+        "nt": "srcPa",
+        "o": "srcPr",
+        "oa": "_srcQn",
+        "oi": "srcRn",
+        "on": "srcRr",
+        "or": "srcS",
+        "ot": "srcSa",
+        "p": "__srcT",
+        "pa": "srcTa",
+        "pi": "srcTi",
+        "pn": "srcYi",
+        "pr": "srcYt",
+        "pt": "srcZi",
+        "q": "_a",
+        "qi": "_srcB",
+        "qn": "srcBa",
+        "qr": "_srcCa",
+        "qt": "_srcCi",
+        "r": "_srcCr",
+        "ra": "srcDa",
+        "ri": "_srcDi",
+        "rn": "_srcDn",
+        "rr": "_srcDr",
+        "rt": "_srcEa",
+        "s": "_srcEr",
+        "sa": "_srcEt",
+        "si": "_srcF",
+        "sn": "_srcFa",
+        "sr": "_srcFn",
+        "st": "srcGa",
+        "t": "_srcGr",
+        "ta": "srcHa",
+        "ti": "_srcHi",
+        "tn": "___srcI",
+        "tr": "in",
+        "tt": "_srcJ",
+        "u": "srcJa",
+        "ua": "_srcJi",
+        "ui": "_srcJr",
+        "un": "_srcK",
+        "ur": "srcKa",
+        "ut": "_srcLa",
+        "v": "_srcLr",
+        "va": "_srcM",
+        "vi": "srcMa",
+        "vn": "_srcMr",
+        "vr": "_srcNa",
+        "vt": "_srcOa",
+        "w": "_srcPa",
+        "wa": "_srcPi",
+        "wi": "_srcPn",
+        "wn": "_srcQ",
+        "wr": "_srcQi",
+        "wt": "_srcQr",
+        "x": "_srcRa",
+        "xa": "_srcSa",
+        "xi": "_srcTa",
+        "xn": "_srcTi",
+        "xr": "_srcTt",
+        "xt": "srcUa",
+        "y": "srcVa",
+        "ya": "_srcW",
+        "yi": "srcWa",
+        "yn": "_srcX",
+        "yr": "srcXa",
+        "yt": "_srcXr",
+        "z": "_srcXt",
+        "zi": "_srcY",
+        "zn": "srcYa",
+        "zr": "_srcZi",
+        "zt": "_srcZr"
       }
     },
     "presentation-iV9gDfl9": {
-      "restored": "boundaries/protobufjs.ts",
+      "restored": "boundaries/protobufjs/presentation.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "protobufjs library",
       "exports": {
-        "$": "$",
-        "$n": "$n",
-        "$t": "$t",
-        "A": "A",
-        "An": "An",
-        "At": "At",
-        "B": "B",
-        "Bn": "Bn",
-        "Bt": "Bt",
-        "C": "C",
-        "Cn": "Cn",
-        "Ct": "Ct",
-        "D": "D",
-        "Dn": "Dn",
-        "Dt": "Dt",
-        "E": "E",
-        "En": "En",
-        "Et": "Et",
-        "F": "F",
-        "Fn": "Fn",
-        "Ft": "Ft",
-        "G": "G",
-        "Gn": "Gn",
-        "Gt": "Gt",
-        "H": "H",
-        "Hn": "Hn",
-        "Ht": "Ht",
-        "I": "I",
-        "In": "In",
-        "It": "It",
-        "J": "J",
-        "Jn": "Jn",
-        "Jt": "Jt",
-        "K": "K",
-        "Kn": "Kn",
-        "Kt": "Kt",
-        "L": "L",
-        "Ln": "Ln",
-        "Lt": "Lt",
-        "M": "M",
-        "Mn": "Mn",
-        "Mt": "Mt",
-        "N": "N",
-        "Nn": "Nn",
-        "Nt": "Nt",
-        "O": "O",
-        "On": "On",
-        "Ot": "Ot",
-        "P": "P",
-        "Pn": "Pn",
-        "Pt": "Pt",
-        "Q": "Q",
-        "Qn": "Qn",
-        "Qt": "Qt",
-        "R": "R",
-        "Rn": "Rn",
-        "Rt": "Rt",
-        "S": "S",
-        "Sn": "Sn",
-        "St": "St",
-        "T": "T",
-        "Tn": "Tn",
-        "Tt": "Tt",
-        "U": "U",
-        "Un": "Un",
-        "Ut": "Ut",
-        "V": "V",
-        "Vn": "Vn",
-        "Vt": "Vt",
-        "W": "W",
-        "Wn": "Wn",
-        "Wt": "Wt",
-        "X": "X",
-        "Xn": "Xn",
-        "Xt": "Xt",
-        "Y": "Y",
-        "Yn": "Yn",
-        "Yt": "Yt",
-        "Z": "Z",
-        "Zn": "Zn",
-        "Zt": "Zt",
-        "_": "_",
-        "_n": "_n",
-        "_t": "_t",
-        "a": "a",
-        "an": "an",
-        "ar": "ar",
-        "at": "at",
-        "b": "b",
-        "bn": "bn",
-        "bt": "bt",
-        "c": "c",
-        "cn": "cn",
-        "cr": "cr",
-        "ct": "ct",
-        "d": "d",
-        "dn": "dn",
-        "dr": "dr",
-        "dt": "dt",
-        "en": "en",
-        "er": "er",
-        "et": "et",
-        "f": "f",
-        "fn": "fn",
-        "fr": "fr",
-        "ft": "ft",
-        "g": "g",
-        "gn": "gn",
-        "gt": "gt",
-        "h": "h",
-        "hn": "hn",
-        "ht": "ht",
-        "i": "i",
-        "in": "in",
-        "ir": "ir",
-        "it": "it",
-        "j": "j",
-        "jn": "jn",
-        "jt": "jt",
-        "k": "k",
-        "kn": "kn",
-        "kt": "kt",
-        "l": "l",
-        "ln": "ln",
-        "lr": "lr",
-        "lt": "lt",
-        "m": "m",
-        "mn": "mn",
-        "mt": "mt",
-        "n": "n",
-        "nn": "nn",
-        "nr": "nr",
-        "nt": "nt",
-        "o": "o",
-        "on": "on",
-        "or": "or",
-        "ot": "ot",
-        "p": "p",
-        "pn": "pn",
-        "pr": "pr",
-        "pt": "pt",
-        "q": "q",
-        "qn": "qn",
-        "qt": "qt",
-        "r": "r",
-        "rn": "rn",
-        "rr": "rr",
-        "rt": "rt",
-        "s": "s",
-        "sn": "sn",
-        "sr": "sr",
-        "st": "st",
-        "t": "t",
-        "tn": "tn",
-        "tr": "tr",
-        "tt": "tt",
-        "u": "u",
-        "un": "un",
-        "ur": "ur",
-        "ut": "ut",
-        "v": "v",
-        "vn": "vn",
-        "vt": "vt",
-        "w": "w",
-        "wn": "wn",
-        "wt": "wt",
-        "x": "x",
-        "xn": "xn",
-        "xt": "xt",
-        "y": "y",
-        "yn": "yn",
-        "yt": "yt",
-        "z": "z",
-        "zn": "zn",
-        "zt": "zt"
+        "$": "presentationZn",
+        "$n": "presentationUr",
+        "$t": "presentationTr",
+        "A": "presentationRr",
+        "An": "presentationIr",
+        "At": "presentationDr",
+        "B": "presentationCr",
+        "Bn": "presentationAr",
+        "Bt": "_presentationZn",
+        "C": "presentationYn",
+        "Cn": "presentationXn",
+        "Ct": "presentationWn",
+        "D": "presentationVn",
+        "Dn": "presentationUn",
+        "Dt": "presentationQn",
+        "E": "presentationLn",
+        "En": "presentationIn",
+        "Et": "presentationGn",
+        "F": "presentationN",
+        "Fn": "_presentationYn",
+        "Ft": "_presentationXn",
+        "G": "_presentationWn",
+        "Gn": "_presentationVn",
+        "Gt": "_presentationUn",
+        "H": "presentationSn",
+        "Hn": "_presentationMn",
+        "Ht": "_presentationLn",
+        "I": "_presentationKn",
+        "In": "_presentationJn",
+        "It": "_presentationHn",
+        "J": "_presentationGn",
+        "Jn": "_presentationFn",
+        "Jt": "presentationDn",
+        "K": "_presentationCn",
+        "Kn": "_presentationBn",
+        "Kt": "_presentationN",
+        "L": "presentationTn",
+        "Ln": "_presentationSn",
+        "Lt": "presentationPn",
+        "M": "presentationOn",
+        "Mn": "presentationNn",
+        "Mt": "presentationMn",
+        "N": "presentationFn",
+        "Nn": "presentationEn",
+        "Nt": "_presentationDn",
+        "O": "presentationCn",
+        "On": "presentationAn",
+        "Ot": "_presentationOn",
+        "P": "_presentationTn",
+        "Pn": "_presentationRn",
+        "Pt": "_presentationNn",
+        "Q": "_presentationIn",
+        "Qn": "_presentationEn",
+        "Qt": "_presentationAn",
+        "R": "presentationZt",
+        "Rn": "presentationXt",
+        "Rt": "presentationQt",
+        "S": "presentationT",
+        "Sn": "presentationX",
+        "St": "presentationV",
+        "T": "presentationO",
+        "Tn": "presentationJ",
+        "Tt": "presentationH",
+        "U": "presentationB",
+        "Un": "presentationAt",
+        "Ut": "presentationYt",
+        "V": "presentationS",
+        "Vn": "presentationQ",
+        "Vt": "__presentationN",
+        "W": "presentationD",
+        "Wn": "presentationC",
+        "Wt": "presentationA",
+        "X": "$",
+        "Xn": "_presentationAt",
+        "Xt": "_presentationB",
+        "Y": "presentationBn",
+        "Yn": "_presentationBt",
+        "Yt": "_presentationCt",
+        "Z": "_presentationDt",
+        "Zn": "presentationE",
+        "Zt": "presentationEt",
+        "_": "presentationF",
+        "_n": "_presentationFt",
+        "_t": "_presentationG",
+        "a": "_presentationGt",
+        "an": "_presentationH",
+        "ar": "presentationHn",
+        "at": "_presentationHt",
+        "b": "_presentationI",
+        "bn": "presentationIt",
+        "bt": "_presentationJ",
+        "c": "presentationJn",
+        "cn": "_presentationJt",
+        "cr": "_presentationK",
+        "ct": "presentationKn",
+        "d": "presentationKt",
+        "dn": "presentationL",
+        "dr": "presentationLt",
+        "dt": "presentationM",
+        "en": "_presentationMt",
+        "er": "_presentationNt",
+        "et": "_presentationO",
+        "f": "presentationOt",
+        "fn": "_presentationP",
+        "fr": "_presentationPt",
+        "ft": "_presentationR",
+        "g": "presentationRn",
+        "gn": "_presentationRt",
+        "gt": "_presentationSt",
+        "h": "__presentationT",
+        "hn": "presentationTt",
+        "ht": "presentationU",
+        "i": "_presentationUt",
+        "in": "_presentationV",
+        "ir": "_presentationVt",
+        "it": "presentationW",
+        "j": "presentationWt",
+        "jn": "_presentationX",
+        "jt": "presentationY",
+        "k": "presentationZ",
+        "kn": "presentationUnderscore",
+        "kt": "_t",
+        "l": "_presentationA",
+        "ln": "presentationBt",
+        "lr": "_presentationC",
+        "lt": "presentationCt",
+        "m": "_presentationD",
+        "mn": "presentationDt",
+        "mt": "presentationEr",
+        "n": "_presentationEt",
+        "nn": "_presentationF",
+        "nr": "presentationFr",
+        "nt": "presentationFt",
+        "o": "presentationG",
+        "on": "presentationGt",
+        "or": "presentationHt",
+        "ot": "presentationI",
+        "p": "_presentationIt",
+        "pn": "presentationJt",
+        "pr": "presentationK",
+        "pt": "_presentationKt",
+        "q": "_presentationL",
+        "qn": "presentationLr",
+        "qt": "_presentationLt",
+        "r": "_presentationM",
+        "rn": "presentationMt",
+        "rr": "___presentationN",
+        "rt": "presentationNr",
+        "s": "presentationNt",
+        "sn": "or",
+        "sr": "_presentationOt",
+        "st": "presentationP",
+        "t": "_presentationPn",
+        "tn": "presentationPr",
+        "tr": "presentationPt",
+        "tt": "_presentationQ",
+        "u": "_presentationQn",
+        "un": "_presentationQt",
+        "ur": "presentationR",
+        "ut": "presentationRt",
+        "v": "_presentationS",
+        "vn": "presentationSr",
+        "vt": "presentationSt",
+        "w": "___presentationT",
+        "wn": "_presentationTt",
+        "wt": "_presentationU",
+        "x": "presentationUt",
+        "xn": "presentationVt",
+        "xt": "_presentationW",
+        "y": "_presentationWt",
+        "yn": "_presentationXt",
+        "yt": "_presentationY",
+        "z": "_presentationYt",
+        "zn": "_presentationZ",
+        "zt": "_presentationZt"
       }
     },
     "modulepreload-polyfill-Cf3xff8G": {
@@ -4499,14 +4560,16 @@
       }
     },
     "timeline-definition-IT6M3QCI-Bx_6jO7O": {
-      "restored": "utils/timeline-definition-it6-m3-qci.ts",
+      "restored": "boundaries/mermaid/timeline-definition-it6-m3-qci.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "single-value-sCXpwjXj": {
-      "restored": "boundaries/single-value-s-c-xpwj-xj.tsx",
+      "restored": "boundaries/single-value.ts",
       "status": "done",
       "exports": {
         "$": "$",
@@ -4601,11 +4664,13 @@
       }
     },
     "statsig-url-config-CBN_IuJR": {
-      "restored": "boundaries/statsig-url-config.tsx",
+      "restored": "boundaries/statsig/statsig-url-config.ts",
       "status": "done",
       "exports": {
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "statsig"
     },
     "cose-bilkent-S5V4N54A-BlVTOsyx": {
       "restored": "utils/cose-bilkent-s5-v4-n54-a-bl-vt-osyx.ts",
@@ -4615,18 +4680,22 @@
       "status": "done"
     },
     "quadrantDiagram-34T5L4WZ-EFHmpxs2": {
-      "restored": "utils/quadrant-diagram-34-t5-l4-wz.ts",
+      "restored": "boundaries/mermaid/quadrant-diagram-34-t5-l4-wz.ts",
       "exports": {
         "diagram": "diagram"
       },
-      "status": "done"
+      "status": "done",
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "sankeyDiagram-XADWPNL6-CXgjy9x6": {
-      "restored": "utils/sankey-diagram-xadwpnl6.ts",
+      "restored": "boundaries/mermaid/sankey-diagram-xadwpnl6.ts",
       "exports": {
         "diagram": "diagram"
       },
-      "status": "done"
+      "status": "done",
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "cose-bilkent-S5V4N54A-C42L7Iw8": {
       "restored": "utils/cose-bilkent-s5-v4-n54-a.ts",
@@ -4656,18 +4725,22 @@
       "status": "done"
     },
     "quadrantDiagram-AYHSOK5B-WVcJzsPP": {
-      "restored": "utils/quadrant-diagram-ayhsok5-b-w-vc-jzs-pp.ts",
+      "restored": "boundaries/mermaid/quadrant-diagram-ayhsok5-b.ts",
       "exports": {
         "diagram": "diagram"
       },
-      "status": "done"
+      "status": "done",
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "sankeyDiagram-TZEHDZUN-XAdBsdDZ": {
-      "restored": "utils/sankey-diagram-tzehdzun-x-ad-bsd-dz.ts",
+      "restored": "boundaries/mermaid/sankey-diagram-tzehdzun.ts",
       "exports": {
         "diagram": "diagram"
       },
-      "status": "done"
+      "status": "done",
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "product-logger-ibAP2Yp2": {
       "restored": "utils/product-logger.tsx",
@@ -4908,7 +4981,7 @@
       "status": "done"
     },
     "dist-kMWsZQu4": {
-      "restored": "boundaries/radix/popper.ts",
+      "restored": "boundaries/dist.ts",
       "exports": {
         "a": "a",
         "i": "i",
@@ -4916,7 +4989,9 @@
         "r": "r",
         "t": "t"
       },
-      "status": "done"
+      "status": "done",
+      "dependencyBoundary": true,
+      "vendor": "runtime"
     },
     "codex-api-error-_CzxEWtd": {
       "restored": "utils/codex-api-error.ts",
@@ -4971,7 +5046,7 @@
       "status": "done"
     },
     "recommended-skill-statsig-overrides-fCzT8bPX": {
-      "restored": "utils/recommended-skill-statsig-overrides.tsx",
+      "restored": "utils/recommended-skill-statsig-overrides.ts",
       "exports": {
         "n": "useRecommendedSkillStatsigOverrides",
         "t": "getSkillOverride"
@@ -5030,7 +5105,7 @@
       }
     },
     "summary-panel-row-D3U8QDSL": {
-      "restored": "components/summary-panel-row.tsx",
+      "restored": "app/summary-panel.tsx",
       "status": "done",
       "exports": {
         "t": "SummaryPanelRow"
@@ -5058,7 +5133,7 @@
       }
     },
     "isEmpty-CKN2Jii3": {
-      "restored": "utils/is-empty.tsx",
+      "restored": "boundaries/lodash/is-empty.ts",
       "exports": {
         "i": "i",
         "n": "n",
@@ -5070,7 +5145,7 @@
       "note": "Lodash isEmpty utility; typed facade pending full restoration"
     },
     "merge-Ch0yXQoh": {
-      "restored": "utils/merge.tsx",
+      "restored": "boundaries/lodash/merge.ts",
       "exports": {
         "_": "_",
         "a": "a",
@@ -5095,7 +5170,7 @@
       "note": "Lodash merge utility; typed facade pending full restoration"
     },
     "mime-types-C1fbkwXZ": {
-      "restored": "utils/mime-types.ts",
+      "restored": "boundaries/mime-types.ts",
       "exports": {
         "t": "t"
       },
@@ -5114,7 +5189,7 @@
       "note": "Zustand middleware; typed facade pending full restoration"
     },
     "mermaid-diagram-shell-BO-t9BGx": {
-      "restored": "utils/mermaid-diagram-shell.tsx",
+      "restored": "boundaries/mermaid/mermaid-diagram-shell.ts",
       "exports": {
         "t": "t"
       },
@@ -5315,12 +5390,12 @@
       "status": "done"
     },
     "is-compact-window-context-CVCwwVNh": {
-      "restored": "utils/is-compact-window-context-cv-cww-v-nh.tsx",
+      "restored": "locales/is-compact-window-context.ts",
       "status": "done",
       "exports": {}
     },
     "is-hotkey-window-context-BeMnvcLR": {
-      "restored": "utils/is-hotkey-window-context-be-mnvc-lr.ts",
+      "restored": "locales/is-hotkey-window-context.ts",
       "exports": {
         "t": "default"
       },
@@ -5390,7 +5465,7 @@
       "status": "done"
     },
     "pdf-c2WnNMiD": {
-      "restored": "boundaries/pdfjs-viewer.ts",
+      "restored": "boundaries/pdf/pdf.ts",
       "exports": {
         "AbortException": "AbortException",
         "AnnotationEditorLayer": "AnnotationEditorLayer",
@@ -5449,10 +5524,12 @@
         "updateUrlHash": "updateUrlHash",
         "version": "version"
       },
-      "status": "done"
+      "status": "done",
+      "dependencyBoundary": true,
+      "vendor": "pdf"
     },
     "presentation-CNEfpj33": {
-      "restored": "boundaries/presentation-protobuf-types.ts",
+      "restored": "boundaries/protobufjs/presentation.ts",
       "exports": {
         "AvLst": "AvLst",
         "BodyProperties": "BodyProperties",
@@ -5647,7 +5724,7 @@
       "status": "done"
     },
     "markdown-to-search-text-D4gbAqkt": {
-      "restored": "markdown/markdown-to-search-text.tsx",
+      "restored": "boundaries/markdown-to-search-text.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -5662,10 +5739,12 @@
         "s": "s",
         "t": "t",
         "u": "u"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "markdown"
     },
     "metric-helpers-BidZZeRm": {
-      "restored": "utils/metric-helpers-bid-z-ze-rm.tsx",
+      "restored": "utils/metric-helpers.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -5847,7 +5926,7 @@
       "status": "done"
     },
     "document-D7i1z3mE": {
-      "restored": "boundaries/protobufjs/document-types.ts",
+      "restored": "utils/document.ts",
       "exports": {
         "Artifact": "SectionBreakType",
         "ArtifactType": "Playground",
@@ -6243,7 +6322,7 @@
       "status": "done"
     },
     "use-platform-D3fl3oDu": {
-      "restored": "utils/use-platform.ts",
+      "restored": "hooks/use-platform.ts",
       "exports": {
         "t": "usePlatform"
       },
@@ -6275,12 +6354,12 @@
       "status": "done"
     },
     "file-diff-KtBt16gK": {
-      "restored": "boundaries/file-diff.tsx",
+      "restored": "boundaries/pierre/file-diff.ts",
       "status": "done",
       "exports": {}
     },
     "reduced-motion-preference-BFM-v_UB": {
-      "restored": "settings/reduced-motion-preference.ts",
+      "restored": "boundaries/framer-motion/reduced-motion-preference.ts",
       "exports": {
         "i": "getReducedMotionMediaQuery",
         "n": "systemPrefersReducedMotionAtom",
@@ -6290,7 +6369,7 @@
       "status": "done"
     },
     "main-BDm-p1LA": {
-      "restored": "utils/vscode-lsp-types-impl.ts",
+      "restored": "utils/main.ts",
       "status": "done",
       "exports": {}
     },
@@ -6483,7 +6562,7 @@
       "status": "done"
     },
     "segmented-toggle-De13HuEU": {
-      "restored": "utils/segmented-toggle.tsx",
+      "restored": "utils/segmented-toggle.ts",
       "exports": {
         "t": "SegmentedToggle"
       },
@@ -6633,7 +6712,7 @@
       "status": "done"
     },
     "settings-shared-B8obOSL1": {
-      "restored": "app/settings/shared.tsx",
+      "restored": "settings/settings-shared.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -6750,7 +6829,7 @@
       "status": "done"
     },
     "rpc-BF_evcbU": {
-      "restored": "boundaries/rpc.ts",
+      "restored": "utils/rpc.ts",
       "status": "done",
       "exports": {
         "A": "A",
@@ -6797,7 +6876,7 @@
       }
     },
     "use-host-config-CiYpjHRj": {
-      "restored": "boundaries/host-config.ts",
+      "restored": "hooks/use-host-config.ts",
       "status": "done",
       "exports": {
         "$": "$",
@@ -6940,10 +7019,12 @@
       "status": "done",
       "exports": {
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "@tanstack/react-query"
     },
     "parse-directives-BWfnLkkG": {
-      "restored": "boundaries/mermaid/parse-directives.ts",
+      "restored": "utils/parse-directives.ts",
       "status": "done",
       "exports": {
         "A": "A",
@@ -6997,10 +7078,12 @@
       "status": "done",
       "exports": {
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "lodash"
     },
     "automation-schedule-DcOeO0C3": {
-      "restored": "boundaries/rrule.ts",
+      "restored": "automations/automation-schedule.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -7025,18 +7108,22 @@
       "status": "done",
       "exports": {
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "lodash"
     },
     "dist-BLGenw3M": {
-      "restored": "boundaries/dist-b-l-genw3-m.ts",
+      "restored": "boundaries/dist.ts",
       "status": "done",
       "exports": {
         "n": "n",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "runtime"
     },
     "dist-DvbKegLw": {
-      "restored": "boundaries/dist-dvb-keg-lw.tsx",
+      "restored": "boundaries/dist.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -7049,10 +7136,12 @@
         "s": "s",
         "t": "t",
         "u": "u"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "runtime"
     },
     "dist-uq8yzYFr": {
-      "restored": "boundaries/dist-uq8yzy-fr.ts",
+      "restored": "boundaries/dist.ts",
       "status": "done",
       "exports": {
         "_": "_",
@@ -7072,10 +7161,12 @@
         "s": "s",
         "t": "t",
         "u": "u"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "runtime"
     },
     "dist-hw5CqF55": {
-      "restored": "boundaries/dist-hw5cq-f55.ts",
+      "restored": "boundaries/dist.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -7083,17 +7174,21 @@
         "n": "n",
         "r": "r",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "runtime"
     },
     "mermaid-diagram-ClGkKF0e": {
-      "restored": "boundaries/mermaid/diagram-clgkkf0e.ts",
+      "restored": "boundaries/mermaid/mermaid-diagram.ts",
       "status": "done",
       "exports": {
         "MermaidDiagramRenderer": "MermaidDiagramRenderer"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "chunk-JA3XYJ7Z-CjR9BG5n": {
-      "restored": "boundaries/mermaid/chunk-ja3xyj7z.ts",
+      "restored": "boundaries/d3/chunk-ja3-xyj7-z-cj-r9-bg5n.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -7102,10 +7197,12 @@
         "o": "o",
         "r": "r",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "d3"
     },
     "chunk-JZLCHNYA-HNai7LB6": {
-      "restored": "boundaries/mermaid/chunk-jzlchnya.ts",
+      "restored": "boundaries/d3/chunk-jzlchnya-hnai7-lb6.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -7118,10 +7215,12 @@
         "s": "s",
         "t": "t",
         "u": "u"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "d3"
     },
     "chunk-QXUST7PY-B8nc5wSD": {
-      "restored": "boundaries/mermaid/chunk-qxust7py.ts",
+      "restored": "boundaries/d3/chunk-qxust7-py-b8nc5w-sd.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -7129,44 +7228,56 @@
         "n": "n",
         "r": "r",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "d3"
     },
     "chunk-N4CR4FBY-ClZLl4Py": {
-      "restored": "boundaries/mermaid/chunk-n4cr4fby.ts",
+      "restored": "boundaries/d3/chunk-n4-cr4-fby-cl-zll4-py.ts",
       "status": "done",
       "exports": {
         "n": "n",
         "r": "r",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "d3"
     },
     "c4Diagram-YG6GDRKO-DjawmGRU": {
-      "restored": "boundaries/mermaid/c4-diagram-yg6gdrko.ts",
+      "restored": "boundaries/mermaid/c4-diagram-yg6-gdrko.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "flowDiagram-NV44I4VS-D4eH0gaV": {
-      "restored": "boundaries/mermaid/flow-diagram-nv44i4vs.ts",
+      "restored": "boundaries/mermaid/flow-diagram-nv44-i4-vs.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "erDiagram-Q2GNP2WA-BuOvbo5z": {
-      "restored": "boundaries/mermaid/er-diagram-q2gnp2wa.ts",
+      "restored": "boundaries/mermaid/er-diagram-q2-gnp2-wa.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "gitGraphDiagram-NY62KEGX-lV4TXvsv": {
-      "restored": "boundaries/mermaid/git-graph-diagram-ny62kegx.ts",
+      "restored": "boundaries/mermaid/git-graph-diagram-ny62-kegx.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "ganttDiagram-LVOFAZNH-yOkQF_JE": {
       "restored": "boundaries/mermaid/gantt-diagram-lvofaznh.ts",
@@ -7176,11 +7287,13 @@
       }
     },
     "infoDiagram-F6ZHWCRC-CZZfMpuV": {
-      "restored": "boundaries/mermaid/info-diagram-f6zhwcrc.ts",
+      "restored": "boundaries/mermaid/info-diagram-f6-zhwcrc.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "pieDiagram-ADFJNKIX-CdTMfn5r": {
       "restored": "boundaries/mermaid/pie-diagram-adfjnkix.ts",
@@ -7190,11 +7303,13 @@
       }
     },
     "xychartDiagram-PRI3JC2R-B3NKXKok": {
-      "restored": "boundaries/mermaid/xychart-diagram.ts",
+      "restored": "boundaries/mermaid/xychart-diagram-pri3-jc2-r.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "requirementDiagram-UZGBJVZJ-CREo4bNX": {
       "restored": "boundaries/mermaid/requirement-diagram-uzgbjvzj.ts",
@@ -7204,81 +7319,97 @@
       }
     },
     "sequenceDiagram-WL72ISMW-BR6BjBF1": {
-      "restored": "boundaries/mermaid/sequence-diagram-wl72ismw.ts",
+      "restored": "boundaries/mermaid/sequence-diagram-wl72-ismw.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "classDiagram-2ON5EDUG-CNv4W435": {
-      "restored": "boundaries/mermaid/class-diagram-2on5edug.ts",
+      "restored": "boundaries/mermaid/class-diagram-2-on5-edug.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "classDiagram-v2-WZHVMYZB-DXC_WPMt": {
-      "restored": "boundaries/mermaid/class-diagram-v2.ts",
+      "restored": "boundaries/mermaid/class-diagram-v2-wzhvmyzb.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "stateDiagram-FKZM4ZOC-BLPu-ra7": {
-      "restored": "boundaries/mermaid/state-diagram-fkzm4zoc.ts",
+      "restored": "boundaries/mermaid/state-diagram-fkzm4-zoc.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "stateDiagram-v2-4FDKWEC3-CqVrfWb0": {
-      "restored": "boundaries/mermaid/state-diagram-v2.ts",
+      "restored": "boundaries/mermaid/state-diagram-v2-4-fdkwec3.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "journeyDiagram-XKPGCS4Q-qmAqcnof": {
-      "restored": "boundaries/mermaid/journey-diagram-xkpgcs4q.ts",
+      "restored": "boundaries/mermaid/journey-diagram-xkpgcs4-q.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "mindmap-definition-VGOIOE7T-CravxLKD": {
-      "restored": "boundaries/mermaid/mindmap-definition.ts",
+      "restored": "boundaries/mermaid/mindmap-definition-vgoioe7-t.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "kanban-definition-3W4ZIXB7-DvB9N6my": {
-      "restored": "boundaries/mermaid/kanban-definition.ts",
+      "restored": "utils/kanban-definition-3-w4-zixb7.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
       }
     },
     "diagram-S2PKOQOG-CYp0tDDf": {
-      "restored": "boundaries/mermaid/diagram-s2pkoqog.ts",
+      "restored": "utils/diagram-s2-pkoqog.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
       }
     },
     "diagram-QEK2KX5R-DVrdB3UI": {
-      "restored": "boundaries/mermaid/diagram-qek2kx5r.ts",
+      "restored": "utils/diagram-qek2-kx5-r.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
       }
     },
     "blockDiagram-VD42YOAC-DicrLsNJ": {
-      "restored": "boundaries/mermaid/block-diagram.ts",
+      "restored": "boundaries/mermaid/block-diagram-vd42-yoac.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "architectureDiagram-VXUJARFQ-x16TdI-X": {
       "restored": "boundaries/mermaid/architecture-diagram-vxujarfq.ts",
@@ -7288,21 +7419,23 @@
       }
     },
     "diagram-PSM6KHXK-DqnCog4a": {
-      "restored": "boundaries/mermaid/diagram-psm6khxk.ts",
+      "restored": "utils/diagram-psm6-khxk.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
       }
     },
     "workbook-BEO_aVXz": {
-      "restored": "boundaries/workbook.ts",
+      "restored": "boundaries/mermaid/workbook-beo-a-vxz.ts",
       "status": "done",
       "exports": {
         "Workbook": "Workbook"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "spreadsheet-C5mWVSPz": {
-      "restored": "boundaries/spreadsheet.ts",
+      "restored": "utils/spreadsheet.ts",
       "status": "done",
       "exports": {
         "AnchorMarker": "AnchorMarker",
@@ -7402,14 +7535,16 @@
       }
     },
     "dagre-6UL2VRFP-DHAAtlj_": {
-      "restored": "boundaries/dagre/dagre-6ul2vrfp.ts",
+      "restored": "boundaries/dagre-6-ul2-vrfp.ts",
       "status": "done",
       "exports": {
         "render": "render"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "runtime"
     },
     "chunk-FPAJGGOC-Cy-1bcKF": {
-      "restored": "boundaries/mermaid/chunk-fpajggoc.ts",
+      "restored": "boundaries/mermaid/chunk-fpajggoc-cy-1bc-kf.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -7428,80 +7563,100 @@
         "s": "s",
         "t": "t",
         "u": "u"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "chunk-O7ZBX7Z2-B9AHjHvq": {
-      "restored": "boundaries/mermaid/chunk-o7zbx7z2.ts",
+      "restored": "boundaries/mermaid/chunk-o7-zbx7-z2-b9-ahj-hvq.ts",
       "status": "done",
       "exports": {
         "n": "n",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "chunk-S6J4BHB3-BiRR_8vz": {
-      "restored": "boundaries/mermaid/chunk-s6j4bhb3.ts",
+      "restored": "boundaries/mermaid/chunk-s6-j4-bhb3-bi-rr-8vz.ts",
       "status": "done",
       "exports": {
         "n": "n",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "chunk-LBM3YZW2-C9W8CgCb": {
-      "restored": "boundaries/mermaid/chunk-lbm3yzw2.ts",
+      "restored": "boundaries/mermaid/chunk-lbm3-yzw2-c9-w8-cg-cb.ts",
       "status": "done",
       "exports": {
         "n": "n",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "chunk-76Q3JFCE-Bhgg5xKY": {
-      "restored": "boundaries/mermaid/chunk-76q3jfce.ts",
+      "restored": "boundaries/mermaid/chunk-76-q3-jfce-bhgg5x-ky.ts",
       "status": "done",
       "exports": {
         "n": "n",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "chunk-T53DSG4Q-DwpHe3Zz": {
-      "restored": "boundaries/mermaid/chunk-t53dsg4q.ts",
+      "restored": "boundaries/mermaid/chunk-t53-dsg4-q-dwp-he3-zz.ts",
       "status": "done",
       "exports": {
         "n": "n",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "chunk-LHMN2FUI-BO1BbTL6": {
-      "restored": "boundaries/mermaid/chunk-lhmn2fui.ts",
+      "restored": "boundaries/mermaid/chunk-lhmn2-fui-bo1-bb-tl6.ts",
       "status": "done",
       "exports": {
         "n": "n",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "chunk-FWNWRKHM-DRtw95ir": {
-      "restored": "boundaries/mermaid/chunk-fwnwrkhm.ts",
+      "restored": "boundaries/mermaid/chunk-fwnwrkhm-drtw95ir.ts",
       "status": "done",
       "exports": {
         "n": "n",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "mermaid-parser.core-Cloq2txW": {
-      "restored": "boundaries/mermaid/parser.core-cloq2txw.ts",
+      "restored": "boundaries/mermaid/mermaid-parser-core.ts",
       "status": "done",
       "exports": {
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "chunk-B4BG7PRW-YMKrAsOx": {
-      "restored": "boundaries/mermaid/chunk-b4bg7prw.ts",
+      "restored": "boundaries/d3/chunk-b4-bg7-prw-ymkr-as-ox.ts",
       "status": "done",
       "exports": {
         "i": "i",
         "n": "n",
         "r": "r",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "d3"
     },
     "dagre-DgCFaaOE": {
       "restored": "boundaries/dagre.ts",
@@ -7511,17 +7666,19 @@
       }
     },
     "chunk-DI55MBZ5-CK4BKk7V": {
-      "restored": "boundaries/mermaid/chunk-di55mbz5.ts",
+      "restored": "boundaries/mermaid/chunk-di55-mbz5-ck4-bkk7-v.ts",
       "status": "done",
       "exports": {
         "i": "i",
         "n": "n",
         "r": "r",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "workbook-DDjets34": {
-      "restored": "boundaries/workbook-ddjets34.ts",
+      "restored": "utils/workbook.ts",
       "status": "done",
       "exports": {
         "A": "A",
@@ -7574,7 +7731,7 @@
       }
     },
     "document-BvkTVHtx": {
-      "restored": "boundaries/mermaid/document.ts",
+      "restored": "utils/document.ts",
       "status": "done",
       "exports": {
         "C": "C",
@@ -7604,7 +7761,7 @@
       }
     },
     "remote-text-edit-session-DjCWscO4": {
-      "restored": "boundaries/remote-text-edit-session.ts",
+      "restored": "utils/remote-text-edit-session.ts",
       "status": "done",
       "exports": {
         "A": "A",
@@ -7679,7 +7836,9 @@
         "w": "w",
         "x": "x",
         "y": "y"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "lodash"
     },
     "flatten-CdNmRCTf": {
       "restored": "boundaries/lodash/flatten.ts",
@@ -7694,53 +7853,67 @@
       }
     },
     "info-NVLQJR56-CJGElsQG": {
-      "restored": "boundaries/mermaid/info-nvlqjr56.ts",
+      "restored": "boundaries/mermaid/info-nvlqjr56-cjgels-qg.ts",
       "status": "done",
       "exports": {
         "createInfoServices": "createInfoServices"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "packet-BFZMPI3H-C976HVjn": {
-      "restored": "boundaries/mermaid/packet-bfzmpi3h.ts",
+      "restored": "boundaries/mermaid/packet-bfzmpi3-h-c976-hvjn.ts",
       "status": "done",
       "exports": {
         "createPacketServices": "createPacketServices"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "pie-7BOR55EZ-Cel_tNJ1": {
-      "restored": "boundaries/mermaid/pie-7bor55ez.ts",
+      "restored": "boundaries/mermaid/pie-7-bor55-ez-cel-t-nj1.ts",
       "status": "done",
       "exports": {
         "createPieServices": "createPieServices"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "architecture-U656AL7Q-Ccsrjk_f": {
-      "restored": "boundaries/mermaid/architecture-u656al7q.ts",
+      "restored": "boundaries/mermaid/architecture-u656-al7-q-ccsrjk-f.ts",
       "status": "done",
       "exports": {
         "createArchitectureServices": "createArchitectureServices"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "gitGraph-F6HP7TQM-8BKmskHr": {
-      "restored": "boundaries/mermaid/git-graph-f6hp7tqm.ts",
+      "restored": "boundaries/mermaid/git-graph-f6-hp7-tqm.ts",
       "status": "done",
       "exports": {
         "createGitGraphServices": "createGitGraphServices"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "radar-NHE76QYJ-8GggBqpZ": {
-      "restored": "boundaries/mermaid/radar-nhe76qyj.ts",
+      "restored": "boundaries/mermaid/radar-nhe76-qyj-8-ggg-bqp-z.ts",
       "status": "done",
       "exports": {
         "createRadarServices": "createRadarServices"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "treemap-KMMF4GRG-ByNQtOJN": {
-      "restored": "boundaries/mermaid/treemap-kmmf4grg.ts",
+      "restored": "boundaries/d3/treemap-kmmf4-grg.ts",
       "status": "done",
       "exports": {
         "createTreemapServices": "createTreemapServices"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "d3"
     },
     "zipObject-HR30GI0P": {
       "restored": "boundaries/lodash/zip-object.ts",
@@ -7763,7 +7936,9 @@
         "s": "s",
         "t": "t",
         "u": "u"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "lodash"
     },
     "union-8iT5ANuG": {
       "restored": "boundaries/lodash/union.ts",
@@ -7776,14 +7951,16 @@
       }
     },
     "mermaid.core-eIokQLcr": {
-      "restored": "boundaries/mermaid/core.ts",
+      "restored": "boundaries/mermaid/mermaid-core.ts",
       "status": "done",
       "exports": {
         "default": "default"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "chunk-5PVQY5BW-CsieDbRK": {
-      "restored": "boundaries/mermaid/chunk-5pvqy5bw.ts",
+      "restored": "boundaries/d3/chunk-5-pvqy5-bw-csie-db-rk.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -7802,10 +7979,12 @@
         "s": "s",
         "t": "t",
         "u": "u"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "d3"
     },
     "chunk-U2HBQHQK-DJ4vuuzw": {
-      "restored": "boundaries/mermaid/chunk-u2hbqhqk.ts",
+      "restored": "boundaries/d3/chunk-u2-hbqhqk-dj4vuuzw.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -7813,18 +7992,22 @@
         "n": "n",
         "r": "r",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "d3"
     },
     "chunk-ZZ45TVLE-CvzuGe_q": {
-      "restored": "boundaries/mermaid/chunk-zz45tvle.ts",
+      "restored": "boundaries/mermaid/chunk-zz45-tvle-cvzu-ge-q.ts",
       "status": "done",
       "exports": {
         "n": "n",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "chunk-5FUZZQ4R-B4cKsdW4": {
-      "restored": "boundaries/mermaid/chunk-5fuzzq4r.ts",
+      "restored": "boundaries/d3/chunk-5-fuzzq4-r-b4c-ksd-w4.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -7837,10 +8020,12 @@
         "s": "s",
         "t": "t",
         "u": "u"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "d3"
     },
     "chunk-ENJZ2VHE-C0rUgAJ1": {
-      "restored": "boundaries/mermaid/chunk-enjz2vhe.ts",
+      "restored": "boundaries/d3/chunk-enjz2-vhe-c0r-ug-aj1.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -7848,16 +8033,20 @@
         "n": "n",
         "r": "r",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "d3"
     },
     "chunk-336JU56O-D9FbfXWS": {
-      "restored": "boundaries/mermaid/chunk-336ju56o.ts",
+      "restored": "boundaries/d3/chunk-336-ju56-o-d9-fbf-xws.ts",
       "status": "done",
       "exports": {
         "n": "n",
         "r": "r",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "d3"
     },
     "c4Diagram-AHTNJAMY-D1_UKJZR": {
       "restored": "boundaries/mermaid/c4-diagram-ahtnjamy.ts",
@@ -7888,18 +8077,22 @@
       }
     },
     "ganttDiagram-T4ZO3ILL-Bk_m_Nfg": {
-      "restored": "boundaries/mermaid/gantt-diagram-t4zo3ill.ts",
+      "restored": "boundaries/mermaid/gantt-diagram-t4-zo3-ill.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "infoDiagram-42DDH7IO-CA5dZBgd": {
-      "restored": "boundaries/mermaid/info-diagram-42ddh7io.ts",
+      "restored": "boundaries/mermaid/info-diagram-42-ddh7-io.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "pieDiagram-DEJITSTG-D-t1CIhj": {
       "restored": "boundaries/mermaid/pie-diagram-dejitstg.ts",
@@ -7909,39 +8102,49 @@
       }
     },
     "xychartDiagram-5P7HB3ND-B4TBc4oz": {
-      "restored": "boundaries/mermaid/xychart-diagram-5p7hb3nd.ts",
+      "restored": "boundaries/mermaid/xychart-diagram-5-p7-hb3-nd.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "requirementDiagram-MS252O5E-C4g-RuEW": {
-      "restored": "boundaries/mermaid/requirement-diagram-ms252o5e.ts",
+      "restored": "boundaries/mermaid/requirement-diagram-ms252-o5-e.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "sequenceDiagram-FGHM5R23-Bh77yTp8": {
-      "restored": "boundaries/mermaid/sequence-diagram-fghm5r23.ts",
+      "restored": "boundaries/mermaid/sequence-diagram-fghm5-r23.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "classDiagram-6PBFFD2Q-Cvxpk6bJ": {
-      "restored": "boundaries/mermaid/class-diagram-6pbffd2q.ts",
+      "restored": "boundaries/mermaid/class-diagram-6-pbffd2-q.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "classDiagram-v2-HSJHXN6E-Dhbhv0LY": {
-      "restored": "boundaries/mermaid/class-diagram-v2.ts",
+      "restored": "boundaries/mermaid/class-diagram-v2-hsjhxn6-e.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "stateDiagram-FHFEXIEX-CIdIE1IK": {
       "restored": "boundaries/mermaid/state-diagram-fhfexiex.ts",
@@ -7951,11 +8154,13 @@
       }
     },
     "stateDiagram-v2-QKLJ7IA2-CfGDQd0C": {
-      "restored": "boundaries/mermaid/state-diagram-v2.ts",
+      "restored": "boundaries/mermaid/state-diagram-v2-qklj7-ia2.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "journeyDiagram-VCZTEJTY-D0GHB_lA": {
       "restored": "boundaries/mermaid/journey-diagram-vcztejty.ts",
@@ -7965,98 +8170,108 @@
       }
     },
     "timeline-definition-GMOUNBTQ-BhxdX_wS": {
-      "restored": "boundaries/mermaid/timeline-definition.ts",
+      "restored": "boundaries/mermaid/timeline-definition-gmounbtq.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "mindmap-definition-QFDTVHPH-BlP876d6": {
-      "restored": "boundaries/mermaid/mindmap-definition.ts",
+      "restored": "boundaries/mermaid/mindmap-definition-qfdtvhph.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "kanban-definition-6JOO6SKY-cHI15BWA": {
-      "restored": "boundaries/mermaid/kanban-definition-6joo6sky.ts",
+      "restored": "utils/kanban-definition-6-joo6-sky.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
       }
     },
     "diagram-TYMM5635-DG2wO4Kx": {
-      "restored": "boundaries/mermaid/diagram-tymm5635.ts",
+      "restored": "utils/diagram-tymm5635.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
       }
     },
     "diagram-MMDJMWI5-BCvRK5AH": {
-      "restored": "boundaries/mermaid/diagram-mmdjmwi5.ts",
+      "restored": "utils/diagram-mmdjmwi5.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
       }
     },
     "blockDiagram-DXYQGD6D-CTLy8H2I": {
-      "restored": "boundaries/mermaid/block-diagram-dxyqgd6d.ts",
+      "restored": "boundaries/mermaid/block-diagram-dxyqgd6-d.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "diagram-5BDNPKRD-CNeveAHh": {
-      "restored": "boundaries/mermaid/diagram-5bdnpkrd.ts",
+      "restored": "utils/diagram-5-bdnpkrd.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
       }
     },
     "architectureDiagram-Q4EWVU46-C9aYmC2s": {
-      "restored": "boundaries/mermaid/architecture-diagram-q4ewvu46.ts",
+      "restored": "boundaries/mermaid/architecture-diagram-q4-ewvu46.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "ishikawaDiagram-UXIWVN3A-C0OZiin8": {
-      "restored": "boundaries/mermaid/ishikawa-diagram.ts",
+      "restored": "utils/ishikawa-diagram-uxiwvn3-a.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
       }
     },
     "vennDiagram-DHZGUBPP-DQ5AHg0F": {
-      "restored": "boundaries/mermaid/venn-diagram.ts",
+      "restored": "utils/venn-diagram-dhzgubpp.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
       }
     },
     "diagram-G4DWMVQ6-B4ApuIEg": {
-      "restored": "boundaries/mermaid/diagram-g4dwmvq6.ts",
+      "restored": "utils/diagram-g4-dwmvq6.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
       }
     },
     "wardleyDiagram-NUSXRM2D-DlElmt-K": {
-      "restored": "boundaries/mermaid/wardley-diagram-nusxrm2d.ts",
+      "restored": "utils/wardley-diagram-nusxrm2-d.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
       }
     },
     "dagre-KV5264BT-wPJhnht8": {
-      "restored": "boundaries/dagre/dagre-kv5264bt.ts",
+      "restored": "boundaries/dagre-kv5264-bt.ts",
       "status": "done",
       "exports": {
         "render": "render"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "runtime"
     },
     "chunk-K5T4RW27-1QwNQQi0": {
-      "restored": "boundaries/mermaid/chunk-k5t4rw27.ts",
+      "restored": "boundaries/mermaid/chunk-k5-t4-rw27-1-qw-nqqi0.ts",
       "status": "done",
       "exports": {
         "_": "_",
@@ -8077,120 +8292,146 @@
         "t": "t",
         "u": "u",
         "v": "v"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "chunk-7N4EOEYR-BEkdQLCb": {
-      "restored": "boundaries/mermaid/chunk-7n4eoeyr.ts",
+      "restored": "boundaries/mermaid/chunk-7-n4-eoeyr-bekd-qlcb.ts",
       "status": "done",
       "exports": {
         "n": "n",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "chunk-67CJDMHE-B3_SAS71": {
-      "restored": "boundaries/mermaid/chunk-67cjdmhe.ts",
+      "restored": "boundaries/mermaid/chunk-67-cjdmhe-b3-sas71.ts",
       "status": "done",
       "exports": {
         "n": "n",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "chunk-KGLVRYIC-DZY-IxHR": {
-      "restored": "boundaries/mermaid/chunk-kglvryic.ts",
+      "restored": "boundaries/mermaid/chunk-kglvryic-dzy-ix-hr.ts",
       "status": "done",
       "exports": {
         "n": "n",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "chunk-FOC6F5B3-BgcFtwB_": {
-      "restored": "boundaries/mermaid/chunk-foc6f5b3.ts",
+      "restored": "boundaries/mermaid/chunk-foc6-f5-b3-bgc-ftw-b.ts",
       "status": "done",
       "exports": {
         "n": "n",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "chunk-AA7GKIK3-Bic0nqP_": {
-      "restored": "boundaries/mermaid/chunk-aa7gkik3.ts",
+      "restored": "boundaries/mermaid/chunk-aa7-gkik3-bic0nq-p.ts",
       "status": "done",
       "exports": {
         "n": "n",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "chunk-2KRD3SAO-Bdi3VHck": {
-      "restored": "boundaries/mermaid/chunk-2krd3sao.ts",
+      "restored": "boundaries/mermaid/chunk-2-krd3-sao-bdi3-vhck.ts",
       "status": "done",
       "exports": {
         "n": "n",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "chunk-ORNJ4GCN-Dtggxgv1": {
-      "restored": "boundaries/mermaid/chunk-ornj4gcn.ts",
+      "restored": "boundaries/mermaid/chunk-ornj4-gcn-dtggxgv1.ts",
       "status": "done",
       "exports": {
         "n": "n",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "chunk-LIHQZDEY-B0GBEU3_": {
-      "restored": "boundaries/mermaid/chunk-lihqzdey.ts",
+      "restored": "boundaries/mermaid/chunk-lihqzdey-b0-gbeu3.ts",
       "status": "done",
       "exports": {
         "n": "n",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "chunk-CIAEETIT-DnOj_Z7m": {
-      "restored": "boundaries/mermaid/chunk-ciaeetit.ts",
+      "restored": "boundaries/mermaid/chunk-ciaeetit-dn-oj-z7m.ts",
       "status": "done",
       "exports": {
         "n": "n",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "mermaid-parser.core-DWICYyNZ": {
-      "restored": "boundaries/mermaid/parser.core-dwicyynz.ts",
+      "restored": "boundaries/mermaid/mermaid-parser-core.ts",
       "status": "done",
       "exports": {
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "chunk-4TB4RGXK-B3SUDt4C": {
-      "restored": "boundaries/mermaid/chunk-4tb4rgxk.ts",
+      "restored": "boundaries/d3/chunk-4-tb4-rgxk-b3-sudt4-c.ts",
       "status": "done",
       "exports": {
         "i": "i",
         "n": "n",
         "r": "r",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "d3"
     },
     "graphlib-Dk1ocXNC": {
-      "restored": "boundaries/graphlib.ts",
+      "restored": "utils/graphlib.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "dagre-Ba2O9HBx": {
-      "restored": "boundaries/dagre/dagre-ba2o9hbx.ts",
+      "restored": "boundaries/dagre.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "chunk-OYMX7WX6-DPwCFRNe": {
-      "restored": "boundaries/mermaid/chunk-oymx7wx6.ts",
+      "restored": "boundaries/mermaid/chunk-oymx7-wx6-dpw-cfrne.ts",
       "status": "done",
       "exports": {
         "i": "i",
         "n": "n",
         "r": "r",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "clone-2yQp58UZ": {
       "restored": "boundaries/lodash/clone.ts",
@@ -8200,70 +8441,88 @@
       }
     },
     "info-OMHHGYJF-VpsoNmpd": {
-      "restored": "boundaries/mermaid/info-omhhgyjf.ts",
+      "restored": "boundaries/mermaid/info-omhhgyjf-vpso-nmpd.ts",
       "status": "done",
       "exports": {
         "createInfoServices": "createInfoServices"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "packet-4T2RLAQJ-Cps_a8kh": {
-      "restored": "boundaries/mermaid/packet-4t2rlaqj.ts",
+      "restored": "boundaries/mermaid/packet-4-t2-rlaqj-cps-a8kh.ts",
       "status": "done",
       "exports": {
         "createPacketServices": "createPacketServices"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "pie-ZZUOXDRM-CTCvZluc": {
-      "restored": "boundaries/mermaid/pie-zzuoxdrm.ts",
+      "restored": "boundaries/mermaid/pie-zzuoxdrm-ctcv-zluc.ts",
       "status": "done",
       "exports": {
         "createPieServices": "createPieServices"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "treeView-SZITEDCU-CQ3h0-LJ": {
-      "restored": "boundaries/mermaid/tree-view-szitedcu.ts",
+      "restored": "boundaries/mermaid/tree-view-szitedcu-cq3h0-lj.ts",
       "status": "done",
       "exports": {
         "createTreeViewServices": "createTreeViewServices"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "architecture-YZFGNWBL-hfWpxWZF": {
-      "restored": "boundaries/mermaid/architecture-yzfgnwbl.ts",
+      "restored": "boundaries/mermaid/architecture-yzfgnwbl-hf-wpx-wzf.ts",
       "status": "done",
       "exports": {
         "createArchitectureServices": "createArchitectureServices"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "gitGraph-7Q5UKJZL-RtuWf9d8": {
-      "restored": "boundaries/mermaid/git-graph-7q5ukjzl.ts",
+      "restored": "boundaries/mermaid/git-graph-7-q5-ukjzl.ts",
       "status": "done",
       "exports": {
         "createGitGraphServices": "createGitGraphServices"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "radar-PYXPWWZC-DenUZrCa": {
-      "restored": "boundaries/mermaid/radar-pyxpwwzc.ts",
+      "restored": "boundaries/mermaid/radar-pyxpwwzc-den-uzr-ca.ts",
       "status": "done",
       "exports": {
         "createRadarServices": "createRadarServices"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "treemap-W4RFUUIX-LvOJWvcJ": {
-      "restored": "boundaries/mermaid/treemap-w4rfuuix.ts",
+      "restored": "boundaries/d3/treemap-w4-rfuuix.ts",
       "status": "done",
       "exports": {
         "createTreemapServices": "createTreemapServices"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "d3"
     },
     "wardley-RL74JXVD-DX26H2Am": {
-      "restored": "boundaries/mermaid/wardley-rl74jxvd.ts",
+      "restored": "boundaries/mermaid/wardley-rl74-jxvd-dx26-h2-am.ts",
       "status": "done",
       "exports": {
         "createWardleyServices": "createWardleyServices"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "mermaid"
     },
     "error-boundary-BOla93vo": {
-      "restored": "boundaries/error-boundary.ts",
+      "restored": "utils/error-boundary.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -8312,28 +8571,28 @@
       "status": "done"
     },
     "PopcornElectronDocumentPanel-LEVj37uj": {
-      "restored": "app/popcorn-electron-document-panel.tsx",
+      "restored": "utils/popcorn-electron-document-panel.ts",
       "status": "done",
       "exports": {
         "PopcornElectronDocumentPanel": "PopcornElectronDocumentPanel"
       }
     },
     "PopcornElectronPresentationPanel-DyLT7PAB": {
-      "restored": "app/popcorn-electron-presentation-panel.tsx",
+      "restored": "utils/popcorn-electron-presentation-panel.ts",
       "status": "done",
       "exports": {
         "PopcornElectronPresentationPanel": "PopcornElectronPresentationPanel"
       }
     },
     "PopcornElectronWorkbookPanel-Drl2YYRf": {
-      "restored": "app/popcorn-electron-workbook-panel.tsx",
+      "restored": "utils/popcorn-electron-workbook-panel.ts",
       "status": "done",
       "exports": {
         "PopcornElectronWorkbookPanel": "PopcornElectronWorkbookPanel"
       }
     },
     "avatar-overlay-realtime-voice-button-BtRztXew": {
-      "restored": "ui/avatar-overlay-realtime-voice-button-bt-rzt-xew.tsx",
+      "restored": "utils/avatar-overlay-realtime-voice-button.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -8347,7 +8606,7 @@
       }
     },
     "appgen-access-state-messages-QS14WTU1": {
-      "restored": "appgen/appgen-access-state-messages.tsx",
+      "restored": "appgen/appgen-access-state-messages.ts",
       "status": "done",
       "exports": {
         "i": "i",
@@ -8357,35 +8616,35 @@
       }
     },
     "setup-codex-wizard-step-view-BQ0iTw_T": {
-      "restored": "utils/setup-codex-wizard-step-view.ts",
+      "restored": "app/setup-codex-wizard-step-view.tsx",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "thread-scroll-layout-DsxWR6SP": {
-      "restored": "utils/thread-scroll-layout.tsx",
+      "restored": "threads/thread-scroll-layout.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "use-codex-worktrees-Zr-sRUtW": {
-      "restored": "utils/use-codex-worktrees-zr-s-r-ut-w.ts",
+      "restored": "hooks/use-codex-worktrees.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "use-git-recent-branches-Bf3U6kni": {
-      "restored": "utils/use-git-recent-branches.ts",
+      "restored": "hooks/use-git-recent-branches.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "use-home-directory-CVo0R7Wz": {
-      "restored": "utils/use-home-directory.tsx",
+      "restored": "hooks/use-home-directory.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -8393,7 +8652,7 @@
       }
     },
     "app-CAW031s_": {
-      "restored": "app/app.tsx",
+      "restored": "utils/app.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -8401,7 +8660,7 @@
       }
     },
     "app-server-notification-debug-signals-DCt-THUZ": {
-      "restored": "app/app-server-notification-debug-signals-d-ct-thuz.tsx",
+      "restored": "app/app-server-notification-debug-signals.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -8413,7 +8672,7 @@
       }
     },
     "app-shell-tab-controller-CVKUvgYM": {
-      "restored": "app-shell/app-shell-tab-controller-cvk-uvg-ym.tsx",
+      "restored": "app-shell/app-shell-tab-controller.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -8426,14 +8685,14 @@
       }
     },
     "browser-sidebar-webview-B-SVcDNr": {
-      "restored": "utils/browser-sidebar-webview-b-s-vc-d-nr.ts",
+      "restored": "app-shell/browser-sidebar-webview.tsx",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "browser-use-origin-state-queries-D3hIgMi-": {
-      "restored": "settings/browser-use-origin-state-queries.tsx",
+      "restored": "app-shell/browser-use-origin-state-queries.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -8451,14 +8710,14 @@
       }
     },
     "codex-analytics-attribution-CQbubOx-": {
-      "restored": "utils/codex-analytics-attribution-c-qbub-ox.ts",
+      "restored": "utils/codex-analytics-attribution.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "collaboration-mode-queries-CTBlLhk8": {
-      "restored": "utils/collaboration-mode-queries.tsx",
+      "restored": "utils/collaboration-mode-queries.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -8466,7 +8725,7 @@
       }
     },
     "composer-suggestion-list-BQ2rPanH": {
-      "restored": "icons/composer-suggestion-list-icon.tsx",
+      "restored": "composer/composer-suggestion-list.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -8478,7 +8737,7 @@
       }
     },
     "config-queries-C2OQQYPH": {
-      "restored": "config/config-queries.tsx",
+      "restored": "utils/config-queries.ts",
       "status": "done",
       "exports": {
         "C": "C",
@@ -8507,7 +8766,7 @@
       }
     },
     "dialog-layout-BUsOXjxz": {
-      "restored": "ui/dialog-layout.tsx",
+      "restored": "app/dialog-layout.tsx",
       "status": "done",
       "exports": {
         "a": "a",
@@ -8528,7 +8787,7 @@
       }
     },
     "get-skill-icon-BdVrkuXU": {
-      "restored": "utils/get-skill-icon-bd-vrku-xu.tsx",
+      "restored": "utils/get-skill-icon.ts",
       "status": "done",
       "exports": {
         "t": "t"
@@ -8542,21 +8801,21 @@
       }
     },
     "git-query-signal--KCsTEIa": {
-      "restored": "utils/git-query-signal-k-cs-te-ia.ts",
+      "restored": "utils/git-query-signal.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "global-dictation-page-BV05fEU5": {
-      "restored": "utils/global-dictation-page.tsx",
+      "restored": "app/global-dictation-page.tsx",
       "status": "done",
       "exports": {
         "GlobalDictationPage": "GlobalDictationPage"
       }
     },
     "heartbeat-automation-permissions-CKjRbTXW": {
-      "restored": "utils/heartbeat-automation-permissions-c-kj-rb-txw.tsx",
+      "restored": "utils/heartbeat-automation-permissions.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -8567,7 +8826,7 @@
       }
     },
     "hooks-settings-queries-5zPGjvwa": {
-      "restored": "utils/hooks-settings-queries.tsx",
+      "restored": "utils/hooks-settings-queries.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -8578,14 +8837,14 @@
       }
     },
     "hotkey-window-detail-layout-psE94glX": {
-      "restored": "utils/hotkey-window-detail-layout.tsx",
+      "restored": "utils/hotkey-window-detail-layout.ts",
       "status": "done",
       "exports": {
         "HotkeyWindowDetailLayout": "HotkeyWindowDetailLayout"
       }
     },
     "local-conversation-title-signals-ChKPHE0E": {
-      "restored": "conversations/local-conversation-title-signals.tsx",
+      "restored": "conversations/local-conversation-title-signals.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -8593,7 +8852,7 @@
       }
     },
     "local-remote-control-enabled-sync-DueNKRXX": {
-      "restored": "local-remote-control-enabled-sync.tsx",
+      "restored": "utils/local-remote-control-enabled-sync.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -8601,7 +8860,7 @@
       }
     },
     "onboarding-state-Ddi1pOV8": {
-      "restored": "app/onboarding-state.tsx",
+      "restored": "utils/onboarding-state.ts",
       "status": "done",
       "exports": {
         "_": "_",
@@ -8625,7 +8884,7 @@
       }
     },
     "parse-diff-C81j2HIg": {
-      "restored": "diff/parse-diff.tsx",
+      "restored": "utils/parse-diff.ts",
       "status": "done",
       "exports": {
         "i": "i",
@@ -8635,7 +8894,7 @@
       }
     },
     "pending-worktree-conversation-TrIGnTKW": {
-      "restored": "pending-worktree-conversation.tsx",
+      "restored": "utils/pending-worktree-conversation.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -8644,7 +8903,7 @@
       }
     },
     "pending-worktree-store-DeJU9wZe": {
-      "restored": "worktrees/pending-worktree-store.tsx",
+      "restored": "utils/pending-worktree-store.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -8664,7 +8923,7 @@
       }
     },
     "primary-runtime-install-action-Cpk3XYUC": {
-      "restored": "ui/primary-runtime-install-action.tsx",
+      "restored": "utils/primary-runtime-install-action.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -8677,7 +8936,7 @@
       }
     },
     "selectable-remote-connections-signal-DIsHsJK7": {
-      "restored": "utils/selectable-remote-connections-signal.tsx",
+      "restored": "utils/selectable-remote-connections-signal.ts",
       "status": "done",
       "exports": {
         "i": "i",
@@ -8687,7 +8946,7 @@
       }
     },
     "sidebar-task-pr-chip-signals-CaOVWYGm": {
-      "restored": "sidebar/sidebar-task-pr-chip-signals-ca-ovwy-gm.tsx",
+      "restored": "utils/sidebar-task-pr-chip-signals.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -8696,7 +8955,7 @@
       }
     },
     "thread-actions-DctPk86-": {
-      "restored": "threads/thread-actions.tsx",
+      "restored": "threads/thread-actions.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -8716,7 +8975,7 @@
       }
     },
     "thread-handoff-store-sg9zWCDG": {
-      "restored": "threads/thread-handoff-store.tsx",
+      "restored": "threads/thread-handoff-store.ts",
       "status": "done",
       "exports": {
         "i": "i",
@@ -8726,21 +8985,21 @@
       }
     },
     "thread-page-header-D_hZ50OA": {
-      "restored": "utils/thread-page-header.tsx",
+      "restored": "threads/thread-page-header.tsx",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "use-app-server-connection-state-urqZ7B3X": {
-      "restored": "utils/use-app-server-connection-state.ts",
+      "restored": "hooks/use-app-server-connection-state.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "use-codex-home-CG1itsCv": {
-      "restored": "utils/use-codex-home.tsx",
+      "restored": "hooks/use-codex-home.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -8748,7 +9007,7 @@
       }
     },
     "use-connected-remote-connections-BhOWSTjG": {
-      "restored": "utils/use-connected-remote-connections-bh-ows-tj-g.tsx",
+      "restored": "hooks/use-connected-remote-connections.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -8756,7 +9015,7 @@
       }
     },
     "use-dictation-DQROZBbT": {
-      "restored": "utils/use-dictation-dqroz-bb-t.tsx",
+      "restored": "hooks/use-dictation.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -8768,7 +9027,7 @@
       }
     },
     "use-diff-comment-sources-K8MB00rv": {
-      "restored": "utils/use-diff-comment-sources.tsx",
+      "restored": "hooks/use-diff-comment-sources.ts",
       "status": "done",
       "exports": {
         "i": "i",
@@ -8778,21 +9037,21 @@
       }
     },
     "use-global-state-C0LjG8WG": {
-      "restored": "utils/use-global-state.ts",
+      "restored": "hooks/use-global-state.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "use-is-remote-host-CdAgT54v": {
-      "restored": "utils/use-is-remote-host.ts",
+      "restored": "hooks/use-is-remote-host.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "windows-tabs-open-SksOQNvg": {
-      "restored": "app-shell/windows-tabs-open-sks-oq-nvg.tsx",
+      "restored": "utils/windows-tabs-open.ts",
       "status": "done",
       "exports": {
         "i": "i",
@@ -8802,7 +9061,7 @@
       }
     },
     "index-4bSY0Qgs": {
-      "restored": "index.tsx",
+      "restored": "app/app-entry.tsx",
       "status": "done",
       "exports": {}
     },
@@ -8812,7 +9071,7 @@
       "exports": {}
     },
     "app-shell-0b-x_r3Z": {
-      "restored": "app-shell/app-shell.tsx",
+      "restored": "app-shell/app-shell.ts",
       "status": "done",
       "exports": {
         "_": "_",
@@ -8836,7 +9095,7 @@
       }
     },
     "thread-side-panel-tabs-CLuB2SaS": {
-      "restored": "thread-side-panel-tabs-c-lu-b2-sa-s/index.ts",
+      "restored": "threads/thread-side-panel-tabs.tsx",
       "status": "done",
       "exports": {
         "_": "_",
@@ -8862,7 +9121,7 @@
       }
     },
     "chronicle-setup-state-BH1UQGSM": {
-      "restored": "utils/chronicle-setup-state.tsx",
+      "restored": "utils/chronicle-setup-state.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -8878,7 +9137,7 @@
       }
     },
     "app-server-manager-hooks-D4-J16ZL": {
-      "restored": "app/app-server-manager-hooks.tsx",
+      "restored": "app/app-server-manager-hooks.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -8893,7 +9152,7 @@
       }
     },
     "remote-connection-visibility-CzDH6oqC": {
-      "restored": "remote-connections/remote-connection-visibility.tsx",
+      "restored": "utils/remote-connection-visibility.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -8902,7 +9161,7 @@
       }
     },
     "use-auth-pK1tONyf": {
-      "restored": "utils/use-auth.tsx",
+      "restored": "hooks/use-auth.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -8917,7 +9176,7 @@
       }
     },
     "model-queries-CbKX4hvn": {
-      "restored": "settings/model-queries.tsx",
+      "restored": "utils/model-queries.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -8928,7 +9187,7 @@
       }
     },
     "use-model-settings-DJ6pxtlj": {
-      "restored": "utils/use-model-settings.tsx",
+      "restored": "hooks/use-model-settings.ts",
       "status": "done",
       "exports": {
         "i": "i",
@@ -8938,7 +9197,7 @@
       }
     },
     "config-BsjQno5-": {
-      "restored": "config/config.tsx",
+      "restored": "utils/config.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -8947,7 +9206,7 @@
       }
     },
     "open-config-toml-button-BIygSiBR": {
-      "restored": "utils/open-config-toml-button-b-iyg-si-br.tsx",
+      "restored": "utils/open-config-toml-button.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -8956,7 +9215,7 @@
       }
     },
     "open-workspace-file-syBFMe9s": {
-      "restored": "utils/open-workspace-file.tsx",
+      "restored": "utils/open-workspace-file.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -8974,7 +9233,7 @@
       }
     },
     "mcp-capability-signals-Ef9PGr3z": {
-      "restored": "mcp/mcp-capability-signals.tsx",
+      "restored": "mcp/mcp-capability-signals.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -8996,7 +9255,7 @@
       }
     },
     "use-webview-execution-target-DSM6vyid": {
-      "restored": "utils/use-webview-execution-target.tsx",
+      "restored": "hooks/use-webview-execution-target.tsx",
       "status": "done",
       "exports": {
         "i": "i",
@@ -9006,7 +9265,7 @@
       }
     },
     "remote-projects-Beixx8Gf": {
-      "restored": "remote-connections/remote-projects.tsx",
+      "restored": "utils/remote-projects.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -9018,7 +9277,7 @@
       }
     },
     "use-service-tier-settings-DDtqCMIO": {
-      "restored": "utils/use-service-tier-settings-d-dtq-cmio.tsx",
+      "restored": "hooks/use-service-tier-settings.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -9026,7 +9285,7 @@
       }
     },
     "new-chat-page-suggestion-data-B6nMEWOH": {
-      "restored": "utils/new-chat-page-suggestion-data.tsx",
+      "restored": "app/new-chat-page-suggestion-data.tsx",
       "status": "done",
       "exports": {
         "a": "a",
@@ -9040,7 +9299,7 @@
       }
     },
     "codex-api-AUWtp9Y7": {
-      "restored": "app/codex-api.tsx",
+      "restored": "utils/codex.ts",
       "status": "done",
       "exports": {
         "C": "C",
@@ -9075,7 +9334,7 @@
       }
     },
     "composer-view-state-BolUCsy-": {
-      "restored": "composer/composer-view-state-bol-u-csy.tsx",
+      "restored": "composer/composer-view-state.tsx",
       "status": "done",
       "exports": {
         "A": "A",
@@ -9126,7 +9385,7 @@
       }
     },
     "use-collaboration-mode-BbdSzC3e": {
-      "restored": "utils/use-collaboration-mode.tsx",
+      "restored": "hooks/use-collaboration-mode.ts",
       "status": "done",
       "exports": {
         "i": "i",
@@ -9136,7 +9395,7 @@
       }
     },
     "use-permissions-mode-H7h2gKaw": {
-      "restored": "utils/use-permissions-mode.tsx",
+      "restored": "hooks/use-permissions-mode.ts",
       "status": "done",
       "exports": {
         "_": "_",
@@ -9160,7 +9419,7 @@
       }
     },
     "experimental-features-queries-B5O3duhG": {
-      "restored": "utils/experimental-features-queries.tsx",
+      "restored": "utils/experimental-features-queries.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -9172,7 +9431,7 @@
       }
     },
     "use-is-plugins-enabled-Dn_J-WZf": {
-      "restored": "utils/use-is-plugins-enabled.tsx",
+      "restored": "hooks/use-is-plugins-enabled.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -9183,14 +9442,14 @@
       }
     },
     "browser-sidebar-availability-B0FcnqMw": {
-      "restored": "utils/browser-sidebar-availability.ts",
+      "restored": "app-shell/browser-sidebar-availability.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "use-plugins-Dex8E4w_": {
-      "restored": "utils/use-plugins.tsx",
+      "restored": "hooks/use-plugins.ts",
       "status": "done",
       "exports": {
         "_": "_",
@@ -9215,7 +9474,7 @@
       }
     },
     "apps-queries-9OR8lHId": {
-      "restored": "app/apps-queries.tsx",
+      "restored": "utils/apps-queries.ts",
       "status": "done",
       "exports": {
         "C": "C",
@@ -9246,14 +9505,14 @@
       }
     },
     "connector-logo-CxTweOVv": {
-      "restored": "utils/connector-logo-cx-twe-o-vv.tsx",
+      "restored": "utils/connector-logo.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "review-navigation-model-CBRECxyy": {
-      "restored": "review/review-navigation-model-cbre-cxyy.tsx",
+      "restored": "review/review-navigation-model.tsx",
       "status": "done",
       "exports": {
         "$": "$",
@@ -9367,16 +9626,18 @@
       }
     },
     "file-tree-search-input-NbmVwPvW": {
-      "restored": "boundaries/file-tree-search-input-nbm-vw-pv-w.tsx",
+      "restored": "boundaries/pierre/file-tree-search-input.ts",
       "status": "done",
       "exports": {
         "n": "n",
         "r": "r",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "@pierre/trees"
     },
     "review-file-source-tab-DGKieCSd": {
-      "restored": "review/review-file-source-tab-dg-kie-c-sd.tsx",
+      "restored": "review/review-file-source.tsx",
       "status": "done",
       "exports": {
         "a": "a",
@@ -9391,7 +9652,7 @@
       }
     },
     "thread-context-B0hBrRyZ": {
-      "restored": "threads/thread-context.tsx",
+      "restored": "threads/thread-context.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -9402,7 +9663,7 @@
       }
     },
     "git-current-branch-query-CFP8_GIA": {
-      "restored": "git/git-current-branch-query.tsx",
+      "restored": "utils/git-current-branch-query.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -9411,7 +9672,7 @@
       }
     },
     "project-context-signal-IsmVossZ": {
-      "restored": "sidebar/project-context-signal-ism-voss-z.tsx",
+      "restored": "app/project-context-signal.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -9432,7 +9693,7 @@
       }
     },
     "thread-browser-panel-tabs-xnatAPyu": {
-      "restored": "threads/thread-browser-panel-tabs-xnat-a-pyu.tsx",
+      "restored": "threads/thread-browser-panel-tabs.tsx",
       "status": "done",
       "exports": {
         "a": "a",
@@ -9468,7 +9729,7 @@
       }
     },
     "use-fast-mode-personalized-estimate-BHhOBo0i": {
-      "restored": "utils/use-fast-mode-personalized-estimate.tsx",
+      "restored": "hooks/use-fast-mode-personalized-estimate.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -9476,7 +9737,7 @@
       }
     },
     "plugin-detail-route-utils-CTmxD8df": {
-      "restored": "plugins/plugin-detail-route-utils.tsx",
+      "restored": "plugins/plugin-detail-route-utils.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -9493,7 +9754,7 @@
       }
     },
     "use-native-apps.electron-BKycNd6Z": {
-      "restored": "utils/use-native-apps-electron.tsx",
+      "restored": "hooks/use-native-apps-electron.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -9509,7 +9770,7 @@
       }
     },
     "inline-mentions-Cd3ZgYUW": {
-      "restored": "utils/inline-mentions.tsx",
+      "restored": "utils/inline-mentions.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -9529,7 +9790,7 @@
       }
     },
     "workspace-file-context-menu-CRMd6a6y": {
-      "restored": "workspace/workspace-file-context-menu.tsx",
+      "restored": "utils/workspace-file-context-menu.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -9541,7 +9802,7 @@
       }
     },
     "open-project-setup-dialog-DfiB5SB2": {
-      "restored": "utils/open-project-setup-dialog.tsx",
+      "restored": "app/open-project-setup-dialog.tsx",
       "status": "done",
       "exports": {
         "a": "a",
@@ -9560,7 +9821,7 @@
       }
     },
     "local-projects-CoROwpJd": {
-      "restored": "local-projects.tsx",
+      "restored": "utils/local-projects.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -9576,7 +9837,7 @@
       }
     },
     "sidebar-project-group-signals-D2VtGUgM": {
-      "restored": "sidebar/sidebar-project-group-signals.tsx",
+      "restored": "utils/sidebar-project-group-signals.ts",
       "status": "done",
       "exports": {
         "A": "A",
@@ -9616,7 +9877,7 @@
       }
     },
     "sidebar-project-groups-Df1VWnri": {
-      "restored": "sidebar/sidebar-project-groups.tsx",
+      "restored": "utils/sidebar-project-groups.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -9634,7 +9895,7 @@
       }
     },
     "run-command-B0E8hx7Q": {
-      "restored": "run-command.ts",
+      "restored": "utils/run-command.ts",
       "status": "done",
       "exports": {
         "i": "i",
@@ -9644,14 +9905,14 @@
       }
     },
     "use-register-command-T-86rz-c": {
-      "restored": "utils/use-register-command-t.ts",
+      "restored": "hooks/use-register-command.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "use-skills-C9xSD3RA": {
-      "restored": "utils/use-skills.tsx",
+      "restored": "hooks/use-skills.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -9659,7 +9920,7 @@
       }
     },
     "external-link-pp1LMUpE": {
-      "restored": "utils/external-link.tsx",
+      "restored": "utils/external-link.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -9673,7 +9934,7 @@
       }
     },
     "use-start-new-conversation-BwhKpfnA": {
-      "restored": "utils/use-start-new-conversation-bwh-kpfn-a.tsx",
+      "restored": "hooks/use-start-new-conversation.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -9681,7 +9942,7 @@
       }
     },
     "plugins-availability-DrjE8pE1": {
-      "restored": "plugins/plugins-availability.tsx",
+      "restored": "plugins/plugins-availability.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -9696,7 +9957,7 @@
       }
     },
     "read-service-tier-for-request-BPRlTKNo": {
-      "restored": "utils/read-service-tier-for-request-bp-rl-tk-no.tsx",
+      "restored": "utils/read-service-tier-for-request.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -9704,7 +9965,7 @@
       }
     },
     "realtime-controller-BATZPSKT": {
-      "restored": "conversations/realtime-controller-batzpskt.tsx",
+      "restored": "utils/realtime-controller.ts",
       "status": "done",
       "exports": {
         "C": "C",
@@ -9735,7 +9996,7 @@
       }
     },
     "check-plugin-availability-DSvDEMVw": {
-      "restored": "utils/check-plugin-availability-d-sv-dem-vw.tsx",
+      "restored": "utils/check-plugin-availability.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -9748,7 +10009,7 @@
       }
     },
     "plugin-detail-queries-CWOBv83x": {
-      "restored": "plugins/plugin-detail-queries.tsx",
+      "restored": "plugins/plugin-detail-queries.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -9774,14 +10035,14 @@
       }
     },
     "threads-create-BgOrVsS2": {
-      "restored": "utils/threads-create.ts",
+      "restored": "threads/threads-create.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "app-server-dynamic-tools-BrqYk-Lp": {
-      "restored": "app/app-server-dynamic-tools-brq-yk-lp.tsx",
+      "restored": "app/app-server-dynamic-tools.ts",
       "status": "done",
       "exports": {
         "A": "A",
@@ -9831,7 +10092,7 @@
       }
     },
     "composer-DlMDPaCL": {
-      "restored": "composer/composer-dl-md-pa-cl.tsx",
+      "restored": "composer/composer.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -9852,7 +10113,7 @@
       }
     },
     "upgrade-plan-dialog-launcher-D8774Vm2": {
-      "restored": "utils/upgrade-plan-dialog-launcher.tsx",
+      "restored": "app/upgrade-plan-dialog-launcher.tsx",
       "status": "done",
       "exports": {
         "n": "n",
@@ -9861,7 +10122,7 @@
       }
     },
     "heartbeat-automation-eligibility-C1_JL34W": {
-      "restored": "utils/heartbeat-automation-eligibility.tsx",
+      "restored": "utils/heartbeat-automation-eligibility.ts",
       "status": "done",
       "exports": {
         "_": "_",
@@ -9886,7 +10147,7 @@
       }
     },
     "sidebar-project-hover-card-source-rows-DtE7St1r": {
-      "restored": "icons/sidebar-project-hover-card-source-rows",
+      "restored": "utils/sidebar-project-hover-card-source-rows.ts",
       "status": "done",
       "exports": {
         "_": "_",
@@ -9909,7 +10170,7 @@
       }
     },
     "sidebar-thread-row-signals-ZqNv-_WT": {
-      "restored": "sidebar/sidebar-thread-row-signals.tsx",
+      "restored": "utils/sidebar-thread-row-signals.ts",
       "status": "done",
       "exports": {
         "C": "C",
@@ -9938,7 +10199,7 @@
       }
     },
     "local-active-workspace-root-dropdown-B28GluSz": {
-      "restored": "local-active-workspace-root-dropdown.tsx",
+      "restored": "utils/local-active-workspace-root-dropdown.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -9947,7 +10208,7 @@
       }
     },
     "settings-back-route-BfYwS6rz": {
-      "restored": "settings/settings-back-route.tsx",
+      "restored": "settings/settings-back-route.ts",
       "status": "done",
       "exports": {
         "i": "i",
@@ -9957,7 +10218,7 @@
       }
     },
     "usage-queries-CItzwIo9": {
-      "restored": "settings/usage-queries.tsx",
+      "restored": "utils/usage-queries.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -9978,7 +10239,7 @@
       }
     },
     "rate-limit-rows-B5kE6YOz": {
-      "restored": "utils/rate-limit-rows.tsx",
+      "restored": "utils/rate-limit-rows.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -9987,7 +10248,7 @@
       }
     },
     "gpu-tearing-debug-settings-CRjSwcqV": {
-      "restored": "icons/gpu-tearing-debug-settings-icon.tsx",
+      "restored": "utils/gpu-tearing-debug-settings.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -10021,7 +10282,7 @@
       }
     },
     "mcp-capability-thread-side-panel-tab-Du0Zkl3p": {
-      "restored": "mcp/mcp-capability-thread-side-panel-tab.tsx",
+      "restored": "mcp/mcp-capability-thread-side-panel.tsx",
       "status": "done",
       "exports": {
         "n": "n",
@@ -10029,7 +10290,7 @@
       }
     },
     "use-plugin-install-flow-DDuwrr2c": {
-      "restored": "utils/use-plugin-install-flow.tsx",
+      "restored": "hooks/use-plugin-install-flow.ts",
       "status": "done",
       "exports": {
         "_": "_",
@@ -10052,7 +10313,7 @@
       }
     },
     "local-task-row-CoPNn6SW": {
-      "restored": "local-task-row.tsx",
+      "restored": "utils/local-task.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -10070,7 +10331,7 @@
       }
     },
     "settings-host-context-DiRourTr": {
-      "restored": "settings/settings-host-context-di-rour-tr.tsx",
+      "restored": "settings/settings-host-context.ts",
       "status": "done",
       "exports": {
         "i": "i",
@@ -10080,14 +10341,14 @@
       }
     },
     "use-git-current-branch-Nkmrrr5P": {
-      "restored": "utils/use-git-current-branch.ts",
+      "restored": "hooks/use-git-current-branch.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "git-config-value-query-BKgFljZW": {
-      "restored": "git/git-config-value-query-b-kg-flj-zw.tsx",
+      "restored": "utils/git-config-value-query.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -10095,7 +10356,7 @@
       }
     },
     "local-environment-selection-Dz7Qei2P": {
-      "restored": "local-environment-selection.tsx",
+      "restored": "utils/local-environment-selection.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -10108,7 +10369,7 @@
       }
     },
     "chat-reply-plus-HRBzDa8r": {
-      "restored": "icons/chat-reply-plus-icon.tsx",
+      "restored": "utils/chat-reply-plus.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -10117,7 +10378,7 @@
       }
     },
     "app-server-connection-state-DiMba98f": {
-      "restored": "app/app-server-connection-state.tsx",
+      "restored": "app/app-server-connection-state.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -10126,7 +10387,7 @@
       }
     },
     "profile-dropdown-DP7ZIWri": {
-      "restored": "settings/profile-dropdown.tsx",
+      "restored": "utils/profile-dropdown.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -10135,7 +10396,7 @@
       }
     },
     "rate-limit-reset-modal-bsUY5-t3": {
-      "restored": "utils/rate-limit-reset-modal.tsx",
+      "restored": "utils/rate-limit-reset-modal.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -10143,14 +10404,14 @@
       }
     },
     "referral-invite-modal-CL-_nI4E": {
-      "restored": "utils/referral-invite-modal.tsx",
+      "restored": "utils/referral-invite-modal.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "profile-visibility-xdIEz8NE": {
-      "restored": "settings/profile-visibility.tsx",
+      "restored": "utils/profile-visibility.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -10158,14 +10419,14 @@
       }
     },
     "use-usage-settings-access-Bq_PKiLc": {
-      "restored": "utils/use-usage-settings-access.ts",
+      "restored": "hooks/use-usage-settings-access.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "remote-hosted-pip-visibility-C9P5oSR7": {
-      "restored": "remote-connections/remote-hosted-pip-visibility.tsx",
+      "restored": "utils/remote-hosted-pip-visibility.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -10186,7 +10447,7 @@
       }
     },
     "composer-controller-BluSmzzW": {
-      "restored": "composer/composer-controller-blu-smzz-w.tsx",
+      "restored": "composer/composer-controller.ts",
       "status": "done",
       "exports": {
         "C": "C",
@@ -10220,7 +10481,7 @@
       }
     },
     "appshot-availability-BgG_Trde": {
-      "restored": "app/appshot-availability.tsx",
+      "restored": "utils/appshot-availability.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -10228,7 +10489,7 @@
       }
     },
     "mention-metadata-syncer-CqO3dJsO": {
-      "restored": "composer/mention-metadata-syncer.tsx",
+      "restored": "utils/mention-metadata-syncer.ts",
       "status": "done",
       "exports": {
         "_": "_",
@@ -10255,7 +10516,7 @@
       }
     },
     "local-remote-selection-DRnEOc8g": {
-      "restored": "local-remote-selection.tsx",
+      "restored": "utils/local-remote-selection.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -10275,7 +10536,7 @@
       }
     },
     "thread-side-panel-active-signals-C1-SoZ32": {
-      "restored": "icons/thread-side-panel-active-signals-icon.tsx",
+      "restored": "threads/thread-side-panel-active-signals.tsx",
       "status": "done",
       "exports": {
         "a": "a",
@@ -10287,17 +10548,19 @@
       }
     },
     "markdown-DiCZL58u": {
-      "restored": "markdown/markdown.tsx",
+      "restored": "boundaries/markdown.ts",
       "status": "done",
       "exports": {
         "i": "i",
         "n": "n",
         "r": "r",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "markdown"
     },
     "service-tier-icons-C-0I5QrR": {
-      "restored": "settings/service-tier-icons-c.tsx",
+      "restored": "utils/service-tier-icons.tsx",
       "status": "done",
       "exports": {
         "a": "a",
@@ -10314,7 +10577,7 @@
       }
     },
     "use-realtime-waveform-pWcesRB9": {
-      "restored": "utils/use-realtime-waveform.tsx",
+      "restored": "hooks/use-realtime-waveform.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -10328,7 +10591,7 @@
       }
     },
     "use-git-default-branch-mDzZlpy3": {
-      "restored": "utils/use-git-default-branch.tsx",
+      "restored": "hooks/use-git-default-branch.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -10336,7 +10599,7 @@
       }
     },
     "cube-O-IHqibI": {
-      "restored": "icons/cube",
+      "restored": "boundaries/d3/cube.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -10349,10 +10612,12 @@
         "s": "s",
         "t": "t",
         "u": "u"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "d3"
     },
     "app-connect-oauth-CaBlbuQW": {
-      "restored": "app/app-connect-oauth-ca-blbu-qw.tsx",
+      "restored": "utils/app-connect-oauth.ts",
       "status": "done",
       "exports": {
         "i": "i",
@@ -10362,14 +10627,14 @@
       }
     },
     "use-app-connect-flow-B7CQFxUf": {
-      "restored": "utils/use-app-connect-flow.ts",
+      "restored": "hooks/use-app-connect-flow.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "image-preview-dialog-UAOcAGuQ": {
-      "restored": "utils/image-preview-dialog-ua-oc-a-gu-q.tsx",
+      "restored": "app/image-preview-dialog.tsx",
       "status": "done",
       "exports": {
         "_": "_",
@@ -10394,7 +10659,7 @@
       }
     },
     "use-dictation-hotkey-C5D34XOY": {
-      "restored": "icons/use-dictation-hotkey-icon.tsx",
+      "restored": "hooks/use-dictation-hotkey.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -10405,7 +10670,7 @@
       }
     },
     "external-markdown-link-D1oNFxGx": {
-      "restored": "utils/external-markdown-link.tsx",
+      "restored": "utils/external-markdown-link.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -10413,7 +10678,7 @@
       }
     },
     "slash-command-item-CjEpy4Fo": {
-      "restored": "utils/slash-command-item.tsx",
+      "restored": "utils/slash-command-item.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -10425,7 +10690,7 @@
       }
     },
     "model-and-reasoning-dropdown-Bn1odDoL": {
-      "restored": "settings/model-and-reasoning-dropdown.tsx",
+      "restored": "utils/model-and-reasoning-dropdown.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -10437,21 +10702,21 @@
       }
     },
     "use-personality-BfBCBHKs": {
-      "restored": "utils/use-personality-bf-bcbh-ks.ts",
+      "restored": "hooks/use-personality.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "use-is-thread-realtime-enabled-ChiO9bP6": {
-      "restored": "utils/use-is-thread-realtime-enabled.ts",
+      "restored": "hooks/use-is-thread-realtime-enabled.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "use-is-dictation-supported-BVXWfQC0": {
-      "restored": "utils/use-is-dictation-supported.ts",
+      "restored": "hooks/use-is-dictation-supported.ts",
       "status": "done",
       "exports": {
         "t": "t"
@@ -10487,7 +10752,7 @@
       }
     },
     "workspace-onboarding-controller-FdX3OkH-": {
-      "restored": "workspace/workspace-onboarding-controller.tsx",
+      "restored": "utils/workspace-onboarding-controller.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -10498,14 +10763,14 @@
       }
     },
     "right-panel-composer-overlay-DMF22kzH": {
-      "restored": "utils/right-panel-composer-overlay.tsx",
+      "restored": "app/right-panel-composer-overlay.tsx",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "workspace-file-command-menu-bridge-Clbln8oj": {
-      "restored": "workspace/workspace-file-command-menu-bridge.tsx",
+      "restored": "utils/workspace-file-command-menu-bridge.ts",
       "status": "done",
       "exports": {
         "i": "i",
@@ -10515,14 +10780,14 @@
       }
     },
     "use-workspace-file-search-D0QLzi6-": {
-      "restored": "utils/use-workspace-file-search.ts",
+      "restored": "hooks/use-workspace-file-search.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "at-mention-list-B6CRGiqm": {
-      "restored": "composer/at-mention-list.tsx",
+      "restored": "utils/at-mention-list.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -10535,21 +10800,21 @@
       }
     },
     "use-nux-ChpUn11I": {
-      "restored": "utils/use-nux.ts",
+      "restored": "hooks/use.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "nux-gate-ncVyDQKh": {
-      "restored": "utils/nux-gate-nc-vy-dq-kh.tsx",
+      "restored": "utils/nux-gate.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "interrupted-turn-state-C57E0EEC": {
-      "restored": "utils/interrupted-turn-state.tsx",
+      "restored": "utils/interrupted-turn-state.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -10584,7 +10849,7 @@
       }
     },
     "project-dropdown-options-yIKBFAMU": {
-      "restored": "sidebar/project-dropdown-options-y-ikbfamu.tsx",
+      "restored": "app/project-dropdown-options.tsx",
       "status": "done",
       "exports": {
         "n": "n",
@@ -10592,14 +10857,14 @@
       }
     },
     "anchored-autocomplete-overlay-BlIqtofW": {
-      "restored": "utils/anchored-autocomplete-overlay-bl-iqtof-w.tsx",
+      "restored": "utils/anchored-autocomplete-overlay.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "mcp-capability-client-bEM-4Syx": {
-      "restored": "mcp/mcp-capability-client.tsx",
+      "restored": "mcp/mcp-capability-client.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -10608,7 +10873,7 @@
       }
     },
     "prompt-editor-BlZkiXwF": {
-      "restored": "utils/prompt-editor-bl-zki-xw-f.tsx",
+      "restored": "utils/prompt-editor.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -10624,7 +10889,7 @@
       }
     },
     "browser-use-settings-visibility-D4TmRWJy": {
-      "restored": "settings/browser-use-settings-visibility.tsx",
+      "restored": "app-shell/browser-use-settings-visibility.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -10632,7 +10897,7 @@
       }
     },
     "browser-sidebar-comment-light-dismiss-DRiHKZ_J": {
-      "restored": "app-shell/browser-sidebar-comment-light-dismiss.tsx",
+      "restored": "app-shell/browser-sidebar-comment-light-dismiss.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -10643,7 +10908,7 @@
       }
     },
     "action-popover-primitives-BriXOYq-": {
-      "restored": "ui/action-popover-primitives-bri-xo-yq.tsx",
+      "restored": "utils/action-popover-primitives.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -10651,7 +10916,7 @@
       }
     },
     "pull-request-code-review-comments-BJSQHV-3": {
-      "restored": "review/pull-request-code-review-comments.tsx",
+      "restored": "pull-request/pull-request-code-review-comments.tsx",
       "status": "done",
       "exports": {
         "a": "a",
@@ -10667,7 +10932,7 @@
       }
     },
     "diff-unified-DxejA8Ix": {
-      "restored": "icons/diff-unified",
+      "restored": "utils/diff-unified.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -10680,7 +10945,7 @@
       }
     },
     "use-diff-annotations-BlWb9ays": {
-      "restored": "files/use-diff-annotations.tsx",
+      "restored": "hooks/use-diff-annotations.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -10701,15 +10966,17 @@
       }
     },
     "markdown-surface-Dcd0fY_C": {
-      "restored": "markdown/markdown-surface.tsx",
+      "restored": "boundaries/markdown-surface.ts",
       "status": "done",
       "exports": {
         "n": "n",
         "t": "t"
-      }
+      },
+      "dependencyBoundary": true,
+      "vendor": "markdown"
     },
     "open-artifact-side-panel-tab-RYQlTc4U": {
-      "restored": "utils/open-artifact-side-panel-tab.tsx",
+      "restored": "app/open-artifact-side-panel.tsx",
       "status": "done",
       "exports": {
         "_": "_",
@@ -10733,21 +11000,21 @@
       }
     },
     "artifact-tab-content-shell-icQ_Lc-H": {
-      "restored": "utils/artifact-tab-content-shell.tsx",
+      "restored": "utils/artifact-tab-content-shell.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "workspace-directory-tree-BQF7iG51": {
-      "restored": "utils/workspace-directory-tree.tsx",
+      "restored": "utils/workspace-directory-tree.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "git-branch-picker-dropdown-content-tZj3VhUw": {
-      "restored": "git/git-branch-picker-dropdown-content.tsx",
+      "restored": "utils/git-branch-picker-dropdown-content.ts",
       "status": "done",
       "exports": {
         "A": "A",
@@ -10797,7 +11064,7 @@
       }
     },
     "external-agent-import-step-CMOeL9Tm": {
-      "restored": "plugins/external-agent-import-step.tsx",
+      "restored": "utils/external-agent-import-step.ts",
       "status": "done",
       "exports": {
         "C": "C",
@@ -10826,35 +11093,35 @@
       }
     },
     "feedback-form-dialog-U7w-wHRu": {
-      "restored": "utils/feedback-form-dialog.tsx",
+      "restored": "app/feedback-form-dialog.tsx",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "skills-page-MmDyVSrF": {
-      "restored": "utils/skills-page-mm-dy-v-sr-f.ts",
+      "restored": "app/skills-page.tsx",
       "status": "done",
       "exports": {
         "SkillsPage": "SkillsPage"
       }
     },
     "app-prefetch-impl-DEaoqJMj": {
-      "restored": "utils/app-prefetch-impl-d-eaoq-j-mj.ts",
+      "restored": "app/app-prefetch-impl.ts",
       "status": "done",
       "exports": {
         "AppPrefetchImpl": "AppPrefetchImpl"
       }
     },
     "browser-sidebar-hidden-background-webview-host-Dh1K2IP3": {
-      "restored": "utils/browser-sidebar-hidden-background-webview-host.tsx",
+      "restored": "app-shell/browser-sidebar-hidden-background-webview-host.tsx",
       "status": "done",
       "exports": {
         "HiddenBackgroundBrowserWebviewHost": "HiddenBackgroundBrowserWebviewHost"
       }
     },
     "browser-sidebar-hidden-browser-use-webview-host-_NfLzTex": {
-      "restored": "utils/browser-sidebar-hidden-browser-use-webview-host.tsx",
+      "restored": "app-shell/browser-sidebar-hidden-browser-use-webview-host.tsx",
       "status": "done",
       "exports": {
         "HiddenBrowserUseWebviewHost": "HiddenBrowserUseWebviewHost"
@@ -10868,49 +11135,49 @@
       }
     },
     "home-ambient-suggestions-content-0qjD7n9w": {
-      "restored": "utils/home-ambient-suggestions-content.tsx",
+      "restored": "utils/home-ambient-suggestions-content.ts",
       "status": "done",
       "exports": {
         "HomeAmbientSuggestionsContent": "HomeAmbientSuggestionsContent"
       }
     },
     "home-announcements-BzumwVfO": {
-      "restored": "utils/home-announcements-bzumw-vf-o.ts",
+      "restored": "utils/home-announcements.ts",
       "status": "done",
       "exports": {
         "HomeAnnouncements": "HomeAnnouncements"
       }
     },
     "home-conversation-starters-CEE2lhSM": {
-      "restored": "utils/home-conversation-starters.tsx",
+      "restored": "utils/home-conversation-starters.ts",
       "status": "done",
       "exports": {
         "HomeConversationStarters": "HomeConversationStarters"
       }
     },
     "home-prefill-artifact-preview-ciErCuwX": {
-      "restored": "utils/home-prefill-artifact-preview-ci-er-cuw-x.ts",
+      "restored": "utils/home-prefill-artifact-preview.ts",
       "status": "done",
       "exports": {
         "HomePrefillArtifactPreview": "HomePrefillArtifactPreview"
       }
     },
     "header-Cpemc0SQ": {
-      "restored": "header-c-pemc-0-sq/index.ts",
+      "restored": "utils/header.ts",
       "status": "done",
       "exports": {
         "Header": "Header"
       }
     },
     "thread-app-shell-chrome-BO6HRgmC": {
-      "restored": "utils/thread-app-shell-chrome.ts",
+      "restored": "threads/thread-app-shell-chrome.ts",
       "status": "done",
       "exports": {
         "ThreadAppShellChrome": "ThreadAppShellChrome"
       }
     },
     "thread-side-panel-tabs-BmVvC20Y": {
-      "restored": "thread-side-panel-tabs-bm-vv-c20-y/index.ts",
+      "restored": "threads/thread-side-panel-tabs.tsx",
       "status": "done",
       "exports": {
         "THREAD_SIDE_PANEL_TAB": "THREAD_SIDE_PANEL_TAB",
@@ -10933,7 +11200,7 @@
       }
     },
     "upgrade-plan-dialog-BClBnbFb": {
-      "restored": "utils/upgrade-plan-dialog-b-cl-bnb-fb.tsx",
+      "restored": "app/upgrade-plan-dialog.tsx",
       "status": "done",
       "exports": {
         "UpgradePlanDialog": "UpgradePlanDialog",
@@ -10948,21 +11215,21 @@
       }
     },
     "profile-CLgRQZ35": {
-      "restored": "utils/profile.tsx",
+      "restored": "utils/profile.ts",
       "status": "done",
       "exports": {
         "Profile": "Profile"
       }
     },
     "keyboard-shortcuts-settings-BuLGCo4B": {
-      "restored": "utils/keyboard-shortcuts-settings.tsx",
+      "restored": "utils/keyboard-shortcuts-settings.ts",
       "status": "done",
       "exports": {
         "KeyboardShortcutsSettings": "KeyboardShortcutsSettings"
       }
     },
     "appshots-settings-Yk90QG0U": {
-      "restored": "utils/appshots-settings.tsx",
+      "restored": "utils/appshots-settings.ts",
       "status": "done",
       "exports": {
         "AppshotsSettings": "AppshotsSettings"
@@ -10976,322 +11243,322 @@
       }
     },
     "pets-settings-_TH06fGl": {
-      "restored": "utils/pets-settings.tsx",
+      "restored": "settings/pets-settings.ts",
       "status": "done",
       "exports": {
         "PetsSettings": "PetsSettings"
       }
     },
     "agent-settings-CvASSGEK": {
-      "restored": "utils/agent-settings-cv-assgek.tsx",
+      "restored": "utils/agent-settings.ts",
       "status": "done",
       "exports": {
         "AgentSettings": "AgentSettings"
       }
     },
     "git-settings-Bv6LnZbi": {
-      "restored": "utils/git-settings.tsx",
+      "restored": "utils/git-settings.ts",
       "status": "done",
       "exports": {
         "GitSettings": "GitSettings"
       }
     },
     "data-controls-JI5kzCyG": {
-      "restored": "utils/data-controls.tsx",
+      "restored": "utils/data-controls.ts",
       "status": "done",
       "exports": {
         "DataControlsSettings": "DataControlsSettings"
       }
     },
     "code-review-settings-DnoRR0qO": {
-      "restored": "utils/code-review-settings.tsx",
+      "restored": "utils/code-review-settings.ts",
       "status": "done",
       "exports": {
         "CodeReviewSettings": "CodeReviewSettings"
       }
     },
     "cloud-preferences-settings-DFJ0Jg4r": {
-      "restored": "utils/cloud-preferences-settings.tsx",
+      "restored": "utils/cloud-preferences-settings.ts",
       "status": "done",
       "exports": {
         "CloudPreferencesSettings": "CloudPreferencesSettings"
       }
     },
     "cloud-environments-settings-page-Cx0Mfko0": {
-      "restored": "utils/cloud-environments-settings-page.tsx",
+      "restored": "settings/cloud-environments-settings-page.tsx",
       "status": "done",
       "exports": {
         "CloudEnvironmentsSettingsPage": "CloudEnvironmentsSettingsPage"
       }
     },
     "personalization-settings-CgsRnWnO": {
-      "restored": "utils/personalization-settings-cgs-rn-wn-o.tsx",
+      "restored": "utils/personalization-settings.ts",
       "status": "done",
       "exports": {
         "PersonalizationSettings": "PersonalizationSettings"
       }
     },
     "usage-settings-BMxGTDii": {
-      "restored": "utils/usage-settings-b-mx-gt-dii.tsx",
+      "restored": "utils/usage-settings.ts",
       "status": "done",
       "exports": {
         "UsageSettings": "UsageSettings"
       }
     },
     "computer-use-settings-Ychxe5nc": {
-      "restored": "utils/computer-use-settings.tsx",
+      "restored": "utils/computer-use-settings.ts",
       "status": "done",
       "exports": {
         "ComputerUseSettings": "ComputerUseSettings"
       }
     },
     "browser-use-settings-Bc9PWqgc": {
-      "restored": "utils/browser-use-settings.ts",
+      "restored": "app-shell/browser-use-settings.ts",
       "status": "done",
       "exports": {
         "BrowserUseSettings": "BrowserUseSettings"
       }
     },
     "local-environments-settings-page-Cp3j5N6T": {
-      "restored": "utils/local-environments-settings-page.tsx",
+      "restored": "settings/local-environments-settings-page.tsx",
       "status": "done",
       "exports": {
         "LocalEnvironmentsSettings": "LocalEnvironmentsSettings"
       }
     },
     "worktrees-settings-page-KeLyIYZM": {
-      "restored": "utils/worktrees-settings-page-ke-ly-iyzm.tsx",
+      "restored": "worktrees/worktrees-settings-page.tsx",
       "status": "done",
       "exports": {
         "WorktreesSettingsPage": "WorktreesSettingsPage"
       }
     },
     "settings-external-section-j-RLbjnz": {
-      "restored": "utils/settings-external-section-j-r-lbjnz.ts",
+      "restored": "settings/settings-external-section.ts",
       "status": "done",
       "exports": {
         "SettingsExternalSection": "SettingsExternalSection"
       }
     },
     "mcp-settings-Cq9pFeQZ": {
-      "restored": "utils/mcp-settings.tsx",
+      "restored": "mcp/mcp-settings.ts",
       "status": "done",
       "exports": {
         "McpSettings": "McpSettings"
       }
     },
     "hooks-settings-BF44UPd8": {
-      "restored": "utils/hooks-settings.tsx",
+      "restored": "utils/hooks-settings.ts",
       "status": "done",
       "exports": {
         "HooksSettings": "HooksSettings"
       }
     },
     "remote-connections-settings-B6vDfO5t": {
-      "restored": "utils/remote-connections-settings.tsx",
+      "restored": "utils/remote-connections-settings.ts",
       "status": "done",
       "exports": {
         "RemoteConnectionsSettings": "RemoteConnectionsSettings"
       }
     },
     "plugins-settings-CQvYlpn-": {
-      "restored": "utils/plugins-settings-c-qv-ylpn.ts",
+      "restored": "plugins/plugins-settings.ts",
       "status": "done",
       "exports": {
         "PluginsSettings": "PluginsSettings"
       }
     },
     "skills-settings-GryY6HHv": {
-      "restored": "utils/skills-settings.tsx",
+      "restored": "utils/skills-settings.ts",
       "status": "done",
       "exports": {
         "SkillsSettings": "SkillsSettings"
       }
     },
     "app-connect-oauth-callback-page-Nd-xrVUk": {
-      "restored": "utils/app-connect-oauth-callback-page-nd-xr-v-uk.tsx",
+      "restored": "app/app-connect-oauth-callback-page.tsx",
       "status": "done",
       "exports": {
         "AppConnectOAuthCallbackPage": "AppConnectOAuthCallbackPage"
       }
     },
     "mcp-capability-view-page-CcdZNGc5": {
-      "restored": "utils/mcp-capability-view-page.tsx",
+      "restored": "mcp/mcp-capability-view-page.tsx",
       "status": "done",
       "exports": {
         "McpCapabilityViewPage": "McpCapabilityViewPage"
       }
     },
     "automations-page-BFQuKuEO": {
-      "restored": "utils/automations-page-bf-qu-ku-eo.tsx",
+      "restored": "automations/automations-page.tsx",
       "status": "done",
       "exports": {
         "AutomationsLayoutPage": "AutomationsLayoutPage"
       }
     },
     "avatar-overlay-featuregate-page-CRiP1JP-": {
-      "restored": "utils/avatar-overlay-featuregate-page.ts",
+      "restored": "app/avatar-overlay-featuregate-page.tsx",
       "status": "done",
       "exports": {
         "AvatarOverlayFeatureGatePage": "AvatarOverlayFeatureGatePage"
       }
     },
     "editor-diff-page-BN9SpgRO": {
-      "restored": "utils/editor-diff-page.tsx",
+      "restored": "app/editor-diff-page.tsx",
       "status": "done",
       "exports": {
         "EditorDiffPage": "EditorDiffPage"
       }
     },
     "debug-window-page-BIrOfRh8": {
-      "restored": "utils/debug-window-page.tsx",
+      "restored": "app/debug-window-page.tsx",
       "status": "done",
       "exports": {
         "DebugWindowPage": "DebugWindowPage"
       }
     },
     "codex-mobile-page-CSkjlAkB": {
-      "restored": "utils/codex-mobile-page-c-skjl-ak-b.ts",
+      "restored": "app/codex-mobile-page.tsx",
       "status": "done",
       "exports": {
         "CodexMobilePage": "CodexMobilePage"
       }
     },
     "hotkey-window-home-page-YLbKpnoq": {
-      "restored": "utils/hotkey-window-home-page-y-lb-kpnoq.tsx",
+      "restored": "app-shell/hotkey-window-home-page.tsx",
       "status": "done",
       "exports": {
         "HotkeyWindowHomePage": "HotkeyWindowHomePage"
       }
     },
     "hotkey-window-new-thread-page-Dywp1I0z": {
-      "restored": "utils/hotkey-window-new-thread-page.tsx",
+      "restored": "app-shell/hotkey-window-new-thread-page.tsx",
       "status": "done",
       "exports": {
         "HotkeyWindowNewThreadPage": "HotkeyWindowNewThreadPage"
       }
     },
     "hotkey-window-thread-page-DR_ipVzx": {
-      "restored": "utils/hotkey-window-thread-page.tsx",
+      "restored": "app-shell/hotkey-window-thread-page.tsx",
       "status": "done",
       "exports": {
         "HotkeyWindowThreadPage": "HotkeyWindowThreadPage"
       }
     },
     "hotkey-window-worktree-init-page-VqUV9ko8": {
-      "restored": "utils/hotkey-window-worktree-init-page.tsx",
+      "restored": "app-shell/hotkey-window-worktree-init-page.tsx",
       "status": "done",
       "exports": {
         "HotkeyWindowWorktreeInitPage": "HotkeyWindowWorktreeInitPage"
       }
     },
     "local-conversation-page-dVDt8SxG": {
-      "restored": "utils/local-conversation-page.tsx",
+      "restored": "conversations/local-conversation-page.tsx",
       "status": "done",
       "exports": {
         "LocalConversationPage": "LocalConversationPage"
       }
     },
     "plan-summary-page-Dna8xoOv": {
-      "restored": "utils/plan-summary-page.tsx",
+      "restored": "app/plan-summary-page.tsx",
       "status": "done",
       "exports": {
         "PlanSummaryPage": "PlanSummaryPage"
       }
     },
     "projects-index-page-DI6pziij": {
-      "restored": "utils/projects-index-page.tsx",
+      "restored": "app/projects-index-page.tsx",
       "status": "done",
       "exports": {
         "ProjectsIndexPage": "ProjectsIndexPage"
       }
     },
     "login-route-Cx8NmtG2": {
-      "restored": "utils/login-route.tsx",
+      "restored": "utils/login-route.ts",
       "status": "done",
       "exports": {
         "LoginRoute": "LoginRoute"
       }
     },
     "select-workspace-page-Dy3SyU1M": {
-      "restored": "utils/select-workspace-page.tsx",
+      "restored": "app/select-workspace-page.tsx",
       "status": "done",
       "exports": {
         "SelectWorkspacePage": "SelectWorkspacePage"
       }
     },
     "settings-page-m3AjVjtg": {
-      "restored": "utils/settings-page.tsx",
+      "restored": "settings/settings-page.tsx",
       "status": "done",
       "exports": {
         "SettingsPage": "SettingsPage"
       }
     },
     "pricing-plan-page-ZPeBbufJ": {
-      "restored": "utils/pricing-plan-page-z-pe-bbuf-j.tsx",
+      "restored": "app/pricing-plan-page.tsx",
       "status": "done",
       "exports": {
         "PricingPlanPage": "PricingPlanPage"
       }
     },
     "onboarding-page-LcCVsmiu": {
-      "restored": "utils/onboarding-page-lc-c-vsmiu.tsx",
+      "restored": "app/onboarding-page.tsx",
       "status": "done",
       "exports": {
         "OnboardingPage": "OnboardingPage"
       }
     },
     "new-thread-panel-page-Eu1HVlOZ": {
-      "restored": "utils/new-thread-panel-page.tsx",
+      "restored": "app/new-thread-panel-page.tsx",
       "status": "done",
       "exports": {
         "NewThreadPanelPage": "NewThreadPanelPage"
       }
     },
     "plugin-detail-page-DlGRZEbz": {
-      "restored": "utils/plugin-detail-page-dl-grz-ebz.ts",
+      "restored": "plugins/plugin-detail-page.tsx",
       "status": "done",
       "exports": {
         "PluginDetailPage": "PluginDetailPage"
       }
     },
     "pull-requests-page-DDwwua2d": {
-      "restored": "utils/pull-requests-page.tsx",
+      "restored": "pull-request/pull-requests-page.tsx",
       "status": "done",
       "exports": {
         "PullRequestsPage": "PullRequestsPage"
       }
     },
     "remote-connections-page-CDoJq-7A": {
-      "restored": "utils/remote-connections-page.ts",
+      "restored": "remote-connections/remote-connections-page.tsx",
       "status": "done",
       "exports": {
         "RemoteConnectionsPage": "RemoteConnectionsPage"
       }
     },
     "remote-conversation-page-DprMD2U0": {
-      "restored": "utils/remote-conversation-page.tsx",
+      "restored": "app/remote-conversation-page.tsx",
       "status": "done",
       "exports": {
         "RemoteConversationPage": "RemoteConversationPage"
       }
     },
     "appgen-page-CkE6mnYU": {
-      "restored": "utils/appgen-page.tsx",
+      "restored": "appgen/appgen-page.tsx",
       "status": "done",
       "exports": {
         "AppgenPage": "AppgenPage"
       }
     },
     "appgen-library-page-D3zTMSC7": {
-      "restored": "utils/appgen-library-page.tsx",
+      "restored": "appgen/appgen-library-page.tsx",
       "status": "done",
       "exports": {
         "AppgenLibraryPage": "AppgenLibraryPage"
       }
     },
     "appgen-settings-page-DGJch-hA": {
-      "restored": "utils/appgen-settings-page-dg-jch-h-a.tsx",
+      "restored": "appgen/appgen-settings-page.tsx",
       "status": "done",
       "exports": {
         "AppgenSettingsPage": "AppgenSettingsPage"
@@ -11305,7 +11572,7 @@
       }
     },
     "worktree-init-v2-page-HsjKMA2F": {
-      "restored": "worktree-init-v2-page-hsj-kma-2-f/index.ts",
+      "restored": "worktrees/worktree-init-v2-page.tsx",
       "status": "done",
       "exports": {
         "WorktreeInitPage": "WorktreeInitPage"
@@ -11319,7 +11586,7 @@
       }
     },
     "pkg-CJtlEP_l": {
-      "restored": "boundaries/pkg.tsx",
+      "restored": "utils/pkg.ts",
       "status": "done",
       "exports": {
         "Analytics": "Analytics",
@@ -11341,14 +11608,14 @@
       }
     },
     "composer-external-footer-C2Y9blhm": {
-      "restored": "utils/composer-external-footer.tsx",
+      "restored": "composer/composer-external-footer.ts",
       "status": "done",
       "exports": {
         "ComposerExternalFooter": "ComposerExternalFooter"
       }
     },
     "above-composer-suggestions-CH3FxJQy": {
-      "restored": "utils/above-composer-suggestions.tsx",
+      "restored": "utils/above-composer-suggestions.ts",
       "status": "done",
       "exports": {
         "AboveComposerSuggestions": "AboveComposerSuggestions"
@@ -11362,42 +11629,42 @@
       }
     },
     "pending-request-item-panel-BIpmxdaQ": {
-      "restored": "utils/pending-request-item-panel-b-ipmxda-q.tsx",
+      "restored": "app/pending-request-item-panel.tsx",
       "status": "done",
       "exports": {
         "PendingRequestItemPanel": "PendingRequestItemPanel"
       }
     },
     "queued-message-list-Bk6KV-jt": {
-      "restored": "utils/queued-message-list.tsx",
+      "restored": "utils/queued-message-list.ts",
       "status": "done",
       "exports": {
         "QueuedMessageList": "QueuedMessageList"
       }
     },
     "review-mode-content-CLHm2QkI": {
-      "restored": "utils/review-mode-content.tsx",
+      "restored": "review/review-mode-content.tsx",
       "status": "done",
       "exports": {
         "ReviewModeContent": "ReviewModeContent"
       }
     },
     "browser-profile-import-dialog-D1qMiO6m": {
-      "restored": "utils/browser-profile-import-dialog.tsx",
+      "restored": "app/browser-profile-import-dialog.tsx",
       "status": "done",
       "exports": {
         "BrowserProfileImportDialogModal": "BrowserProfileImportDialogModal"
       }
     },
     "artifact-tab-content.electron-CyWdVlct": {
-      "restored": "utils/artifact-tab-content-electron-cy-wd-vlct.tsx",
+      "restored": "utils/artifact-tab-content-electron.ts",
       "status": "done",
       "exports": {
         "ArtifactTabContent": "ArtifactTabContent"
       }
     },
     "use-workspace-users-BuMotENr": {
-      "restored": "utils/use-workspace-users-bu-mot-e-nr.tsx",
+      "restored": "hooks/use-workspace-users.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -11420,7 +11687,7 @@
       }
     },
     "plugin-detail-page-C-S4JUEx": {
-      "restored": "plugins/plugin-detail-page-c.tsx",
+      "restored": "plugins/plugin-detail-page.tsx",
       "status": "done",
       "exports": {
         "A": "A",
@@ -11467,7 +11734,7 @@
       }
     },
     "plugin-uninstall-dialog-B-C7-Phm": {
-      "restored": "utils/plugin-uninstall-dialog-b.tsx",
+      "restored": "plugins/plugin-uninstall-dialog.tsx",
       "status": "done",
       "exports": {
         "t": "t"
@@ -11486,28 +11753,28 @@
       }
     },
     "settings-host-dropdown-BDIFNoo6": {
-      "restored": "utils/settings-host-dropdown.tsx",
+      "restored": "settings/settings-host-dropdown.tsx",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "skills-page-BeVRmdB3": {
-      "restored": "utils/skills-page.tsx",
+      "restored": "app/skills-page.tsx",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "use-git-config-value-Bnyud4Db": {
-      "restored": "utils/use-git-config-value.ts",
+      "restored": "hooks/use-git-config-value.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "git-submodule-paths-query-DIo47mr-": {
-      "restored": "git/git-submodule-paths-query.tsx",
+      "restored": "utils/git-submodule-paths-query.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -11515,7 +11782,7 @@
       }
     },
     "ambient-suggestion-apps-DdP0OibX": {
-      "restored": "app/ambient-suggestion-apps.tsx",
+      "restored": "utils/ambient-suggestion-apps.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -11526,7 +11793,7 @@
       }
     },
     "home-onboarding-assistant-tutorial-card-DrPL6Veg": {
-      "restored": "app/home-onboarding-assistant-tutorial-card.tsx",
+      "restored": "utils/home-onboarding-assistant-tutorial-card.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -11543,7 +11810,7 @@
       }
     },
     "codex-mobile-setup-dialog-CubQheHr": {
-      "restored": "app/codex-mobile-setup-dialog-cub-qhe-hr.tsx",
+      "restored": "app/codex-mobile-setup-dialog.tsx",
       "status": "done",
       "exports": {
         "a": "a",
@@ -11555,7 +11822,7 @@
       }
     },
     "debug-modal-DFKoe0qr": {
-      "restored": "utils/debug-modal.tsx",
+      "restored": "utils/debug-modal.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -11563,7 +11830,7 @@
       }
     },
     "use-debug-panel-BQHHISJM": {
-      "restored": "utils/use-debug-panel-bqhhisjm.tsx",
+      "restored": "app/use-debug-panel.tsx",
       "status": "done",
       "exports": {
         "a": "a",
@@ -11576,7 +11843,7 @@
       }
     },
     "conversation-CpM7wQ5B": {
-      "restored": "conversations/conversation.tsx",
+      "restored": "conversations/conversation.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -11597,21 +11864,21 @@
       }
     },
     "home-announcements-ys_LB9Gg": {
-      "restored": "utils/home-announcements.tsx",
+      "restored": "utils/home-announcements.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "header-DgzE38hF": {
-      "restored": "header-dgz-e38-hf.tsx",
+      "restored": "utils/header.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "local-conversation-turn-BmqVwWdf": {
-      "restored": "conversations/local-conversation-turn-bmq-vw-wdf.tsx",
+      "restored": "conversations/local-conversation-turn.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -11626,7 +11893,7 @@
       }
     },
     "git-branch-switcher-Dc3Rf_Jy": {
-      "restored": "git/git-branch-switcher.tsx",
+      "restored": "utils/git-branch-switcher.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -11637,7 +11904,7 @@
       }
     },
     "local-remote-dropdown-BX0mMvJK": {
-      "restored": "local-remote-dropdown.tsx",
+      "restored": "utils/local-remote-dropdown.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -11645,7 +11912,7 @@
       }
     },
     "patch-item-content-zipiBosg": {
-      "restored": "diff/patch-item-content-zipi-bosg.tsx",
+      "restored": "utils/patch-item-content.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -11657,7 +11924,7 @@
       }
     },
     "patch-diff-stats-DBMgLllB": {
-      "restored": "diff/patch-diff-stats-db-mg-lll-b.tsx",
+      "restored": "utils/patch-diff-stats.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -11665,14 +11932,14 @@
       }
     },
     "user-formatted-text-CI6sQNhV": {
-      "restored": "utils/user-formatted-text.tsx",
+      "restored": "utils/user-formatted-text.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "user-message-attachments-5G1ZKim-": {
-      "restored": "utils/user-message-attachments.tsx",
+      "restored": "utils/user-message-attachments.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -11692,7 +11959,7 @@
       }
     },
     "local-conversation-thread-tEA3qvi1": {
-      "restored": "conversations/local-conversation-thread.tsx",
+      "restored": "conversations/local-conversation-thread.ts",
       "status": "done",
       "exports": {
         "_": "_",
@@ -11718,7 +11985,7 @@
       }
     },
     "split-items-into-render-groups-DSulUsUG": {
-      "restored": "utils/split-items-into-render-groups-d-sul-us-ug.tsx",
+      "restored": "utils/split-items-into-render-groups.ts",
       "status": "done",
       "exports": {
         "C": "C",
@@ -11748,7 +12015,7 @@
       }
     },
     "thread-overflow-menu-fbrVHkWR": {
-      "restored": "threads/thread-overflow-menu-fbr-v-hk-wr.tsx",
+      "restored": "threads/thread-overflow-menu.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -11756,7 +12023,7 @@
       }
     },
     "plan-summary-item-content-BsESCXw0": {
-      "restored": "summary-item-content.tsx",
+      "restored": "utils/plan-summary-item-content.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -11764,14 +12031,14 @@
       }
     },
     "thread-app-shell-chrome-DCxIEqvQ": {
-      "restored": "utils/thread-app-shell-chrome-d-cx-i-eqv-q.tsx",
+      "restored": "threads/thread-app-shell-chrome.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "subscription-update-plan-D2uMfgET": {
-      "restored": "subscription-update-plan.tsx",
+      "restored": "utils/subscription-update-plan.ts",
       "status": "done",
       "exports": {
         "i": "i",
@@ -11781,7 +12048,7 @@
       }
     },
     "general-settings-U7DFIZBC": {
-      "restored": "settings/general-settings.tsx",
+      "restored": "utils/general-settings.ts",
       "status": "done",
       "exports": {
         "i": "i",
@@ -11798,7 +12065,7 @@
       }
     },
     "browser-use-settings-CITKdwyy": {
-      "restored": "settings/browser-use-settings-cit-kdwyy.tsx",
+      "restored": "app-shell/browser-use-settings.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -11818,7 +12085,7 @@
       }
     },
     "codex-mobile-setup-flow-NuuQuXft": {
-      "restored": "app/codex-mobile-setup-flow-nuu-qu-xft.tsx",
+      "restored": "utils/codex-mobile-setup-flow.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -11832,28 +12099,28 @@
       }
     },
     "worktree-environment-dropdown-_JdYz4cO": {
-      "restored": "utils/worktree-environment-dropdown.tsx",
+      "restored": "utils/worktree-environment-dropdown.ts",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "avatar-overlay-native-page-BQoNWTAx": {
-      "restored": "utils/avatar-overlay-native-page-b-qo-nwt-ax.ts",
+      "restored": "app/avatar-overlay-native-page.tsx",
       "status": "done",
       "exports": {
         "AvatarOverlayNativePage": "AvatarOverlayNativePage"
       }
     },
     "avatar-overlay-page-Dvr9Lgpo": {
-      "restored": "utils/avatar-overlay-page.tsx",
+      "restored": "app/avatar-overlay-page.tsx",
       "status": "done",
       "exports": {
         "AvatarOverlayPage": "AvatarOverlayPage"
       }
     },
     "composer-footer-branch-switcher-Bb-gnPy1": {
-      "restored": "composer/composer-footer-branch-switcher.tsx",
+      "restored": "composer/composer-footer-branch-switcher.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -11862,7 +12129,7 @@
       }
     },
     "local-conversation-stream-role-product-event-CSenTRdI": {
-      "restored": "conversations/local-conversation-stream-role-product-event-c-sen-t-rd-i.tsx",
+      "restored": "conversations/local-conversation-stream-role-product-event.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -11870,14 +12137,14 @@
       }
     },
     "worktree-init-v2-page-_SjZivpn": {
-      "restored": "worktree-init-v2-page-sj-zivpn.tsx",
+      "restored": "worktrees/worktree-init-v2-page.tsx",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "onboarding-roles-Dtb3fisD": {
-      "restored": "app/onboarding-roles.tsx",
+      "restored": "utils/onboarding-roles.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -11888,49 +12155,49 @@
       }
     },
     "appgen-share-dialog-DXPJlTmi": {
-      "restored": "utils/appgen-share-dialog-dxp-jl-tmi.tsx",
+      "restored": "appgen/appgen-share-dialog.tsx",
       "status": "done",
       "exports": {
         "t": "t"
       }
     },
     "docx-preview-panel-BOs3KN8r": {
-      "restored": "utils/docx-preview-panel.tsx",
+      "restored": "app/docx-preview-panel.tsx",
       "status": "done",
       "exports": {
         "DocxPreviewPanel": "DocxPreviewPanel"
       }
     },
     "notebook-preview-panel-ujTYTolt": {
-      "restored": "utils/notebook-preview-panel-uj-ty-tolt.tsx",
+      "restored": "app/notebook-preview-panel.tsx",
       "status": "done",
       "exports": {
         "NotebookPreviewPanel": "NotebookPreviewPanel"
       }
     },
     "pdf-preview-panel-BhgzCAZ1": {
-      "restored": "utils/pdf-preview-panel.tsx",
+      "restored": "app/pdf-preview-panel.tsx",
       "status": "done",
       "exports": {
         "PdfPreviewPanel": "PdfPreviewPanel"
       }
     },
     "appgen-share-dialog-CQf-7R-I": {
-      "restored": "utils/appgen-share-dialog.ts",
+      "restored": "appgen/appgen-share-dialog.tsx",
       "status": "done",
       "exports": {
         "AppgenShareDialog": "AppgenShareDialog"
       }
     },
     "conversation-markdown-C4gLm7ft": {
-      "restored": "utils/conversation-markdown.ts",
+      "restored": "conversations/conversation-markdown.ts",
       "status": "done",
       "exports": {
         "renderConversationMarkdown": "renderConversationMarkdown"
       }
     },
     "avatar-overlay-native-frame-60_MXXD5": {
-      "restored": "ui/avatar-overlay-native-frame.tsx",
+      "restored": "utils/avatar-overlay-native-frame.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -11938,7 +12205,7 @@
       }
     },
     "use-avatar-overlay-selection-BQJVVYdR": {
-      "restored": "utils/use-avatar-overlay-selection-bqjvv-yd-r.tsx",
+      "restored": "hooks/use-avatar-overlay-selection.tsx",
       "status": "done",
       "exports": {
         "a": "a",
@@ -11954,7 +12221,7 @@
       }
     },
     "paged-annotation-comment-ui-CRTnR6p4": {
-      "restored": "utils/paged-annotation-comment-ui.tsx",
+      "restored": "utils/paged-annotation-comment.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -11974,7 +12241,7 @@
       }
     },
     "workbook-from-markdown-Do0YNaaN": {
-      "restored": "popcorn/workbook-from-markdown.tsx",
+      "restored": "utils/workbook-from-markdown.ts",
       "status": "done",
       "exports": {
         "buildTableValuesFromMarkdown": "buildTableValuesFromMarkdown",

@@ -116,7 +116,12 @@ export function logAnnotationStart(
 export function logAnnotationSubmit(
   logger: unknown,
   context: ArtifactAnalyticsContext,
-  { annotationModeEnabled, annotationTargetKind, submitMode, submitSource }: AnnotationSubmitOptions,
+  {
+    annotationModeEnabled,
+    annotationTargetKind,
+    submitMode,
+    submitSource,
+  }: AnnotationSubmitOptions,
 ) {
   logProductEvent(logger, D, {
     ...buildArtifactContext(context),

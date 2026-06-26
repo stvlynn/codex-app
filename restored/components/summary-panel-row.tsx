@@ -44,7 +44,8 @@ export function SummaryPanelRow({
   onPointerDown,
   ...rest
 }: SummaryPanelRowProps & React.HTMLAttributes<HTMLDivElement>): JSX.Element {
-  const hasClickHandler = onClick != null || onPointerDown != null || onKeyDown != null;
+  const hasClickHandler =
+    onClick != null || onPointerDown != null || onKeyDown != null;
   const isClickable = !disabled && hasClickHandler;
   const isInteractive = !disabled && (interactive || hasClickHandler);
 

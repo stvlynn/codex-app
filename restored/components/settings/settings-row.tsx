@@ -37,7 +37,9 @@ export function SettingsRow({
           {icon != null && <span className="shrink-0">{icon}</span>}
           <div className="flex min-w-0 flex-col gap-1">
             {label != null && (
-              <div className="min-w-0 text-sm text-token-text-primary">{label}</div>
+              <div className="min-w-0 text-sm text-token-text-primary">
+                {label}
+              </div>
             )}
             {description != null && (
               <div
@@ -108,7 +110,9 @@ export function SettingsRowButton({
         <div className="flex min-w-0 items-center gap-3">
           {icon != null && <span className="shrink-0">{icon}</span>}
           <div className="flex min-w-0 flex-col gap-1">
-            <div className="min-w-0 text-sm text-token-text-primary">{label}</div>
+            <div className="min-w-0 text-sm text-token-text-primary">
+              {label}
+            </div>
             {description != null && (
               <div className="min-w-0 text-sm text-token-text-secondary">
                 {description}
