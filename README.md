@@ -18,11 +18,19 @@ Typical flow: **refresh `./ref` from the app → deobfuscate `./ref` into `./res
 ## Prerequisites
 
 - **macOS** with the **[Codex desktop app](https://chatgpt.com/codex)** installed at `/Applications/Codex.app` (required by the refresh skill — it reads the app's `app.asar`).
-- **Node.js** (the refresh skill runs `node` and `npx @electron/asar` / `prettier`).
+- **Node.js** `>=20.0.0` and **pnpm** `9.0.0` — the root workspace uses `pnpm` (`corepack enable` to use the declared `packageManager`).
 - **[Bun](https://bun.sh)** (the deobfuscate skill's scripts are TypeScript run with `bun`).
 - An agent that can run skills (Claude Code, or any Codex/agent harness that reads `.agents/skills`). You can also run the bundled scripts by hand — see below.
 
 The skills live under [`.agents/skills/`](.agents/skills/). Point your agent at this repo, then invoke a skill by name; or run the scripts directly.
+
+## Quick start
+
+```bash
+make dev      # Install dependencies and validate the workspace
+make check    # Run typecheck + test + docs:check
+make help     # Show all available targets
+```
 
 ---
 

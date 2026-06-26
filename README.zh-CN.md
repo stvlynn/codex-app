@@ -18,11 +18,19 @@
 ## 前置条件
 
 - **macOS**，并已安装 **[Codex 桌面应用](https://chatgpt.com/codex)** 于 `/Applications/Codex.app`（同步 Skill 需要读取它的 `app.asar`）。
-- **Node.js**（同步 Skill 会调用 `node` 和 `npx @electron/asar` / `prettier`）。
+- **Node.js** `>=20.0.0` 与 **pnpm** `9.0.0` —— 根工作区使用 `pnpm`（启用 `corepack enable` 以使用声明的 `packageManager`）。
 - **[Bun](https://bun.sh)**（反混淆 Skill 的脚本是用 `bun` 运行的 TypeScript）。
 - 一个能运行 Skill 的 Agent（Claude Code，或任何读取 `.agents/skills` 的 Codex/Agent 环境）。也可以手动运行内置脚本，见下文。
 
 两个 Skill 位于 [`.agents/skills/`](.agents/skills/)。把 Agent 指向本仓库后按名字调用即可；或直接运行脚本。
+
+## 快速开始
+
+```bash
+make dev      # 安装依赖并验证工作区
+make check    # 运行类型检查 + 测试 + 文档检查
+make help     # 显示所有可用目标
+```
 
 ---
 

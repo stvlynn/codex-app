@@ -1,5 +1,21 @@
 # Commands
 
+## Makefile targets
+
+The root `Makefile` delegates to `pnpm` scripts and keeps common tasks in one place.
+
+```bash
+make dev      # Install dependencies and validate the workspace
+make check    # Run typecheck + test + docs:check
+make test     # Run deobfuscation skill tests
+make typecheck
+make lint
+make format
+make docs     # Validate docs/ structure
+make deploy   # Show deployment pointer
+make help     # Show all targets
+```
+
 ## Refresh `./ref` from the installed app
 
 ```bash
