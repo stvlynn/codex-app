@@ -1,0 +1,20 @@
+// Restored from ref/webview/assets/stop-Dq7o1Ent.js
+// Semantic icon module: named React component with JSX return value.
+
+import type { SVGProps } from "react";
+export type IconProps = SVGProps<SVGSVGElement>;
+export function StopIcon(props: IconProps) {
+  return (
+    <svg
+      width={20}
+      height={20}
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path d="M4.5 5.75C4.5 5.05964 5.05964 4.5 5.75 4.5H14.25C14.9404 4.5 15.5 5.05964 15.5 5.75V14.25C15.5 14.9404 14.9404 15.5 14.25 15.5H5.75C5.05964 15.5 4.5 14.9404 4.5 14.25V5.75Z" />
+    </svg>
+  );
+}
+export default StopIcon;

@@ -1,0 +1,52 @@
+// Restored from ref/webview/assets/document-D7i1z3mE.js
+//
+// Re-export shim: protobuf document types surfaced with semantic names.
+
+import { C as documentC } from "../mermaid/document";
+import { S as documentS } from "../mermaid/document";
+import { _ as document_ } from "../mermaid/document";
+import { a as documenta } from "../mermaid/document";
+import { b as documentb } from "../mermaid/document";
+import { c as documentc } from "../mermaid/document";
+import { d as documentd } from "../mermaid/document";
+import { f as documentf } from "../mermaid/document";
+import { g as documentg } from "../mermaid/document";
+import { h as documenth } from "../mermaid/document";
+import { i as documenti } from "../mermaid/document";
+import { l as documentl } from "../mermaid/document";
+import { m as documentm } from "../mermaid/document";
+import { n as documentn } from "../mermaid/document";
+import { o as documento } from "../mermaid/document";
+import { p as documentp } from "../mermaid/document";
+import { r as documentr } from "../mermaid/document";
+import { s as documents } from "../mermaid/document";
+import { t as documentt } from "../mermaid/document";
+import { u as documentu } from "../mermaid/document";
+import { v as documentv } from "../mermaid/document";
+import { w as documentw } from "../mermaid/document";
+import { x as documentx } from "../mermaid/document";
+import { y as documenty } from "../mermaid/document";
+export { documentC as SectionBreakType };
+export { documentS as Playground };
+export { document_ as NumberingDefinition };
+export { documenta as CommentReference };
+export { documentb as PageSetup };
+export { documentc as DocumentSection };
+export { documentd as EmbeddedFontType };
+export { documentf as Endnote };
+export { documentg as NoteProperties };
+export { documenth as HeaderFooterContent };
+export { documenti as Comment };
+export { documentl as DocumentSettings };
+export { documentm as Footnote };
+export { documentn as ArtifactType };
+export { documento as Document };
+export { documentp as FontDefinition };
+export { documentr as ColumnLayout };
+export { documents as DocumentGrid };
+export { documentt as Artifact };
+export { documentu as EmbeddedFont };
+export { documentv as NumberingLevel };
+export { documentw as protobufPackage };
+export { documentx as ParagraphNumbering };
+export { documenty as PageMargin };

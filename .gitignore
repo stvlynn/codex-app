@@ -1,0 +1,31 @@
+# Generated artifacts
+ref/
+restored/
+
+# Deobfuscation skill dependencies
+.agents/skills/deobfuscate-javascript/node_modules/
+.agents/skills/deobfuscate-javascript/bun.lock
+
+# Temporary analysis and debugging files
+tmp-*
+.tmp-*
+debug-*.ts
+debug-*.js
+*.log
+
+# Local workspace
+.workspace/
+.drafts/
+.notes/
+
+# OS and editor files
+.DS_Store
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Python cache
+__pycache__/
+*.pyc

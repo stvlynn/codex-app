@@ -1,0 +1,12 @@
+{
+  "name": "decode-codex",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Reverse-engineering workspace for the OpenAI Codex macOS app.",
+  "scripts": {
+    "test": "cd .agents/skills/deobfuscate-javascript && bun test",
+    "typecheck": "cd .agents/skills/deobfuscate-javascript && bun tsc --noEmit",
+    "docs:check": "node scripts/check-docs.mjs",
+    "check": "npm run typecheck && npm run test && npm run docs:check"
+  }
+}

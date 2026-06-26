@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex App Ref Refresh"
+  short_description: "Refresh Codex app asar into ./ref"
+  default_prompt: "Use $codex-app-ref-refresh to refresh ./ref from the installed Codex.app asar and format extracted JS/CSS."

@@ -1,0 +1,104 @@
+// Restored from ref/webview/assets/get-attached-heartbeat-automation-for-thread--SYt845Y.js
+// Automation status ring SVG component and heartbeat automation finder.
+
+import clsx from "clsx";
+import { UnselectedCircleIcon } from "../icons/unselected-circle-icon";
+const RADIUS = 5.75;
+const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
+const GAP = 1.5;
+export type CheckStatus = "failing" | "passing" | "pending" | "skipped" | "unknown";
+export interface CheckItem {
+  status: CheckStatus;
+}
+export interface CheckRingSegment {
+  color: string;
+  count: number;
+  key: string;
+  ratio: number;
+}
+export interface AutomationStatusRingProps {
+  className?: string;
+  checks: CheckItem[];
+}
+function computeCheckSegments(checks: CheckItem[]): CheckRingSegment[] {
+  const total = checks.length;
+  if (total === 0) return [];
+  const counts = {
+    failing: checks.filter(c => c.status === "failing").length,
+    passing: checks.filter(c => c.status === "passing").length,
+    pending: checks.filter(c => c.status === "pending").length,
+    skipped: checks.filter(c => c.status === "skipped").length,
+    unknown: checks.filter(c => c.status === "unknown").length
+  };
+  return [{
+    color: "var(--color-token-charts-green)",
+    count: counts.passing,
+    key: "passing"
+  }, {
+    color: "var(--color-token-charts-red)",
+    count: counts.failing,
+    key: "failing"
+  }, {
+    color: "var(--color-token-charts-yellow)",
+    count: counts.pending,
+    key: "pending"
+  }, {
+    color: "var(--color-token-description-foreground)",
+    count: counts.skipped + counts.unknown,
+    key: "skipped"
+  }].filter(s => s.count > 0).map(s => ({
+    color: s.color,
+    key: s.key,
+    ratio: s.count / total
+  }));
+}
+export function AutomationStatusRing(props: AutomationStatusRingProps): JSX.Element {
+  const {
+    className = "icon-sm shrink-0",
+    checks
+  } = props;
+  const segments = computeCheckSegments(checks);
+  const ringClass = clsx("text-token-description-foreground", className);
+  if (segments.length === 0) {
+    return <UnselectedCircleIcon className={ringClass} />;
+  }
+  const gap = segments.length > 1 ? GAP : 0;
+  let accumulated = 0;
+  return <svg aria-hidden={true} className={ringClass} fill="none" viewBox="0 0 18 18">
+      <g transform="rotate(-90 9 9)">
+        {segments.map(segment => {
+        const arcLength = CIRCUMFERENCE * segment.ratio;
+        const dashArray = `${Math.max(arcLength - gap, 0.001)} ${CIRCUMFERENCE}`;
+        const offset = -(accumulated + gap / 2);
+        accumulated += arcLength;
+        return <circle key={segment.key} cx="9" cy="9" r={RADIUS} stroke={segment.color} strokeDasharray={dashArray} strokeDashoffset={offset} strokeLinecap="butt" strokeWidth="1.7" />;
+      })}
+      </g>
+    </svg>;
+}
+export interface Automation {
+  status: "ACTIVE" | "PAUSED";
+  targetThreadId: string | null;
+}
+export interface FindAttachedAutomationOptions {
+  automations: Automation[];
+  conversationId: string | null;
+  includePausedAutomations?: boolean;
+}
+function isHeartbeatAutomation(automation: Automation): boolean {
+  return automation.targetThreadId != null;
+}
+export function findAttachedHeartbeatAutomation(options: FindAttachedAutomationOptions): Automation | null {
+  const {
+    automations,
+    conversationId,
+    includePausedAutomations = false
+  } = options;
+  if (conversationId == null) return null;
+  return automations.find(automation => isHeartbeatAutomation(automation) && (automation.status === "ACTIVE" || includePausedAutomations && automation.status === "PAUSED") && automation.targetThreadId === conversationId) ?? null;
+}
+export function ClockIcon(props: React.SVGProps<SVGSVGElement>): JSX.Element {
+  return <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} fill="currentColor" viewBox="0 0 20 20" {...props}>
+      <path d="M10.012 1.669a8.343 8.343 0 0 1 8.343 8.343 8.343 8.343 0 0 1-8.343 8.343 8.343 8.343 0 0 1-8.343-8.343 8.343 8.343 0 0 1 8.343-8.343Zm0 1.668a6.675 6.675 0 1 0 0 13.35 6.675 6.675 0 0 0 0-13.35Zm0 1.669a5.007 5.007 0 1 1 0 10.012V5.006Z" />
+    </svg>;
+}
