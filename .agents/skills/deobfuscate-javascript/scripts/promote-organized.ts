@@ -456,7 +456,7 @@ function qualityOptionsFor(
   classification: string | undefined,
   tier: "readable" | "deep",
 ): QualityGateOptions {
-  if (classification === "vendor-runtime" || classification === "boundary") {
+  if (classification === "vendor" || classification === "vendor-runtime" || classification === "boundary") {
     return {
       ...DEFAULT_OPTIONS,
       vendored: true,
@@ -468,6 +468,7 @@ function qualityOptionsFor(
     return {
       ...DEFAULT_OPTIONS,
       allowFlat: true,
+      allowMechanicalNames: true,
     };
   }
   // Readable tier ships organized-but-untyped output; deep tier enforces types.
