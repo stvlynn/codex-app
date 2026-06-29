@@ -16,3 +16,15 @@ export declare const r: any;
 export declare const s: any;
 export declare const t: any;
 export declare const u: any;
+
+// Aliases used by consumer checkpoints
+export declare const chunkJZLCHNYAA: any;
+export declare const chunkJZLCHNYAC: any;
+export declare const chunkJZLCHNYAI: any;
+export declare const chunkJZLCHNYAL: any;
+export declare const chunkJZLCHNYAN: any;
+export declare const chunkJZLCHNYAO: any;
+export declare const chunkJZLCHNYAR: any;
+export declare const chunkJZLCHNYAS: any;
+export declare const chunkJZLCHNYAT: any;
+export declare const chunkJZLCHNYAU: any;

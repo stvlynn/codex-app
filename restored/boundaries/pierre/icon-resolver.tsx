@@ -503,3 +503,8 @@ export function iconResolverT(iconResolverParam1) {
   };
 }
 export { iconResolverN };
+
+// Aliases used by consumer checkpoints
+export declare const iconResolverI: any;
+export declare const iconResolverR: any;
+export declare const iconResolverT: any;

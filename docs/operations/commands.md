@@ -5,7 +5,8 @@
 The root `Makefile` delegates to `pnpm` scripts and keeps common tasks in one place.
 
 ```bash
-make dev      # Install dependencies and validate the workspace
+make dev      # Install dependencies, validate, and start the extracted Electron app
+make electron-smoke # Validate and smoke-test the extracted Electron app launch
 make check    # Run typecheck + test + docs:check
 make test     # Run deobfuscation skill tests
 make typecheck

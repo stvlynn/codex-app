@@ -13,3 +13,13 @@ export declare const useFocusGuards: any;
 export declare const Portal: any;
 export declare const DismissableLayer: any;
 export declare const RemoveScroll: any;
+
+// Aliases used by consumer checkpoints
+export declare const combinationA: any;
+export declare const combinationC: any;
+export declare const combinationI: any;
+export declare const combinationN: any;
+export declare const combinationO: any;
+export declare const combinationR: any;
+export declare const combinationS: any;
+export declare const combinationT: any;

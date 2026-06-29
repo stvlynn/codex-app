@@ -1181,3 +1181,6 @@ function scoreQueryMatchHelper22(scoreQueryMatchParam130) {
 function scoreQueryMatchHelper23(scoreQueryMatchParam131) {
   return /[a-z0-9]/i.test(scoreQueryMatchParam131);
 }
+
+// Aliases used by consumer checkpoints
+export declare const scoreQueryMatch: any;

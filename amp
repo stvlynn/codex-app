@@ -1,0 +1,85 @@
+[
+  {
+    "file": "restored/.deobfuscate-javascript/_full/files/right-panel-composer-overlay-DMF22kzH/candidate.tsx",
+    "lineCount": 234,
+    "exportCount": 1,
+    "registryObjectExport": false,
+    "crypticParams": 0,
+    "crypticBindings": 0,
+    "shortIdentifierOffenders": [],
+    "mechanicalNames": [],
+    "duplicateImportNames": [],
+    "mechanicalImportBindings": [],
+    "missingRelativeExports": [],
+    "unresolvedRelativeImports": [
+      {
+        "source": "../app-shell/app-shell-ref",
+        "resolvedFrom": "restored/.deobfuscate-javascript/_full/files/right-panel-composer-overlay-DMF22kzH"
+      },
+      {
+        "source": "../app-shell/app-shell-state",
+        "resolvedFrom": "restored/.deobfuscate-javascript/_full/files/right-panel-composer-overlay-DMF22kzH"
+      },
+      {
+        "source": "../app-shell/app-shell-tab-controller-cvk-uvg-ym",
+        "resolvedFrom": "restored/.deobfuscate-javascript/_full/files/right-panel-composer-overlay-DMF22kzH"
+      },
+      {
+        "source": "../threads/thread-layout",
+        "resolvedFrom": "restored/.deobfuscate-javascript/_full/files/right-panel-composer-overlay-DMF22kzH"
+      },
+      {
+        "source": "../utils/persisted-signal",
+        "resolvedFrom": "restored/.deobfuscate-javascript/_full/files/right-panel-composer-overlay-DMF22kzH"
+      },
+      {
+        "source": "../utils/right-panel-composer-overlay-scroll-reserve",
+        "resolvedFrom": "restored/.deobfuscate-javascript/_full/files/right-panel-composer-overlay-DMF22kzH"
+      }
+    ],
+    "unfinalizedCheckpointImports": [],
+    "invalidJsxTags": [],
+    "unboundJsxTags": [],
+    "unboundIdentifiers": [],
+    "untypedComponentProps": [],
+    "untypedPublicFunctionParams": [],
+    "misleadingHookExports": [],
+    "publicCrypticNames": [],
+    "hasProvenanceHeader": true,
+    "duplicateProvenanceHeaders": 0,
+    "residueMatches": [],
+    "splitRequired": false,
+    "issues": [
+      {
+        "code": "unresolved-relative-imports",
+        "message": "Relative imports must resolve inside the restored output",
+        "detail": [
+          {
+            "source": "../app-shell/app-shell-ref",
+            "resolvedFrom": "restored/.deobfuscate-javascript/_full/files/right-panel-composer-overlay-DMF22kzH"
+          },
+          {
+            "source": "../app-shell/app-shell-state",
+            "resolvedFrom": "restored/.deobfuscate-javascript/_full/files/right-panel-composer-overlay-DMF22kzH"
+          },
+          {
+            "source": "../app-shell/app-shell-tab-controller-cvk-uvg-ym",
+            "resolvedFrom": "restored/.deobfuscate-javascript/_full/files/right-panel-composer-overlay-DMF22kzH"
+          },
+          {
+            "source": "../threads/thread-layout",
+            "resolvedFrom": "restored/.deobfuscate-javascript/_full/files/right-panel-composer-overlay-DMF22kzH"
+          },
+          {
+            "source": "../utils/persisted-signal",
+            "resolvedFrom": "restored/.deobfuscate-javascript/_full/files/right-panel-composer-overlay-DMF22kzH"
+          },
+          {
+            "source": "../utils/right-panel-composer-overlay-scroll-reserve",
+            "resolvedFrom": "restored/.deobfuscate-javascript/_full/files/right-panel-composer-overlay-DMF22kzH"
+          }
+        ]
+      }
+    ]
+  }
+]

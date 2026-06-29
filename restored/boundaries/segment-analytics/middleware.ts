@@ -2241,3 +2241,7 @@ export {
   middlewareS,
   middlewareU,
 };
+
+// Aliases used by consumer checkpoints
+export declare const middlewareN: any;
+export declare const middlewareT: any;

@@ -27,7 +27,8 @@ The skills live under [`.agents/skills/`](.agents/skills/). Point your agent at 
 ## Quick start
 
 ```bash
-make dev      # Install dependencies and validate the workspace
+make dev      # Install dependencies, validate, and start the extracted Electron app
+make electron-smoke # Validate and smoke-test the extracted Electron app launch
 make check    # Run typecheck + test + docs:check
 make help     # Show all available targets
 ```

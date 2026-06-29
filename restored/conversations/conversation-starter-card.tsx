@@ -13,3 +13,6 @@ export interface ConversationStarterCardProps {
 }
 export declare const ConversationStarterCard: React.FC<ConversationStarterCardProps>;
 export default ConversationStarterCard;
+
+// Aliases used by consumer checkpoints
+export declare const default: any;

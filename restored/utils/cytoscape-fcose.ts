@@ -7,3 +7,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 export declare const t: any;
+export declare const CytoscapeFcose: any;

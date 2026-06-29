@@ -8,3 +8,5 @@
 
 export declare const n: any;
 export declare const t: any;
+export declare const threadRightPanelStateNState: any;
+export declare const threadRightPanelStateTState: any;

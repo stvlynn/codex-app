@@ -24,3 +24,23 @@ export declare const s: any;
 export declare const t: any;
 export declare const u: any;
 export declare const v: any;
+
+// Aliases used by consumer checkpoints
+export declare const chunkK5T4RW27A: any;
+export declare const chunkK5T4RW27C: any;
+export declare const chunkK5T4RW27D: any;
+export declare const chunkK5T4RW27F: any;
+export declare const chunkK5T4RW27G: any;
+export declare const chunkK5T4RW27H: any;
+export declare const chunkK5T4RW27I: any;
+export declare const chunkK5T4RW27L: any;
+export declare const chunkK5T4RW27M: any;
+export declare const chunkK5T4RW27N: any;
+export declare const chunkK5T4RW27O: any;
+export declare const chunkK5T4RW27P: any;
+export declare const chunkK5T4RW27R: any;
+export declare const chunkK5T4RW27S: any;
+export declare const chunkK5T4RW27T: any;
+export declare const chunkK5T4RW27U: any;
+export declare const chunkK5T4RW27Underscore: any;
+export declare const chunkK5T4RW27V: any;

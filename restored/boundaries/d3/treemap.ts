@@ -597,3 +597,10 @@ export function treemapT() {
   );
 }
 export { treemapA, treemapI, treemapN, treemapR };
+
+// Additional aliases exported for consumers mapped via IMPORT_MAP
+export const a: any = undefined;
+export const i: any = undefined;
+export const n: any = undefined;
+export const r: any = undefined;
+export const t: any = undefined;

@@ -24,3 +24,4 @@ export declare const s: any;
 export declare const t: any;
 export declare const u: any;
 export declare const v: any;
+export declare const mcpCapabilityViewFrameUnderscore: any;

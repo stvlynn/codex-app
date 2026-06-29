@@ -8,3 +8,9 @@ export * from "./sidebar-width";
 export * from "./atoms";
 export * from "./sidebar-actions";
 export * from "./bottom-panel-actions";
+
+// Alias for consumer import until the full export is restored.
+// The checkpoint uses this both as a side-effect callable and as `appShellStateVState.entries$`.
+export const appShellStateVState: any = Object.assign(() => {}, {
+  entries$: undefined,
+});

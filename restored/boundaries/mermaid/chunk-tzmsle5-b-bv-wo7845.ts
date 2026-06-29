@@ -13,3 +13,12 @@ export declare const o: any;
 export declare const r: any;
 export declare const s: any;
 export declare const t: any;
+
+// Aliases used by consumer checkpoints
+export declare const chunkTZMSLE5BA: any;
+export declare const chunkTZMSLE5BI: any;
+export declare const chunkTZMSLE5BN: any;
+export declare const chunkTZMSLE5BO: any;
+export declare const chunkTZMSLE5BR: any;
+export declare const chunkTZMSLE5BS: any;
+export declare const chunkTZMSLE5BT: any;

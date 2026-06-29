@@ -17,3 +17,16 @@ export declare const r: any;
 export declare const s: any;
 export declare const t: any;
 export declare const u: any;
+
+// Aliases used by consumer checkpoints
+export declare const basePickByA: any;
+export declare const basePickByC: any;
+export declare const basePickByD: any;
+export declare const basePickByI: any;
+export declare const basePickByL: any;
+export declare const basePickByN: any;
+export declare const basePickByO: any;
+export declare const basePickByR: any;
+export declare const basePickByS: any;
+export declare const basePickByT: any;
+export declare const basePickByU: any;

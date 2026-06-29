@@ -37,3 +37,32 @@ export declare const v: any;
 export declare const w: any;
 export declare const x: any;
 export declare const y: any;
+
+// Aliases used by consumer checkpoints
+export declare const vscodeApiA: any;
+export declare const vscodeApiC: any;
+export declare const vscodeApiD: any;
+export declare const vscodeApiF: any;
+export declare const vscodeApiG: any;
+export declare const vscodeApiH: any;
+export declare const vscodeApiI: any;
+export declare const vscodeApiJ: any;
+export declare const vscodeApiK: any;
+export declare const vscodeApiL: any;
+export declare const vscodeApiM: any;
+export declare const vscodeApiN: any;
+export declare const vscodeApiO: any;
+export declare const vscodeApiP: any;
+export declare const vscodeApiR: any;
+export declare const vscodeApiS: any;
+export declare const vscodeApiT: any;
+export declare const vscodeApiU: any;
+export declare const vscodeApiUnderscore: any;
+export declare const vscodeApiV: any;
+
+// Additional aliases exported for consumers mapped via IMPORT_MAP
+export const automationScheduleImport2: any = undefined;
+export const automationScheduleImport3: any = undefined;
+export const commandKeybindingsImport4: any = undefined;
+export const commandKeybindingsImport5: any = undefined;
+export const parseDirectivesImport1: any = undefined;

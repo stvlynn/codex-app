@@ -18,3 +18,14 @@ export declare const r: any;
 export declare const s: any;
 export declare const t: any;
 export declare const u: any;
+
+// Aliases used by consumer checkpoints
+export declare const markdownToSearchTextA: any;
+export declare const markdownToSearchTextC: any;
+export declare const markdownToSearchTextD: any;
+export declare const markdownToSearchTextL: any;
+export declare const markdownToSearchTextN: any;
+export declare const markdownToSearchTextR: any;
+export declare const markdownToSearchTextS: any;
+export declare const markdownToSearchTextT: any;
+export declare const markdownToSearchTextU: any;

@@ -152,7 +152,7 @@
       "status": "done"
     },
     "isArrayLikeObject-1Hrr5Oll": {
-      "restored": "utils/lodash-is-array-like-object.tsx",
+      "restored": "boundaries/lodash/is-array-like-object.ts",
       "exports": {
         "A": "isArrayLikeObjectF",
         "B": "isArrayLikeObjectO",
@@ -198,9 +198,37 @@
         "w": "_isArrayLikeObjectW",
         "x": "isArrayLikeObjectX",
         "y": "isArrayLikeObjectY",
-        "z": "isArrayLikeObjectZ"
+        "z": "isArrayLikeObjectZ",
+        "isArrayLikeObjectJ": "isArrayLikeObjectJ",
+        "isArrayLikeObjectW": "isArrayLikeObjectW",
+        "isArrayLikeObjectS": "isArrayLikeObjectS",
+        "isArrayLikeObjectH": "isArrayLikeObjectH",
+        "isArrayLikeObjectC": "isArrayLikeObjectC",
+        "isArrayLikeObjectV": "isArrayLikeObjectV",
+        "isArrayLikeObjectB": "isArrayLikeObjectB",
+        "isArrayLikeObjectK": "isArrayLikeObjectK",
+        "isArrayLikeObjectX": "isArrayLikeObjectX",
+        "isArrayLikeObjectN": "isArrayLikeObjectN",
+        "isArrayLikeObjectD": "isArrayLikeObjectD",
+        "isArrayLikeObjectI": "isArrayLikeObjectI",
+        "isArrayLikeObjectO": "isArrayLikeObjectO",
+        "isArrayLikeObjectZ": "isArrayLikeObjectZ",
+        "isArrayLikeObjectF": "isArrayLikeObjectF",
+        "isArrayLikeObjectR": "isArrayLikeObjectR",
+        "isArrayLikeObjectA": "isArrayLikeObjectA",
+        "isArrayLikeObjectU": "isArrayLikeObjectU",
+        "isArrayLikeObjectE": "isArrayLikeObjectE",
+        "isArrayLikeObjectUnderscore": "isArrayLikeObjectUnderscore",
+        "isArrayLikeObjectG": "isArrayLikeObjectG",
+        "isArrayLikeObjectY": "isArrayLikeObjectY",
+        "isArrayLikeObjectM": "isArrayLikeObjectM",
+        "isArrayLikeObjectT": "isArrayLikeObjectT",
+        "isArrayLikeObjectP": "isArrayLikeObjectP",
+        "isArrayLikeObjectL": "isArrayLikeObjectL"
       },
-      "status": "done"
+      "status": "done",
+      "vendor": "lodash",
+      "dependencyBoundary": "lodash boundary"
     },
     "min-BVs4UoI0": {
       "restored": "utils/d3-array-min.tsx",
@@ -227,9 +255,17 @@
         "n": "sankeyLinkHorizontalR",
         "o": "sankeyLinkHorizontalN",
         "r": "sankeyLinkHorizontalT",
-        "t": "sankeyLinkHorizontalI"
+        "t": "sankeyLinkHorizontalI",
+        "sankeyLinkHorizontalT": "sankeyLinkHorizontalT",
+        "sankeyLinkHorizontalA": "sankeyLinkHorizontalA",
+        "sankeyLinkHorizontalR": "sankeyLinkHorizontalR",
+        "sankeyLinkHorizontalI": "sankeyLinkHorizontalI",
+        "sankeyLinkHorizontalN": "sankeyLinkHorizontalN",
+        "sankeyLinkHorizontalO": "sankeyLinkHorizontalO"
       },
-      "status": "done"
+      "status": "done",
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "step-K6tEdR0Q": {
       "restored": "utils/d3-shape-step-curve.tsx",
@@ -302,11 +338,14 @@
       "status": "done"
     },
     "chunk-KS23V3DP-aPas0hZ5": {
-      "restored": "utils/chunk-ks23-v3-dp.ts",
+      "restored": "boundaries/esbuild-runtime/chunk-ks23-v3-dp-a-pas0h-z5.ts",
       "exports": {
-        "t": "ChunkKS23V3DP"
+        "t": "ChunkKS23V3DP",
+        "ChunkKS23V3DP": "ChunkKS23V3DP"
       },
-      "status": "done"
+      "status": "done",
+      "vendor": "esbuild-runtime",
+      "dependencyBoundary": "esbuild-runtime boundary"
     },
     "code-searching-icon-DZ2sIJwa": {
       "restored": "animations/code-searching-icon.ts",
@@ -642,9 +681,15 @@
         "i": "iconResolverR",
         "n": "iconResolverI",
         "r": "iconResolverT",
-        "t": "iconResolverN"
+        "t": "iconResolverN",
+        "iconResolverI": "iconResolverI",
+        "iconResolverR": "iconResolverR",
+        "iconResolverT": "iconResolverT",
+        "iconResolverN": "iconResolverN"
       },
-      "status": "done"
+      "status": "done",
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "id-ID-rq_OYNd1": {
       "restored": "locales/id.ts",
@@ -900,9 +945,28 @@
         "r": "parsePatchFilesN",
         "s": "parsePatchFilesT",
         "t": "parsePatchFilesL",
-        "u": "parsePatchFilesR"
+        "u": "parsePatchFilesR",
+        "parsePatchFilesS": "parsePatchFilesS",
+        "parsePatchFilesL": "parsePatchFilesL",
+        "parsePatchFilesM": "parsePatchFilesM",
+        "parsePatchFilesF": "parsePatchFilesF",
+        "parsePatchFilesC": "parsePatchFilesC",
+        "parsePatchFilesI": "parsePatchFilesI",
+        "parsePatchFilesP": "parsePatchFilesP",
+        "parsePatchFilesO": "parsePatchFilesO",
+        "parsePatchFilesT": "parsePatchFilesT",
+        "parsePatchFilesH": "parsePatchFilesH",
+        "parsePatchFilesN": "parsePatchFilesN",
+        "parsePatchFilesA": "parsePatchFilesA",
+        "parsePatchFilesD": "parsePatchFilesD",
+        "parsePatchFilesG": "parsePatchFilesG",
+        "parsePatchFilesR": "parsePatchFilesR",
+        "parsePatchFilesU": "parsePatchFilesU",
+        "parsePatchFilesUnderscore": "parsePatchFilesUnderscore"
       },
-      "status": "done"
+      "status": "done",
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "pl-PL-DyZ_95zX": {
       "restored": "locales/pl.ts",
@@ -1015,9 +1079,12 @@
     "store-489E8Cj_": {
       "restored": "boundaries/pierre/store.ts",
       "exports": {
-        "t": "Store"
+        "t": "Store",
+        "Store": "Store"
       },
-      "status": "done"
+      "status": "done",
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "sv-SE-DYt1uh98": {
       "restored": "locales/sv.ts",
@@ -1178,7 +1245,7 @@
       "status": "done"
     },
     "chunk-Cq_f4orQ": {
-      "restored": "utils/esbuild-runtime-helpers.tsx",
+      "restored": "boundaries/esbuild-runtime/helpers.ts",
       "exports": {
         "a": "chunkT",
         "i": "chunkS",
@@ -1186,9 +1253,18 @@
         "o": "chunkO",
         "r": "chunkN",
         "s": "chunkI",
-        "t": "chunkA"
+        "t": "chunkA",
+        "chunkO": "chunkO",
+        "chunkR": "chunkR",
+        "chunkS": "chunkS",
+        "chunkI": "chunkI",
+        "chunkA": "chunkA",
+        "chunkT": "chunkT",
+        "chunkN": "chunkN"
       },
-      "status": "done"
+      "status": "done",
+      "vendor": "esbuild-runtime",
+      "dependencyBoundary": "esbuild-runtime boundary"
     },
     "app-window-BkmniFLd": {
       "restored": "icons/app-window-icon.tsx",
@@ -1958,9 +2034,12 @@
     "score-query-match-DS2pZf_b": {
       "restored": "boundaries/pierre/score-query-match.ts",
       "exports": {
-        "t": "scoreQueryMatch"
+        "t": "scoreQueryMatch",
+        "scoreQueryMatch": "scoreQueryMatch"
       },
-      "status": "done"
+      "status": "done",
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "send-to-cloud-YxjVSBaL": {
       "restored": "icons/send-to-cloud-icon.tsx",
@@ -2171,22 +2250,32 @@
       "status": "done"
     },
     "chunk-AGHRB4JF-Bxy73eEy": {
-      "restored": "utils/esbuild-runtime-umd-a.tsx",
+      "restored": "boundaries/esbuild-runtime/chunk-aghrb4-jf-bxy73e-ey.ts",
       "exports": {
         "a": "chunkAGHRB4JFT",
         "i": "chunkAGHRB4JFI",
         "n": "chunkAGHRB4JFA",
         "r": "chunkAGHRB4JFN",
-        "t": "chunkAGHRB4JFR"
+        "t": "chunkAGHRB4JFR",
+        "chunkAGHRB4JFN": "chunkAGHRB4JFN",
+        "chunkAGHRB4JFR": "chunkAGHRB4JFR",
+        "chunkAGHRB4JFA": "chunkAGHRB4JFA",
+        "chunkAGHRB4JFI": "chunkAGHRB4JFI",
+        "chunkAGHRB4JFT": "chunkAGHRB4JFT"
       },
-      "status": "done"
+      "status": "done",
+      "vendor": "esbuild-runtime",
+      "dependencyBoundary": "esbuild-runtime boundary"
     },
     "chunk-FMBD7UC4-CT2OagM_": {
-      "restored": "utils/chunk-fmbd7-uc4.ts",
+      "restored": "boundaries/esbuild-runtime/chunk-fmbd7-uc4-ct2-oag-m.ts",
       "exports": {
-        "t": "chunkFMBD7UC4"
+        "t": "chunkFMBD7UC4",
+        "chunkFMBD7UC4": "chunkFMBD7UC4"
       },
-      "status": "done"
+      "status": "done",
+      "vendor": "esbuild-runtime",
+      "dependencyBoundary": "esbuild-runtime boundary"
     },
     "channel-ykMIcoPi": {
       "restored": "utils/d3-color-channel.tsx",
@@ -2240,22 +2329,32 @@
       "status": "done"
     },
     "chunk-AGHRB4JF-DNCNxfKz": {
-      "restored": "utils/esbuild-runtime-umd-b.tsx",
+      "restored": "boundaries/esbuild-runtime/chunk-aghrb4-jf-dncnxf-kz.ts",
       "exports": {
         "a": "chunkAGHRB4JFT",
         "i": "chunkAGHRB4JFI",
         "n": "chunkAGHRB4JFA",
         "r": "chunkAGHRB4JFN",
-        "t": "chunkAGHRB4JFR"
+        "t": "chunkAGHRB4JFR",
+        "chunkAGHRB4JFA": "chunkAGHRB4JFA",
+        "chunkAGHRB4JFI": "chunkAGHRB4JFI",
+        "chunkAGHRB4JFN": "chunkAGHRB4JFN",
+        "chunkAGHRB4JFR": "chunkAGHRB4JFR",
+        "chunkAGHRB4JFT": "chunkAGHRB4JFT"
       },
-      "status": "done"
+      "status": "done",
+      "vendor": "esbuild-runtime",
+      "dependencyBoundary": "esbuild-runtime boundary"
     },
     "chunk-FMBD7UC4-DBBZVnVA": {
-      "restored": "utils/chunk-fmbd7-uc4-dbbz-vn-va.ts",
+      "restored": "boundaries/esbuild-runtime/chunk-fmbd7-uc4-dbbzvn-va.ts",
       "exports": {
-        "t": "chunkFMBD7UC4"
+        "t": "chunkFMBD7UC4",
+        "chunkFMBD7UC4": "chunkFMBD7UC4"
       },
-      "status": "done"
+      "status": "done",
+      "vendor": "esbuild-runtime",
+      "dependencyBoundary": "esbuild-runtime boundary"
     },
     "core-CpC1jq0N": {
       "restored": "utils/segment-analytics-core.tsx",
@@ -2392,14 +2491,18 @@
     "arc-D3MQZVTw": {
       "restored": "boundaries/d3/arc.ts",
       "exports": {
-        "t": "t"
+        "t": "t",
+        "arc": "arc"
       },
-      "status": "done"
+      "status": "done",
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "cytoscape-fcose-CYmUq-SS": {
       "restored": "utils/cytoscape-fcose.ts",
       "exports": {
-        "t": "t"
+        "t": "t",
+        "CytoscapeFcose": "CytoscapeFcose"
       },
       "status": "done"
     },
@@ -2415,14 +2518,19 @@
       "exports": {
         "default": "default"
       },
-      "status": "done"
+      "status": "done",
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "line-DIsP-Yv_": {
       "restored": "boundaries/d3/line.ts",
       "exports": {
-        "t": "t"
+        "t": "t",
+        "line": "line"
       },
-      "status": "done"
+      "status": "done",
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "browser-BQH2qCja": {
       "restored": "utils/browser.ts",
@@ -2433,17 +2541,23 @@
       "status": "done"
     },
     "isEmpty-CTfqpukK": {
-      "restored": "utils/is-empty.ts",
+      "restored": "boundaries/lodash/is-empty.ts",
       "exports": {
         "i": "i",
         "n": "n",
         "r": "r",
-        "t": "t"
+        "t": "t",
+        "isEmptyI": "isEmptyI",
+        "isEmptyT": "isEmptyT",
+        "isEmptyR": "isEmptyR",
+        "isEmptyN": "isEmptyN"
       },
-      "status": "done"
+      "status": "done",
+      "vendor": "lodash",
+      "dependencyBoundary": "lodash boundary"
     },
     "dist-eWHzKSsV": {
-      "restored": "boundaries/dist.ts",
+      "restored": "boundaries/radix-ui/primitive.ts",
       "exports": {
         "a": "a",
         "c": "c",
@@ -2455,32 +2569,52 @@
         "r": "r",
         "s": "s",
         "t": "t",
-        "u": "u"
+        "u": "u",
+        "distI": "distI",
+        "distR": "distR",
+        "distL": "distL",
+        "distS": "distS",
+        "distD": "distD",
+        "distN": "distN",
+        "distO": "distO",
+        "distC": "distC",
+        "distU": "distU",
+        "distA": "distA",
+        "distT": "distT"
       },
       "status": "done",
-      "dependencyBoundary": true,
-      "vendor": "runtime"
+      "dependencyBoundary": "radix-ui boundary",
+      "vendor": "radix-ui"
     },
     "_baseEach-D1JYswpe": {
       "restored": "boundaries/lodash/base-each.ts",
       "exports": {
-        "t": "t"
+        "t": "t",
+        "baseEach": "baseEach"
       },
-      "status": "done"
+      "status": "done",
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "_defineProperty-CjRaK4yh": {
       "restored": "boundaries/lodash/define-property.ts",
       "exports": {
-        "t": "t"
+        "t": "t",
+        "defineProperty": "defineProperty"
       },
-      "status": "done"
+      "status": "done",
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "client-C1mrATqU": {
       "restored": "boundaries/segment-analytics/client.ts",
       "exports": {
-        "t": "t"
+        "t": "t",
+        "Client": "Client"
       },
-      "status": "done"
+      "status": "done",
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "address-utils-D9uhGifl": {
       "restored": "utils/address-utils.tsx",
@@ -2521,11 +2655,14 @@
       "status": "done"
     },
     "chunk-CVBHYZKI-D5c0MJ_k": {
-      "restored": "utils/chunk-cvbhyzki.ts",
+      "restored": "boundaries/esbuild-runtime/chunk-cvbhyzki-d5c0-mj-k.ts",
       "exports": {
-        "t": "getSubGraphTitleMargins"
+        "t": "getSubGraphTitleMargins",
+        "chunkCVBHYZKI": "chunkCVBHYZKI"
       },
-      "status": "done"
+      "status": "done",
+      "vendor": "esbuild-runtime",
+      "dependencyBoundary": "esbuild-runtime boundary"
     },
     "load-script-CELRAn-0": {
       "restored": "utils/load-script.tsx",
@@ -2825,7 +2962,8 @@
     "useForm-Dc2s3Q7s": {
       "restored": "boundaries/use-form.ts",
       "exports": {
-        "t": "UseForm"
+        "t": "UseForm",
+        "UseForm": "UseForm"
       },
       "status": "boundary",
       "boundaryType": "vendored-library",
@@ -2844,13 +2982,13 @@
       "boundaryType": "vendored-library",
       "note": "Vendored module facade; pending full restoration",
       "exports": {
-        "i": "arrowTypeOffsets",
-        "n": "arrowHeadLengths",
-        "r": "computeLabelTransform",
-        "t": "getLineFunctionsWithOffset"
+        "i": "i",
+        "n": "n",
+        "r": "r",
+        "t": "t"
       },
       "vendor": "mermaid",
-      "dependencyBoundary": true
+      "dependencyBoundary": "mermaid boundary"
     },
     "chunk-ICPOFSXX-Dk2rFw9E": {
       "restored": "boundaries/mermaid/chunk-icpofsxx-dk2r-fw9-e.ts",
@@ -2908,10 +3046,17 @@
         "w": "w",
         "x": "x",
         "y": "y",
-        "z": "z"
+        "z": "z",
+        "chunkICPOFSXXR": "chunkICPOFSXXR",
+        "chunkICPOFSXXI": "chunkICPOFSXXI",
+        "chunkICPOFSXXC": "chunkICPOFSXXC",
+        "chunkICPOFSXXS": "chunkICPOFSXXS",
+        "chunkICPOFSXXB": "chunkICPOFSXXB",
+        "chunkICPOFSXXM": "chunkICPOFSXXM",
+        "chunkICPOFSXXF": "chunkICPOFSXXF"
       },
       "vendor": "mermaid",
-      "dependencyBoundary": true
+      "dependencyBoundary": "mermaid boundary"
     },
     "chunk-XPW4576I-Bqa38NHl": {
       "restored": "boundaries/mermaid/chunk-xpw4576-i-bqa38-nhl.ts",
@@ -2919,11 +3064,11 @@
       "boundaryType": "vendored-library",
       "note": "Vendored module facade; pending full restoration",
       "exports": {
-        "n": "load",
-        "t": "Schema"
+        "n": "n",
+        "t": "t"
       },
       "vendor": "mermaid",
-      "dependencyBoundary": true
+      "dependencyBoundary": "mermaid boundary"
     },
     "chunk-ABZYJK2D-8WiwWXHe": {
       "restored": "boundaries/mermaid/chunk-abzyjk2-d-8-wiw-wxhe.ts",
@@ -2980,10 +3125,17 @@
         "w": "w",
         "x": "x",
         "y": "y",
-        "z": "z"
+        "z": "z",
+        "chunkABZYJK2DI": "chunkABZYJK2DI",
+        "chunkABZYJK2DB": "chunkABZYJK2DB",
+        "chunkABZYJK2DY": "chunkABZYJK2DY",
+        "chunkABZYJK2DO": "chunkABZYJK2DO",
+        "chunkABZYJK2DS": "chunkABZYJK2DS",
+        "chunkABZYJK2DN": "chunkABZYJK2DN",
+        "chunkABZYJK2DC": "chunkABZYJK2DC"
       },
       "vendor": "mermaid",
-      "dependencyBoundary": true
+      "dependencyBoundary": "mermaid boundary"
     },
     "chunk-HN2XXSSU-dadJeUL1": {
       "restored": "boundaries/mermaid/chunk-hn2-xxssu-dad-je-ul1.ts",
@@ -2991,12 +3143,12 @@
       "boundaryType": "vendored-library",
       "note": "Vendored module facade; pending full restoration",
       "exports": {
-        "n": "arrowTypeOffsets",
-        "r": "arrowHeadLengths",
-        "t": "getLineFunctionsWithOffset"
+        "n": "n",
+        "r": "r",
+        "t": "t"
       },
       "vendor": "mermaid",
-      "dependencyBoundary": true
+      "dependencyBoundary": "mermaid boundary"
     },
     "chunk-MI3HLSF2-DUVSUh0R": {
       "restored": "boundaries/mermaid/chunk-mi3-hlsf2-duvsuh0-r.ts",
@@ -3004,11 +3156,11 @@
       "boundaryType": "vendored-library",
       "note": "Vendored module facade; pending full restoration",
       "exports": {
-        "n": "load",
-        "t": "Schema"
+        "n": "n",
+        "t": "t"
       },
       "vendor": "mermaid",
-      "dependencyBoundary": true
+      "dependencyBoundary": "mermaid boundary"
     },
     "highlight-code-BntQZ0HZ": {
       "restored": "boundaries/highlight-code.ts",
@@ -3017,7 +3169,9 @@
       "note": "Vendored module facade; pending full restoration",
       "exports": {
         "highlightCode": "highlightCode"
-      }
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "legacy-video-plugins-BKJsmZCC": {
       "restored": "boundaries/legacy-video-plugins.ts",
@@ -3026,7 +3180,9 @@
       "note": "Vendored module facade; pending full restoration",
       "exports": {
         "loadLegacyVideoPlugins": "loadLegacyVideoPlugins"
-      }
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "keyboard-event-accelerator-AI-jxMPG": {
       "restored": "utils/keyboard-event-accelerator-ai-jx-mpg.tsx",
@@ -3047,7 +3203,23 @@
         "o": "useFocusGuards",
         "r": "Portal",
         "s": "DismissableLayer",
-        "t": "RemoveScroll"
+        "t": "RemoveScroll",
+        "combinationO": "combinationO",
+        "combinationI": "combinationI",
+        "combinationS": "combinationS",
+        "combinationR": "combinationR",
+        "combinationC": "combinationC",
+        "combinationA": "combinationA",
+        "combinationT": "combinationT",
+        "combinationN": "combinationN",
+        "DismissableLayer": "DismissableLayer",
+        "FocusScope": "FocusScope",
+        "Portal": "Portal",
+        "RemoveScroll": "RemoveScroll",
+        "ariaHidden": "ariaHidden",
+        "useCallbackRef": "useCallbackRef",
+        "useFocusGuards": "useFocusGuards",
+        "useId": "useId"
       },
       "status": "boundary",
       "boundaryType": "vendored-library",
@@ -3079,10 +3251,11 @@
       "status": "done"
     },
     "chunk-LFPYN7LY-h_ROgi7V": {
-      "restored": "boundaries/mermaid/chunk-lfpyn7-ly-h-rogi7-v.ts",
+      "restored": "utils/chunk-lfpyn7-ly.tsx",
+      "status": "done",
       "exports": {
         "_": "createBrowserRouter",
-        "a": "createMemoryRouter",
+        "a": "Navigate",
         "c": "RouterProvider",
         "d": "Form",
         "f": "Link",
@@ -3097,12 +3270,52 @@
         "r": "useLoaderData",
         "s": "useActionData",
         "t": "useRouteError",
-        "u": "useFormAction"
-      },
-      "status": "boundary",
-      "boundaryType": "vendored-library",
-      "note": "React Router v6 (react-router-dom) bundled facade",
-      "vendor": "mermaid"
+        "u": "useFormAction",
+        "chunkLFPYN7LYN": "chunkLFPYN7LYN",
+        "chunkLFPYN7LYR": "chunkLFPYN7LYR",
+        "chunkLFPYN7LYS": "chunkLFPYN7LYS",
+        "chunkLFPYN7LYI": "chunkLFPYN7LYI",
+        "chunkLFPYN7LYU": "chunkLFPYN7LYU",
+        "chunkLFPYN7LYG": "chunkLFPYN7LYG",
+        "chunkLFPYN7LYT": "chunkLFPYN7LYT",
+        "chunkLFPYN7LYP": "chunkLFPYN7LYP",
+        "chunkLFPYN7LYD": "chunkLFPYN7LYD",
+        "chunkLFPYN7LYO": "chunkLFPYN7LYO",
+        "chunkLFPYN7LYM": "chunkLFPYN7LYM",
+        "chunkLFPYN7LYF": "chunkLFPYN7LYF",
+        "chunkLFPYN7LYUnderscore": "chunkLFPYN7LYUnderscore",
+        "chunkLFPYN7LYH": "chunkLFPYN7LYH",
+        "chunkLFPYN7LYA": "chunkLFPYN7LYA",
+        "chunkLFPYN7LYL": "chunkLFPYN7LYL",
+        "chunkLFPYN7LYC": "chunkLFPYN7LYC",
+        "Await": "Await",
+        "Form": "Form",
+        "Link": "Link",
+        "NavLink": "NavLink",
+        "Navigate": "Navigate",
+        "Outlet": "Outlet",
+        "RouterProvider": "RouterProvider",
+        "ScrollRestoration": "ScrollRestoration",
+        "createBrowserRouter": "createBrowserRouter",
+        "createMemoryRouter": "createMemoryRouter",
+        "defer": "defer",
+        "json": "json",
+        "redirect": "redirect",
+        "unstable_HistoryRouter": "unstable_HistoryRouter",
+        "useActionData": "useActionData",
+        "useBlocker": "useBlocker",
+        "useFormAction": "useFormAction",
+        "useHref": "useHref",
+        "useLoaderData": "useLoaderData",
+        "useLocation": "useLocation",
+        "useMatch": "useMatch",
+        "useNavigate": "useNavigate",
+        "useRevalidator": "useRevalidator",
+        "useRouteError": "useRouteError",
+        "useRoutes": "useRoutes",
+        "useSubmit": "useSubmit",
+        "useViewTransitionState": "useViewTransitionState"
+      }
     },
     "reduced-motion-GGHfH0hr": {
       "restored": "boundaries/framer-motion/reduced-motion.ts",
@@ -3111,10 +3324,12 @@
       "note": "Framer Motion reduced-motion preference",
       "exports": {
         "i": "reducedMotionT",
-        "n": "reducedMotionI",
-        "r": "reducedMotionN",
-        "t": "reducedMotionR"
-      }
+        "n": "n",
+        "r": "r",
+        "t": "t"
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "hooks-settings-model-CesfUzEC": {
       "restored": "utils/hooks-settings-model/index.ts",
@@ -3187,9 +3402,34 @@
         "v": "v",
         "w": "w",
         "x": "x",
-        "y": "y"
+        "y": "y",
+        "vscodeApiO": "vscodeApiO",
+        "vscodeApiR": "vscodeApiR",
+        "vscodeApiS": "vscodeApiS",
+        "vscodeApiL": "vscodeApiL",
+        "vscodeApiI": "vscodeApiI",
+        "vscodeApiD": "vscodeApiD",
+        "vscodeApiUnderscore": "vscodeApiUnderscore",
+        "vscodeApiA": "vscodeApiA",
+        "vscodeApiG": "vscodeApiG",
+        "vscodeApiF": "vscodeApiF",
+        "vscodeApiJ": "vscodeApiJ",
+        "vscodeApiP": "vscodeApiP",
+        "vscodeApiM": "vscodeApiM",
+        "vscodeApiK": "vscodeApiK",
+        "vscodeApiV": "vscodeApiV",
+        "vscodeApiC": "vscodeApiC",
+        "vscodeApiN": "vscodeApiN",
+        "vscodeApiT": "vscodeApiT",
+        "vscodeApiH": "vscodeApiH",
+        "vscodeApiU": "vscodeApiU",
+        "automationScheduleImport3": "automationScheduleImport3",
+        "automationScheduleImport2": "automationScheduleImport2",
+        "commandKeybindingsImport5": "commandKeybindingsImport5",
+        "parseDirectivesImport1": "parseDirectivesImport1",
+        "commandKeybindingsImport4": "commandKeybindingsImport4"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "runtime boundary",
       "vendor": "runtime"
     },
     "use-element-in-view-DpAyOq4x": {
@@ -3282,9 +3522,10 @@
       "boundaryType": "vendored-library",
       "note": "Statsig client key constant",
       "exports": {
-        "t": "t"
+        "t": "t",
+        "statsigClientKey": "statsigClientKey"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "statsig boundary",
       "vendor": "statsig"
     },
     "service-tier-copy-Bpfjp4x4": {
@@ -3314,7 +3555,7 @@
         "t": "t"
       },
       "vendor": "mermaid",
-      "dependencyBoundary": true
+      "dependencyBoundary": "mermaid boundary"
     },
     "chunk-426QAEUC-SBg7XJ-1": {
       "restored": "boundaries/d3/chunk-426-qaeuc-sbg7-xj-1.ts",
@@ -3322,9 +3563,10 @@
       "boundaryType": "vendored-library",
       "note": "Mermaid selectSvgElement helper",
       "exports": {
-        "t": "t"
+        "t": "t",
+        "chunk426QAEUC": "chunk426QAEUC"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "d3 boundary",
       "vendor": "d3"
     },
     "chunk-EXTU4WIE-DyDLNYc8": {
@@ -3333,9 +3575,10 @@
       "boundaryType": "vendored-library",
       "note": "Mermaid selectSvgElement helper (variant D)",
       "exports": {
-        "t": "t"
+        "t": "t",
+        "chunkEXTU4WIE": "chunkEXTU4WIE"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "d3 boundary",
       "vendor": "d3"
     },
     "chunk-X2U36JSP-DWvyIaf0": {
@@ -3350,7 +3593,7 @@
         "r": "r",
         "t": "t"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "chunk-QN33PNHL-DvZPbBsU": {
@@ -3361,7 +3604,7 @@
       "exports": {
         "t": "t"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "chunk-ATLVNIR6-D9WszxCx": {
@@ -3376,7 +3619,7 @@
         "r": "r",
         "t": "t"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "chunk-55IACEB6-CslsubLB": {
@@ -3385,9 +3628,10 @@
       "boundaryType": "vendored-library",
       "note": "Mermaid getDiagramElement helper",
       "exports": {
-        "t": "t"
+        "t": "t",
+        "chunk55IACEB6": "chunk55IACEB6"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "d3 boundary",
       "vendor": "d3"
     },
     "chunk-55IACEB6-Qk_p6M41": {
@@ -3396,9 +3640,10 @@
       "boundaryType": "vendored-library",
       "note": "Mermaid getDiagramElement helper (variant Q)",
       "exports": {
-        "t": "t"
+        "t": "t",
+        "chunk55IACEB6": "chunk55IACEB6"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "d3 boundary",
       "vendor": "d3"
     },
     "chunk-S3R3BYOJ-B7UcUgIb": {
@@ -3423,9 +3668,26 @@
         "r": "r",
         "s": "s",
         "t": "t",
-        "u": "u"
+        "u": "u",
+        "chunkS3R3BYOJD": "chunkS3R3BYOJD",
+        "chunkS3R3BYOJH": "chunkS3R3BYOJH",
+        "chunkS3R3BYOJG": "chunkS3R3BYOJG",
+        "chunkS3R3BYOJF": "chunkS3R3BYOJF",
+        "chunkS3R3BYOJS": "chunkS3R3BYOJS",
+        "chunkS3R3BYOJA": "chunkS3R3BYOJA",
+        "chunkS3R3BYOJN": "chunkS3R3BYOJN",
+        "chunkS3R3BYOJO": "chunkS3R3BYOJO",
+        "chunkS3R3BYOJL": "chunkS3R3BYOJL",
+        "chunkS3R3BYOJC": "chunkS3R3BYOJC",
+        "chunkS3R3BYOJU": "chunkS3R3BYOJU",
+        "chunkS3R3BYOJI": "chunkS3R3BYOJI",
+        "chunkS3R3BYOJR": "chunkS3R3BYOJR",
+        "chunkS3R3BYOJT": "chunkS3R3BYOJT",
+        "chunkS3R3BYOJP": "chunkS3R3BYOJP",
+        "chunkS3R3BYOJM": "chunkS3R3BYOJM",
+        "chunkS3R3BYOJUnderscore": "chunkS3R3BYOJUnderscore"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "d3 boundary",
       "vendor": "d3"
     },
     "chunk-TZMSLE5B-BvWo7845": {
@@ -3440,10 +3702,17 @@
         "o": "o",
         "r": "r",
         "s": "s",
-        "t": "t"
+        "t": "t",
+        "chunkTZMSLE5BI": "chunkTZMSLE5BI",
+        "chunkTZMSLE5BT": "chunkTZMSLE5BT",
+        "chunkTZMSLE5BR": "chunkTZMSLE5BR",
+        "chunkTZMSLE5BO": "chunkTZMSLE5BO",
+        "chunkTZMSLE5BA": "chunkTZMSLE5BA",
+        "chunkTZMSLE5BS": "chunkTZMSLE5BS",
+        "chunkTZMSLE5BN": "chunkTZMSLE5BN"
       },
       "vendor": "mermaid",
-      "dependencyBoundary": true
+      "dependencyBoundary": "mermaid boundary"
     },
     "_baseFor-eDjxQiUL": {
       "restored": "boundaries/lodash/base-for.ts",
@@ -3451,35 +3720,60 @@
       "boundaryType": "vendored-library",
       "note": "Lodash internal baseFor utility",
       "exports": {
-        "C": "baseForUnderscore",
-        "D": "_baseForS",
-        "E": "_baseForO",
-        "O": "baseForA",
-        "S": "baseForI",
-        "T": "baseForN",
-        "_": "_baseForT",
-        "a": "baseForC",
-        "b": "baseForD",
-        "c": "baseForE",
-        "d": "baseForO",
-        "f": "baseForS",
-        "g": "baseForT",
-        "h": "baseForB",
-        "i": "_baseForC",
-        "l": "_baseForD",
-        "m": "baseForF",
-        "n": "baseForG",
-        "o": "baseForH",
-        "p": "baseForL",
-        "r": "baseForM",
-        "s": "baseForP",
-        "t": "baseForR",
-        "u": "baseForU",
-        "v": "baseForV",
-        "w": "baseForW",
-        "x": "baseForX",
-        "y": "baseForY"
-      }
+        "C": "C",
+        "D": "D",
+        "E": "E",
+        "O": "O",
+        "S": "S",
+        "T": "T",
+        "_": "_",
+        "a": "a",
+        "b": "b",
+        "c": "c",
+        "d": "d",
+        "f": "f",
+        "g": "g",
+        "h": "h",
+        "i": "i",
+        "l": "l",
+        "m": "m",
+        "n": "n",
+        "o": "o",
+        "p": "p",
+        "r": "r",
+        "s": "s",
+        "t": "t",
+        "u": "u",
+        "v": "v",
+        "w": "w",
+        "x": "x",
+        "y": "y",
+        "baseForR": "baseForR",
+        "_baseForC": "_baseForC",
+        "_baseForD": "_baseForD",
+        "_baseForT": "_baseForT",
+        "baseForB": "baseForB",
+        "baseForC": "baseForC",
+        "baseForD": "baseForD",
+        "baseForE": "baseForE",
+        "baseForF": "baseForF",
+        "baseForG": "baseForG",
+        "baseForH": "baseForH",
+        "baseForL": "baseForL",
+        "baseForM": "baseForM",
+        "baseForO": "baseForO",
+        "baseForP": "baseForP",
+        "baseForS": "baseForS",
+        "baseForT": "baseForT",
+        "baseForU": "baseForU",
+        "baseForUnderscore": "baseForUnderscore",
+        "baseForV": "baseForV",
+        "baseForW": "baseForW",
+        "baseForX": "baseForX",
+        "baseForY": "baseForY"
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "_basePickBy-X1_M8KZ0": {
       "restored": "boundaries/lodash/base-pick-by.ts",
@@ -3497,9 +3791,20 @@
         "r": "r",
         "s": "s",
         "t": "t",
-        "u": "u"
+        "u": "u",
+        "basePickByO": "basePickByO",
+        "basePickByR": "basePickByR",
+        "basePickByA": "basePickByA",
+        "basePickByC": "basePickByC",
+        "basePickByN": "basePickByN",
+        "basePickByD": "basePickByD",
+        "basePickByS": "basePickByS",
+        "basePickByL": "basePickByL",
+        "basePickByT": "basePickByT",
+        "basePickByI": "basePickByI",
+        "basePickByU": "basePickByU"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "lodash boundary",
       "vendor": "lodash"
     },
     "_baseUniq-C2aVs9t8": {
@@ -3542,7 +3847,7 @@
         "x": "x",
         "y": "y"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "lodash boundary",
       "vendor": "lodash"
     },
     "Tableau10-BYZHCNVA": {
@@ -3552,8 +3857,12 @@
       "note": "D3 Tableau10 color scheme",
       "exports": {
         "n": "tableau10T",
-        "t": "tableau10N"
-      }
+        "t": "t",
+        "tableau10N": "tableau10N",
+        "tableau10T": "tableau10T"
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "chunk-4BX2VUAB-CQ4cpB2N": {
       "restored": "boundaries/mermaid/chunk-4-bx2-vuab-cq4cp-b2-n.ts",
@@ -3561,10 +3870,10 @@
       "boundaryType": "vendored-library",
       "note": "Mermaid populateCommonDb helper",
       "exports": {
-        "t": "chunk4BX2VUAB"
+        "t": "t"
       },
       "vendor": "mermaid",
-      "dependencyBoundary": true
+      "dependencyBoundary": "mermaid boundary"
     },
     "chunk-4BX2VUAB-Dutn5tdG": {
       "restored": "boundaries/mermaid/chunk-4-bx2-vuab-dutn5td-g.ts",
@@ -3572,10 +3881,11 @@
       "boundaryType": "vendored-library",
       "note": "Mermaid populateCommonDb helper (variant D)",
       "exports": {
-        "t": "t"
+        "t": "t",
+        "chunk4BX2VUAB": "chunk4BX2VUAB"
       },
       "vendor": "mermaid",
-      "dependencyBoundary": true
+      "dependencyBoundary": "mermaid boundary"
     },
     "chunk-QZHKN3VN-C6aDqNWX": {
       "restored": "boundaries/mermaid/chunk-qzhkn3-vn-c6a-dq-nwx.ts",
@@ -3583,10 +3893,10 @@
       "boundaryType": "vendored-library",
       "note": "Mermaid ImperativeState class",
       "exports": {
-        "t": "ChunkQZHKN3VN"
+        "t": "t"
       },
       "vendor": "mermaid",
-      "dependencyBoundary": true
+      "dependencyBoundary": "mermaid boundary"
     },
     "chunk-QZHKN3VN-D8sZjzJc": {
       "restored": "boundaries/mermaid/chunk-qzhkn3-vn-d8s-zjz-jc.ts",
@@ -3594,10 +3904,11 @@
       "boundaryType": "vendored-library",
       "note": "Mermaid ImperativeState class (variant D)",
       "exports": {
-        "t": "t"
+        "t": "t",
+        "ChunkQZHKN3VN": "ChunkQZHKN3VN"
       },
       "vendor": "mermaid",
-      "dependencyBoundary": true
+      "dependencyBoundary": "mermaid boundary"
     },
     "treemap-CMHfdOyb": {
       "restored": "boundaries/d3/treemap.ts",
@@ -3605,12 +3916,18 @@
       "boundaryType": "vendored-library",
       "note": "D3 treemap layout",
       "exports": {
-        "a": "treemapT",
-        "i": "treemapA",
-        "n": "treemapI",
-        "r": "treemapN",
-        "t": "treemapR"
-      }
+        "a": "a",
+        "i": "i",
+        "n": "n",
+        "r": "r",
+        "t": "t",
+        "treemapA": "treemapA",
+        "treemapI": "treemapI",
+        "treemapN": "treemapN",
+        "treemapR": "treemapR"
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "Serializer-yJ_eEkxi": {
       "restored": "boundaries/stylis/serializer.ts",
@@ -3618,10 +3935,13 @@
       "boundaryType": "vendored-library",
       "note": "Stylis CSS serializer",
       "exports": {
-        "n": "serializerR",
-        "r": "serializerN",
-        "t": "serializerT"
-      }
+        "n": "n",
+        "r": "r",
+        "t": "t",
+        "serializerT": "serializerT"
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "dist-D8VrLBqU": {
       "restored": "boundaries/sanitize-url/dist.ts",
@@ -3629,8 +3949,11 @@
       "boundaryType": "vendored-library",
       "note": "sanitize-url library",
       "exports": {
-        "t": "dist"
-      }
+        "t": "t",
+        "dist": "dist"
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "esm-DbqKqkZh": {
       "restored": "boundaries/iconify/esm.ts",
@@ -3638,13 +3961,21 @@
       "boundaryType": "vendored-library",
       "note": "Iconify icon utilities",
       "exports": {
-        "a": "esmO",
-        "i": "esmA",
-        "n": "esmI",
-        "o": "esmR",
-        "r": "esmN",
-        "t": "esmT"
-      }
+        "a": "a",
+        "i": "i",
+        "n": "n",
+        "o": "o",
+        "r": "r",
+        "t": "t",
+        "esmR": "esmR",
+        "esmN": "esmN",
+        "esmA": "esmA",
+        "esmI": "esmI",
+        "esmT": "esmT",
+        "esmO": "esmO"
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "middleware-BDgBoOJW": {
       "restored": "boundaries/segment-analytics/middleware.ts",
@@ -3666,8 +3997,25 @@
         "r": "middlewareP",
         "s": "middlewareR",
         "t": "middlewareS",
-        "u": "middlewareU"
-      }
+        "u": "middlewareU",
+        "middlewareU": "middlewareU",
+        "middlewareO": "middlewareO",
+        "middlewareT": "middlewareT",
+        "middlewareF": "middlewareF",
+        "middlewareL": "middlewareL",
+        "middlewareR": "middlewareR",
+        "middlewareM": "middlewareM",
+        "middlewareH": "middlewareH",
+        "middlewareP": "middlewareP",
+        "middlewareS": "middlewareS",
+        "middlewareA": "middlewareA",
+        "middlewareD": "middlewareD",
+        "middlewareC": "middlewareC",
+        "middlewareN": "middlewareN",
+        "middlewareI": "middlewareI"
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "src-n5zF1GB1": {
       "restored": "boundaries/d3/src.ts",
@@ -3675,21 +4023,22 @@
       "boundaryType": "vendored-library",
       "note": "D3 zoom and selection utilities",
       "exports": {
-        "t": "t"
+        "t": "t",
+        "Src": "Src"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "d3 boundary",
       "vendor": "d3"
     },
     "dist-8ofUNnGK": {
-      "restored": "boundaries/dist.ts",
+      "restored": "boundaries/radix-ui/use-size.ts",
       "status": "done",
       "boundaryType": "vendored-library",
       "note": "use-element-size hook",
       "exports": {
         "t": "t"
       },
-      "dependencyBoundary": true,
-      "vendor": "runtime"
+      "dependencyBoundary": "radix-ui boundary",
+      "vendor": "radix-ui"
     },
     "dist-BDOgluP9": {
       "restored": "boundaries/react-colorful/dist.ts",
@@ -3697,9 +4046,10 @@
       "boundaryType": "vendored-library",
       "note": "react-colorful color picker",
       "exports": {
-        "t": "t"
+        "t": "t",
+        "Dist": "Dist"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "react-colorful boundary",
       "vendor": "react-colorful"
     },
     "lib-CqEvD6Nn": {
@@ -3719,15 +4069,36 @@
         "l": "libI",
         "m": "libL",
         "n": "libM",
-        "o": "libN",
+        "o": "o",
         "p": "libO",
         "r": "libP",
         "s": "libR",
         "t": "libS",
         "u": "libU",
         "v": "libV",
-        "y": "libY"
-      }
+        "y": "y",
+        "libC": "libC",
+        "libV": "libV",
+        "libH": "libH",
+        "libY": "libY",
+        "libI": "libI",
+        "libF": "libF",
+        "libD": "libD",
+        "libP": "libP",
+        "libT": "libT",
+        "libUnderscore": "libUnderscore",
+        "libM": "libM",
+        "libS": "libS",
+        "libR": "libR",
+        "libG": "libG",
+        "libN": "libN",
+        "libO": "libO",
+        "libA": "libA",
+        "libU": "libU",
+        "libL": "libL"
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "plan-pricing-dtn4oxxh": {
       "restored": "boundaries/plan-pricing.ts",
@@ -3736,8 +4107,12 @@
       "note": "Plan pricing currency formatter",
       "exports": {
         "n": "planPricingT",
-        "t": "planPricingN"
-      }
+        "t": "planPricingN",
+        "planPricingN": "planPricingN",
+        "planPricingT": "planPricingT"
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "app-scope-CWE-zIhQ": {
       "restored": "boundaries/app-scope.ts",
@@ -3795,9 +4170,40 @@
         "w": "w",
         "x": "x",
         "y": "y",
-        "z": "z"
+        "z": "z",
+        "appScopeK": "appScopeK",
+        "appScopeN": "appScopeN",
+        "appScopeZ": "appScopeZ",
+        "appScopeUnderscore": "appScopeUnderscore",
+        "appScopeD": "appScopeD",
+        "appScopeX": "appScopeX",
+        "appScopeP": "appScopeP",
+        "appScopeR": "appScopeR",
+        "appScopeS": "appScopeS",
+        "appScopeI": "appScopeI",
+        "appScopeV": "appScopeV",
+        "appScopeC": "appScopeC",
+        "appScopeT": "appScopeT",
+        "appScopeQ": "appScopeQ",
+        "appScopeW": "appScopeW",
+        "appScopeL": "appScopeL",
+        "appScopeF": "appScopeF",
+        "appScopeA": "appScopeA",
+        "appScopeB": "appScopeB",
+        "appScopeY": "appScopeY",
+        "appScopeO": "appScopeO",
+        "appScopeJ": "appScopeJ",
+        "appScopeH": "appScopeH",
+        "appScopeG": "appScopeG",
+        "appScopeU": "appScopeU",
+        "appScopeE": "appScopeE",
+        "appScopeM": "appScopeM",
+        "automationScheduleImport1": "automationScheduleImport1",
+        "commandKeybindingsImport3": "commandKeybindingsImport3",
+        "commandKeybindingsImport1": "commandKeybindingsImport1",
+        "commandKeybindingsImport2": "commandKeybindingsImport2"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "runtime boundary",
       "vendor": "runtime"
     },
     "lib-BWT6A3Q0": {
@@ -3807,15 +4213,26 @@
       "note": "intl-messageformat and fast-memoize",
       "exports": {
         "a": "libO",
-        "c": "libI",
-        "i": "libR",
-        "l": "libT",
+        "c": "c",
+        "i": "i",
+        "l": "l",
         "n": "libN",
         "o": "libA",
-        "r": "libC",
-        "s": "libL",
-        "t": "libS"
-      }
+        "r": "r",
+        "s": "s",
+        "t": "libS",
+        "libR": "libR",
+        "libS": "libS",
+        "libI": "libI",
+        "libN": "libN",
+        "libO": "libO",
+        "libA": "libA",
+        "libL": "libL",
+        "libT": "libT",
+        "libC": "libC"
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "modifiers.esm-BFjb-QXg": {
       "restored": "boundaries/dnd-kit/modifiers-esm.ts",
@@ -3826,7 +4243,9 @@
         "n": "modifiersEsmN",
         "r": "modifiersEsmT",
         "t": "modifiersEsmR"
-      }
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "pdf-CaT3Fa-k": {
       "restored": "boundaries/pdf.ts",
@@ -3890,9 +4309,14 @@
         "w": "w",
         "x": "x",
         "y": "y",
-        "z": "z"
+        "z": "z",
+        "pdfO": "pdfO",
+        "pdfP": "pdfP",
+        "pdfS": "pdfS",
+        "pdfY": "pdfY",
+        "pdfR": "pdfR"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "pdf boundary",
       "vendor": "pdf"
     },
     "plan-management-state-oe_4sqNh": {
@@ -3922,29 +4346,29 @@
         "$": "srcRa",
         "$i": "srcJi",
         "$n": "srcQi",
-        "$r": "_srcIa",
+        "$r": "$r",
         "$t": "_srcAa",
         "A": "srcGi",
-        "Aa": "srcXi",
+        "Aa": "Aa",
         "Ai": "srcWi",
-        "An": "srcUi",
-        "Ar": "srcHi",
+        "An": "An",
+        "Ar": "Ar",
         "At": "srcPi",
         "B": "srcNi",
-        "Bi": "srcBi",
+        "Bi": "Bi",
         "Bn": "srcVi",
-        "Br": "srcRi",
-        "Bt": "srcMi",
+        "Br": "Br",
+        "Bt": "Bt",
         "C": "srcOi",
         "Ca": "srcAi",
         "Ci": "_srcKi",
-        "Cn": "_srcWi",
+        "Cn": "Cn",
         "Cr": "srcCi",
         "Ct": "_srcXi",
         "D": "_srcBi",
-        "Da": "_srcYi",
+        "Da": "Da",
         "Di": "srcSi",
-        "Dn": "_srcGi",
+        "Dn": "Dn",
         "Dr": "_srcI",
         "Dt": "_srcVi",
         "E": "_srcMi",
@@ -3952,15 +4376,15 @@
         "Ei": "_srcIi",
         "En": "_srcSi",
         "Er": "_srcFi",
-        "Et": "_srcNi",
-        "F": "_srcEi",
+        "Et": "Et",
+        "F": "F",
         "Fa": "_srcUi",
-        "Fi": "_srcOi",
+        "Fi": "Fi",
         "Fn": "_srcAi",
-        "Fr": "_srcLi",
-        "Ft": "srcQr",
-        "G": "srcR",
-        "Gi": "srcXr",
+        "Fr": "Fr",
+        "Ft": "Ft",
+        "G": "G",
+        "Gi": "Gi",
         "Gn": "srcZr",
         "Gr": "srcYr",
         "Gt": "srcJr",
@@ -3969,42 +4393,42 @@
         "Hn": "srcGr",
         "Hr": "srcKr",
         "Ht": "srcVr",
-        "I": "srcFr",
-        "Ia": "_srcBr",
-        "Ii": "srcSr",
+        "I": "I",
+        "Ia": "Ia",
+        "Ii": "Ii",
         "In": "srcCr",
-        "Ir": "_srcKr",
+        "Ir": "Ir",
         "It": "_srcWr",
-        "J": "srcTr",
+        "J": "J",
         "Ji": "srcEr",
         "Jn": "srcDr",
         "Jr": "srcOr",
         "Jt": "_srcUr",
-        "K": "_srcPr",
-        "Ki": "_srcHr",
+        "K": "K",
+        "Ki": "Ki",
         "Kn": "_srcFr",
         "Kr": "_srcVr",
         "Kt": "_srcYr",
-        "L": "_srcR",
-        "La": "_srcOr",
+        "L": "L",
+        "La": "La",
         "Li": "_srcSr",
         "Ln": "_srcAr",
-        "Lr": "srcZn",
+        "Lr": "Lr",
         "Lt": "_srcTr",
         "M": "srcQn",
-        "Ma": "_srcNr",
-        "Mi": "_srcZn",
+        "Ma": "Ma",
+        "Mi": "Mi",
         "Mn": "srcYn",
-        "Mr": "srcXn",
+        "Mr": "Mr",
         "Mt": "srcWn",
         "N": "srcVn",
-        "Na": "srcUn",
+        "Na": "Na",
         "Ni": "srcLn",
         "Nn": "srcKn",
         "Nr": "srcJn",
         "Nt": "srcIn",
         "O": "srcHn",
-        "Oa": "srcGn",
+        "Oa": "Oa",
         "Oi": "srcBn",
         "On": "srcN",
         "Or": "_srcRr",
@@ -4016,85 +4440,85 @@
         "Pr": "_srcKn",
         "Pt": "_srcWn",
         "Q": "srcOn",
-        "Qi": "srcTn",
+        "Qi": "Qi",
         "Qn": "_srcXn",
-        "Qr": "_srcBn",
+        "Qr": "Qr",
         "Qt": "srcSn",
         "R": "srcCn",
-        "Ra": "_srcYn",
-        "Ri": "_srcGn",
+        "Ra": "Ra",
+        "Ri": "Ri",
         "Rn": "_srcVn",
-        "Rr": "_srcN",
+        "Rr": "Rr",
         "Rt": "_srcHn",
         "S": "_srcLn",
         "Sa": "_srcAn",
         "Si": "_srcOn",
-        "Sn": "_srcCn",
+        "Sn": "Sn",
         "Sr": "_srcSn",
         "St": "_srcUn",
         "T": "_srcMn",
-        "Ta": "_srcNn",
+        "Ta": "Ta",
         "Ti": "_srcRn",
-        "Tn": "_srcTn",
+        "Tn": "Tn",
         "Tr": "_srcEn",
-        "Tt": "srcZt",
+        "Tt": "Tt",
         "U": "srcQt",
         "Ui": "srcT",
         "Un": "srcXt",
         "Ur": "srcJt",
         "Ut": "_srcQt",
         "V": "srcGt",
-        "Vi": "srcWt",
+        "Vi": "Vi",
         "Vn": "srcKt",
-        "Vr": "srcUt",
-        "Vt": "srcVt",
+        "Vr": "Vr",
+        "Vt": "Vt",
         "W": "srcBt",
         "Wi": "_srcZt",
         "Wn": "srcRt",
         "Wr": "srcLt",
-        "Wt": "srcIt",
+        "Wt": "Wt",
         "X": "srcPt",
         "Xi": "srcNt",
         "Xn": "srcFt",
         "Xr": "srcMt",
-        "Xt": "srcAt",
+        "Xt": "Xt",
         "Y": "_srcJt",
         "Yi": "_srcKt",
         "Yn": "srcOt",
         "Yr": "srcEt",
-        "Yt": "srcTt",
+        "Yt": "Yt",
         "Z": "_srcWt",
         "Zi": "srcCt",
         "Zn": "_srcRt",
         "Zr": "_srcNt",
         "Zt": "srcZ",
         "_": "srcDollar",
-        "_a": "srcSt",
+        "_a": "_a",
         "_i": "_srcOt",
-        "_n": "_srcIt",
-        "_r": "_srcCt",
+        "_n": "_n",
+        "_r": "_r",
         "_t": "_srcAt",
-        "a": "srcQ",
+        "a": "a",
         "aa": "_srcLt",
-        "ai": "_srcDt",
+        "ai": "ai",
         "an": "_srcT",
         "ar": "_srcUt",
         "at": "_srcFt",
-        "b": "_srcPt",
-        "ba": "_srcHt",
+        "b": "b",
+        "ba": "ba",
         "bi": "_srcGt",
-        "bn": "_srcMt",
+        "bn": "bn",
         "br": "_srcVt",
-        "bt": "_srcYt",
-        "c": "_srcSt",
+        "bt": "bt",
+        "c": "c",
         "ca": "_srcBt",
-        "ci": "srcY",
-        "cn": "srcX",
+        "ci": "ci",
+        "cn": "cn",
         "cr": "srcJ",
         "ct": "_srcZ",
         "d": "srcW",
         "da": "srcV",
-        "di": "srcU",
+        "di": "di",
         "dn": "__srcR",
         "dr": "srcK",
         "dt": "srcH",
@@ -4113,88 +4537,88 @@
         "ga": "_srcD",
         "gi": "_srcU",
         "gn": "_srcL",
-        "gr": "_srcC",
-        "gt": "_srcS",
-        "h": "__srcA",
-        "ha": "_srcO",
-        "hi": "___srcR",
+        "gr": "gr",
+        "gt": "gt",
+        "h": "h",
+        "ha": "ha",
+        "hi": "hi",
         "hn": "___srcN",
         "hr": "___srcT",
-        "ht": "$i",
-        "i": "_srcA",
+        "ht": "ht",
+        "i": "i",
         "ia": "srcAa",
         "ii": "srcAr",
         "in": "srcBr",
         "ir": "srcC",
-        "it": "srcCa",
+        "it": "it",
         "j": "srcD",
-        "ja": "_srcDa",
+        "ja": "ja",
         "ji": "srcDi",
-        "jn": "srcDn",
-        "jr": "srcDt",
-        "jt": "srcE",
-        "k": "srcEa",
-        "ka": "srcEi",
+        "jn": "jn",
+        "jr": "jr",
+        "jt": "jt",
+        "k": "k",
+        "ka": "ka",
         "ki": "srcEn",
-        "kn": "srcFa",
+        "kn": "kn",
         "kr": "srcFi",
         "kt": "srcHr",
-        "l": "srcHt",
-        "la": "srcIa",
+        "l": "l",
+        "la": "la",
         "li": "srcIi",
         "ln": "srcIr",
         "lr": "srcKi",
-        "lt": "srcL",
+        "lt": "lt",
         "m": "srcLa",
-        "ma": "srcLi",
+        "ma": "ma",
         "mi": "srcLr",
-        "mn": "_srcMa",
-        "mr": "srcMn",
+        "mn": "mn",
+        "mr": "mr",
         "mt": "srcMr",
         "n": "srcNa",
         "na": "srcNn",
         "ni": "srcNr",
         "nn": "srcO",
         "nr": "srcOa",
-        "nt": "srcPa",
-        "o": "srcPr",
+        "nt": "nt",
+        "o": "o",
         "oa": "_srcQn",
-        "oi": "srcRn",
+        "oi": "oi",
         "on": "srcRr",
-        "or": "srcS",
+        "or": "or",
         "ot": "srcSa",
         "p": "__srcT",
-        "pa": "srcTa",
+        "pa": "pa",
         "pi": "srcTi",
         "pn": "srcYi",
         "pr": "srcYt",
-        "pt": "srcZi",
+        "pt": "pt",
         "q": "_a",
-        "qi": "_srcB",
+        "qi": "qi",
         "qn": "srcBa",
         "qr": "_srcCa",
         "qt": "_srcCi",
         "r": "_srcCr",
         "ra": "srcDa",
         "ri": "_srcDi",
-        "rn": "_srcDn",
+        "rn": "rn",
         "rr": "_srcDr",
-        "rt": "_srcEa",
-        "s": "_srcEr",
+        "rt": "rt",
+        "s": "s",
         "sa": "_srcEt",
-        "si": "_srcF",
+        "si": "si",
         "sn": "_srcFa",
-        "sr": "_srcFn",
+        "sr": "sr",
         "st": "srcGa",
         "t": "_srcGr",
         "ta": "srcHa",
-        "ti": "_srcHi",
+        "ti": "ti",
         "tn": "___srcI",
         "tr": "in",
-        "tt": "_srcJ",
+        "tt": "tt",
         "u": "srcJa",
         "ua": "_srcJi",
-        "ui": "_srcJr",
+        "ui": "ui",
         "un": "_srcK",
         "ur": "srcKa",
         "ut": "_srcLa",
@@ -4203,31 +4627,291 @@
         "vi": "srcMa",
         "vn": "_srcMr",
         "vr": "_srcNa",
-        "vt": "_srcOa",
-        "w": "_srcPa",
-        "wa": "_srcPi",
+        "vt": "vt",
+        "w": "w",
+        "wa": "wa",
         "wi": "_srcPn",
-        "wn": "_srcQ",
+        "wn": "wn",
         "wr": "_srcQi",
-        "wt": "_srcQr",
-        "x": "_srcRa",
-        "xa": "_srcSa",
+        "wt": "wt",
+        "x": "x",
+        "xa": "xa",
         "xi": "_srcTa",
-        "xn": "_srcTi",
-        "xr": "_srcTt",
+        "xn": "xn",
+        "xr": "xr",
         "xt": "srcUa",
         "y": "srcVa",
         "ya": "_srcW",
         "yi": "srcWa",
         "yn": "_srcX",
-        "yr": "srcXa",
+        "yr": "yr",
         "yt": "_srcXr",
         "z": "_srcXt",
         "zi": "_srcY",
         "zn": "srcYa",
         "zr": "_srcZi",
-        "zt": "_srcZr"
-      }
+        "zt": "_srcZr",
+        "srcIr": "srcIr",
+        "srcJr": "srcJr",
+        "srcQ": "srcQ",
+        "srcOa": "srcOa",
+        "srcX": "srcX",
+        "srcDollar": "srcDollar",
+        "srcGr": "srcGr",
+        "srcD": "srcD",
+        "srcPn": "srcPn",
+        "srcRt": "srcRt",
+        "srcZt": "srcZt",
+        "srcBt": "srcBt",
+        "srcUi": "srcUi",
+        "srcHt": "srcHt",
+        "srcG": "srcG",
+        "srcUr": "srcUr",
+        "srcBa": "srcBa",
+        "srcKn": "srcKn",
+        "srcIn": "srcIn",
+        "srcA": "srcA",
+        "srcW": "srcW",
+        "srcHn": "srcHn",
+        "srcKt": "srcKt",
+        "srcRr": "srcRr",
+        "srcTr": "srcTr",
+        "srcFn": "srcFn",
+        "srcHa": "srcHa",
+        "srcN": "srcN",
+        "srcBi": "srcBi",
+        "srcYt": "srcYt",
+        "srcYi": "srcYi",
+        "srcDn": "srcDn",
+        "srcWr": "srcWr",
+        "srcVa": "srcVa",
+        "srcRn": "srcRn",
+        "srcCi": "srcCi",
+        "srcBn": "srcBn",
+        "srcGa": "srcGa",
+        "srcGn": "srcGn",
+        "srcOt": "srcOt",
+        "srcLt": "srcLt",
+        "srcMr": "srcMr",
+        "srcTn": "srcTn",
+        "srcJi": "srcJi",
+        "srcVn": "srcVn",
+        "srcOi": "srcOi",
+        "srcOr": "srcOr",
+        "srcKa": "srcKa",
+        "srcPa": "srcPa",
+        "srcHr": "srcHr",
+        "srcR": "srcR",
+        "srcNi": "srcNi",
+        "srcDi": "srcDi",
+        "srcEr": "srcEr",
+        "srcUa": "srcUa",
+        "srcAa": "srcAa",
+        "srcNa": "srcNa",
+        "srcKi": "srcKi",
+        "srcI": "srcI",
+        "srcCr": "srcCr",
+        "srcHi": "srcHi",
+        "srcZn": "srcZn",
+        "srcBr": "srcBr",
+        "srcL": "srcL",
+        "srcF": "srcF",
+        "srcPt": "srcPt",
+        "srcCt": "srcCt",
+        "srcV": "srcV",
+        "srcPi": "srcPi",
+        "srcFa": "srcFa",
+        "srcPr": "srcPr",
+        "srcLi": "srcLi",
+        "srcNn": "srcNn",
+        "srcVi": "srcVi",
+        "srcWi": "srcWi",
+        "srcUnderscore": "srcUnderscore",
+        "srcIt": "srcIt",
+        "srcFr": "srcFr",
+        "srcTa": "srcTa",
+        "srcVt": "srcVt",
+        "srcKr": "srcKr",
+        "srcLn": "srcLn",
+        "srcZi": "srcZi",
+        "srcXt": "srcXt",
+        "srcUt": "srcUt",
+        "srcSr": "srcSr",
+        "srcMi": "srcMi",
+        "srcEi": "srcEi",
+        "srcB": "srcB",
+        "srcTi": "srcTi",
+        "srcAt": "srcAt",
+        "srcEn": "srcEn",
+        "srcXa": "srcXa",
+        "srcAr": "srcAr",
+        "srcWa": "srcWa",
+        "srcSa": "srcSa",
+        "srcJa": "srcJa",
+        "srcOn": "srcOn",
+        "srcSt": "srcSt",
+        "srcFt": "srcFt",
+        "srcP": "srcP",
+        "srcIa": "srcIa",
+        "srcK": "srcK",
+        "srcGt": "srcGt",
+        "srcVr": "srcVr",
+        "srcM": "srcM",
+        "srcTt": "srcTt",
+        "srcQt": "srcQt",
+        "srcE": "srcE",
+        "srcH": "srcH",
+        "srcY": "srcY",
+        "srcC": "srcC",
+        "srcUn": "srcUn",
+        "srcJ": "srcJ",
+        "srcAn": "srcAn",
+        "srcQi": "srcQi",
+        "srcS": "srcS",
+        "srcSi": "srcSi",
+        "srcSn": "srcSn",
+        "srcXr": "srcXr",
+        "srcT": "srcT",
+        "srcCa": "srcCa",
+        "srcEt": "srcEt",
+        "srcJn": "srcJn",
+        "srcQn": "srcQn",
+        "srcMt": "srcMt",
+        "srcQr": "srcQr",
+        "srcDt": "srcDt",
+        "srcGi": "srcGi",
+        "srcZr": "srcZr",
+        "srcLa": "srcLa",
+        "srcYn": "srcYn",
+        "srcFi": "srcFi",
+        "srcYa": "srcYa",
+        "srcWn": "srcWn",
+        "srcDa": "srcDa",
+        "srcJt": "srcJt",
+        "srcRa": "srcRa",
+        "srcYr": "srcYr",
+        "srcNr": "srcNr",
+        "srcEa": "srcEa",
+        "srcDr": "srcDr",
+        "srcRi": "srcRi",
+        "srcMn": "srcMn",
+        "srcMa": "srcMa",
+        "srcXi": "srcXi",
+        "srcLr": "srcLr",
+        "srcAi": "srcAi",
+        "srcZ": "srcZ",
+        "srcO": "srcO",
+        "srcU": "srcU",
+        "___srcI": "___srcI",
+        "___srcN": "___srcN",
+        "__srcI": "__srcI",
+        "__srcR": "__srcR",
+        "__srcT": "__srcT",
+        "_srcA": "_srcA",
+        "_srcAt": "_srcAt",
+        "_srcB": "_srcB",
+        "_srcBn": "_srcBn",
+        "_srcBr": "_srcBr",
+        "_srcC": "_srcC",
+        "_srcCa": "_srcCa",
+        "_srcCi": "_srcCi",
+        "_srcCr": "_srcCr",
+        "_srcCt": "_srcCt",
+        "_srcDa": "_srcDa",
+        "_srcDi": "_srcDi",
+        "_srcDn": "_srcDn",
+        "_srcDr": "_srcDr",
+        "_srcEa": "_srcEa",
+        "_srcEi": "_srcEi",
+        "_srcEn": "_srcEn",
+        "_srcEr": "_srcEr",
+        "_srcEt": "_srcEt",
+        "_srcF": "_srcF",
+        "_srcFa": "_srcFa",
+        "_srcFn": "_srcFn",
+        "_srcFr": "_srcFr",
+        "_srcG": "_srcG",
+        "_srcGi": "_srcGi",
+        "_srcGn": "_srcGn",
+        "_srcGr": "_srcGr",
+        "_srcHi": "_srcHi",
+        "_srcHr": "_srcHr",
+        "_srcI": "_srcI",
+        "_srcIi": "_srcIi",
+        "_srcIt": "_srcIt",
+        "_srcJ": "_srcJ",
+        "_srcJi": "_srcJi",
+        "_srcJr": "_srcJr",
+        "_srcK": "_srcK",
+        "_srcKr": "_srcKr",
+        "_srcL": "_srcL",
+        "_srcLa": "_srcLa",
+        "_srcLr": "_srcLr",
+        "_srcLt": "_srcLt",
+        "_srcM": "_srcM",
+        "_srcMa": "_srcMa",
+        "_srcMr": "_srcMr",
+        "_srcNa": "_srcNa",
+        "_srcNi": "_srcNi",
+        "_srcNn": "_srcNn",
+        "_srcNr": "_srcNr",
+        "_srcNt": "_srcNt",
+        "_srcOa": "_srcOa",
+        "_srcOt": "_srcOt",
+        "_srcPa": "_srcPa",
+        "_srcPi": "_srcPi",
+        "_srcPn": "_srcPn",
+        "_srcPr": "_srcPr",
+        "_srcQ": "_srcQ",
+        "_srcQi": "_srcQi",
+        "_srcQn": "_srcQn",
+        "_srcQr": "_srcQr",
+        "_srcRa": "_srcRa",
+        "_srcRi": "_srcRi",
+        "_srcRt": "_srcRt",
+        "_srcSa": "_srcSa",
+        "_srcTa": "_srcTa",
+        "_srcTi": "_srcTi",
+        "_srcTn": "_srcTn",
+        "_srcTr": "_srcTr",
+        "_srcTt": "_srcTt",
+        "_srcUr": "_srcUr",
+        "_srcV": "_srcV",
+        "_srcW": "_srcW",
+        "_srcWn": "_srcWn",
+        "_srcX": "_srcX",
+        "_srcXn": "_srcXn",
+        "_srcXr": "_srcXr",
+        "_srcXt": "_srcXt",
+        "_srcY": "_srcY",
+        "_srcYn": "_srcYn",
+        "_srcZ": "_srcZ",
+        "_srcZi": "_srcZi",
+        "_srcZn": "_srcZn",
+        "_srcZr": "_srcZr",
+        "srcIi": "srcIi",
+        "srcNt": "srcNt",
+        "srcXn": "srcXn",
+        "parseDirectivesImport3": "parseDirectivesImport3",
+        "rpcImport10": "rpcImport10",
+        "rpcImport11": "rpcImport11",
+        "recommendedSkillStatsigOverridesImport4": "recommendedSkillStatsigOverridesImport4",
+        "rpcImport9": "rpcImport9",
+        "rpcImport7": "rpcImport7",
+        "rpcImport8": "rpcImport8",
+        "rpcImport6": "rpcImport6",
+        "rpcImport3": "rpcImport3",
+        "recommendedSkillStatsigOverridesImport2": "recommendedSkillStatsigOverridesImport2",
+        "rpcImport1": "rpcImport1",
+        "rpcImport5": "rpcImport5",
+        "recommendedSkillStatsigOverridesImport3": "recommendedSkillStatsigOverridesImport3",
+        "parseDirectivesImport2": "parseDirectivesImport2",
+        "rpcImport4": "rpcImport4",
+        "recommendedSkillStatsigOverridesImport5": "recommendedSkillStatsigOverridesImport5",
+        "rpcImport2": "rpcImport2"
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "presentation-iV9gDfl9": {
       "restored": "boundaries/protobufjs/presentation.ts",
@@ -4235,189 +4919,318 @@
       "boundaryType": "vendored-library",
       "note": "protobufjs library",
       "exports": {
-        "$": "presentationZn",
-        "$n": "presentationUr",
-        "$t": "presentationTr",
-        "A": "presentationRr",
-        "An": "presentationIr",
-        "At": "presentationDr",
-        "B": "presentationCr",
-        "Bn": "presentationAr",
-        "Bt": "_presentationZn",
-        "C": "presentationYn",
-        "Cn": "presentationXn",
-        "Ct": "presentationWn",
-        "D": "presentationVn",
-        "Dn": "presentationUn",
-        "Dt": "presentationQn",
-        "E": "presentationLn",
-        "En": "presentationIn",
-        "Et": "presentationGn",
-        "F": "presentationN",
-        "Fn": "_presentationYn",
-        "Ft": "_presentationXn",
-        "G": "_presentationWn",
-        "Gn": "_presentationVn",
-        "Gt": "_presentationUn",
-        "H": "presentationSn",
-        "Hn": "_presentationMn",
-        "Ht": "_presentationLn",
-        "I": "_presentationKn",
-        "In": "_presentationJn",
-        "It": "_presentationHn",
-        "J": "_presentationGn",
-        "Jn": "_presentationFn",
-        "Jt": "presentationDn",
-        "K": "_presentationCn",
-        "Kn": "_presentationBn",
-        "Kt": "_presentationN",
-        "L": "presentationTn",
-        "Ln": "_presentationSn",
-        "Lt": "presentationPn",
-        "M": "presentationOn",
-        "Mn": "presentationNn",
-        "Mt": "presentationMn",
-        "N": "presentationFn",
-        "Nn": "presentationEn",
-        "Nt": "_presentationDn",
-        "O": "presentationCn",
-        "On": "presentationAn",
-        "Ot": "_presentationOn",
-        "P": "_presentationTn",
-        "Pn": "_presentationRn",
-        "Pt": "_presentationNn",
-        "Q": "_presentationIn",
-        "Qn": "_presentationEn",
-        "Qt": "_presentationAn",
-        "R": "presentationZt",
-        "Rn": "presentationXt",
-        "Rt": "presentationQt",
-        "S": "presentationT",
-        "Sn": "presentationX",
-        "St": "presentationV",
-        "T": "presentationO",
-        "Tn": "presentationJ",
-        "Tt": "presentationH",
-        "U": "presentationB",
-        "Un": "presentationAt",
-        "Ut": "presentationYt",
-        "V": "presentationS",
-        "Vn": "presentationQ",
-        "Vt": "__presentationN",
-        "W": "presentationD",
-        "Wn": "presentationC",
-        "Wt": "presentationA",
-        "X": "$",
-        "Xn": "_presentationAt",
-        "Xt": "_presentationB",
-        "Y": "presentationBn",
-        "Yn": "_presentationBt",
-        "Yt": "_presentationCt",
-        "Z": "_presentationDt",
-        "Zn": "presentationE",
-        "Zt": "presentationEt",
-        "_": "presentationF",
-        "_n": "_presentationFt",
-        "_t": "_presentationG",
-        "a": "_presentationGt",
-        "an": "_presentationH",
-        "ar": "presentationHn",
-        "at": "_presentationHt",
-        "b": "_presentationI",
-        "bn": "presentationIt",
-        "bt": "_presentationJ",
-        "c": "presentationJn",
-        "cn": "_presentationJt",
-        "cr": "_presentationK",
-        "ct": "presentationKn",
-        "d": "presentationKt",
-        "dn": "presentationL",
-        "dr": "presentationLt",
-        "dt": "presentationM",
-        "en": "_presentationMt",
-        "er": "_presentationNt",
-        "et": "_presentationO",
-        "f": "presentationOt",
-        "fn": "_presentationP",
-        "fr": "_presentationPt",
-        "ft": "_presentationR",
-        "g": "presentationRn",
-        "gn": "_presentationRt",
-        "gt": "_presentationSt",
-        "h": "__presentationT",
-        "hn": "presentationTt",
-        "ht": "presentationU",
-        "i": "_presentationUt",
-        "in": "_presentationV",
-        "ir": "_presentationVt",
-        "it": "presentationW",
-        "j": "presentationWt",
-        "jn": "_presentationX",
-        "jt": "presentationY",
-        "k": "presentationZ",
-        "kn": "presentationUnderscore",
-        "kt": "_t",
-        "l": "_presentationA",
-        "ln": "presentationBt",
-        "lr": "_presentationC",
-        "lt": "presentationCt",
-        "m": "_presentationD",
-        "mn": "presentationDt",
-        "mt": "presentationEr",
-        "n": "_presentationEt",
-        "nn": "_presentationF",
-        "nr": "presentationFr",
-        "nt": "presentationFt",
-        "o": "presentationG",
-        "on": "presentationGt",
-        "or": "presentationHt",
-        "ot": "presentationI",
-        "p": "_presentationIt",
-        "pn": "presentationJt",
-        "pr": "presentationK",
-        "pt": "_presentationKt",
-        "q": "_presentationL",
-        "qn": "presentationLr",
-        "qt": "_presentationLt",
-        "r": "_presentationM",
-        "rn": "presentationMt",
+        "$": "$",
+        "$n": "$n",
+        "$t": "$t",
+        "A": "A",
+        "An": "An",
+        "At": "At",
+        "B": "B",
+        "Bn": "Bn",
+        "Bt": "Bt",
+        "C": "C",
+        "Cn": "Cn",
+        "Ct": "Ct",
+        "D": "D",
+        "Dn": "Dn",
+        "Dt": "Dt",
+        "E": "E",
+        "En": "En",
+        "Et": "Et",
+        "F": "F",
+        "Fn": "Fn",
+        "Ft": "Ft",
+        "G": "G",
+        "Gn": "Gn",
+        "Gt": "Gt",
+        "H": "H",
+        "Hn": "Hn",
+        "Ht": "Ht",
+        "I": "I",
+        "In": "In",
+        "It": "It",
+        "J": "J",
+        "Jn": "Jn",
+        "Jt": "Jt",
+        "K": "K",
+        "Kn": "Kn",
+        "Kt": "Kt",
+        "L": "L",
+        "Ln": "Ln",
+        "Lt": "Lt",
+        "M": "M",
+        "Mn": "Mn",
+        "Mt": "Mt",
+        "N": "N",
+        "Nn": "Nn",
+        "Nt": "Nt",
+        "O": "O",
+        "On": "On",
+        "Ot": "Ot",
+        "P": "P",
+        "Pn": "Pn",
+        "Pt": "Pt",
+        "Q": "Q",
+        "Qn": "Qn",
+        "Qt": "Qt",
+        "R": "R",
+        "Rn": "Rn",
+        "Rt": "Rt",
+        "S": "S",
+        "Sn": "Sn",
+        "St": "St",
+        "T": "T",
+        "Tn": "Tn",
+        "Tt": "Tt",
+        "U": "U",
+        "Un": "Un",
+        "Ut": "Ut",
+        "V": "V",
+        "Vn": "Vn",
+        "Vt": "Vt",
+        "W": "W",
+        "Wn": "Wn",
+        "Wt": "Wt",
+        "X": "X",
+        "Xn": "Xn",
+        "Xt": "Xt",
+        "Y": "Y",
+        "Yn": "Yn",
+        "Yt": "Yt",
+        "Z": "Z",
+        "Zn": "Zn",
+        "Zt": "Zt",
+        "_": "_",
+        "_n": "_n",
+        "_t": "_t",
+        "a": "a",
+        "an": "an",
+        "ar": "ar",
+        "at": "at",
+        "b": "b",
+        "bn": "bn",
+        "bt": "bt",
+        "c": "c",
+        "cn": "cn",
+        "cr": "cr",
+        "ct": "ct",
+        "d": "d",
+        "dn": "dn",
+        "dr": "dr",
+        "dt": "dt",
+        "en": "en",
+        "er": "er",
+        "et": "et",
+        "f": "f",
+        "fn": "fn",
+        "fr": "fr",
+        "ft": "ft",
+        "g": "g",
+        "gn": "gn",
+        "gt": "gt",
+        "h": "h",
+        "hn": "hn",
+        "ht": "ht",
+        "i": "i",
+        "in": "in",
+        "ir": "ir",
+        "it": "it",
+        "j": "j",
+        "jn": "jn",
+        "jt": "jt",
+        "k": "k",
+        "kn": "kn",
+        "kt": "kt",
+        "l": "l",
+        "ln": "ln",
+        "lr": "lr",
+        "lt": "lt",
+        "m": "m",
+        "mn": "mn",
+        "mt": "mt",
+        "n": "n",
+        "nn": "nn",
+        "nr": "nr",
+        "nt": "nt",
+        "o": "o",
+        "on": "on",
+        "or": "or",
+        "ot": "ot",
+        "p": "p",
+        "pn": "pn",
+        "pr": "pr",
+        "pt": "pt",
+        "q": "q",
+        "qn": "qn",
+        "qt": "qt",
+        "r": "r",
+        "rn": "rn",
         "rr": "___presentationN",
-        "rt": "presentationNr",
-        "s": "presentationNt",
-        "sn": "or",
-        "sr": "_presentationOt",
-        "st": "presentationP",
-        "t": "_presentationPn",
-        "tn": "presentationPr",
-        "tr": "presentationPt",
-        "tt": "_presentationQ",
-        "u": "_presentationQn",
-        "un": "_presentationQt",
-        "ur": "presentationR",
-        "ut": "presentationRt",
-        "v": "_presentationS",
-        "vn": "presentationSr",
-        "vt": "presentationSt",
-        "w": "___presentationT",
-        "wn": "_presentationTt",
-        "wt": "_presentationU",
-        "x": "presentationUt",
-        "xn": "presentationVt",
-        "xt": "_presentationW",
-        "y": "_presentationWt",
-        "yn": "_presentationXt",
-        "yt": "_presentationY",
-        "z": "_presentationYt",
-        "zn": "_presentationZ",
-        "zt": "_presentationZt"
-      }
+        "rt": "rt",
+        "s": "s",
+        "sn": "sn",
+        "sr": "sr",
+        "st": "st",
+        "t": "t",
+        "tn": "tn",
+        "tr": "tr",
+        "tt": "tt",
+        "u": "u",
+        "un": "un",
+        "ur": "ur",
+        "ut": "ut",
+        "v": "v",
+        "vn": "vn",
+        "vt": "vt",
+        "w": "w",
+        "wn": "wn",
+        "wt": "wt",
+        "x": "x",
+        "xn": "xn",
+        "xt": "xt",
+        "y": "y",
+        "yn": "yn",
+        "yt": "yt",
+        "z": "z",
+        "zn": "zn",
+        "zt": "zt",
+        "presentationQn": "presentationQn",
+        "presentationZn": "presentationZn",
+        "presentationVn": "presentationVn",
+        "presentationRr": "presentationRr",
+        "presentationN": "presentationN",
+        "presentationJ": "presentationJ",
+        "presentationIn": "presentationIn",
+        "presentationA": "presentationA",
+        "presentationH": "presentationH",
+        "presentationUn": "presentationUn",
+        "AvLst": "AvLst",
+        "BodyProperties": "BodyProperties",
+        "Camera3D": "Camera3D",
+        "ChartReference": "ChartReference",
+        "CodeBlockElement": "CodeBlockElement",
+        "CodeBlockKind": "CodeBlockKind",
+        "CodeEnvironment": "CodeEnvironment",
+        "CodeExecutionMeta": "CodeExecutionMeta",
+        "CodeLineRange": "CodeLineRange",
+        "CodeResult": "CodeResult",
+        "CodeThemeRef": "CodeThemeRef",
+        "ColorMap": "ColorMap",
+        "ColorScheme": "ColorScheme",
+        "ConditionalTableStyle": "ConditionalTableStyle",
+        "ConditionalTableStyle_Condition": "ConditionalTableStyle_Condition",
+        "Connector": "Connector",
+        "ConnectorLineStyle": "ConnectorLineStyle",
+        "ConnectorLineStyle_LineCap": "ConnectorLineStyle_LineCap",
+        "ConnectorLineStyle_LineEnd": "ConnectorLineStyle_LineEnd",
+        "ConnectorLineStyle_LineEndLength": "ConnectorLineStyle_LineEndLength",
+        "ConnectorLineStyle_LineEndType": "ConnectorLineStyle_LineEndType",
+        "ConnectorLineStyle_LineEndWidth": "ConnectorLineStyle_LineEndWidth",
+        "ConnectorLineStyle_LineJoin": "ConnectorLineStyle_LineJoin",
+        "CustomPath": "CustomPath",
+        "Effect": "Effect",
+        "EffectStyle": "EffectStyle",
+        "EffectType": "EffectType",
+        "Element": "Element",
+        "ElementPlacement": "ElementPlacement",
+        "ElementPlacementType": "ElementPlacementType",
+        "ElementType": "ElementType",
+        "ElementWrap": "ElementWrap",
+        "ElementWrapType": "ElementWrapType",
+        "EmbeddedArtifactElement": "EmbeddedArtifactElement",
+        "GlowEffect": "GlowEffect",
+        "Hyperlink": "Hyperlink",
+        "ImageElement": "ImageElement",
+        "ImageMask": "ImageMask",
+        "InlineNode": "InlineNode",
+        "Layout": "Layout",
+        "LightRig3D": "LightRig3D",
+        "Paragraph": "Paragraph",
+        "PathArcTo": "PathArcTo",
+        "PathClose": "PathClose",
+        "PathCommand": "PathCommand",
+        "PathCubicBezierTo": "PathCubicBezierTo",
+        "PathLineTo": "PathLineTo",
+        "PathMoveTo": "PathMoveTo",
+        "PathQuadBezierTo": "PathQuadBezierTo",
+        "Presentation": "Presentation",
+        "PresentationGuide": "PresentationGuide",
+        "PresentationGuide_GuideOrientation": "PresentationGuide_GuideOrientation",
+        "PresentationViewProperties": "PresentationViewProperties",
+        "RectFormula": "RectFormula",
+        "ReflectionEffect": "ReflectionEffect",
+        "Rotation3D": "Rotation3D",
+        "Scene3D": "Scene3D",
+        "Script": "Script",
+        "Script_ReturnMode": "Script_ReturnMode",
+        "ShadowEffect": "ShadowEffect",
+        "Shape3D": "Shape3D",
+        "Shape3D_Bevel": "Shape3D_Bevel",
+        "ShapeElement": "ShapeElement",
+        "Slide": "Slide",
+        "SlideFurnitureVisibility": "SlideFurnitureVisibility",
+        "SmartArtConnection": "SmartArtConnection",
+        "SmartArtDataModel": "SmartArtDataModel",
+        "SmartArtElement": "SmartArtElement",
+        "SmartArtLayoutAlgorithm": "SmartArtLayoutAlgorithm",
+        "SmartArtLayoutAtom": "SmartArtLayoutAtom",
+        "SmartArtLayoutChoose": "SmartArtLayoutChoose",
+        "SmartArtLayoutChooseBranch": "SmartArtLayoutChooseBranch",
+        "SmartArtLayoutConstraint": "SmartArtLayoutConstraint",
+        "SmartArtLayoutConstraints": "SmartArtLayoutConstraints",
+        "SmartArtLayoutForEach": "SmartArtLayoutForEach",
+        "SmartArtLayoutIterator": "SmartArtLayoutIterator",
+        "SmartArtLayoutNode": "SmartArtLayoutNode",
+        "SmartArtLayoutParameter": "SmartArtLayoutParameter",
+        "SmartArtLayoutPresentationOf": "SmartArtLayoutPresentationOf",
+        "SmartArtLayoutRule": "SmartArtLayoutRule",
+        "SmartArtLayoutRules": "SmartArtLayoutRules",
+        "SmartArtLayoutShape": "SmartArtLayoutShape",
+        "SmartArtPoint": "SmartArtPoint",
+        "SoftEdgesEffect": "SoftEdgesEffect",
+        "StyleReference": "StyleReference",
+        "TableBorder": "TableBorder",
+        "TableBorders": "TableBorders",
+        "TableCell": "TableCell",
+        "TableCellBorders": "TableCellBorders",
+        "TableCellMargins": "TableCellMargins",
+        "TableCellStyle": "TableCellStyle",
+        "TableCell_Lines": "TableCell_Lines",
+        "TableElement": "TableElement",
+        "TableProperties": "TableProperties",
+        "TableRow": "TableRow",
+        "TableStyleDefinition": "TableStyleDefinition",
+        "TableStylePart": "TableStylePart",
+        "TableStyles": "TableStyles",
+        "TextRun": "TextRun",
+        "Theme": "Theme",
+        "ThemeColor": "ThemeColor",
+        "VideoElement": "VideoElement",
+        "protobufPackage": "protobufPackage",
+        "documentImport7": "documentImport7",
+        "documentImport12": "documentImport12",
+        "documentImport8": "documentImport8",
+        "documentImport10": "documentImport10",
+        "documentImport3": "documentImport3",
+        "documentImport1": "documentImport1",
+        "documentImport2": "documentImport2",
+        "documentImport4": "documentImport4",
+        "documentImport9": "documentImport9",
+        "documentImport5": "documentImport5",
+        "documentImport6": "documentImport6",
+        "documentImport11": "documentImport11"
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "modulepreload-polyfill-Cf3xff8G": {
       "restored": "boundaries/modulepreload-polyfill.ts",
       "status": "done",
       "boundaryType": "runtime",
       "note": "modulepreload polyfill IIFE",
-      "exports": {}
+      "exports": {},
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "known-app-icon-CXoFtnBV": {
       "restored": "utils/known-app-icon/index.tsx",
@@ -4565,7 +5378,7 @@
       "exports": {
         "diagram": "diagram"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "single-value-sCXpwjXj": {
@@ -4652,8 +5465,36 @@
         "xt": "xt",
         "y": "y",
         "yt": "yt",
-        "z": "z"
-      }
+        "z": "z",
+        "singleValueJ": "singleValueJ",
+        "singleValueL": "singleValueL",
+        "singleValueD": "singleValueD",
+        "singleValueTt": "singleValueTt",
+        "singleValueHt": "singleValueHt",
+        "singleValueN": "singleValueN",
+        "singleValueVt": "singleValueVt",
+        "singleValueBt": "singleValueBt",
+        "singleValueY": "singleValueY",
+        "singleValueIt": "singleValueIt",
+        "singleValueC": "singleValueC",
+        "singleValueRt": "singleValueRt",
+        "singleValueK": "singleValueK",
+        "singleValueT": "singleValueT",
+        "singleValueU": "singleValueU",
+        "singleValueEt": "singleValueEt",
+        "singleValueQ": "singleValueQ",
+        "singleValueWt": "singleValueWt",
+        "singleValueW": "singleValueW",
+        "singleValueH": "singleValueH",
+        "singleValueUt": "singleValueUt",
+        "singleValueNt": "singleValueNt",
+        "singleValueZ": "singleValueZ",
+        "singleValueF": "singleValueF",
+        "singleValueDt": "singleValueDt",
+        "singleValueDollar": "singleValueDollar"
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "use-ascii-engine-B9cDslGS": {
       "restored": "utils/use-ascii-engine.tsx",
@@ -4667,9 +5508,10 @@
       "restored": "boundaries/statsig/statsig-url-config.ts",
       "status": "done",
       "exports": {
-        "t": "t"
+        "t": "t",
+        "statsigUrlConfig": "statsigUrlConfig"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "statsig boundary",
       "vendor": "statsig"
     },
     "cose-bilkent-S5V4N54A-BlVTOsyx": {
@@ -4685,7 +5527,7 @@
         "diagram": "diagram"
       },
       "status": "done",
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "sankeyDiagram-XADWPNL6-CXgjy9x6": {
@@ -4694,7 +5536,7 @@
         "diagram": "diagram"
       },
       "status": "done",
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "cose-bilkent-S5V4N54A-C42L7Iw8": {
@@ -4705,11 +5547,14 @@
       "status": "done"
     },
     "graphlib-DGNlaJmK": {
-      "restored": "utils/graphlib-dg-nla-jm-k.ts",
+      "restored": "boundaries/dagre/graphlib.ts",
       "exports": {
-        "t": "t"
+        "t": "t",
+        "Graphlib": "Graphlib"
       },
-      "status": "done"
+      "status": "done",
+      "vendor": "dagre",
+      "dependencyBoundary": "dagre boundary"
     },
     "handle-D9lWAd6M": {
       "restored": "utils/handle.tsx",
@@ -4730,7 +5575,7 @@
         "diagram": "diagram"
       },
       "status": "done",
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "sankeyDiagram-TZEHDZUN-XAdBsdDZ": {
@@ -4739,7 +5584,7 @@
         "diagram": "diagram"
       },
       "status": "done",
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "product-logger-ibAP2Yp2": {
@@ -4955,7 +5800,8 @@
         "z": "z",
         "zn": "zn",
         "zr": "zr",
-        "zt": "zt"
+        "zt": "zt",
+        "\"OAI-Product-Sku\"": "\"OAI-Product-Sku\""
       },
       "status": "done"
     },
@@ -4976,22 +5822,30 @@
     "clone-Mnyt6qd1": {
       "restored": "boundaries/lodash/clone.ts",
       "exports": {
-        "t": "t"
+        "t": "t",
+        "clone": "clone"
       },
-      "status": "done"
+      "status": "done",
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "dist-kMWsZQu4": {
-      "restored": "boundaries/dist.ts",
+      "restored": "boundaries/radix-ui/arrow.ts",
       "exports": {
         "a": "a",
         "i": "i",
         "n": "n",
         "r": "r",
-        "t": "t"
+        "t": "t",
+        "distI": "distI",
+        "distR": "distR",
+        "distN": "distN",
+        "distA": "distA",
+        "distT": "distT"
       },
       "status": "done",
-      "dependencyBoundary": true,
-      "vendor": "runtime"
+      "dependencyBoundary": "radix-ui boundary",
+      "vendor": "radix-ui"
     },
     "codex-api-error-_CzxEWtd": {
       "restored": "utils/codex-api-error.ts",
@@ -5034,7 +5888,8 @@
         "u": "u",
         "v": "v",
         "x": "x",
-        "y": "y"
+        "y": "y",
+        "useComposerControllerUnderscore": "useComposerControllerUnderscore"
       }
     },
     "primary-runtime-install-status-message-9X-UzhFS": {
@@ -5138,11 +5993,17 @@
         "i": "i",
         "n": "n",
         "r": "r",
-        "t": "t"
+        "t": "t",
+        "isEmptyI": "isEmptyI",
+        "isEmptyT": "isEmptyT",
+        "isEmptyR": "isEmptyR",
+        "isEmptyN": "isEmptyN"
       },
       "status": "done",
       "boundaryType": "vendored-library",
-      "note": "Lodash isEmpty utility; typed facade pending full restoration"
+      "note": "Lodash isEmpty utility; typed facade pending full restoration",
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "merge-Ch0yXQoh": {
       "restored": "boundaries/lodash/merge.ts",
@@ -5163,20 +6024,42 @@
         "r": "r",
         "s": "s",
         "t": "t",
-        "u": "u"
+        "u": "u",
+        "mergeL": "mergeL",
+        "mergeH": "mergeH",
+        "mergeS": "mergeS",
+        "mergeR": "mergeR",
+        "mergeUnderscore": "mergeUnderscore",
+        "mergeC": "mergeC",
+        "mergeP": "mergeP",
+        "mergeF": "mergeF",
+        "mergeT": "mergeT",
+        "mergeO": "mergeO",
+        "mergeN": "mergeN",
+        "mergeU": "mergeU",
+        "mergeI": "mergeI",
+        "mergeA": "mergeA",
+        "mergeM": "mergeM",
+        "mergeG": "mergeG",
+        "mergeD": "mergeD"
       },
       "status": "done",
       "boundaryType": "vendored-library",
-      "note": "Lodash merge utility; typed facade pending full restoration"
+      "note": "Lodash merge utility; typed facade pending full restoration",
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "mime-types-C1fbkwXZ": {
       "restored": "boundaries/mime-types.ts",
       "exports": {
-        "t": "t"
+        "t": "t",
+        "MimeTypes": "MimeTypes"
       },
       "status": "done",
       "boundaryType": "vendored-library",
-      "note": "mime-types library; typed facade pending full restoration"
+      "note": "mime-types library; typed facade pending full restoration",
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "middleware-Az7vHdEh": {
       "restored": "boundaries/zustand-middleware.tsx",
@@ -5191,11 +6074,14 @@
     "mermaid-diagram-shell-BO-t9BGx": {
       "restored": "boundaries/mermaid/mermaid-diagram-shell.ts",
       "exports": {
-        "t": "t"
+        "t": "t",
+        "MermaidDiagramShell": "MermaidDiagramShell"
       },
       "status": "done",
       "boundaryType": "vendored-library",
-      "note": "Mermaid diagram shell component; typed facade pending full restoration"
+      "note": "Mermaid diagram shell component; typed facade pending full restoration",
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "sidebar-thread-keys-Ch_amVKz": {
       "restored": "sidebar/sidebar-thread-keys.tsx",
@@ -5290,17 +6176,43 @@
     "persisted-atom-DAN4dBf_": {
       "restored": "utils/persisted-atom.tsx",
       "status": "done",
-      "exports": {}
+      "exports": {
+        "t": "persistedAtomT"
+      }
     },
     "persisted-signal-Djfqb095": {
       "restored": "utils/persisted-signal.tsx",
       "status": "done",
       "exports": {
-        "d": "H",
-        "g": "T",
-        "o": "G",
-        "p": "B",
-        "t": "J"
+        "t": "persistedSignalT",
+        "d": "d",
+        "g": "g",
+        "o": "o",
+        "p": "p",
+        "persistedSignalT": "persistedSignalT",
+        "persistedSignalC": "persistedSignalC",
+        "persistedSignalB": "persistedSignalB",
+        "persistedSignalU": "persistedSignalU",
+        "persistedSignalN": "persistedSignalN",
+        "persistedSignalR": "persistedSignalR",
+        "persistedSignalF": "persistedSignalF",
+        "persistedSignalM": "persistedSignalM",
+        "persistedSignalA": "persistedSignalA",
+        "persistedSignalY": "persistedSignalY",
+        "persistedSignalV": "persistedSignalV",
+        "persistedSignalS": "persistedSignalS",
+        "persistedSignalX": "persistedSignalX",
+        "persistedSignalG": "persistedSignalG",
+        "persistedSignalH": "persistedSignalH",
+        "persistedSignalI": "persistedSignalI",
+        "persistedSignalL": "persistedSignalL",
+        "persistedSignalUnderscore": "persistedSignalUnderscore",
+        "B": "B",
+        "F": "F",
+        "G": "G",
+        "H": "H",
+        "T": "T",
+        "V": "V"
       }
     },
     "permissions-mode-visibility-BRJnTR2q": {
@@ -5353,7 +6265,7 @@
       "status": "done"
     },
     "chunk-YZCP3GAM-CkcPUeYE": {
-      "restored": "utils/chunk-yzcp3-gam-ckc-p-ue-ye.tsx",
+      "restored": "boundaries/esbuild-runtime/chunk-yzcp3-gam-ckc-pue-ye.ts",
       "exports": {
         "a": "drawRect",
         "c": "drawBackgroundRect",
@@ -5362,9 +6274,19 @@
         "o": "drawEmbeddedImage",
         "r": "getNoteRectDefaults",
         "s": "getTextObjDefaults",
-        "t": "createTooltip"
+        "t": "createTooltip",
+        "chunkYZCP3GAMO": "chunkYZCP3GAMO",
+        "chunkYZCP3GAMN": "chunkYZCP3GAMN",
+        "chunkYZCP3GAMS": "chunkYZCP3GAMS",
+        "chunkYZCP3GAMA": "chunkYZCP3GAMA",
+        "chunkYZCP3GAMT": "chunkYZCP3GAMT",
+        "chunkYZCP3GAMI": "chunkYZCP3GAMI",
+        "chunkYZCP3GAMC": "chunkYZCP3GAMC",
+        "chunkYZCP3GAMR": "chunkYZCP3GAMR"
       },
-      "status": "done"
+      "status": "done",
+      "vendor": "esbuild-runtime",
+      "dependencyBoundary": "esbuild-runtime boundary"
     },
     "control-group-D6VRtZJR": {
       "restored": "utils/control-group.tsx",
@@ -5460,7 +6382,9 @@
       "restored": "conversations/conversation-starter-card.tsx",
       "exports": {
         "n": "ConversationStarterCard",
-        "t": "default"
+        "t": "default",
+        "ConversationStarterCard": "ConversationStarterCard",
+        "default": "default"
       },
       "status": "done"
     },
@@ -5525,7 +6449,7 @@
         "version": "version"
       },
       "status": "done",
-      "dependencyBoundary": true,
+      "dependencyBoundary": "pdf boundary",
       "vendor": "pdf"
     },
     "presentation-CNEfpj33": {
@@ -5635,7 +6559,9 @@
         "VideoElement": "VideoElement",
         "protobufPackage": "protobufPackage"
       },
-      "status": "done"
+      "status": "done",
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "large-empty-state-DKCyYtZB": {
       "restored": "utils/large-empty-state-dk-cy-yt-zb.tsx",
@@ -5738,13 +6664,22 @@
         "r": "r",
         "s": "s",
         "t": "t",
-        "u": "u"
+        "u": "u",
+        "markdownToSearchTextA": "markdownToSearchTextA",
+        "markdownToSearchTextT": "markdownToSearchTextT",
+        "markdownToSearchTextR": "markdownToSearchTextR",
+        "markdownToSearchTextL": "markdownToSearchTextL",
+        "markdownToSearchTextD": "markdownToSearchTextD",
+        "markdownToSearchTextU": "markdownToSearchTextU",
+        "markdownToSearchTextN": "markdownToSearchTextN",
+        "markdownToSearchTextS": "markdownToSearchTextS",
+        "markdownToSearchTextC": "markdownToSearchTextC"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "markdown boundary",
       "vendor": "markdown"
     },
     "metric-helpers-BidZZeRm": {
-      "restored": "utils/metric-helpers.ts",
+      "restored": "utils/metric-helpers/index.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -6356,7 +7291,14 @@
     "file-diff-KtBt16gK": {
       "restored": "boundaries/pierre/file-diff.ts",
       "status": "done",
-      "exports": {}
+      "exports": {
+        "n": "n",
+        "t": "t",
+        "fileDiffT": "fileDiffT",
+        "fileDiffN": "fileDiffN"
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "reduced-motion-preference-BFM-v_UB": {
       "restored": "boundaries/framer-motion/reduced-motion-preference.ts",
@@ -6364,14 +7306,48 @@
         "i": "getReducedMotionMediaQuery",
         "n": "systemPrefersReducedMotionAtom",
         "r": "reducedMotionUserSettingAtom",
-        "t": "prefersReducedMotionAtom"
+        "t": "prefersReducedMotionAtom",
+        "reducedMotionPreferenceT": "reducedMotionPreferenceT",
+        "reducedMotionPreferenceR": "reducedMotionPreferenceR",
+        "reducedMotionPreferenceN": "reducedMotionPreferenceN",
+        "reducedMotionPreferenceI": "reducedMotionPreferenceI",
+        "prefersReducedMotionAtom": "prefersReducedMotionAtom",
+        "reducedMotionUserSettingAtom": "reducedMotionUserSettingAtom",
+        "systemPrefersReducedMotionAtom": "systemPrefersReducedMotionAtom"
       },
-      "status": "done"
+      "status": "done",
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "main-BDm-p1LA": {
-      "restored": "utils/main.ts",
+      "restored": "boundaries/lodash/main.ts",
       "status": "done",
-      "exports": {}
+      "exports": {
+        "a": "a",
+        "c": "c",
+        "d": "d",
+        "i": "i",
+        "l": "l",
+        "n": "n",
+        "o": "o",
+        "r": "r",
+        "s": "s",
+        "t": "t",
+        "u": "u",
+        "mainU": "mainU",
+        "mainI": "mainI",
+        "mainR": "mainR",
+        "mainO": "mainO",
+        "mainL": "mainL",
+        "mainS": "mainS",
+        "mainC": "mainC",
+        "mainT": "mainT",
+        "mainN": "mainN",
+        "mainD": "mainD",
+        "mainA": "mainA"
+      },
+      "vendor": "lodash",
+      "dependencyBoundary": "lodash boundary"
     },
     "use-reduced-motion-Dx8ukPZm": {
       "restored": "utils/use-reduced-motion.ts",
@@ -6531,7 +7507,10 @@
     },
     "app-shell-state-QDRlZ5bT": {
       "restored": "app-shell/app-shell-state/index.ts",
-      "status": "done"
+      "status": "done",
+      "exports": {
+        "v": "appShellStateVState"
+      }
     },
     "thread-user-message-navigation-rail-DwC5A8DL": {
       "restored": "utils/thread-user-message-navigation-rail.tsx",
@@ -6674,6 +7653,7 @@
     "primary-runtime-install-state-BkTYe0Xa": {
       "restored": "ui/primary-runtime-install-state.tsx",
       "exports": {
+        "S": "primaryRuntimeInstallStateSState",
         "a": "isPrimaryRuntimeInstalling",
         "i": "cancelPrimaryRuntimeInstall",
         "n": "runPrimaryRuntimeInstallRequest",
@@ -6712,14 +7692,14 @@
       "status": "done"
     },
     "settings-shared-B8obOSL1": {
-      "restored": "settings/settings-shared.ts",
+      "restored": "settings/settings-shared/index.tsx",
       "status": "done",
       "exports": {
-        "a": "a",
-        "i": "i",
-        "n": "n",
-        "r": "r",
-        "t": "t"
+        "a": "getNavLabel",
+        "i": "SettingsSectionTitle",
+        "n": "SettingsNavTitle",
+        "r": "SettingsSectionSubtitle",
+        "t": "SettingsNavButton"
       }
     },
     "preview-DvaTfwxN": {
@@ -6876,7 +7856,7 @@
       }
     },
     "use-host-config-CiYpjHRj": {
-      "restored": "hooks/use-host-config.ts",
+      "restored": "boundaries/host-config.ts",
       "status": "done",
       "exports": {
         "$": "$",
@@ -7011,16 +7991,93 @@
         "yn": "yn",
         "yt": "yt",
         "z": "z",
-        "zt": "zt"
+        "zt": "zt",
+        "useHostConfigZt": "useHostConfigZt",
+        "useHostConfigDn": "useHostConfigDn",
+        "useHostConfigS": "useHostConfigS",
+        "useHostConfigTn": "useHostConfigTn",
+        "useHostConfigXn": "useHostConfigXn",
+        "useHostConfigPt": "useHostConfigPt",
+        "useHostConfigOt": "useHostConfigOt",
+        "useHostConfigUn": "useHostConfigUn",
+        "useHostConfigYt": "useHostConfigYt",
+        "useHostConfigM": "useHostConfigM",
+        "useHostConfigDt": "useHostConfigDt",
+        "useHostConfigT": "useHostConfigT",
+        "useHostConfigR": "useHostConfigR",
+        "useHostConfigWt": "useHostConfigWt",
+        "useHostConfigI": "useHostConfigI",
+        "useHostConfigFn": "useHostConfigFn",
+        "useHostConfigF": "useHostConfigF",
+        "useHostConfigKt": "useHostConfigKt",
+        "useHostConfigVt": "useHostConfigVt",
+        "useHostConfigDollar": "useHostConfigDollar",
+        "useHostConfigA": "useHostConfigA",
+        "useHostConfigEt": "useHostConfigEt",
+        "useHostConfigN": "useHostConfigN",
+        "useHostConfigEn": "useHostConfigEn",
+        "useHostConfigD": "useHostConfigD",
+        "useHostConfigAn": "useHostConfigAn",
+        "useHostConfigIt": "useHostConfigIt",
+        "useHostConfigTt": "useHostConfigTt",
+        "useHostConfigQt": "useHostConfigQt",
+        "useHostConfigXt": "useHostConfigXt",
+        "useHostConfigCn": "useHostConfigCn",
+        "useHostConfigHn": "useHostConfigHn",
+        "useHostConfigGn": "useHostConfigGn",
+        "useHostConfigUnderscore": "useHostConfigUnderscore",
+        "useHostConfigRn": "useHostConfigRn",
+        "useHostConfigWn": "useHostConfigWn",
+        "useHostConfigNt": "useHostConfigNt",
+        "useHostConfigG": "useHostConfigG",
+        "useHostConfigIn": "useHostConfigIn",
+        "useHostConfigOn": "useHostConfigOn",
+        "useHostConfigBt": "useHostConfigBt",
+        "useHostConfigP": "useHostConfigP",
+        "useHostConfigUt": "useHostConfigUt",
+        "useHostConfigPn": "useHostConfigPn",
+        "useHostConfigSn": "useHostConfigSn",
+        "useHostConfigLt": "useHostConfigLt",
+        "useHostConfigAt": "useHostConfigAt",
+        "useHostConfigZ": "useHostConfigZ",
+        "useHostConfigX": "useHostConfigX",
+        "useHostConfigU": "useHostConfigU",
+        "useHostConfigHt": "useHostConfigHt",
+        "useHostConfigRt": "useHostConfigRt",
+        "useHostConfigY": "useHostConfigY",
+        "useHostConfigGt": "useHostConfigGt",
+        "useHostConfigVn": "useHostConfigVn",
+        "useHostConfigLn": "useHostConfigLn",
+        "useHostConfigMn": "useHostConfigMn",
+        "useHostConfigJ": "useHostConfigJ",
+        "useHostConfigO": "useHostConfigO",
+        "useHostConfigW": "useHostConfigW",
+        "useHostConfigC": "useHostConfigC",
+        "useHostConfigYn": "useHostConfigYn",
+        "useHostConfigMt": "useHostConfigMt",
+        "useHostConfigCt": "useHostConfigCt",
+        "useHostConfigE": "useHostConfigE",
+        "useHostConfigJt": "useHostConfigJt",
+        "useHostConfigSt": "useHostConfigSt",
+        "useHostConfigK": "useHostConfigK",
+        "useHostConfigB": "useHostConfigB",
+        "useHostConfigFt": "useHostConfigFt",
+        "useHostConfigL": "useHostConfigL",
+        "useHostConfigQ": "useHostConfigQ",
+        "useHostConfigBn": "useHostConfigBn",
+        "useHostConfigH": "useHostConfigH",
+        "useHostConfigV": "useHostConfigV",
+        "useHostConfigNn": "useHostConfigNn"
       }
     },
     "useQueries-DP7bSAX2": {
       "restored": "boundaries/tanstack-query/use-queries.ts",
       "status": "done",
       "exports": {
-        "t": "t"
+        "t": "t",
+        "UseQueries": "UseQueries"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "@tanstack/react-query boundary",
       "vendor": "@tanstack/react-query"
     },
     "parse-directives-BWfnLkkG": {
@@ -7063,23 +8120,30 @@
       "restored": "boundaries/lodash/base-order-by.ts",
       "status": "done",
       "exports": {
-        "t": "t"
-      }
+        "t": "t",
+        "baseOrderBy": "baseOrderBy"
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "uniq-CdTw0qC4": {
       "restored": "boundaries/lodash/uniq.ts",
       "status": "done",
       "exports": {
-        "t": "t"
-      }
+        "t": "t",
+        "uniq": "uniq"
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "sumBy-CSgbzDRq": {
       "restored": "boundaries/lodash/sum-by.ts",
       "status": "done",
       "exports": {
-        "t": "t"
+        "t": "t",
+        "sumBy": "sumBy"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "lodash boundary",
       "vendor": "lodash"
     },
     "automation-schedule-DcOeO0C3": {
@@ -7107,23 +8171,26 @@
       "restored": "boundaries/lodash/sort-by.ts",
       "status": "done",
       "exports": {
-        "t": "t"
+        "t": "t",
+        "sortBy": "sortBy"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "lodash boundary",
       "vendor": "lodash"
     },
     "dist-BLGenw3M": {
-      "restored": "boundaries/dist.ts",
+      "restored": "boundaries/cmdk/dist.ts",
       "status": "done",
       "exports": {
         "n": "n",
-        "t": "t"
+        "t": "t",
+        "distN": "distN",
+        "distT": "distT"
       },
-      "dependencyBoundary": true,
-      "vendor": "runtime"
+      "dependencyBoundary": "cmdk boundary",
+      "vendor": "cmdk"
     },
     "dist-DvbKegLw": {
-      "restored": "boundaries/dist.ts",
+      "restored": "boundaries/radix-ui/context-menu.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -7135,13 +8202,23 @@
         "r": "r",
         "s": "s",
         "t": "t",
-        "u": "u"
+        "u": "u",
+        "distI": "distI",
+        "distR": "distR",
+        "distL": "distL",
+        "distS": "distS",
+        "distN": "distN",
+        "distO": "distO",
+        "distC": "distC",
+        "distU": "distU",
+        "distA": "distA",
+        "distT": "distT"
       },
-      "dependencyBoundary": true,
-      "vendor": "runtime"
+      "dependencyBoundary": "radix-ui boundary",
+      "vendor": "radix-ui"
     },
     "dist-uq8yzYFr": {
-      "restored": "boundaries/dist.ts",
+      "restored": "boundaries/radix-ui/menu.ts",
       "status": "done",
       "exports": {
         "_": "_",
@@ -7160,23 +8237,45 @@
         "r": "r",
         "s": "s",
         "t": "t",
-        "u": "u"
+        "u": "u",
+        "distI": "distI",
+        "distR": "distR",
+        "distL": "distL",
+        "distS": "distS",
+        "distM": "distM",
+        "distH": "distH",
+        "distF": "distF",
+        "distUnderscore": "distUnderscore",
+        "distD": "distD",
+        "distG": "distG",
+        "distP": "distP",
+        "distN": "distN",
+        "distO": "distO",
+        "distC": "distC",
+        "distU": "distU",
+        "distA": "distA",
+        "distT": "distT"
       },
-      "dependencyBoundary": true,
-      "vendor": "runtime"
+      "dependencyBoundary": "radix-ui boundary",
+      "vendor": "radix-ui"
     },
     "dist-hw5CqF55": {
-      "restored": "boundaries/dist.ts",
+      "restored": "boundaries/radix-ui/popover.ts",
       "status": "done",
       "exports": {
         "a": "a",
         "i": "i",
         "n": "n",
         "r": "r",
-        "t": "t"
+        "t": "t",
+        "distI": "distI",
+        "distR": "distR",
+        "distN": "distN",
+        "distA": "distA",
+        "distT": "distT"
       },
-      "dependencyBoundary": true,
-      "vendor": "runtime"
+      "dependencyBoundary": "radix-ui boundary",
+      "vendor": "radix-ui"
     },
     "mermaid-diagram-ClGkKF0e": {
       "restored": "boundaries/mermaid/mermaid-diagram.ts",
@@ -7184,7 +8283,7 @@
       "exports": {
         "MermaidDiagramRenderer": "MermaidDiagramRenderer"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "chunk-JA3XYJ7Z-CjR9BG5n": {
@@ -7198,7 +8297,7 @@
         "r": "r",
         "t": "t"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "d3 boundary",
       "vendor": "d3"
     },
     "chunk-JZLCHNYA-HNai7LB6": {
@@ -7214,9 +8313,19 @@
         "r": "r",
         "s": "s",
         "t": "t",
-        "u": "u"
+        "u": "u",
+        "chunkJZLCHNYAA": "chunkJZLCHNYAA",
+        "chunkJZLCHNYAS": "chunkJZLCHNYAS",
+        "chunkJZLCHNYAL": "chunkJZLCHNYAL",
+        "chunkJZLCHNYAN": "chunkJZLCHNYAN",
+        "chunkJZLCHNYAI": "chunkJZLCHNYAI",
+        "chunkJZLCHNYAC": "chunkJZLCHNYAC",
+        "chunkJZLCHNYAO": "chunkJZLCHNYAO",
+        "chunkJZLCHNYAR": "chunkJZLCHNYAR",
+        "chunkJZLCHNYAT": "chunkJZLCHNYAT",
+        "chunkJZLCHNYAU": "chunkJZLCHNYAU"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "d3 boundary",
       "vendor": "d3"
     },
     "chunk-QXUST7PY-B8nc5wSD": {
@@ -7227,9 +8336,14 @@
         "i": "i",
         "n": "n",
         "r": "r",
-        "t": "t"
+        "t": "t",
+        "chunkQXUST7PYN": "chunkQXUST7PYN",
+        "chunkQXUST7PYR": "chunkQXUST7PYR",
+        "chunkQXUST7PYI": "chunkQXUST7PYI",
+        "chunkQXUST7PYT": "chunkQXUST7PYT",
+        "chunkQXUST7PYA": "chunkQXUST7PYA"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "d3 boundary",
       "vendor": "d3"
     },
     "chunk-N4CR4FBY-ClZLl4Py": {
@@ -7238,9 +8352,12 @@
       "exports": {
         "n": "n",
         "r": "r",
-        "t": "t"
+        "t": "t",
+        "chunkN4CR4FBYT": "chunkN4CR4FBYT",
+        "chunkN4CR4FBYR": "chunkN4CR4FBYR",
+        "chunkN4CR4FBYN": "chunkN4CR4FBYN"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "d3 boundary",
       "vendor": "d3"
     },
     "c4Diagram-YG6GDRKO-DjawmGRU": {
@@ -7249,7 +8366,7 @@
       "exports": {
         "diagram": "diagram"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "flowDiagram-NV44I4VS-D4eH0gaV": {
@@ -7258,7 +8375,7 @@
       "exports": {
         "diagram": "diagram"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "erDiagram-Q2GNP2WA-BuOvbo5z": {
@@ -7267,7 +8384,7 @@
       "exports": {
         "diagram": "diagram"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "gitGraphDiagram-NY62KEGX-lV4TXvsv": {
@@ -7276,7 +8393,7 @@
       "exports": {
         "diagram": "diagram"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "ganttDiagram-LVOFAZNH-yOkQF_JE": {
@@ -7284,7 +8401,9 @@
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "infoDiagram-F6ZHWCRC-CZZfMpuV": {
       "restored": "boundaries/mermaid/info-diagram-f6-zhwcrc.ts",
@@ -7292,7 +8411,7 @@
       "exports": {
         "diagram": "diagram"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "pieDiagram-ADFJNKIX-CdTMfn5r": {
@@ -7300,7 +8419,9 @@
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "xychartDiagram-PRI3JC2R-B3NKXKok": {
       "restored": "boundaries/mermaid/xychart-diagram-pri3-jc2-r.ts",
@@ -7308,7 +8429,7 @@
       "exports": {
         "diagram": "diagram"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "requirementDiagram-UZGBJVZJ-CREo4bNX": {
@@ -7316,7 +8437,9 @@
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "sequenceDiagram-WL72ISMW-BR6BjBF1": {
       "restored": "boundaries/mermaid/sequence-diagram-wl72-ismw.ts",
@@ -7324,7 +8447,7 @@
       "exports": {
         "diagram": "diagram"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "classDiagram-2ON5EDUG-CNv4W435": {
@@ -7333,7 +8456,7 @@
       "exports": {
         "diagram": "diagram"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "classDiagram-v2-WZHVMYZB-DXC_WPMt": {
@@ -7342,7 +8465,7 @@
       "exports": {
         "diagram": "diagram"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "stateDiagram-FKZM4ZOC-BLPu-ra7": {
@@ -7351,7 +8474,7 @@
       "exports": {
         "diagram": "diagram"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "stateDiagram-v2-4FDKWEC3-CqVrfWb0": {
@@ -7360,7 +8483,7 @@
       "exports": {
         "diagram": "diagram"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "journeyDiagram-XKPGCS4Q-qmAqcnof": {
@@ -7369,7 +8492,7 @@
       "exports": {
         "diagram": "diagram"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "mindmap-definition-VGOIOE7T-CravxLKD": {
@@ -7378,29 +8501,35 @@
       "exports": {
         "diagram": "diagram"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "kanban-definition-3W4ZIXB7-DvB9N6my": {
-      "restored": "utils/kanban-definition-3-w4-zixb7.ts",
+      "restored": "boundaries/mermaid/kanban-definition-v2.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "vendor": "mermaid",
+      "dependencyBoundary": "mermaid boundary"
     },
     "diagram-S2PKOQOG-CYp0tDDf": {
-      "restored": "utils/diagram-s2-pkoqog.ts",
+      "restored": "boundaries/mermaid/diagram-cyp0t-ddf.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "vendor": "mermaid",
+      "dependencyBoundary": "mermaid boundary"
     },
     "diagram-QEK2KX5R-DVrdB3UI": {
-      "restored": "utils/diagram-qek2-kx5-r.ts",
+      "restored": "boundaries/mermaid/diagram-dvrd-b3-ui.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "vendor": "mermaid",
+      "dependencyBoundary": "mermaid boundary"
     },
     "blockDiagram-VD42YOAC-DicrLsNJ": {
       "restored": "boundaries/mermaid/block-diagram-vd42-yoac.ts",
@@ -7408,7 +8537,7 @@
       "exports": {
         "diagram": "diagram"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "architectureDiagram-VXUJARFQ-x16TdI-X": {
@@ -7416,14 +8545,18 @@
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "diagram-PSM6KHXK-DqnCog4a": {
-      "restored": "utils/diagram-psm6-khxk.ts",
+      "restored": "boundaries/mermaid/diagram-dqn-cog4a.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "vendor": "mermaid",
+      "dependencyBoundary": "mermaid boundary"
     },
     "workbook-BEO_aVXz": {
       "restored": "boundaries/mermaid/workbook-beo-a-vxz.ts",
@@ -7431,11 +8564,11 @@
       "exports": {
         "Workbook": "Workbook"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "spreadsheet-C5mWVSPz": {
-      "restored": "utils/spreadsheet.ts",
+      "restored": "boundaries/xlsx/spreadsheet.ts",
       "status": "done",
       "exports": {
         "AnchorMarker": "AnchorMarker",
@@ -7532,7 +8665,9 @@
         "TimelineCacheItem": "TimelineCacheItem",
         "Workbook": "Workbook",
         "protobufPackage": "protobufPackage"
-      }
+      },
+      "vendor": "xlsx",
+      "dependencyBoundary": "xlsx boundary"
     },
     "dagre-6UL2VRFP-DHAAtlj_": {
       "restored": "boundaries/dagre-6-ul2-vrfp.ts",
@@ -7540,7 +8675,7 @@
       "exports": {
         "render": "render"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "runtime boundary",
       "vendor": "runtime"
     },
     "chunk-FPAJGGOC-Cy-1bcKF": {
@@ -7562,9 +8697,25 @@
         "r": "r",
         "s": "s",
         "t": "t",
-        "u": "u"
+        "u": "u",
+        "chunkFPAJGGOCD": "chunkFPAJGGOCD",
+        "chunkFPAJGGOCI": "chunkFPAJGGOCI",
+        "chunkFPAJGGOCH": "chunkFPAJGGOCH",
+        "chunkFPAJGGOCM": "chunkFPAJGGOCM",
+        "chunkFPAJGGOCA": "chunkFPAJGGOCA",
+        "chunkFPAJGGOCN": "chunkFPAJGGOCN",
+        "chunkFPAJGGOCC": "chunkFPAJGGOCC",
+        "chunkFPAJGGOCU": "chunkFPAJGGOCU",
+        "chunkFPAJGGOCO": "chunkFPAJGGOCO",
+        "chunkFPAJGGOCR": "chunkFPAJGGOCR",
+        "chunkFPAJGGOCG": "chunkFPAJGGOCG",
+        "chunkFPAJGGOCP": "chunkFPAJGGOCP",
+        "chunkFPAJGGOCS": "chunkFPAJGGOCS",
+        "chunkFPAJGGOCL": "chunkFPAJGGOCL",
+        "chunkFPAJGGOCF": "chunkFPAJGGOCF",
+        "chunkFPAJGGOCT": "chunkFPAJGGOCT"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "chunk-O7ZBX7Z2-B9AHjHvq": {
@@ -7572,9 +8723,10 @@
       "status": "done",
       "exports": {
         "n": "n",
-        "t": "t"
+        "t": "t",
+        "chunkO7ZBX7Z2N": "chunkO7ZBX7Z2N"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "chunk-S6J4BHB3-BiRR_8vz": {
@@ -7582,9 +8734,10 @@
       "status": "done",
       "exports": {
         "n": "n",
-        "t": "t"
+        "t": "t",
+        "chunkS6J4BHB3N": "chunkS6J4BHB3N"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "chunk-LBM3YZW2-C9W8CgCb": {
@@ -7592,9 +8745,10 @@
       "status": "done",
       "exports": {
         "n": "n",
-        "t": "t"
+        "t": "t",
+        "chunkLBM3YZW2N": "chunkLBM3YZW2N"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "chunk-76Q3JFCE-Bhgg5xKY": {
@@ -7602,9 +8756,10 @@
       "status": "done",
       "exports": {
         "n": "n",
-        "t": "t"
+        "t": "t",
+        "chunk76Q3JFCEN": "chunk76Q3JFCEN"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "chunk-T53DSG4Q-DwpHe3Zz": {
@@ -7612,9 +8767,10 @@
       "status": "done",
       "exports": {
         "n": "n",
-        "t": "t"
+        "t": "t",
+        "chunkT53DSG4QN": "chunkT53DSG4QN"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "chunk-LHMN2FUI-BO1BbTL6": {
@@ -7622,9 +8778,10 @@
       "status": "done",
       "exports": {
         "n": "n",
-        "t": "t"
+        "t": "t",
+        "chunkLHMN2FUIN": "chunkLHMN2FUIN"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "chunk-FWNWRKHM-DRtw95ir": {
@@ -7632,9 +8789,10 @@
       "status": "done",
       "exports": {
         "n": "n",
-        "t": "t"
+        "t": "t",
+        "chunkFWNWRKHMN": "chunkFWNWRKHMN"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "mermaid-parser.core-Cloq2txW": {
@@ -7643,7 +8801,7 @@
       "exports": {
         "t": "t"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "chunk-B4BG7PRW-YMKrAsOx": {
@@ -7653,17 +8811,24 @@
         "i": "i",
         "n": "n",
         "r": "r",
-        "t": "t"
+        "t": "t",
+        "chunkB4BG7PRWR": "chunkB4BG7PRWR",
+        "chunkB4BG7PRWT": "chunkB4BG7PRWT",
+        "chunkB4BG7PRWI": "chunkB4BG7PRWI",
+        "chunkB4BG7PRWN": "chunkB4BG7PRWN"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "d3 boundary",
       "vendor": "d3"
     },
     "dagre-DgCFaaOE": {
       "restored": "boundaries/dagre.ts",
       "status": "done",
       "exports": {
-        "t": "t"
-      }
+        "t": "t",
+        "Dagre": "Dagre"
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "chunk-DI55MBZ5-CK4BKk7V": {
       "restored": "boundaries/mermaid/chunk-di55-mbz5-ck4-bkk7-v.ts",
@@ -7672,13 +8837,17 @@
         "i": "i",
         "n": "n",
         "r": "r",
-        "t": "t"
+        "t": "t",
+        "chunkDI55MBZ5T": "chunkDI55MBZ5T",
+        "chunkDI55MBZ5R": "chunkDI55MBZ5R",
+        "chunkDI55MBZ5I": "chunkDI55MBZ5I",
+        "chunkDI55MBZ5N": "chunkDI55MBZ5N"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "workbook-DDjets34": {
-      "restored": "utils/workbook.ts",
+      "restored": "boundaries/mermaid/workbook.ts",
       "status": "done",
       "exports": {
         "A": "A",
@@ -7727,8 +8896,39 @@
         "w": "w",
         "x": "x",
         "y": "y",
-        "z": "z"
-      }
+        "z": "z",
+        "workbookR": "workbookR",
+        "workbookQ": "workbookQ",
+        "workbookW": "workbookW",
+        "workbookO": "workbookO",
+        "workbookT": "workbookT",
+        "workbookS": "workbookS",
+        "workbookF": "workbookF",
+        "workbookN": "workbookN",
+        "workbookD": "workbookD",
+        "workbookP": "workbookP",
+        "workbookI": "workbookI",
+        "workbookC": "workbookC",
+        "workbookE": "workbookE",
+        "workbookM": "workbookM",
+        "workbookJ": "workbookJ",
+        "workbookX": "workbookX",
+        "workbookUnderscore": "workbookUnderscore",
+        "workbookV": "workbookV",
+        "workbookH": "workbookH",
+        "WorkbookK": "WorkbookK",
+        "workbookL": "workbookL",
+        "workbookA": "workbookA",
+        "workbookY": "workbookY",
+        "WorkbookC": "WorkbookC",
+        "workbookZ": "workbookZ",
+        "workbookK": "workbookK",
+        "workbookB": "workbookB",
+        "workbookU": "workbookU",
+        "workbookG": "workbookG"
+      },
+      "vendor": "mermaid",
+      "dependencyBoundary": "mermaid boundary"
     },
     "document-BvkTVHtx": {
       "restored": "utils/document.ts",
@@ -7835,9 +9035,32 @@
         "v": "v",
         "w": "w",
         "x": "x",
-        "y": "y"
+        "y": "y",
+        "reduceG": "reduceG",
+        "reduceW": "reduceW",
+        "reduceF": "reduceF",
+        "reduceX": "reduceX",
+        "reduceM": "reduceM",
+        "reduceI": "reduceI",
+        "reduceE": "reduceE",
+        "reduceD": "reduceD",
+        "reduceP": "reduceP",
+        "reduceH": "reduceH",
+        "reduceN": "reduceN",
+        "reduceUnderscore": "reduceUnderscore",
+        "reduceO": "reduceO",
+        "reduceV": "reduceV",
+        "reduceT": "reduceT",
+        "reduceU": "reduceU",
+        "reduceL": "reduceL",
+        "reduceS": "reduceS",
+        "reduceC": "reduceC",
+        "reduceY": "reduceY",
+        "reduceA": "reduceA",
+        "reduceB": "reduceB",
+        "reduceR": "reduceR"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "lodash boundary",
       "vendor": "lodash"
     },
     "flatten-CdNmRCTf": {
@@ -7849,8 +9072,16 @@
         "n": "n",
         "o": "o",
         "r": "r",
-        "t": "t"
-      }
+        "t": "t",
+        "flattenN": "flattenN",
+        "flattenA": "flattenA",
+        "flattenO": "flattenO",
+        "flattenT": "flattenT",
+        "flattenR": "flattenR",
+        "flattenI": "flattenI"
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "info-NVLQJR56-CJGElsQG": {
       "restored": "boundaries/mermaid/info-nvlqjr56-cjgels-qg.ts",
@@ -7858,7 +9089,7 @@
       "exports": {
         "createInfoServices": "createInfoServices"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "packet-BFZMPI3H-C976HVjn": {
@@ -7867,7 +9098,7 @@
       "exports": {
         "createPacketServices": "createPacketServices"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "pie-7BOR55EZ-Cel_tNJ1": {
@@ -7876,7 +9107,7 @@
       "exports": {
         "createPieServices": "createPieServices"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "architecture-U656AL7Q-Ccsrjk_f": {
@@ -7885,7 +9116,7 @@
       "exports": {
         "createArchitectureServices": "createArchitectureServices"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "gitGraph-F6HP7TQM-8BKmskHr": {
@@ -7894,7 +9125,7 @@
       "exports": {
         "createGitGraphServices": "createGitGraphServices"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "radar-NHE76QYJ-8GggBqpZ": {
@@ -7903,7 +9134,7 @@
       "exports": {
         "createRadarServices": "createRadarServices"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "treemap-KMMF4GRG-ByNQtOJN": {
@@ -7912,7 +9143,7 @@
       "exports": {
         "createTreemapServices": "createTreemapServices"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "d3 boundary",
       "vendor": "d3"
     },
     "zipObject-HR30GI0P": {
@@ -7935,9 +9166,26 @@
         "r": "r",
         "s": "s",
         "t": "t",
-        "u": "u"
+        "u": "u",
+        "zipObjectP": "zipObjectP",
+        "zipObjectUnderscore": "zipObjectUnderscore",
+        "zipObjectC": "zipObjectC",
+        "zipObjectO": "zipObjectO",
+        "zipObjectG": "zipObjectG",
+        "zipObjectD": "zipObjectD",
+        "zipObjectM": "zipObjectM",
+        "zipObjectF": "zipObjectF",
+        "zipObjectL": "zipObjectL",
+        "zipObjectH": "zipObjectH",
+        "zipObjectT": "zipObjectT",
+        "zipObjectA": "zipObjectA",
+        "zipObjectI": "zipObjectI",
+        "zipObjectS": "zipObjectS",
+        "zipObjectU": "zipObjectU",
+        "zipObjectR": "zipObjectR",
+        "zipObjectN": "zipObjectN"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "lodash boundary",
       "vendor": "lodash"
     },
     "union-8iT5ANuG": {
@@ -7947,8 +9195,14 @@
         "i": "i",
         "n": "n",
         "r": "r",
-        "t": "t"
-      }
+        "t": "t",
+        "unionN": "unionN",
+        "unionI": "unionI",
+        "unionT": "unionT",
+        "unionR": "unionR"
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "mermaid.core-eIokQLcr": {
       "restored": "boundaries/mermaid/mermaid-core.ts",
@@ -7956,7 +9210,7 @@
       "exports": {
         "default": "default"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "chunk-5PVQY5BW-CsieDbRK": {
@@ -7980,7 +9234,7 @@
         "t": "t",
         "u": "u"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "d3 boundary",
       "vendor": "d3"
     },
     "chunk-U2HBQHQK-DJ4vuuzw": {
@@ -7991,9 +9245,14 @@
         "i": "i",
         "n": "n",
         "r": "r",
-        "t": "t"
+        "t": "t",
+        "chunkU2HBQHQKR": "chunkU2HBQHQKR",
+        "chunkU2HBQHQKT": "chunkU2HBQHQKT",
+        "chunkU2HBQHQKN": "chunkU2HBQHQKN",
+        "chunkU2HBQHQKI": "chunkU2HBQHQKI",
+        "chunkU2HBQHQKA": "chunkU2HBQHQKA"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "d3 boundary",
       "vendor": "d3"
     },
     "chunk-ZZ45TVLE-CvzuGe_q": {
@@ -8001,9 +9260,11 @@
       "status": "done",
       "exports": {
         "n": "n",
-        "t": "t"
+        "t": "t",
+        "chunkZZ45TVLEN": "chunkZZ45TVLEN",
+        "chunkZZ45TVLET": "chunkZZ45TVLET"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "chunk-5FUZZQ4R-B4cKsdW4": {
@@ -8019,9 +9280,19 @@
         "r": "r",
         "s": "s",
         "t": "t",
-        "u": "u"
+        "u": "u",
+        "chunk5FUZZQ4RL": "chunk5FUZZQ4RL",
+        "chunk5FUZZQ4RA": "chunk5FUZZQ4RA",
+        "chunk5FUZZQ4RS": "chunk5FUZZQ4RS",
+        "chunk5FUZZQ4RR": "chunk5FUZZQ4RR",
+        "chunk5FUZZQ4RT": "chunk5FUZZQ4RT",
+        "chunk5FUZZQ4RU": "chunk5FUZZQ4RU",
+        "chunk5FUZZQ4RO": "chunk5FUZZQ4RO",
+        "chunk5FUZZQ4RN": "chunk5FUZZQ4RN",
+        "chunk5FUZZQ4RC": "chunk5FUZZQ4RC",
+        "chunk5FUZZQ4RI": "chunk5FUZZQ4RI"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "d3 boundary",
       "vendor": "d3"
     },
     "chunk-ENJZ2VHE-C0rUgAJ1": {
@@ -8032,9 +9303,14 @@
         "i": "i",
         "n": "n",
         "r": "r",
-        "t": "t"
+        "t": "t",
+        "chunkENJZ2VHER": "chunkENJZ2VHER",
+        "chunkENJZ2VHEI": "chunkENJZ2VHEI",
+        "chunkENJZ2VHEA": "chunkENJZ2VHEA",
+        "chunkENJZ2VHEN": "chunkENJZ2VHEN",
+        "chunkENJZ2VHET": "chunkENJZ2VHET"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "d3 boundary",
       "vendor": "d3"
     },
     "chunk-336JU56O-D9FbfXWS": {
@@ -8043,9 +9319,12 @@
       "exports": {
         "n": "n",
         "r": "r",
-        "t": "t"
+        "t": "t",
+        "chunk336JU56OR": "chunk336JU56OR",
+        "chunk336JU56ON": "chunk336JU56ON",
+        "chunk336JU56OT": "chunk336JU56OT"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "d3 boundary",
       "vendor": "d3"
     },
     "c4Diagram-AHTNJAMY-D1_UKJZR": {
@@ -8053,28 +9332,36 @@
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "flowDiagram-DWJPFMVM-C76X9T8a": {
       "restored": "boundaries/mermaid/flow-diagram-dwjpfmvm.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "erDiagram-SMLLAGMA-Zcn5Tkw5": {
       "restored": "boundaries/mermaid/er-diagram-smllagma.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "gitGraphDiagram-UUTBAWPF-DGICCt1Z": {
       "restored": "boundaries/mermaid/git-graph-diagram-uutbawpf.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "ganttDiagram-T4ZO3ILL-Bk_m_Nfg": {
       "restored": "boundaries/mermaid/gantt-diagram-t4-zo3-ill.ts",
@@ -8082,7 +9369,7 @@
       "exports": {
         "diagram": "diagram"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "infoDiagram-42DDH7IO-CA5dZBgd": {
@@ -8091,7 +9378,7 @@
       "exports": {
         "diagram": "diagram"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "pieDiagram-DEJITSTG-D-t1CIhj": {
@@ -8099,7 +9386,9 @@
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "xychartDiagram-5P7HB3ND-B4TBc4oz": {
       "restored": "boundaries/mermaid/xychart-diagram-5-p7-hb3-nd.ts",
@@ -8107,7 +9396,7 @@
       "exports": {
         "diagram": "diagram"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "requirementDiagram-MS252O5E-C4g-RuEW": {
@@ -8116,7 +9405,7 @@
       "exports": {
         "diagram": "diagram"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "sequenceDiagram-FGHM5R23-Bh77yTp8": {
@@ -8125,7 +9414,7 @@
       "exports": {
         "diagram": "diagram"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "classDiagram-6PBFFD2Q-Cvxpk6bJ": {
@@ -8134,7 +9423,7 @@
       "exports": {
         "diagram": "diagram"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "classDiagram-v2-HSJHXN6E-Dhbhv0LY": {
@@ -8143,7 +9432,7 @@
       "exports": {
         "diagram": "diagram"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "stateDiagram-FHFEXIEX-CIdIE1IK": {
@@ -8151,7 +9440,9 @@
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "stateDiagram-v2-QKLJ7IA2-CfGDQd0C": {
       "restored": "boundaries/mermaid/state-diagram-v2-qklj7-ia2.ts",
@@ -8159,7 +9450,7 @@
       "exports": {
         "diagram": "diagram"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "journeyDiagram-VCZTEJTY-D0GHB_lA": {
@@ -8167,7 +9458,9 @@
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "timeline-definition-GMOUNBTQ-BhxdX_wS": {
       "restored": "boundaries/mermaid/timeline-definition-gmounbtq.ts",
@@ -8175,7 +9468,7 @@
       "exports": {
         "diagram": "diagram"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "mindmap-definition-QFDTVHPH-BlP876d6": {
@@ -8184,29 +9477,35 @@
       "exports": {
         "diagram": "diagram"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "kanban-definition-6JOO6SKY-cHI15BWA": {
-      "restored": "utils/kanban-definition-6-joo6-sky.ts",
+      "restored": "boundaries/mermaid/kanban-definition.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "vendor": "mermaid",
+      "dependencyBoundary": "mermaid boundary"
     },
     "diagram-TYMM5635-DG2wO4Kx": {
-      "restored": "utils/diagram-tymm5635.ts",
+      "restored": "boundaries/mermaid/diagram-dg2w-o4-kx.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "vendor": "mermaid",
+      "dependencyBoundary": "mermaid boundary"
     },
     "diagram-MMDJMWI5-BCvRK5AH": {
-      "restored": "utils/diagram-mmdjmwi5.ts",
+      "restored": "boundaries/mermaid/diagram-bcv-rk5-ah.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "vendor": "mermaid",
+      "dependencyBoundary": "mermaid boundary"
     },
     "blockDiagram-DXYQGD6D-CTLy8H2I": {
       "restored": "boundaries/mermaid/block-diagram-dxyqgd6-d.ts",
@@ -8214,15 +9513,17 @@
       "exports": {
         "diagram": "diagram"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "diagram-5BDNPKRD-CNeveAHh": {
-      "restored": "utils/diagram-5-bdnpkrd.ts",
+      "restored": "boundaries/mermaid/diagram.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "vendor": "mermaid",
+      "dependencyBoundary": "mermaid boundary"
     },
     "architectureDiagram-Q4EWVU46-C9aYmC2s": {
       "restored": "boundaries/mermaid/architecture-diagram-q4-ewvu46.ts",
@@ -8230,36 +9531,44 @@
       "exports": {
         "diagram": "diagram"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "ishikawaDiagram-UXIWVN3A-C0OZiin8": {
-      "restored": "utils/ishikawa-diagram-uxiwvn3-a.ts",
+      "restored": "boundaries/mermaid/ishikawa-diagram.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "vendor": "mermaid",
+      "dependencyBoundary": "mermaid boundary"
     },
     "vennDiagram-DHZGUBPP-DQ5AHg0F": {
-      "restored": "utils/venn-diagram-dhzgubpp.ts",
+      "restored": "boundaries/mermaid/venn-diagram.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "vendor": "mermaid",
+      "dependencyBoundary": "mermaid boundary"
     },
     "diagram-G4DWMVQ6-B4ApuIEg": {
-      "restored": "utils/diagram-g4-dwmvq6.ts",
+      "restored": "boundaries/mermaid/diagram-b4-apu-ieg.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "vendor": "mermaid",
+      "dependencyBoundary": "mermaid boundary"
     },
     "wardleyDiagram-NUSXRM2D-DlElmt-K": {
-      "restored": "utils/wardley-diagram-nusxrm2-d.ts",
+      "restored": "boundaries/mermaid/wardley-diagram.ts",
       "status": "done",
       "exports": {
         "diagram": "diagram"
-      }
+      },
+      "vendor": "mermaid",
+      "dependencyBoundary": "mermaid boundary"
     },
     "dagre-KV5264BT-wPJhnht8": {
       "restored": "boundaries/dagre-kv5264-bt.ts",
@@ -8267,7 +9576,7 @@
       "exports": {
         "render": "render"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "runtime boundary",
       "vendor": "runtime"
     },
     "chunk-K5T4RW27-1QwNQQi0": {
@@ -8291,9 +9600,27 @@
         "s": "s",
         "t": "t",
         "u": "u",
-        "v": "v"
+        "v": "v",
+        "chunkK5T4RW27Underscore": "chunkK5T4RW27Underscore",
+        "chunkK5T4RW27L": "chunkK5T4RW27L",
+        "chunkK5T4RW27I": "chunkK5T4RW27I",
+        "chunkK5T4RW27F": "chunkK5T4RW27F",
+        "chunkK5T4RW27T": "chunkK5T4RW27T",
+        "chunkK5T4RW27V": "chunkK5T4RW27V",
+        "chunkK5T4RW27H": "chunkK5T4RW27H",
+        "chunkK5T4RW27D": "chunkK5T4RW27D",
+        "chunkK5T4RW27R": "chunkK5T4RW27R",
+        "chunkK5T4RW27P": "chunkK5T4RW27P",
+        "chunkK5T4RW27O": "chunkK5T4RW27O",
+        "chunkK5T4RW27U": "chunkK5T4RW27U",
+        "chunkK5T4RW27N": "chunkK5T4RW27N",
+        "chunkK5T4RW27S": "chunkK5T4RW27S",
+        "chunkK5T4RW27G": "chunkK5T4RW27G",
+        "chunkK5T4RW27M": "chunkK5T4RW27M",
+        "chunkK5T4RW27C": "chunkK5T4RW27C",
+        "chunkK5T4RW27A": "chunkK5T4RW27A"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "chunk-7N4EOEYR-BEkdQLCb": {
@@ -8301,9 +9628,10 @@
       "status": "done",
       "exports": {
         "n": "n",
-        "t": "t"
+        "t": "t",
+        "chunk7N4EOEYRN": "chunk7N4EOEYRN"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "chunk-67CJDMHE-B3_SAS71": {
@@ -8311,9 +9639,10 @@
       "status": "done",
       "exports": {
         "n": "n",
-        "t": "t"
+        "t": "t",
+        "chunk67CJDMHEN": "chunk67CJDMHEN"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "chunk-KGLVRYIC-DZY-IxHR": {
@@ -8321,9 +9650,10 @@
       "status": "done",
       "exports": {
         "n": "n",
-        "t": "t"
+        "t": "t",
+        "chunkKGLVRYICN": "chunkKGLVRYICN"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "chunk-FOC6F5B3-BgcFtwB_": {
@@ -8331,9 +9661,10 @@
       "status": "done",
       "exports": {
         "n": "n",
-        "t": "t"
+        "t": "t",
+        "chunkFOC6F5B3N": "chunkFOC6F5B3N"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "chunk-AA7GKIK3-Bic0nqP_": {
@@ -8341,9 +9672,10 @@
       "status": "done",
       "exports": {
         "n": "n",
-        "t": "t"
+        "t": "t",
+        "chunkAA7GKIK3N": "chunkAA7GKIK3N"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "chunk-2KRD3SAO-Bdi3VHck": {
@@ -8351,9 +9683,10 @@
       "status": "done",
       "exports": {
         "n": "n",
-        "t": "t"
+        "t": "t",
+        "chunk2KRD3SAON": "chunk2KRD3SAON"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "chunk-ORNJ4GCN-Dtggxgv1": {
@@ -8361,9 +9694,10 @@
       "status": "done",
       "exports": {
         "n": "n",
-        "t": "t"
+        "t": "t",
+        "chunkORNJ4GCNN": "chunkORNJ4GCNN"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "chunk-LIHQZDEY-B0GBEU3_": {
@@ -8371,9 +9705,10 @@
       "status": "done",
       "exports": {
         "n": "n",
-        "t": "t"
+        "t": "t",
+        "chunkLIHQZDEYN": "chunkLIHQZDEYN"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "chunk-CIAEETIT-DnOj_Z7m": {
@@ -8381,9 +9716,10 @@
       "status": "done",
       "exports": {
         "n": "n",
-        "t": "t"
+        "t": "t",
+        "chunkCIAEETITN": "chunkCIAEETITN"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "mermaid-parser.core-DWICYyNZ": {
@@ -8392,7 +9728,7 @@
       "exports": {
         "t": "t"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "chunk-4TB4RGXK-B3SUDt4C": {
@@ -8402,24 +9738,34 @@
         "i": "i",
         "n": "n",
         "r": "r",
-        "t": "t"
+        "t": "t",
+        "chunk4TB4RGXKR": "chunk4TB4RGXKR",
+        "chunk4TB4RGXKN": "chunk4TB4RGXKN",
+        "chunk4TB4RGXKT": "chunk4TB4RGXKT",
+        "chunk4TB4RGXKI": "chunk4TB4RGXKI"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "d3 boundary",
       "vendor": "d3"
     },
     "graphlib-Dk1ocXNC": {
-      "restored": "utils/graphlib.ts",
+      "restored": "boundaries/dagre/graphlib.ts",
       "status": "done",
       "exports": {
-        "t": "t"
-      }
+        "t": "t",
+        "Graphlib": "Graphlib"
+      },
+      "vendor": "dagre",
+      "dependencyBoundary": "dagre boundary"
     },
     "dagre-Ba2O9HBx": {
       "restored": "boundaries/dagre.ts",
       "status": "done",
       "exports": {
-        "t": "t"
-      }
+        "t": "t",
+        "Dagre": "Dagre"
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "chunk-OYMX7WX6-DPwCFRNe": {
       "restored": "boundaries/mermaid/chunk-oymx7-wx6-dpw-cfrne.ts",
@@ -8428,17 +9774,24 @@
         "i": "i",
         "n": "n",
         "r": "r",
-        "t": "t"
+        "t": "t",
+        "chunkOYMX7WX6N": "chunkOYMX7WX6N",
+        "chunkOYMX7WX6T": "chunkOYMX7WX6T",
+        "chunkOYMX7WX6R": "chunkOYMX7WX6R",
+        "chunkOYMX7WX6I": "chunkOYMX7WX6I"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "clone-2yQp58UZ": {
       "restored": "boundaries/lodash/clone.ts",
       "status": "done",
       "exports": {
-        "t": "t"
-      }
+        "t": "t",
+        "clone": "clone"
+      },
+      "dependencyBoundary": "runtime boundary",
+      "vendor": "runtime"
     },
     "info-OMHHGYJF-VpsoNmpd": {
       "restored": "boundaries/mermaid/info-omhhgyjf-vpso-nmpd.ts",
@@ -8446,7 +9799,7 @@
       "exports": {
         "createInfoServices": "createInfoServices"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "packet-4T2RLAQJ-Cps_a8kh": {
@@ -8455,7 +9808,7 @@
       "exports": {
         "createPacketServices": "createPacketServices"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "pie-ZZUOXDRM-CTCvZluc": {
@@ -8464,7 +9817,7 @@
       "exports": {
         "createPieServices": "createPieServices"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "treeView-SZITEDCU-CQ3h0-LJ": {
@@ -8473,7 +9826,7 @@
       "exports": {
         "createTreeViewServices": "createTreeViewServices"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "architecture-YZFGNWBL-hfWpxWZF": {
@@ -8482,7 +9835,7 @@
       "exports": {
         "createArchitectureServices": "createArchitectureServices"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "gitGraph-7Q5UKJZL-RtuWf9d8": {
@@ -8491,7 +9844,7 @@
       "exports": {
         "createGitGraphServices": "createGitGraphServices"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "radar-PYXPWWZC-DenUZrCa": {
@@ -8500,7 +9853,7 @@
       "exports": {
         "createRadarServices": "createRadarServices"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "treemap-W4RFUUIX-LvOJWvcJ": {
@@ -8509,7 +9862,7 @@
       "exports": {
         "createTreemapServices": "createTreemapServices"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "d3 boundary",
       "vendor": "d3"
     },
     "wardley-RL74JXVD-DX26H2Am": {
@@ -8518,7 +9871,7 @@
       "exports": {
         "createWardleyServices": "createWardleyServices"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "mermaid boundary",
       "vendor": "mermaid"
     },
     "error-boundary-BOla93vo": {
@@ -8559,8 +9912,467 @@
       }
     },
     "thread-context-inputs-B6tQCr7t": {
-      "restored": "app/thread-context-inputs/constants.ts",
-      "status": "done"
+      "restored": "app/thread-context-inputs/index.ts",
+      "status": "done",
+      "vendor": "runtime",
+      "dependencyBoundary": "runtime boundary",
+      "exports": {
+        "$": "$",
+        "$i": "$i",
+        "$n": "$n",
+        "$r": "$r",
+        "$t": "$t",
+        "A": "A",
+        "Aa": "Aa",
+        "Ai": "Ai",
+        "An": "An",
+        "Ar": "Ar",
+        "At": "At",
+        "B": "B",
+        "Bi": "Bi",
+        "Bn": "Bn",
+        "Br": "Br",
+        "Bt": "Bt",
+        "C": "C",
+        "Ca": "Ca",
+        "Ci": "Ci",
+        "Cn": "Cn",
+        "Cr": "Cr",
+        "Ct": "Ct",
+        "D": "D",
+        "Da": "Da",
+        "Di": "Di",
+        "Dn": "Dn",
+        "Dr": "Dr",
+        "Dt": "Dt",
+        "E": "E",
+        "Ea": "Ea",
+        "Ei": "Ei",
+        "En": "En",
+        "Er": "Er",
+        "Et": "Et",
+        "F": "F",
+        "Fi": "Fi",
+        "Fn": "Fn",
+        "Fr": "Fr",
+        "Ft": "Ft",
+        "G": "G",
+        "Gi": "Gi",
+        "Gn": "Gn",
+        "Gr": "Gr",
+        "Gt": "Gt",
+        "H": "H",
+        "Hi": "Hi",
+        "Hn": "Hn",
+        "Hr": "Hr",
+        "Ht": "Ht",
+        "I": "I",
+        "Ii": "Ii",
+        "In": "In",
+        "Ir": "Ir",
+        "It": "It",
+        "J": "J",
+        "Ji": "Ji",
+        "Jn": "Jn",
+        "Jr": "Jr",
+        "Jt": "Jt",
+        "K": "K",
+        "Ki": "Ki",
+        "Kn": "Kn",
+        "Kr": "Kr",
+        "Kt": "Kt",
+        "L": "L",
+        "Li": "Li",
+        "Ln": "Ln",
+        "Lr": "Lr",
+        "Lt": "Lt",
+        "M": "M",
+        "Mi": "Mi",
+        "Mn": "Mn",
+        "Mr": "Mr",
+        "Mt": "Mt",
+        "N": "N",
+        "Ni": "Ni",
+        "Nn": "Nn",
+        "Nr": "Nr",
+        "Nt": "Nt",
+        "O": "O",
+        "Oa": "Oa",
+        "Oi": "Oi",
+        "On": "On",
+        "Or": "Or",
+        "Ot": "Ot",
+        "P": "P",
+        "Pi": "Pi",
+        "Pn": "Pn",
+        "Pr": "Pr",
+        "Pt": "Pt",
+        "Q": "Q",
+        "Qi": "Qi",
+        "Qn": "Qn",
+        "Qr": "Qr",
+        "Qt": "Qt",
+        "R": "R",
+        "Ri": "Ri",
+        "Rn": "Rn",
+        "Rr": "Rr",
+        "Rt": "Rt",
+        "S": "S",
+        "Sa": "Sa",
+        "Si": "Si",
+        "Sn": "Sn",
+        "Sr": "Sr",
+        "St": "St",
+        "T": "T",
+        "Ta": "Ta",
+        "Ti": "Ti",
+        "Tn": "Tn",
+        "Tr": "Tr",
+        "Tt": "Tt",
+        "U": "U",
+        "Ui": "Ui",
+        "Un": "Un",
+        "Ur": "Ur",
+        "Ut": "Ut",
+        "V": "V",
+        "Vi": "Vi",
+        "Vn": "Vn",
+        "Vr": "Vr",
+        "Vt": "Vt",
+        "W": "W",
+        "Wi": "Wi",
+        "Wn": "Wn",
+        "Wr": "Wr",
+        "Wt": "Wt",
+        "X": "X",
+        "Xi": "Xi",
+        "Xn": "Xn",
+        "Xr": "Xr",
+        "Xt": "Xt",
+        "Y": "Y",
+        "Yi": "Yi",
+        "Yn": "Yn",
+        "Yr": "Yr",
+        "Yt": "Yt",
+        "Z": "Z",
+        "Zi": "Zi",
+        "Zn": "Zn",
+        "Zr": "Zr",
+        "Zt": "Zt",
+        "_": "_",
+        "_a": "_a",
+        "_i": "_i",
+        "_n": "_n",
+        "_r": "_r",
+        "_t": "_t",
+        "a": "a",
+        "aa": "aa",
+        "ai": "ai",
+        "an": "an",
+        "ar": "ar",
+        "at": "at",
+        "b": "b",
+        "ba": "ba",
+        "bi": "bi",
+        "bn": "bn",
+        "br": "br",
+        "bt": "bt",
+        "c": "c",
+        "ca": "ca",
+        "ci": "ci",
+        "cn": "cn",
+        "cr": "cr",
+        "ct": "ct",
+        "d": "d",
+        "da": "da",
+        "di": "di",
+        "dn": "dn",
+        "dr": "dr",
+        "dt": "dt",
+        "ea": "ea",
+        "ei": "ei",
+        "en": "en",
+        "er": "er",
+        "et": "et",
+        "f": "f",
+        "fa": "fa",
+        "fi": "fi",
+        "fn": "fn",
+        "fr": "fr",
+        "ft": "ft",
+        "g": "g",
+        "ga": "ga",
+        "gi": "gi",
+        "gn": "gn",
+        "gr": "gr",
+        "gt": "gt",
+        "h": "h",
+        "ha": "ha",
+        "hi": "hi",
+        "hn": "hn",
+        "hr": "hr",
+        "ht": "ht",
+        "i": "i",
+        "ia": "ia",
+        "ii": "ii",
+        "in": "in",
+        "ir": "ir",
+        "it": "it",
+        "j": "j",
+        "ji": "ji",
+        "jn": "jn",
+        "jr": "jr",
+        "jt": "jt",
+        "k": "k",
+        "ka": "ka",
+        "ki": "ki",
+        "kn": "kn",
+        "kr": "kr",
+        "kt": "kt",
+        "l": "l",
+        "la": "la",
+        "li": "li",
+        "ln": "ln",
+        "lr": "lr",
+        "lt": "lt",
+        "m": "m",
+        "ma": "ma",
+        "mi": "mi",
+        "mn": "mn",
+        "mr": "mr",
+        "mt": "mt",
+        "n": "n",
+        "na": "na",
+        "ni": "ni",
+        "nn": "nn",
+        "nr": "nr",
+        "nt": "nt",
+        "o": "o",
+        "oa": "oa",
+        "oi": "oi",
+        "on": "on",
+        "or": "or",
+        "ot": "ot",
+        "p": "p",
+        "pa": "pa",
+        "pi": "pi",
+        "pn": "pn",
+        "pr": "pr",
+        "pt": "pt",
+        "q": "q",
+        "qi": "qi",
+        "qn": "qn",
+        "qr": "qr",
+        "qt": "qt",
+        "r": "r",
+        "ra": "ra",
+        "ri": "ri",
+        "rn": "rn",
+        "rr": "rr",
+        "rt": "rt",
+        "s": "s",
+        "sa": "sa",
+        "si": "si",
+        "sn": "sn",
+        "sr": "sr",
+        "st": "st",
+        "t": "t",
+        "ta": "ta",
+        "ti": "ti",
+        "tn": "tn",
+        "tr": "tr",
+        "tt": "tt",
+        "u": "u",
+        "ua": "ua",
+        "ui": "ui",
+        "un": "un",
+        "ur": "ur",
+        "ut": "ut",
+        "v": "v",
+        "va": "va",
+        "vi": "vi",
+        "vn": "vn",
+        "vr": "vr",
+        "vt": "vt",
+        "w": "w",
+        "wa": "wa",
+        "wi": "wi",
+        "wn": "wn",
+        "wr": "wr",
+        "wt": "wt",
+        "x": "x",
+        "xa": "xa",
+        "xi": "xi",
+        "xn": "xn",
+        "xr": "xr",
+        "xt": "xt",
+        "y": "y",
+        "ya": "ya",
+        "yi": "yi",
+        "yn": "yn",
+        "yr": "yr",
+        "yt": "yt",
+        "z": "z",
+        "zi": "zi",
+        "zn": "zn",
+        "zr": "zr",
+        "zt": "zt",
+        "threadContextInputsUnderscore": "threadContextInputsUnderscore",
+        "threadContextInputsNn": "threadContextInputsNn",
+        "threadContextInputsOr": "threadContextInputsOr",
+        "threadContextInputsEa": "threadContextInputsEa",
+        "threadContextInputsLn": "threadContextInputsLn",
+        "threadContextInputsIr": "threadContextInputsIr",
+        "threadContextInputsGn": "threadContextInputsGn",
+        "threadContextInputsIt": "threadContextInputsIt",
+        "threadContextInputsPi": "threadContextInputsPi",
+        "threadContextInputsAt": "threadContextInputsAt",
+        "threadContextInputsPa": "threadContextInputsPa",
+        "threadContextInputsKa": "threadContextInputsKa",
+        "threadContextInputsJ": "threadContextInputsJ",
+        "threadContextInputsHi": "threadContextInputsHi",
+        "threadContextInputsWt": "threadContextInputsWt",
+        "threadContextInputsVa": "threadContextInputsVa",
+        "threadContextInputsPr": "threadContextInputsPr",
+        "threadContextInputsZt": "threadContextInputsZt",
+        "threadContextInputsFr": "threadContextInputsFr",
+        "threadContextInputsXa": "threadContextInputsXa",
+        "threadContextInputsLa": "threadContextInputsLa",
+        "threadContextInputsC": "threadContextInputsC",
+        "threadContextInputsWr": "threadContextInputsWr",
+        "threadContextInputsLt": "threadContextInputsLt",
+        "threadContextInputsHr": "threadContextInputsHr",
+        "threadContextInputsUn": "threadContextInputsUn",
+        "threadContextInputsIi": "threadContextInputsIi",
+        "threadContextInputsZ": "threadContextInputsZ",
+        "threadContextInputsF": "threadContextInputsF",
+        "threadContextInputsNi": "threadContextInputsNi",
+        "threadContextInputsWi": "threadContextInputsWi",
+        "threadContextInputsT": "threadContextInputsT",
+        "threadContextInputsTr": "threadContextInputsTr",
+        "threadContextInputsGi": "threadContextInputsGi",
+        "threadContextInputsL": "threadContextInputsL",
+        "threadContextInputsFa": "threadContextInputsFa",
+        "threadContextInputsLi": "threadContextInputsLi",
+        "threadContextInputsTi": "threadContextInputsTi",
+        "threadContextInputsMt": "threadContextInputsMt",
+        "threadContextInputsDn": "threadContextInputsDn",
+        "threadContextInputsAn": "threadContextInputsAn",
+        "threadContextInputsTn": "threadContextInputsTn",
+        "threadContextInputsYi": "threadContextInputsYi",
+        "threadContextInputsA": "threadContextInputsA",
+        "threadContextInputsHt": "threadContextInputsHt",
+        "threadContextInputsM": "threadContextInputsM",
+        "threadContextInputsYt": "threadContextInputsYt",
+        "threadContextInputsUr": "threadContextInputsUr",
+        "threadContextInputsW": "threadContextInputsW",
+        "threadContextInputsRr": "threadContextInputsRr",
+        "threadContextInputsDi": "threadContextInputsDi",
+        "threadContextInputsQn": "threadContextInputsQn",
+        "threadContextInputsKn": "threadContextInputsKn",
+        "threadContextInputsVi": "threadContextInputsVi",
+        "threadContextInputsI": "threadContextInputsI",
+        "threadContextInputsQr": "threadContextInputsQr",
+        "threadContextInputsUt": "threadContextInputsUt",
+        "threadContextInputsQi": "threadContextInputsQi",
+        "threadContextInputsOt": "threadContextInputsOt",
+        "threadContextInputsH": "threadContextInputsH",
+        "threadContextInputsDollar": "threadContextInputsDollar",
+        "threadContextInputsFn": "threadContextInputsFn",
+        "threadContextInputsXt": "threadContextInputsXt",
+        "threadContextInputsWa": "threadContextInputsWa",
+        "threadContextInputsE": "threadContextInputsE",
+        "threadContextInputsNa": "threadContextInputsNa",
+        "threadContextInputsB": "threadContextInputsB",
+        "threadContextInputsNt": "threadContextInputsNt",
+        "threadContextInputsOa": "threadContextInputsOa",
+        "threadContextInputsEn": "threadContextInputsEn",
+        "threadContextInputsX": "threadContextInputsX",
+        "threadContextInputsFi": "threadContextInputsFi",
+        "threadContextInputsCr": "threadContextInputsCr",
+        "threadContextInputsUa": "threadContextInputsUa",
+        "threadContextInputsRi": "threadContextInputsRi",
+        "threadContextInputsSn": "threadContextInputsSn",
+        "threadContextInputsSi": "threadContextInputsSi",
+        "threadContextInputsQt": "threadContextInputsQt",
+        "threadContextInputsDr": "threadContextInputsDr",
+        "threadContextInputsIn": "threadContextInputsIn",
+        "threadContextInputsU": "threadContextInputsU",
+        "threadContextInputsZn": "threadContextInputsZn",
+        "threadContextInputsCi": "threadContextInputsCi",
+        "threadContextInputsWn": "threadContextInputsWn",
+        "threadContextInputsJi": "threadContextInputsJi",
+        "threadContextInputsHa": "threadContextInputsHa",
+        "threadContextInputsSr": "threadContextInputsSr",
+        "threadContextInputsKi": "threadContextInputsKi",
+        "threadContextInputsY": "threadContextInputsY",
+        "threadContextInputsCt": "threadContextInputsCt",
+        "threadContextInputsBa": "threadContextInputsBa",
+        "threadContextInputsDt": "threadContextInputsDt",
+        "threadContextInputsGr": "threadContextInputsGr",
+        "threadContextInputsP": "threadContextInputsP",
+        "threadContextInputsDa": "threadContextInputsDa",
+        "threadContextInputsRt": "threadContextInputsRt",
+        "threadContextInputsYr": "threadContextInputsYr",
+        "threadContextInputsVt": "threadContextInputsVt",
+        "threadContextInputsEt": "threadContextInputsEt",
+        "threadContextInputsIa": "threadContextInputsIa",
+        "threadContextInputsRn": "threadContextInputsRn",
+        "threadContextInputsOi": "threadContextInputsOi",
+        "threadContextInputsBr": "threadContextInputsBr",
+        "threadContextInputsGt": "threadContextInputsGt",
+        "threadContextInputsYn": "threadContextInputsYn",
+        "threadContextInputsMr": "threadContextInputsMr",
+        "threadContextInputsMn": "threadContextInputsMn",
+        "threadContextInputsJr": "threadContextInputsJr",
+        "threadContextInputsVn": "threadContextInputsVn",
+        "threadContextInputsO": "threadContextInputsO",
+        "threadContextInputsLr": "threadContextInputsLr",
+        "threadContextInputsXi": "threadContextInputsXi",
+        "threadContextInputsMa": "threadContextInputsMa",
+        "threadContextInputsOn": "threadContextInputsOn",
+        "threadContextInputsAr": "threadContextInputsAr",
+        "threadContextInputsD": "threadContextInputsD",
+        "threadContextInputsHn": "threadContextInputsHn",
+        "threadContextInputsNr": "threadContextInputsNr",
+        "threadContextInputsVr": "threadContextInputsVr",
+        "threadContextInputsXr": "threadContextInputsXr",
+        "threadContextInputsPt": "threadContextInputsPt",
+        "threadContextInputsN": "threadContextInputsN",
+        "threadContextInputsV": "threadContextInputsV",
+        "threadContextInputsBn": "threadContextInputsBn",
+        "threadContextInputsJt": "threadContextInputsJt",
+        "threadContextInputsBi": "threadContextInputsBi",
+        "threadContextInputsR": "threadContextInputsR",
+        "threadContextInputsFt": "threadContextInputsFt",
+        "threadContextInputsPn": "threadContextInputsPn",
+        "threadContextInputsG": "threadContextInputsG",
+        "threadContextInputsQ": "threadContextInputsQ",
+        "threadContextInputsCn": "threadContextInputsCn",
+        "threadContextInputsTa": "threadContextInputsTa",
+        "threadContextInputsZr": "threadContextInputsZr",
+        "threadContextInputsSt": "threadContextInputsSt",
+        "threadContextInputsS": "threadContextInputsS",
+        "threadContextInputsCa": "threadContextInputsCa",
+        "threadContextInputsKt": "threadContextInputsKt",
+        "threadContextInputsBt": "threadContextInputsBt",
+        "threadContextInputsJn": "threadContextInputsJn",
+        "threadContextInputsAi": "threadContextInputsAi",
+        "threadContextInputsK": "threadContextInputsK",
+        "threadContextInputsYa": "threadContextInputsYa",
+        "threadContextInputsXn": "threadContextInputsXn",
+        "threadContextInputsGa": "threadContextInputsGa",
+        "threadContextInputsEi": "threadContextInputsEi",
+        "threadContextInputsZi": "threadContextInputsZi",
+        "threadContextInputsUi": "threadContextInputsUi",
+        "threadContextInputsSa": "threadContextInputsSa",
+        "threadContextInputsRa": "threadContextInputsRa",
+        "threadContextInputsTt": "threadContextInputsTt",
+        "threadContextInputsAa": "threadContextInputsAa",
+        "threadContextInputsEr": "threadContextInputsEr",
+        "threadContextInputsKr": "threadContextInputsKr",
+        "threadContextInputsMi": "threadContextInputsMi"
+      }
     },
     "codex-mobile-setup-queries-C3IYQ1eW": {
       "restored": "icons/codex-mobile-setup-queries-icon.tsx",
@@ -8606,20 +10418,20 @@
       }
     },
     "appgen-access-state-messages-QS14WTU1": {
-      "restored": "appgen/appgen-access-state-messages.ts",
+      "restored": "appgen/appgen-access-state-messages.tsx",
       "status": "done",
       "exports": {
-        "i": "i",
-        "n": "n",
-        "r": "r",
-        "t": "t"
+        "i": "AccessStateIcon",
+        "n": "AccessStateMessage",
+        "r": "ShortAccessStateMessage",
+        "t": "AccessStateTooltip"
       }
     },
     "setup-codex-wizard-step-view-BQ0iTw_T": {
       "restored": "app/setup-codex-wizard-step-view.tsx",
       "status": "done",
       "exports": {
-        "t": "t"
+        "t": "SetupCodexWizardStepView"
       }
     },
     "thread-scroll-layout-DsxWR6SP": {
@@ -8633,22 +10445,22 @@
       "restored": "hooks/use-codex-worktrees.ts",
       "status": "done",
       "exports": {
-        "t": "t"
+        "t": "useCodexWorktrees"
       }
     },
     "use-git-recent-branches-Bf3U6kni": {
       "restored": "hooks/use-git-recent-branches.ts",
       "status": "done",
       "exports": {
-        "t": "t"
+        "t": "useGitRecentBranches"
       }
     },
     "use-home-directory-CVo0R7Wz": {
       "restored": "hooks/use-home-directory.ts",
       "status": "done",
       "exports": {
-        "n": "n",
-        "t": "t"
+        "n": "useHomeDirectory",
+        "t": "useHomeDirectoryQuery"
       }
     },
     "app-CAW031s_": {
@@ -8663,12 +10475,12 @@
       "restored": "app/app-server-notification-debug-signals.ts",
       "status": "done",
       "exports": {
-        "a": "a",
-        "i": "i",
-        "n": "n",
-        "o": "o",
-        "r": "r",
-        "t": "t"
+        "a": "useNotificationDebugLog",
+        "i": "appendDebugEvent",
+        "n": "updateDebugEvent",
+        "o": "recordNotification",
+        "r": "clearNotificationsByHost",
+        "t": "notificationDebugLogAtom"
       }
     },
     "app-shell-tab-controller-CVKUvgYM": {
@@ -8688,7 +10500,7 @@
       "restored": "app-shell/browser-sidebar-webview.tsx",
       "status": "done",
       "exports": {
-        "t": "t"
+        "t": "BrowserSidebarWebview"
       }
     },
     "browser-use-origin-state-queries-D3hIgMi-": {
@@ -8713,15 +10525,15 @@
       "restored": "utils/codex-analytics-attribution.ts",
       "status": "done",
       "exports": {
-        "t": "t"
+        "t": "codexAnalyticsAttribution"
       }
     },
     "collaboration-mode-queries-CTBlLhk8": {
       "restored": "utils/collaboration-mode-queries.ts",
       "status": "done",
       "exports": {
-        "n": "n",
-        "t": "t"
+        "n": "collaborationModeListQuery",
+        "t": "collaborationModeListQueryFromContext"
       }
     },
     "composer-suggestion-list-BQ2rPanH": {
@@ -8797,14 +10609,15 @@
       "restored": "utils/git-availability-query.ts",
       "status": "done",
       "exports": {
-        "t": "t"
+        "t": "t",
+        "gitAvailabilityQuery": "gitAvailabilityQuery"
       }
     },
     "git-query-signal--KCsTEIa": {
       "restored": "utils/git-query-signal.ts",
       "status": "done",
       "exports": {
-        "t": "t"
+        "t": "gitQuerySignal"
       }
     },
     "global-dictation-page-BV05fEU5": {
@@ -8818,22 +10631,22 @@
       "restored": "utils/heartbeat-automation-permissions.ts",
       "status": "done",
       "exports": {
-        "a": "a",
-        "i": "i",
-        "n": "n",
-        "r": "r",
-        "t": "t"
+        "a": "heartbeatThreadPermissionsById",
+        "i": "getResolvedPermissions",
+        "n": "permissionProfileFingerprintAtom",
+        "r": "mergePermissionsRecord",
+        "t": "resolvePermissions"
       }
     },
     "hooks-settings-queries-5zPGjvwa": {
-      "restored": "utils/hooks-settings-queries.ts",
+      "restored": "utils/hooks-settings-queries.tsx",
       "status": "done",
       "exports": {
-        "a": "a",
-        "i": "i",
-        "n": "n",
-        "r": "r",
-        "t": "t"
+        "a": "hooksSettingsQueriesA",
+        "i": "hooksSettingsQueriesI",
+        "n": "hooksSettingsQueriesN",
+        "r": "hooksSettingsQueriesR",
+        "t": "hooksSettingsQueriesT"
       }
     },
     "hotkey-window-detail-layout-psE94glX": {
@@ -8847,44 +10660,44 @@
       "restored": "conversations/local-conversation-title-signals.ts",
       "status": "done",
       "exports": {
-        "n": "n",
-        "t": "t"
+        "n": "localConversationTitleSignal",
+        "t": "conversationTitleAtom"
       }
     },
     "local-remote-control-enabled-sync-DueNKRXX": {
       "restored": "utils/local-remote-control-enabled-sync.ts",
       "status": "done",
       "exports": {
-        "n": "n",
-        "t": "t"
+        "n": "syncRemoteControlEnabled",
+        "t": "applyRemoteControlEnabled"
       }
     },
     "onboarding-state-Ddi1pOV8": {
       "restored": "utils/onboarding-state.ts",
       "status": "done",
       "exports": {
-        "_": "_",
-        "a": "a",
-        "c": "c",
-        "d": "d",
-        "f": "f",
-        "g": "g",
-        "h": "h",
-        "i": "i",
-        "l": "l",
-        "m": "m",
-        "n": "n",
-        "o": "o",
-        "p": "p",
-        "r": "r",
-        "s": "s",
-        "t": "t",
-        "u": "u",
-        "v": "v"
+        "_": "onboardingStateUState",
+        "a": "onboardingStateTState",
+        "c": "onboardingStateSState",
+        "d": "onboardingStateRState",
+        "f": "onboardingStateOState",
+        "g": "onboardingStateNState",
+        "h": "onboardingStateMState",
+        "i": "onboardingStateLState",
+        "l": "onboardingStateIState",
+        "m": "onboardingStateCState",
+        "n": "onboardingStateAState",
+        "o": "onboardingStateHState",
+        "p": "onboardingStateGState",
+        "r": "onboardingStatePState",
+        "s": "onboardingStateFState",
+        "t": "onboardingStateDState",
+        "u": "onboardingStateUnderscoreState",
+        "v": "onboardingStateVState"
       }
     },
     "parse-diff-C81j2HIg": {
-      "restored": "utils/parse-diff.ts",
+      "restored": "utils/parse-diff/index.ts",
       "status": "done",
       "exports": {
         "i": "i",
@@ -8923,26 +10736,26 @@
       }
     },
     "primary-runtime-install-action-Cpk3XYUC": {
-      "restored": "utils/primary-runtime-install-action.ts",
+      "restored": "ui/primary-runtime-install-action.tsx",
       "status": "done",
       "exports": {
-        "a": "a",
-        "i": "i",
-        "n": "n",
-        "o": "o",
-        "r": "r",
-        "s": "s",
-        "t": "t"
+        "a": "buildResetMetrics",
+        "i": "buildFailedInstallMetrics",
+        "n": "installPrimaryRuntime",
+        "o": "PRIMARY_RUNTIME_RESET_ID",
+        "r": "buildDiagnoseMetrics",
+        "s": "PRIMARY_RUNTIME_INSTALL_ID",
+        "t": "isAbortError"
       }
     },
     "selectable-remote-connections-signal-DIsHsJK7": {
-      "restored": "utils/selectable-remote-connections-signal.ts",
+      "restored": "utils/selectable-remote-connections-signal.tsx",
       "status": "done",
       "exports": {
-        "i": "i",
-        "n": "n",
-        "r": "r",
-        "t": "t"
+        "i": "filterAddedRemoteControlConnections",
+        "n": "selectableRemoteConnectionsSignalN",
+        "r": "selectableRemoteConnectionsSignalR",
+        "t": "selectableRemoteConnectionsSignalT"
       }
     },
     "sidebar-task-pr-chip-signals-CaOVWYGm": {
@@ -8978,40 +10791,40 @@
       "restored": "threads/thread-handoff-store.ts",
       "status": "done",
       "exports": {
-        "i": "i",
-        "n": "n",
-        "r": "r",
-        "t": "t"
+        "i": "createHandoffOperation",
+        "n": "useThreadHandoffStoreValue",
+        "r": "findThreadHandoffOperationByConversationId",
+        "t": "useThreadHandoffStore"
       }
     },
     "thread-page-header-D_hZ50OA": {
       "restored": "threads/thread-page-header.tsx",
       "status": "done",
       "exports": {
-        "t": "t"
+        "t": "ThreadPageHeader"
       }
     },
     "use-app-server-connection-state-urqZ7B3X": {
       "restored": "hooks/use-app-server-connection-state.ts",
       "status": "done",
       "exports": {
-        "t": "t"
+        "t": "useAppServerConnectionState"
       }
     },
     "use-codex-home-CG1itsCv": {
       "restored": "hooks/use-codex-home.ts",
       "status": "done",
       "exports": {
-        "n": "n",
-        "t": "t"
+        "n": "useCodexHome",
+        "t": "useCodexHomeQuery"
       }
     },
     "use-connected-remote-connections-BhOWSTjG": {
       "restored": "hooks/use-connected-remote-connections.ts",
       "status": "done",
       "exports": {
-        "n": "n",
-        "t": "t"
+        "n": "useConnectedRemoteConnectionsLookup",
+        "t": "useConnectedRemoteConnections"
       }
     },
     "use-dictation-DQROZBbT": {
@@ -9040,14 +10853,14 @@
       "restored": "hooks/use-global-state.ts",
       "status": "done",
       "exports": {
-        "t": "t"
+        "t": "useGlobalState"
       }
     },
     "use-is-remote-host-CdAgT54v": {
       "restored": "hooks/use-is-remote-host.ts",
       "status": "done",
       "exports": {
-        "t": "t"
+        "t": "useIsRemoteHost"
       }
     },
     "windows-tabs-open-SksOQNvg": {
@@ -9161,7 +10974,7 @@
       }
     },
     "use-auth-pK1tONyf": {
-      "restored": "hooks/use-auth.ts",
+      "restored": "boundaries/use-auth.ts",
       "status": "done",
       "exports": {
         "a": "a",
@@ -9172,7 +10985,16 @@
         "o": "o",
         "r": "r",
         "s": "s",
-        "t": "t"
+        "t": "t",
+        "useAuthL": "useAuthL",
+        "useAuthO": "useAuthO",
+        "useAuthA": "useAuthA",
+        "useAuthS": "useAuthS",
+        "useAuthC": "useAuthC",
+        "useAuthT": "useAuthT",
+        "useAuthN": "useAuthN",
+        "useAuthR": "useAuthR",
+        "useAuthI": "useAuthI"
       }
     },
     "model-queries-CbKX4hvn": {
@@ -9265,15 +11087,15 @@
       }
     },
     "remote-projects-Beixx8Gf": {
-      "restored": "utils/remote-projects.ts",
+      "restored": "utils/remote-projects/index.ts",
       "status": "done",
       "exports": {
-        "a": "a",
-        "i": "i",
-        "n": "n",
-        "o": "o",
-        "r": "r",
-        "t": "t"
+        "a": "useRemoteProjects",
+        "i": "setActiveRemoteProjectId",
+        "n": "findRemoteProjectByHostAndPath",
+        "o": "gitOriginsQueryAtom",
+        "r": "remoteProjectsByHostAtom",
+        "t": "findMatchingRemoteProjectPath"
       }
     },
     "use-service-tier-settings-DDtqCMIO": {
@@ -9631,9 +11453,12 @@
       "exports": {
         "n": "n",
         "r": "r",
-        "t": "t"
+        "t": "t",
+        "fileTreeSearchInputR": "fileTreeSearchInputR",
+        "fileTreeSearchInputN": "fileTreeSearchInputN",
+        "fileTreeSearchInputT": "fileTreeSearchInputT"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "@pierre/trees boundary",
       "vendor": "@pierre/trees"
     },
     "review-file-source-tab-DGKieCSd": {
@@ -9689,20 +11514,26 @@
         "n": "n",
         "o": "o",
         "r": "r",
-        "t": "t"
+        "t": "t",
+        "threadPanelStateRState": "threadPanelStateRState",
+        "threadPanelStateOState": "threadPanelStateOState",
+        "threadPanelStateTState": "threadPanelStateTState",
+        "threadPanelStateIState": "threadPanelStateIState",
+        "threadPanelStateAState": "threadPanelStateAState",
+        "threadPanelStateNState": "threadPanelStateNState"
       }
     },
     "thread-browser-panel-tabs-xnatAPyu": {
       "restored": "threads/thread-browser-panel-tabs.tsx",
       "status": "done",
       "exports": {
-        "a": "a",
-        "i": "i",
-        "n": "n",
-        "o": "o",
-        "r": "r",
-        "s": "s",
-        "t": "t"
+        "a": "getBrowserPanelTabs",
+        "i": "findBrowserPanelTab",
+        "n": "getBrowserTabControllerSignalKey",
+        "o": "resolvePreferredPanelFromState",
+        "r": "resolvePreferredPanelFromRequested",
+        "s": "resolveActivePanelFromHostKind",
+        "t": "getActiveBrowserTabIdsForTargets"
       }
     },
     "thread-page-bottom-panel-state-Cd1CwCl4": {
@@ -9725,15 +11556,32 @@
         "r": "r",
         "s": "s",
         "t": "t",
-        "u": "u"
+        "u": "u",
+        "threadPageBottomPanelStateRState": "threadPageBottomPanelStateRState",
+        "threadPageBottomPanelStateUnderscoreState": "threadPageBottomPanelStateUnderscoreState",
+        "threadPageBottomPanelStateNState": "threadPageBottomPanelStateNState",
+        "threadPageBottomPanelStateAState": "threadPageBottomPanelStateAState",
+        "threadPageBottomPanelStateHState": "threadPageBottomPanelStateHState",
+        "threadPageBottomPanelStatePState": "threadPageBottomPanelStatePState",
+        "threadPageBottomPanelStateOState": "threadPageBottomPanelStateOState",
+        "threadPageBottomPanelStateDState": "threadPageBottomPanelStateDState",
+        "threadPageBottomPanelStateMState": "threadPageBottomPanelStateMState",
+        "threadPageBottomPanelStateTState": "threadPageBottomPanelStateTState",
+        "threadPageBottomPanelStateLState": "threadPageBottomPanelStateLState",
+        "threadPageBottomPanelStateIState": "threadPageBottomPanelStateIState",
+        "threadPageBottomPanelStateFState": "threadPageBottomPanelStateFState",
+        "threadPageBottomPanelStateSState": "threadPageBottomPanelStateSState",
+        "threadPageBottomPanelStateGState": "threadPageBottomPanelStateGState",
+        "threadPageBottomPanelStateCState": "threadPageBottomPanelStateCState",
+        "threadPageBottomPanelStateUState": "threadPageBottomPanelStateUState"
       }
     },
     "use-fast-mode-personalized-estimate-BHhOBo0i": {
       "restored": "hooks/use-fast-mode-personalized-estimate.ts",
       "status": "done",
       "exports": {
-        "n": "n",
-        "t": "t"
+        "n": "useFastModePersonalizedEstimate",
+        "t": "fastModePersonalizedEstimateMessages"
       }
     },
     "plugin-detail-route-utils-CTmxD8df": {
@@ -10344,15 +12192,15 @@
       "restored": "hooks/use-git-current-branch.ts",
       "status": "done",
       "exports": {
-        "t": "t"
+        "t": "useGitCurrentBranch"
       }
     },
     "git-config-value-query-BKgFljZW": {
       "restored": "utils/git-config-value-query.ts",
       "status": "done",
       "exports": {
-        "n": "n",
-        "t": "t"
+        "n": "fromCwd",
+        "t": "queryByMetadata"
       }
     },
     "local-environment-selection-Dz7Qei2P": {
@@ -10378,7 +12226,7 @@
       }
     },
     "app-server-connection-state-DiMba98f": {
-      "restored": "app/app-server-connection-state.ts",
+      "restored": "app/app-server-connection-state/index.ts",
       "status": "done",
       "exports": {
         "n": "n",
@@ -10414,8 +12262,8 @@
       "restored": "utils/profile-visibility.ts",
       "status": "done",
       "exports": {
-        "n": "n",
-        "t": "t"
+        "n": "useProfileVisibility",
+        "t": "useCanShowProfileVisibility"
       }
     },
     "use-usage-settings-access-Bq_PKiLc": {
@@ -10554,9 +12402,13 @@
         "i": "i",
         "n": "n",
         "r": "r",
-        "t": "t"
+        "t": "t",
+        "markdownT": "markdownT",
+        "markdownI": "markdownI",
+        "markdownR": "markdownR",
+        "markdownN": "markdownN"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "markdown boundary",
       "vendor": "markdown"
     },
     "service-tier-icons-C-0I5QrR": {
@@ -10594,8 +12446,8 @@
       "restored": "hooks/use-git-default-branch.ts",
       "status": "done",
       "exports": {
-        "n": "n",
-        "t": "t"
+        "n": "useGitDefaultBranch",
+        "t": "gitDefaultBranchQuery"
       }
     },
     "cube-O-IHqibI": {
@@ -10611,9 +12463,19 @@
         "r": "r",
         "s": "s",
         "t": "t",
-        "u": "u"
+        "u": "u",
+        "cubeA": "cubeA",
+        "cubeS": "cubeS",
+        "cubeN": "cubeN",
+        "cubeI": "cubeI",
+        "cubeO": "cubeO",
+        "cubeR": "cubeR",
+        "cubeU": "cubeU",
+        "cubeC": "cubeC",
+        "cubeL": "cubeL",
+        "cubeT": "cubeT"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "d3 boundary",
       "vendor": "d3"
     },
     "app-connect-oauth-CaBlbuQW": {
@@ -10708,25 +12570,19 @@
         "t": "t"
       }
     },
-    "use-is-thread-realtime-enabled-ChiO9bP6": {
-      "restored": "hooks/use-is-thread-realtime-enabled.ts",
-      "status": "done",
-      "exports": {
-        "t": "t"
-      }
-    },
     "use-is-dictation-supported-BVXWfQC0": {
       "restored": "hooks/use-is-dictation-supported.ts",
       "status": "done",
       "exports": {
-        "t": "t"
+        "t": "useIsDictationSupported"
       }
     },
     "queued-follow-ups-store-rWZI8H1H": {
       "restored": "utils/queued-follow-ups-store.ts",
       "status": "done",
       "exports": {
-        "t": "t"
+        "t": "t",
+        "QueuedFollowUpsStore": "QueuedFollowUpsStore"
       }
     },
     "review-runtime-bridge-B96Aw_l4": {
@@ -10766,7 +12622,7 @@
       "restored": "app/right-panel-composer-overlay.tsx",
       "status": "done",
       "exports": {
-        "t": "t"
+        "t": "RightPanelComposerOverlay"
       }
     },
     "workspace-file-command-menu-bridge-Clbln8oj": {
@@ -10796,21 +12652,22 @@
         "o": "o",
         "r": "r",
         "s": "s",
-        "t": "t"
-      }
-    },
-    "use-nux-ChpUn11I": {
-      "restored": "hooks/use.ts",
-      "status": "done",
-      "exports": {
-        "t": "t"
+        "t": "t",
+        "atMentionListR": "atMentionListR",
+        "atMentionListT": "atMentionListT",
+        "atMentionListI": "atMentionListI",
+        "atMentionListO": "atMentionListO",
+        "atMentionListA": "atMentionListA",
+        "atMentionListS": "atMentionListS",
+        "atMentionListN": "atMentionListN",
+        "AtMentionList": "AtMentionList"
       }
     },
     "nux-gate-ncVyDQKh": {
-      "restored": "utils/nux-gate.ts",
+      "restored": "components/nux-gate.tsx",
       "status": "done",
       "exports": {
-        "t": "t"
+        "t": "NuxGate"
       }
     },
     "interrupted-turn-state-C57E0EEC": {
@@ -10845,7 +12702,8 @@
         "s": "s",
         "t": "t",
         "u": "u",
-        "v": "v"
+        "v": "v",
+        "mcpCapabilityViewFrameUnderscore": "mcpCapabilityViewFrameUnderscore"
       }
     },
     "project-dropdown-options-yIKBFAMU": {
@@ -10885,7 +12743,9 @@
       "status": "done",
       "exports": {
         "n": "n",
-        "t": "t"
+        "t": "t",
+        "threadRightPanelStateNState": "threadRightPanelStateNState",
+        "threadRightPanelStateTState": "threadRightPanelStateTState"
       }
     },
     "browser-use-settings-visibility-D4TmRWJy": {
@@ -10970,9 +12830,11 @@
       "status": "done",
       "exports": {
         "n": "n",
-        "t": "t"
+        "t": "t",
+        "markdownSurfaceT": "markdownSurfaceT",
+        "markdownSurfaceN": "markdownSurfaceN"
       },
-      "dependencyBoundary": true,
+      "dependencyBoundary": "markdown boundary",
       "vendor": "markdown"
     },
     "open-artifact-side-panel-tab-RYQlTc4U": {
@@ -11334,7 +13196,7 @@
       }
     },
     "settings-external-section-j-RLbjnz": {
-      "restored": "settings/settings-external-section.ts",
+      "restored": "settings/settings-external-section.tsx",
       "status": "done",
       "exports": {
         "SettingsExternalSection": "SettingsExternalSection"
@@ -11683,7 +13545,8 @@
       "restored": "utils/apps-availability.ts",
       "status": "done",
       "exports": {
-        "t": "t"
+        "t": "t",
+        "appsAvailability": "appsAvailability"
       }
     },
     "plugin-detail-page-C-S4JUEx": {
@@ -11770,15 +13633,15 @@
       "restored": "hooks/use-git-config-value.ts",
       "status": "done",
       "exports": {
-        "t": "t"
+        "t": "useGitConfigValue"
       }
     },
     "git-submodule-paths-query-DIo47mr-": {
       "restored": "utils/git-submodule-paths-query.ts",
       "status": "done",
       "exports": {
-        "n": "n",
-        "t": "t"
+        "n": "submodulePathsAtom",
+        "t": "submodulePathsQuery"
       }
     },
     "ambient-suggestion-apps-DdP0OibX": {
@@ -11826,7 +13689,10 @@
       "status": "done",
       "exports": {
         "n": "n",
-        "t": "t"
+        "t": "t",
+        "debugModalN": "debugModalN",
+        "debugModalT": "debugModalT",
+        "DebugModal": "DebugModal"
       }
     },
     "use-debug-panel-BQHHISJM": {
@@ -12054,14 +13920,18 @@
         "i": "i",
         "n": "n",
         "r": "r",
-        "t": "t"
+        "t": "t",
+        "generalSettingsN": "generalSettingsN",
+        "generalSettingsR": "generalSettingsR",
+        "GeneralSettings": "GeneralSettings"
       }
     },
     "experimental-feature-visibility-1tpRaB62": {
       "restored": "utils/experimental-feature-visibility.ts",
       "status": "done",
       "exports": {
-        "t": "t"
+        "t": "t",
+        "experimentalFeatureVisibility": "experimentalFeatureVisibility"
       }
     },
     "browser-use-settings-CITKdwyy": {
@@ -12241,12 +14111,28 @@
       }
     },
     "workbook-from-markdown-Do0YNaaN": {
-      "restored": "utils/workbook-from-markdown.ts",
+      "restored": "boundaries/mermaid/workbook-from-markdown.ts",
       "status": "done",
       "exports": {
         "buildTableValuesFromMarkdown": "buildTableValuesFromMarkdown",
         "sanitizeSheetName": "sanitizeSheetName"
-      }
+      },
+      "vendor": "mermaid",
+      "dependencyBoundary": "mermaid boundary"
+    },
+    "use-is-thread-realtime-enabled-ChiO9bP6": {
+      "restored": "hooks/use-is-thread-realtime-enabled.ts",
+      "exports": {
+        "t": "useIsThreadRealtimeEnabled"
+      },
+      "status": "done"
+    },
+    "use-nux-ChpUn11I": {
+      "restored": "hooks/use-nux.ts",
+      "exports": {
+        "t": "useNux"
+      },
+      "status": "done"
     }
   },
   "reduce-C4fu3kBc": {
@@ -20149,5 +22035,49 @@
         "public": "UseSelectedAvatarResult"
       }
     ]
+  },
+  "use-auth-pK1tONyf": {
+    "restored": "boundaries/use-auth.ts",
+    "exports": [
+      {
+        "original": "a",
+        "public": "a"
+      },
+      {
+        "original": "c",
+        "public": "c"
+      },
+      {
+        "original": "i",
+        "public": "i"
+      },
+      {
+        "original": "l",
+        "public": "l"
+      },
+      {
+        "original": "n",
+        "public": "n"
+      },
+      {
+        "original": "o",
+        "public": "o"
+      },
+      {
+        "original": "r",
+        "public": "r"
+      },
+      {
+        "original": "s",
+        "public": "s"
+      },
+      {
+        "original": "t",
+        "public": "t"
+      }
+    ],
+    "status": "done",
+    "boundary": true,
+    "vendor": "runtime"
   }
 }

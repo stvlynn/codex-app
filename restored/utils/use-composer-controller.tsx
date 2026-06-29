@@ -28,3 +28,4 @@ export declare const u: any;
 export declare const v: any;
 export declare const x: any;
 export declare const y: any;
+export declare const useComposerControllerUnderscore: any;

@@ -10,3 +10,9 @@ export declare const i: any;
 export declare const n: any;
 export declare const r: any;
 export declare const t: any;
+
+// Aliases used by consumer checkpoints
+export declare const isEmptyI: any;
+export declare const isEmptyN: any;
+export declare const isEmptyR: any;
+export declare const isEmptyT: any;

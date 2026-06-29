@@ -64,3 +64,7 @@ function planPricingHelper1(
     maximumFractionDigits: _planPricingN ?? undefined,
   };
 }
+
+// Aliases used by consumer checkpoints
+export declare const planPricingN: any;
+export declare const planPricingT: any;

@@ -16,3 +16,15 @@ export declare const r: any;
 export declare const s: any;
 export declare const t: any;
 export declare const u: any;
+
+// Aliases used by consumer checkpoints
+export declare const cubeA: any;
+export declare const cubeC: any;
+export declare const cubeI: any;
+export declare const cubeL: any;
+export declare const cubeN: any;
+export declare const cubeO: any;
+export declare const cubeR: any;
+export declare const cubeS: any;
+export declare const cubeT: any;
+export declare const cubeU: any;

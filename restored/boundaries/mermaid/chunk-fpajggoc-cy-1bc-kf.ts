@@ -22,3 +22,21 @@ export declare const r: any;
 export declare const s: any;
 export declare const t: any;
 export declare const u: any;
+
+// Aliases used by consumer checkpoints
+export declare const chunkFPAJGGOCA: any;
+export declare const chunkFPAJGGOCC: any;
+export declare const chunkFPAJGGOCD: any;
+export declare const chunkFPAJGGOCF: any;
+export declare const chunkFPAJGGOCG: any;
+export declare const chunkFPAJGGOCH: any;
+export declare const chunkFPAJGGOCI: any;
+export declare const chunkFPAJGGOCL: any;
+export declare const chunkFPAJGGOCM: any;
+export declare const chunkFPAJGGOCN: any;
+export declare const chunkFPAJGGOCO: any;
+export declare const chunkFPAJGGOCP: any;
+export declare const chunkFPAJGGOCR: any;
+export declare const chunkFPAJGGOCS: any;
+export declare const chunkFPAJGGOCT: any;
+export declare const chunkFPAJGGOCU: any;

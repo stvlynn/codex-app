@@ -87,3 +87,9 @@ export const prefersReducedMotionAtom = atom<boolean>((get) => {
   const systemPrefers = get(systemPrefersReducedMotionAtom);
   return resolveReducedMotion(preference, systemPrefers);
 });
+
+// Aliases used by consumer checkpoints
+export declare const reducedMotionPreferenceI: any;
+export declare const reducedMotionPreferenceN: any;
+export declare const reducedMotionPreferenceR: any;
+export declare const reducedMotionPreferenceT: any;

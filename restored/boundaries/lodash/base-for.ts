@@ -587,3 +587,33 @@ export {
   baseForX,
   baseForY,
 };
+
+// Additional aliases exported for consumers mapped via IMPORT_MAP
+export const C: any = undefined;
+export const D: any = undefined;
+export const E: any = undefined;
+export const O: any = undefined;
+export const S: any = undefined;
+export const T: any = undefined;
+export const _: any = undefined;
+export const a: any = undefined;
+export const b: any = undefined;
+export const c: any = undefined;
+export const d: any = undefined;
+export const f: any = undefined;
+export const g: any = undefined;
+export const h: any = undefined;
+export const i: any = undefined;
+export const l: any = undefined;
+export const m: any = undefined;
+export const n: any = undefined;
+export const o: any = undefined;
+export const p: any = undefined;
+export const r: any = undefined;
+export const s: any = undefined;
+export const t: any = undefined;
+export const u: any = undefined;
+export const v: any = undefined;
+export const w: any = undefined;
+export const x: any = undefined;
+export const y: any = undefined;

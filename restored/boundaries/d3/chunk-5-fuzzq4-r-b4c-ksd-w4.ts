@@ -16,3 +16,15 @@ export declare const r: any;
 export declare const s: any;
 export declare const t: any;
 export declare const u: any;
+
+// Aliases used by consumer checkpoints
+export declare const chunk5FUZZQ4RA: any;
+export declare const chunk5FUZZQ4RC: any;
+export declare const chunk5FUZZQ4RI: any;
+export declare const chunk5FUZZQ4RL: any;
+export declare const chunk5FUZZQ4RN: any;
+export declare const chunk5FUZZQ4RO: any;
+export declare const chunk5FUZZQ4RR: any;
+export declare const chunk5FUZZQ4RS: any;
+export declare const chunk5FUZZQ4RT: any;
+export declare const chunk5FUZZQ4RU: any;

@@ -10,3 +10,11 @@ export declare const n: any;
 export declare const o: any;
 export declare const r: any;
 export declare const t: any;
+
+// Aliases used by consumer checkpoints
+export declare const flattenA: any;
+export declare const flattenI: any;
+export declare const flattenN: any;
+export declare const flattenO: any;
+export declare const flattenR: any;
+export declare const flattenT: any;

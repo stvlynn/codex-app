@@ -21,6 +21,23 @@ const PARSER_PLUGINS: parser.ParserPlugin[] = [
   "topLevelAwait",
 ];
 const REPO_ROOT = path.resolve(import.meta.dir, "../../../..");
+const REF_ASSETS_DIR = path.join(REPO_ROOT, "ref/webview/assets");
+
+function findBundleAsset(stem: string): string {
+  const matches = fs
+    .readdirSync(REF_ASSETS_DIR)
+    .filter((name) => name.startsWith(`${stem}-`) && name.endsWith(".js"));
+  if (matches.length !== 1) {
+    throw new Error(
+      `expected one ${stem} bundle fixture in ${REF_ASSETS_DIR}, found ${matches.length}`,
+    );
+  }
+  return `ref/webview/assets/${matches[0]}`;
+}
+
+const DOWNLOAD_SOURCE_PATH = findBundleAsset("download");
+const EXPAND_SOURCE_PATH = findBundleAsset("expand");
+const BUTTON_SOURCE_PATH = findBundleAsset("button");
 
 function readRepoFile(relativePath: string): string {
   return fs.readFileSync(path.join(REPO_ROOT, relativePath), "utf-8");
@@ -39,8 +56,8 @@ function expectNoRuntimeResidue(files: SemanticFile[]): void {
 }
 
 describe("semantic-finalize", () => {
-  test("download-Cf0FyA1Y.js single icon becomes typed semantic module", () => {
-    const sourcePath = "ref/webview/assets/download-Cf0FyA1Y.js";
+  test("the current download icon bundle becomes a typed semantic module", () => {
+    const sourcePath = DOWNLOAD_SOURCE_PATH;
     const source = readRepoFile(sourcePath);
     const polished = polish(source, { sourcePath }).code;
     const result = semanticFinalize(polished, { recipe: "icon", sourcePath });
@@ -49,7 +66,7 @@ describe("semantic-finalize", () => {
     expect(result.files).toHaveLength(1);
     const code = result.files[0]!.code;
     expect(code).toContain(
-      "// Restored from ref/webview/assets/download-Cf0FyA1Y.js",
+      `// Restored from ${sourcePath}`,
     );
     expect(code).toContain('import type { SVGProps } from "react"');
     expect(code).toContain("export type IconProps = SVGProps<SVGSVGElement>");
@@ -60,8 +77,8 @@ describe("semantic-finalize", () => {
     parseModule(code);
   });
 
-  test("download-Cf0FyA1Y.js maps original alias after generic fallback rename", () => {
-    const sourcePath = "ref/webview/assets/download-Cf0FyA1Y.js";
+  test("the current download icon maps its original alias after generic fallback rename", () => {
+    const sourcePath = DOWNLOAD_SOURCE_PATH;
     const polished = [
       `// Restored from ${sourcePath}`,
       `export const elementNode1 = props => <svg width={20} height={20} viewBox="0 0 20 20" {...props}><path d="M0" fill="currentColor" /></svg>;`,
@@ -69,7 +86,7 @@ describe("semantic-finalize", () => {
     const result = semanticFinalize(polished, {
       recipe: "icon",
       sourcePath,
-      basename: "download-Cf0FyA1Y",
+      basename: path.basename(sourcePath, ".js"),
     });
 
     expect(result.exportMap.t).toBe("DownloadIcon");
@@ -119,24 +136,19 @@ describe("semantic-finalize", () => {
     for (const file of result.files) parseModule(file.code);
   });
 
-  test("expand-BVUB1pRY.js real bundle maps original aliases to Expand/Collapse names", () => {
-    const sourcePath = "ref/webview/assets/expand-BVUB1pRY.js";
+  test("the current expand icon bundle maps its original alias", () => {
+    const sourcePath = EXPAND_SOURCE_PATH;
     const source = readRepoFile(sourcePath);
     const polished = polish(source, { sourcePath }).code;
     const result = semanticFinalize(polished, {
       recipe: "icon",
       sourcePath,
-      basename: "expand-BVUB1pRY",
+      basename: path.basename(sourcePath, ".js"),
     });
 
     expect(result.exportMap.t).toBe("ExpandIcon");
-    expect(result.exportMap.n).toBe("CollapseIcon");
-    expect(result.files.map((file) => file.path).sort()).toEqual([
-      "expand/collapse-icon.tsx",
-      "expand/expand-icon.tsx",
-      "expand/index.ts",
-      "expand/types.ts",
-    ]);
+    expect(result.layout).toBe("single");
+    expect(result.files.map((file) => file.path)).toEqual(["expand-icon.tsx"]);
   });
 
   test("expand-BVUB1pRY.js keeps Expand/Collapse names after generic fallback renames", () => {
@@ -162,8 +174,8 @@ describe("semantic-finalize", () => {
     ]);
   });
 
-  test("button-bq66r8jD.js becomes typed semantic Button component", () => {
-    const sourcePath = "ref/webview/assets/button-bq66r8jD.js";
+  test("the current button bundle becomes a typed semantic Button component", () => {
+    const sourcePath = BUTTON_SOURCE_PATH;
     const source = readRepoFile(sourcePath);
     const polished = polish(source, { sourcePath }).code;
     const result = semanticFinalize(polished, { recipe: "button", sourcePath });

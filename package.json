@@ -9,6 +9,9 @@
     "lint": "echo 'No linter configured yet'",
     "format": "echo 'No formatter configured yet'",
     "docs:check": "node scripts/check-docs.mjs",
+    "electron:doctor": "node scripts/dev-electron.mjs --doctor",
+    "electron:dev": "node scripts/dev-electron.mjs",
+    "electron:smoke": "node scripts/dev-electron.mjs --smoke",
     "check": "pnpm run typecheck && pnpm run test && pnpm run docs:check"
   },
   "engines": {

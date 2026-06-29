@@ -856,3 +856,7 @@ function parsePatchFilesHelper18(
       };
 }
 export { parsePatchFilesL, parsePatchFilesR };
+
+// Aliases used by consumer checkpoints
+export declare const parsePatchFilesN: any;
+export declare const parsePatchFilesT: any;

@@ -11,3 +11,10 @@ export declare const i: any;
 export declare const n: any;
 export declare const r: any;
 export declare const t: any;
+
+// Aliases used by consumer checkpoints
+export declare const chunkENJZ2VHEA: any;
+export declare const chunkENJZ2VHEI: any;
+export declare const chunkENJZ2VHEN: any;
+export declare const chunkENJZ2VHER: any;
+export declare const chunkENJZ2VHET: any;

@@ -7,3 +7,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 export declare const t: any;
+
+// Aliases used by consumer checkpoints
+export declare const line: any;

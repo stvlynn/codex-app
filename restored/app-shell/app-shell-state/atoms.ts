@@ -30,6 +30,7 @@ export const bottomPanelMaximizedSpring$ = createAtom({
 export const bottomPanelWasMaximized$ = createAtom(false);
 export const bottomPanelFullWidthOnNextOpen$ = createAtom(false);
 export const bottomPanelOverlayVisible$ = createAtom(false);
+export const rightPanelComposerOverlayVisible$ = createAtom(false);
 export const sidebarWidth$ = createAtom(DEFAULT_SIDEBAR_WIDTH);
 export const sidebarPinned$ = createAtom(false);
 export const sidebarWidthSpring$ = createAtom(true);

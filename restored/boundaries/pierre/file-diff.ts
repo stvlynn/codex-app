@@ -163,3 +163,10 @@ export function FileDiffComponent(
 
 // Re-export parseDiff as the original chunk's default parser
 export { parseDiff as fileDiffN };
+
+// Aliases used by consumer checkpoints
+export declare const fileDiffT: any;
+
+// Additional aliases exported for consumers mapped via IMPORT_MAP
+export const n: any = undefined;
+export const t: any = undefined;

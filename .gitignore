@@ -1,5 +1,6 @@
 # Generated artifacts
 ref/
+node_modules/
 
 # Deobfuscation workspace: intermediate checkpoints, manifest, ledger, symbols.
 # The promoted output under restored/ is committed; the hidden workspace is not.

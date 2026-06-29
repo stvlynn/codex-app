@@ -8,3 +8,7 @@
 
 export declare const n: any;
 export declare const t: any;
+
+// Aliases used by consumer checkpoints
+export declare const markdownSurfaceN: any;
+export declare const markdownSurfaceT: any;

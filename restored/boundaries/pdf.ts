@@ -63,3 +63,10 @@ export declare const w: any;
 export declare const x: any;
 export declare const y: any;
 export declare const z: any;
+
+// Aliases used by consumer checkpoints
+export declare const pdfO: any;
+export declare const pdfP: any;
+export declare const pdfR: any;
+export declare const pdfS: any;
+export declare const pdfY: any;

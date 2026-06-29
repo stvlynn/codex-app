@@ -23,3 +23,22 @@ export declare const r: any;
 export declare const s: any;
 export declare const t: any;
 export declare const u: any;
+
+// Aliases used by consumer checkpoints
+export declare const mergeA: any;
+export declare const mergeC: any;
+export declare const mergeD: any;
+export declare const mergeF: any;
+export declare const mergeG: any;
+export declare const mergeH: any;
+export declare const mergeI: any;
+export declare const mergeL: any;
+export declare const mergeM: any;
+export declare const mergeN: any;
+export declare const mergeO: any;
+export declare const mergeP: any;
+export declare const mergeR: any;
+export declare const mergeS: any;
+export declare const mergeT: any;
+export declare const mergeU: any;
+export declare const mergeUnderscore: any;

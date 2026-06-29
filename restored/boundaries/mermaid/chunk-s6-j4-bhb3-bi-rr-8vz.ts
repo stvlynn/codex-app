@@ -8,3 +8,6 @@
 
 export declare const n: any;
 export declare const t: any;
+
+// Aliases used by consumer checkpoints
+export declare const chunkS6J4BHB3N: any;

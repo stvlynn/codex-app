@@ -9,3 +9,8 @@
 export declare const n: any;
 export declare const r: any;
 export declare const t: any;
+
+// Aliases used by consumer checkpoints
+export declare const fileTreeSearchInputN: any;
+export declare const fileTreeSearchInputR: any;
+export declare const fileTreeSearchInputT: any;

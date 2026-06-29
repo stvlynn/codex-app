@@ -7,3 +7,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 export declare const GeneralSettings: any;
+
+// Aliases used by consumer checkpoints
+export declare const generalSettingsN: any;
+export declare const generalSettingsR: any;
+
+// Additional aliases exported for consumers mapped via IMPORT_MAP
+export const i: any = undefined;
+export const n: any = undefined;
+export const r: any = undefined;
+export const t: any = undefined;

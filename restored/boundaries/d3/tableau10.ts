@@ -15,3 +15,6 @@ export const tableau10T = tableau10N(
   "4e79a7f28e2ce1575976b7b259a14fedc949af7aa1ff9da79c755fbab0ab",
 );
 export { tableau10N };
+
+// Additional aliases exported for consumers mapped via IMPORT_MAP
+export const t: any = undefined;

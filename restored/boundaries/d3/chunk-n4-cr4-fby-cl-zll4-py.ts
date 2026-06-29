@@ -9,3 +9,8 @@
 export declare const n: any;
 export declare const r: any;
 export declare const t: any;
+
+// Aliases used by consumer checkpoints
+export declare const chunkN4CR4FBYN: any;
+export declare const chunkN4CR4FBYR: any;
+export declare const chunkN4CR4FBYT: any;

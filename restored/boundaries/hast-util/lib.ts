@@ -4790,3 +4790,10 @@ export {
   libV,
   libY,
 };
+
+// Aliases used by consumer checkpoints
+export declare const libT: any;
+
+// Additional aliases exported for consumers mapped via IMPORT_MAP
+export const o: any = undefined;
+export const y: any = undefined;

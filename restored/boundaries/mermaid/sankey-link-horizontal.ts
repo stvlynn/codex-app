@@ -1196,3 +1196,10 @@ export function sankeyLinkHorizontalT() {
     .target(sankeyLinkHorizontalHelper26);
 }
 export { sankeyLinkHorizontalI };
+
+// Aliases used by consumer checkpoints
+export declare const sankeyLinkHorizontalA: any;
+export declare const sankeyLinkHorizontalN: any;
+export declare const sankeyLinkHorizontalO: any;
+export declare const sankeyLinkHorizontalR: any;
+export declare const sankeyLinkHorizontalT: any;

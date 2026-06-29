@@ -57,3 +57,38 @@ export declare const w: any;
 export declare const x: any;
 export declare const y: any;
 export declare const z: any;
+
+// Aliases used by consumer checkpoints
+export declare const appScopeA: any;
+export declare const appScopeB: any;
+export declare const appScopeC: any;
+export declare const appScopeD: any;
+export declare const appScopeE: any;
+export declare const appScopeF: any;
+export declare const appScopeG: any;
+export declare const appScopeH: any;
+export declare const appScopeI: any;
+export declare const appScopeJ: any;
+export declare const appScopeK: any;
+export declare const appScopeL: any;
+export declare const appScopeM: any;
+export declare const appScopeN: any;
+export declare const appScopeO: any;
+export declare const appScopeP: any;
+export declare const appScopeQ: any;
+export declare const appScopeR: any;
+export declare const appScopeS: any;
+export declare const appScopeT: any;
+export declare const appScopeU: any;
+export declare const appScopeUnderscore: any;
+export declare const appScopeV: any;
+export declare const appScopeW: any;
+export declare const appScopeX: any;
+export declare const appScopeY: any;
+export declare const appScopeZ: any;
+
+// Additional aliases exported for consumers mapped via IMPORT_MAP
+export const automationScheduleImport1: any = undefined;
+export const commandKeybindingsImport1: any = undefined;
+export const commandKeybindingsImport2: any = undefined;
+export const commandKeybindingsImport3: any = undefined;

@@ -99,4 +99,4 @@ export declare const xt: any;
 export declare const y: any;
 export declare const yt: any;
 export declare const z: any;
-export declare const zt: any;
+export const zt: any = undefined;

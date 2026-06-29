@@ -419,3 +419,18 @@ export function esmT(esmParam3) {
     esmValue34
   );
 }
+
+// Aliases used by consumer checkpoints
+export declare const esmA: any;
+export declare const esmI: any;
+export declare const esmN: any;
+export declare const esmR: any;
+export declare const esmT: any;
+
+// Additional aliases exported for consumers mapped via IMPORT_MAP
+export const a: any = undefined;
+export const i: any = undefined;
+export const n: any = undefined;
+export const o: any = undefined;
+export const r: any = undefined;
+export const t: any = undefined;

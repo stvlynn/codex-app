@@ -10,3 +10,6 @@ export declare const i: any;
 export declare const n: any;
 export declare const r: any;
 export declare const t: any;
+
+// Additional aliases exported for consumers mapped via IMPORT_MAP
+export const reducedMotionT: any = undefined;

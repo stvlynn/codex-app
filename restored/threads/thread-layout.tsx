@@ -11,7 +11,7 @@ export interface ThreadLayoutProps {
   containerRef?: Ref<HTMLDivElement>;
   tabIndex?: number;
 }
-const contentWrapperClass = clsx(
+export const contentWrapperClass = clsx(
   "mx-auto w-full max-w-(--thread-content-max-width)",
   "px-toolbar",
 );

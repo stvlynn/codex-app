@@ -272,4 +272,16 @@ export const H: any = undefined;
 export const J: any = undefined;
 export const T: any = undefined;
 export const V: any = undefined;
+export const persistedSignalC: any = undefined;
+export const persistedSignalU: any = undefined;
+export const persistedSignalN: any = undefined;
+export const persistedSignalR: any = undefined;
+export const persistedSignalM: any = undefined;
+export const persistedSignalA: any = undefined;
+export const persistedSignalY: any = undefined;
+export const persistedSignalS: any = undefined;
+export const persistedSignalX: any = undefined;
+export const persistedSignalI: any = undefined;
+export const persistedSignalL: any = undefined;
+export const persistedSignalUnderscore: any = undefined;
 /* eslint-enable @typescript-eslint/no-explicit-any */

@@ -27,7 +27,8 @@
 ## 快速开始
 
 ```bash
-make dev      # 安装依赖并验证工作区
+make dev      # 安装依赖、验证工作区，并启动解包出的 Electron 应用
+make electron-smoke # 验证并短时启动解包出的 Electron 应用
 make check    # 运行类型检查 + 测试 + 文档检查
 make help     # 显示所有可用目标
 ```

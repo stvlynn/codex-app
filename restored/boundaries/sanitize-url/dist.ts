@@ -92,3 +92,6 @@ export const dist = chunkT((distParam1) => {
   }
   distParam1.sanitizeUrl = distHelper5;
 });
+
+// Additional aliases exported for consumers mapped via IMPORT_MAP
+export const t: any = undefined;

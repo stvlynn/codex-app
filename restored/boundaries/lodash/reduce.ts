@@ -32,3 +32,28 @@ export declare const v: any;
 export declare const w: any;
 export declare const x: any;
 export declare const y: any;
+
+// Aliases used by consumer checkpoints
+export declare const reduceA: any;
+export declare const reduceB: any;
+export declare const reduceC: any;
+export declare const reduceD: any;
+export declare const reduceE: any;
+export declare const reduceF: any;
+export declare const reduceG: any;
+export declare const reduceH: any;
+export declare const reduceI: any;
+export declare const reduceL: any;
+export declare const reduceM: any;
+export declare const reduceN: any;
+export declare const reduceO: any;
+export declare const reduceP: any;
+export declare const reduceR: any;
+export declare const reduceS: any;
+export declare const reduceT: any;
+export declare const reduceU: any;
+export declare const reduceUnderscore: any;
+export declare const reduceV: any;
+export declare const reduceW: any;
+export declare const reduceX: any;
+export declare const reduceY: any;

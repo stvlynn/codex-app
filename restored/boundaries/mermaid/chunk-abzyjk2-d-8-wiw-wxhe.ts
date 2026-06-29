@@ -56,3 +56,12 @@ export declare const w: any;
 export declare const x: any;
 export declare const y: any;
 export declare const z: any;
+
+// Aliases used by consumer checkpoints
+export declare const chunkABZYJK2DB: any;
+export declare const chunkABZYJK2DC: any;
+export declare const chunkABZYJK2DI: any;
+export declare const chunkABZYJK2DN: any;
+export declare const chunkABZYJK2DO: any;
+export declare const chunkABZYJK2DS: any;
+export declare const chunkABZYJK2DY: any;

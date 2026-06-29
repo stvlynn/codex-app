@@ -4417,3 +4417,14 @@ libHelper76("formatDisplayName");
 libHelper75("formatDate");
 libHelper75("formatTime");
 export { libA, libC, libL, libS };
+
+// Aliases used by consumer checkpoints
+export declare const libI: any;
+export declare const libR: any;
+
+// Additional aliases exported for consumers mapped via IMPORT_MAP
+export const c: any = undefined;
+export const i: any = undefined;
+export const l: any = undefined;
+export const r: any = undefined;
+export const s: any = undefined;

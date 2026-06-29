@@ -23,3 +23,22 @@ export declare const r: any;
 export declare const s: any;
 export declare const t: any;
 export declare const u: any;
+
+// Aliases used by consumer checkpoints
+export declare const chunkS3R3BYOJA: any;
+export declare const chunkS3R3BYOJC: any;
+export declare const chunkS3R3BYOJD: any;
+export declare const chunkS3R3BYOJF: any;
+export declare const chunkS3R3BYOJG: any;
+export declare const chunkS3R3BYOJH: any;
+export declare const chunkS3R3BYOJI: any;
+export declare const chunkS3R3BYOJL: any;
+export declare const chunkS3R3BYOJM: any;
+export declare const chunkS3R3BYOJN: any;
+export declare const chunkS3R3BYOJO: any;
+export declare const chunkS3R3BYOJP: any;
+export declare const chunkS3R3BYOJR: any;
+export declare const chunkS3R3BYOJS: any;
+export declare const chunkS3R3BYOJT: any;
+export declare const chunkS3R3BYOJU: any;
+export declare const chunkS3R3BYOJUnderscore: any;

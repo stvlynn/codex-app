@@ -32,3 +32,22 @@ export declare const json: any;
 export declare const redirect: any;
 export declare const defer: any;
 export declare const unstable_HistoryRouter: any;
+export declare const chunkLFPYN7LYUnderscore: any;
+
+// Aliases used by consumer checkpoints
+export declare const chunkLFPYN7LYA: any;
+export declare const chunkLFPYN7LYC: any;
+export declare const chunkLFPYN7LYD: any;
+export declare const chunkLFPYN7LYF: any;
+export declare const chunkLFPYN7LYG: any;
+export declare const chunkLFPYN7LYH: any;
+export declare const chunkLFPYN7LYI: any;
+export declare const chunkLFPYN7LYL: any;
+export declare const chunkLFPYN7LYM: any;
+export declare const chunkLFPYN7LYN: any;
+export declare const chunkLFPYN7LYO: any;
+export declare const chunkLFPYN7LYP: any;
+export declare const chunkLFPYN7LYR: any;
+export declare const chunkLFPYN7LYS: any;
+export declare const chunkLFPYN7LYT: any;
+export declare const chunkLFPYN7LYU: any;

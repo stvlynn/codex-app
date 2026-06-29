@@ -218,3 +218,10 @@ export declare const z: any;
 export declare const zn: any;
 export declare const zr: any;
 export declare const zt: any;
+export declare const "OAI-Product-Sku": any;
+
+// Aliases used by consumer checkpoints
+export declare const "OAI-Product-Sku": any;
+
+// Additional aliases exported for consumers mapped via IMPORT_MAP
+export const "OAI-Product-Sku": any = undefined;

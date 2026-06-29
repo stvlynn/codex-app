@@ -8,3 +8,6 @@
 
 declare const _default: any;
 export default _default;
+
+// Additional aliases exported for consumers mapped via IMPORT_MAP
+export const default: any = undefined;

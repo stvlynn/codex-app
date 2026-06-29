@@ -21,3 +21,22 @@ export declare const r: any;
 export declare const s: any;
 export declare const t: any;
 export declare const u: any;
+
+// Aliases used by consumer checkpoints
+export declare const zipObjectA: any;
+export declare const zipObjectC: any;
+export declare const zipObjectD: any;
+export declare const zipObjectF: any;
+export declare const zipObjectG: any;
+export declare const zipObjectH: any;
+export declare const zipObjectI: any;
+export declare const zipObjectL: any;
+export declare const zipObjectM: any;
+export declare const zipObjectN: any;
+export declare const zipObjectO: any;
+export declare const zipObjectP: any;
+export declare const zipObjectR: any;
+export declare const zipObjectS: any;
+export declare const zipObjectT: any;
+export declare const zipObjectU: any;
+export declare const zipObjectUnderscore: any;
