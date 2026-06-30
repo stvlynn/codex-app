@@ -3,10 +3,10 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-TARGET = ROOT / "restored"
-MANIFEST_PATH = TARGET / ".deobfuscate-javascript" / "_full" / "manifest.json"
+TARGET = ROOT / "src"
+MANIFEST_PATH = ROOT / "src" / ".deobfuscate-javascript" / "_full" / "manifest.json"
 IMPORT_MAP_PATH = TARGET / "IMPORT_MAP.json"
-CHECKPOINTS_DIR = TARGET / ".deobfuscate-javascript" / "_full" / "checkpoints"
+CHECKPOINTS_DIR = ROOT / "src" / ".deobfuscate-javascript" / "_full" / "checkpoints"
 
 m = json.load(open(MANIFEST_PATH))
 im = json.load(open(IMPORT_MAP_PATH))
@@ -52,9 +52,9 @@ for cp in CHECKPOINTS_DIR.glob("*"):
         if cls not in ("vendor", "vendor-runtime", "boundary"):
             continue
         entry = im.get("chunks", {}).get(base)
-        if not entry or not entry.get("restored"):
+        if not entry or not entry.get("path"):
             continue
-        target_path = TARGET / entry["restored"]
+        target_path = TARGET / entry["path"]
         if not target_path.exists():
             continue
         exports = existing_exports(target_path)
@@ -68,7 +68,7 @@ added_total = 0
 files_changed = 0
 for base in sorted(needed):
     entry = im["chunks"][base]
-    target_path = TARGET / entry["restored"]
+    target_path = TARGET / entry["path"]
     exports = existing_exports(target_path)
     missing = sorted(needed[base] - exports)
     if not missing:
@@ -82,6 +82,6 @@ for base in sorted(needed):
         text += "\n"
     text += "\n// Aliases used by consumer checkpoints\n" + "\n".join(lines) + "\n"
     target_path.write_text(text)
-    print(f"✓ {base}: +{len(missing)} aliases -> {entry['restored']}")
+    print(f"✓ {base}: +{len(missing)} aliases -> {entry["path"]}")
 
 print(f"\nUpdated {files_changed} vendor boundary files with {added_total} aliases.")

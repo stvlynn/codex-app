@@ -2,7 +2,7 @@
 
 Nine end-to-end runs of the pipeline against representative inputs, from a 5 KB minified file all the way to a React-Compiler-output `Button` with cache scaffolding. Each example references the relevant workflow + stage docs — read those for step-level detail, then come back here for a concrete trace.
 
-These traces show the **deep path** end-to-end (typed `.tsx` + Stage 3 acceptance reviewer-LOOP). The **default "readable restore" tier** stops earlier: Stage 1 (only if obfuscated) → Stage 2 rename → reading-aid polish (`polish.ts --rename --fast`) → format → **stage in `$WS`, organize, then promote** into `restored/` with a semantic filename + provenance, with naming quality as the only hard bar (never deliver raw script output straight into `restored/`). Treat the typed-`.tsx` and reviewer-LOOP steps below as deep mode.
+These traces show the **deep path** end-to-end (typed `.tsx` + Stage 3 acceptance reviewer-LOOP). The **default "readable restore" tier** stops earlier: Stage 1 (only if obfuscated) → Stage 2 rename → reading-aid polish (`polish.ts --rename --fast`) → format → **stage in `$WS`, organize, then promote** into `src/` with a semantic filename + provenance, with naming quality as the only hard bar (never deliver raw script output straight into `src/`). Treat the typed-`.tsx` and reviewer-LOOP steps below as deep mode.
 
 ← Back to [SKILL.md](../SKILL.md).
 
@@ -12,12 +12,12 @@ These traces show the **deep path** end-to-end (typed `.tsx` + Stage 3 acceptanc
 
 **User:** "humanify this file" *(attaches a 5 KB minified script)*
 
-1. `bun scripts/detect.ts user.min.js` → no Stage 1 techniques.
-2. `bun scripts/sourcemap-check.ts user.min.js` → ✗ no sourcemap. Continue.
+1. `bun src/infrastructure/detect.ts user.min.js` → no Stage 1 techniques.
+2. `bun src/infrastructure/sourcemap-check.ts user.min.js` → ✗ no sourcemap. Continue.
 3. Set up workspace: `WS=<target-dir>/.deobfuscate-javascript/user.min && mkdir -p "$WS" && cp user.min.js "$WS/original.js"`.
-4. `bun scripts/extract.ts "$WS/original.js" --out "$WS/symbols.json"`.
+4. `bun src/infrastructure/extract.ts "$WS/original.js" --out "$WS/symbols.json"`.
 5. Read `$WS/symbols.json`, decide names, `Write` `$WS/renames.json`.
-6. `bun scripts/apply.ts "$WS/original.js" "$WS/renames.json" --out "$WS/renamed.js"`.
+6. `bun src/infrastructure/apply.ts "$WS/original.js" "$WS/renames.json" --out "$WS/renamed.js"`.
 7. Host-agent rewrite `$WS/renamed.js` into a semantic public file, pre-filter it, and run the Stage 3 acceptance review — the host agent reads it end-to-end against the quality bar, no sub-agent required. *(Default tier stops at the readable draft after `--fast` polish + naming; the semantic-rewrite + acceptance-review steps here are deep mode.)*
 8. Report the accepted file and what it does.
 
@@ -27,12 +27,12 @@ Workflow: [small-minified.md](../workflows/small-minified.md).
 
 **User:** "Deobfuscate module 3658 from `og/bundle.js`, call it `treeGenerator`"
 
-1. `bun scripts/sourcemap-check.ts og/bundle.js`. None.
+1. `bun src/infrastructure/sourcemap-check.ts og/bundle.js`. None.
 2. Set up workspace: `WS=modules/.deobfuscate-javascript/bundle && mkdir -p "$WS" && cp og/bundle.js "$WS/original.js"`.
 3. `npx webcrack "$WS/original.js" -o "$WS/webcracked/"` (one-time).
-4. `bun scripts/extract.ts "$WS/webcracked/modules/3658.js" --out "$WS/symbols.json"`.
+4. `bun src/infrastructure/extract.ts "$WS/webcracked/modules/3658.js" --out "$WS/symbols.json"`.
 5. Decide names with a `treeGenerator` bent (top-level function = `treeGenerator`; helpers below that). Write `$WS/renames.json`.
-6. `bun scripts/apply.ts "$WS/webcracked/modules/3658.js" "$WS/renames.json" --out modules/module_3658_treeGenerator.js`.
+6. `bun src/infrastructure/apply.ts "$WS/webcracked/modules/3658.js" "$WS/renames.json" --out modules/module_3658_treeGenerator.js`.
 7. Report path back to user.
 
 Workflow: [webpack-bundle.md](../workflows/webpack-bundle.md).
@@ -41,7 +41,7 @@ Workflow: [webpack-bundle.md](../workflows/webpack-bundle.md).
 
 **User:** "Make this readable" *(attaches `app.bundle.js`)*
 
-1. `bun scripts/sourcemap-check.ts app.bundle.js` → ✓ found `app.bundle.js.map` with 47 original sources including `src/App.tsx`, `src/api/client.ts`, …
+1. `bun src/infrastructure/sourcemap-check.ts app.bundle.js` → ✓ found `app.bundle.js.map` with 47 original sources including `src/App.tsx`, `src/api/client.ts`, …
 2. Stop. Tell the user: *"A sourcemap is available — recovering the original sources is lossless and much better than renaming. Want me to extract them with `source-map-explorer` or hand-decode the `sourcesContent` array?"*
 
 ## Example 4: file is already readable
@@ -55,12 +55,12 @@ Don't run the pipeline. Tell the user the file already has meaningful names and 
 **User:** "I downloaded this from a malware sample, can you make sense of it?" *(attaches obfuscator.io output with `_0x...` arrays, hex strings, dead code, opaque predicates)*
 
 1. Set up workspace: `WS=<target-dir>/.deobfuscate-javascript/sample && mkdir -p "$WS" && cp sample.js "$WS/original.js"`.
-2. `bun scripts/detect.ts "$WS/original.js"` → reports `string-array` (0.85), `hex-encoding` (0.8), `opaque-predicates` (0.6), `dead-code-injection` (0.5).
-3. `bun scripts/deobfuscate.ts "$WS/original.js" --out "$WS/stageA.js" --report "$WS/stageA.json"`. Read the report — confirm `string-array.referencesReplaced > 0`, `decode-strings.fromCharCode > 0`, `simplify.deadIfsRemoved > 0`, `control-flow-report` shows 0 flatteners. If there are flatteners, rewrite them now (see Example 6).
+2. `bun src/infrastructure/detect.ts "$WS/original.js"` → reports `string-array` (0.85), `hex-encoding` (0.8), `opaque-predicates` (0.6), `dead-code-injection` (0.5).
+3. `bun src/infrastructure/deobfuscate.ts "$WS/original.js" --out "$WS/stageA.js" --report "$WS/stageA.json"`. Read the report — confirm `string-array.referencesReplaced > 0`, `decode-strings.fromCharCode > 0`, `simplify.deadIfsRemoved > 0`, `control-flow-report` shows 0 flatteners. If there are flatteners, rewrite them now (see Example 6).
 4. `Read $WS/stageA.js` — verify it looks like normal-shaped JS (no `_0x`, no hex escapes).
-5. `bun scripts/extract.ts "$WS/stageA.js" --out "$WS/symbols.json"`.
+5. `bun src/infrastructure/extract.ts "$WS/stageA.js" --out "$WS/symbols.json"`.
 6. Write `$WS/renames.json`.
-7. `bun scripts/apply.ts "$WS/stageA.js" "$WS/renames.json" --out "$WS/renamed.js"`.
+7. `bun src/infrastructure/apply.ts "$WS/stageA.js" "$WS/renames.json" --out "$WS/renamed.js"`.
 8. Host-agent rewrite `$WS/renamed.js` into a semantic public file, pre-filter it, and run the Stage 3 acceptance review — the host agent reads it end-to-end against the quality bar, no sub-agent required. *(Default tier stops at the readable draft after `--fast` polish + naming; the semantic-rewrite + acceptance-review steps here are deep mode.)*
 
 Workflow: [full-obfuscation.md](../workflows/full-obfuscation.md).
@@ -70,12 +70,12 @@ Workflow: [full-obfuscation.md](../workflows/full-obfuscation.md).
 **User:** "this function is unreadable" *(attaches code containing `while(!![]){switch(_0x123){case 0: ...}}`)*
 
 1. Set up workspace (`WS=<target-dir>/.deobfuscate-javascript/$(basename input.js .js)`, `mkdir -p "$WS"`, `cp input.js "$WS/original.js"`).
-2. `bun scripts/deobfuscate.ts "$WS/original.js" --stop-after control-flow-report --report "$WS/control-flow-report.json"` (or run the report script standalone after Stage 1 finishes).
+2. `bun src/infrastructure/deobfuscate.ts "$WS/original.js" --stop-after control-flow-report --report "$WS/control-flow-report.json"` (or run the report script standalone after Stage 1 finishes).
 3. Read `$WS/control-flow-report.json`. For each `flatteners[i]`:
    - Note `dispatchVariable` (e.g. `_0x4f2`), `caseLabels` (the dispatch values in declaration order), and `containingFunction`.
 4. Open the source at the reported `loc.start..loc.end`. For each case, identify what it does and what value it assigns to `dispatchVariable` next.
 5. Hand-rewrite as a normal sequence: take the initial value, follow `case → next-state → next case`, inline statements. Skip cases that aren't reachable from the initial state.
-6. Re-run `scripts/simplify.ts` on the rewritten code to clean up.
+6. Re-run `src/application/simplify.ts` on the rewritten code to clean up.
 
 This is judgment work; tooling lays out the dispatch graph but you stitch it together.
 
@@ -84,17 +84,17 @@ This is judgment work; tooling lays out the dispatch graph but you stitch it tog
 **User:** "deobfuscate this 1 MB main bundle" *(attaches a vite-built `app-main.js`)*
 
 1. Set up workspace: `WS=<target-dir>/.deobfuscate-javascript/app-main && mkdir -p "$WS" && cp app-main.js "$WS/original.js"`.
-2. `bun scripts/sourcemap-check.ts "$WS/original.js"`. None (or stop and recover from `.map` if present).
-3. `bun scripts/detect.ts "$WS/original.js"`. If Stage 1 techniques exist, run `deobfuscate.ts` first; otherwise skip to step 4.
+2. `bun src/infrastructure/sourcemap-check.ts "$WS/original.js"`. None (or stop and recover from `.map` if present).
+3. `bun src/infrastructure/detect.ts "$WS/original.js"`. If Stage 1 techniques exist, run `deobfuscate.ts` first; otherwise skip to step 4.
 4. **Filtered extract** — a full extract of 9 000 symbols would be ~50 MB JSON; trim aggressively:
    ```bash
-   bun scripts/extract.ts "$WS/original.js" --out "$WS/symbols.json" \
+   bun src/infrastructure/extract.ts "$WS/original.js" --out "$WS/symbols.json" \
      --only-cryptic --min-refs 3 --top 200 --max-same-scope 5 --context-size 300
    ```
    Reports `extracted 200 symbol(s) (9474 filtered out of 9674) → $WS/symbols.json` (~100 KB).
 5. **Plan**:
    ```bash
-   bun scripts/plan.ts "$WS/symbols.json" --out-dir "$WS/plan" --input "$WS/original.js" --batch-size 50
+   bun src/application/plan.ts "$WS/symbols.json" --out-dir "$WS/plan" --input "$WS/original.js" --batch-size 50
    ```
    Generates `$WS/plan/CHECKLIST.md` with ~4 batches and `batch-0.json` … `batch-3.json`.
 6. `Read $WS/plan/CHECKLIST.md` to see the overview. Work batches in order:
@@ -104,7 +104,7 @@ This is judgment work; tooling lays out the dispatch graph but you stitch it tog
 7. **Merge + apply**:
    ```bash
    cat $WS/plan/renames-*.json | jq -s 'add' > "$WS/plan/renames.json"
-   bun scripts/apply.ts "$WS/original.js" "$WS/plan/renames.json" --out "$WS/renamed.js"
+   bun src/infrastructure/apply.ts "$WS/original.js" "$WS/plan/renames.json" --out "$WS/renamed.js"
    # "$WS/renamed.js" is a checkpoint, not the final deliverable.
    ```
 8. Host-agent rewrite the checkpoint into semantic public files, pre-filter, and run Stage 3. Top-level concepts should now be readable; nested scratch bindings can remain only when the reviewer accepts them as intentionally local and harmless. *(Default tier stops at the readable checkpoint after `--fast` polish + naming; the semantic-rewrite + reviewer-LOOP steps here are deep mode.)*
@@ -136,9 +136,9 @@ export { i as t };
 ```
 
 1. Set up workspace: `INPUT=ref/.../clock-BdccdK2N.js && WS=<target-dir>/.deobfuscate-javascript/$(basename "$INPUT" .js) && mkdir -p "$WS" && cp "$INPUT" "$WS/original.js"`.
-2. `bun scripts/sourcemap-check.ts "$WS/original.js"`. The URL is referenced but the `.map` file is missing — no recovery possible, proceed with rename.
-3. `bun scripts/detect.ts "$WS/original.js"` → no obfuscation. Skip Stage 1.
-4. `bun scripts/extract.ts "$WS/original.js" --out "$WS/symbols.json"`. Six symbols: `e@14, t@60, n@68, r@118, i@129, e@134`.
+2. `bun src/infrastructure/sourcemap-check.ts "$WS/original.js"`. The URL is referenced but the `.map` file is missing — no recovery possible, proceed with rename.
+3. `bun src/infrastructure/detect.ts "$WS/original.js"` → no obfuscation. Skip Stage 1.
+4. `bun src/infrastructure/extract.ts "$WS/original.js" --out "$WS/symbols.json"`. Six symbols: `e@14, t@60, n@68, r@118, i@129, e@134`.
 5. Read the context. Decide names — note that `i` is the export's local binding; give it the name you want to appear in the final `.tsx`. Write `$WS/renames.json`:
    ```json
    {
@@ -150,10 +150,10 @@ export { i as t };
      "e@134": "props"
    }
    ```
-6. `bun scripts/apply.ts "$WS/original.js" "$WS/renames.json" --out "$WS/renamed.js"`.
+6. `bun src/infrastructure/apply.ts "$WS/original.js" "$WS/renames.json" --out "$WS/renamed.js"`.
 7. **Stage 2 polish** — recover JSX, drop the bundler artifacts, lift the export, stamp the provenance header:
    ```bash
-   bun scripts/polish.ts "$WS/renamed.js" \
+   bun src/infrastructure/polish.ts "$WS/renamed.js" \
      --source "$INPUT" \
      --description "Clock icon — single-path SVG with spread-through SVG attributes." \
      --out "$WS/polished.tsx" \
@@ -193,14 +193,14 @@ Workflow: [react-vite.md](../workflows/react-vite.md).
 **User:** *attaches a Vite/Rollup chunk for a `Button` component compiled with the React Compiler memoizer (`let cache = react.c(25); cache[0] === props ? ((children = cache[1]), ...) : (({ children, className, ... } = props), (cache[0] = props), …);`), asks "make this readable as TSX"*
 
 1. Set up workspace: `INPUT=ref/.../button-XXXX.js && WS=<target-dir>/.deobfuscate-javascript/$(basename "$INPUT" .js) && mkdir -p "$WS" && cp "$INPUT" "$WS/original.js"`.
-2. `bun scripts/sourcemap-check.ts "$WS/original.js"`. The `.map` is missing — proceed with rename.
-3. `bun scripts/detect.ts "$WS/original.js"` → no obfuscation. Skip Stage 1.
-4. `bun scripts/extract.ts "$WS/original.js" --out "$WS/symbols.json"` → ~30 symbols (function locals, top-level lookup tables, imports).
+2. `bun src/infrastructure/sourcemap-check.ts "$WS/original.js"`. The `.map` is missing — proceed with rename.
+3. `bun src/infrastructure/detect.ts "$WS/original.js"` → no obfuscation. Skip Stage 1.
+4. `bun src/infrastructure/extract.ts "$WS/original.js" --out "$WS/symbols.json"` → ~30 symbols (function locals, top-level lookup tables, imports).
 5. Read context. The destructured props are `f, p, m, h, g, _, d, l, u`; the resolved variables are `v, y, b, x, S, C, w, T, E, D, O, k, A`. Pick meaningful names — for the destructured prop and its resolved value, give the *destructured* one the prop name (e.g. `uniform`) and the resolved one a longer name (e.g. `isUniform`) so inline-defaults can collapse them. Write `$WS/renames.json`.
-6. `bun scripts/apply.ts "$WS/original.js" "$WS/renames.json" --out "$WS/renamed.js"`.
+6. `bun src/infrastructure/apply.ts "$WS/original.js" "$WS/renames.json" --out "$WS/renamed.js"`.
 7. **Stage 2 polish** — strip the cache, simplify, recover JSX, inline defaults, lift the export, stamp the two-line provenance header:
    ```bash
-   bun scripts/polish.ts "$WS/renamed.js" \
+   bun src/infrastructure/polish.ts "$WS/renamed.js" \
      --source "$INPUT" \
      --description "Semantic button component: named variants, typed props, and direct JSX." \
      --out "$WS/polished.tsx" \

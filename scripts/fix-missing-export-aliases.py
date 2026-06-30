@@ -16,7 +16,7 @@ import sys
 from pathlib import Path
 from typing import Set
 
-ROOT = Path("/Users/stvlynn/code/codex-reverse/restored")
+ROOT = Path(str(ROOT / "src"))
 IMPORT_MAP_PATH = ROOT / "IMPORT_MAP.json"
 
 EXPORT_RE = re.compile(
@@ -91,41 +91,41 @@ def main() -> int:
     files_modified = 0
 
     for basename, entry in chunks.items():
-        restored_rel = entry.get("restored")
-        if not restored_rel:
+        public_rel = entry.get("path")
+        if not public_rel:
             continue
         # Only add aliases to vendor/runtime boundaries and data-asset files.
         # App-feature chunks should be properly rewritten by agents instead of
         # papering over missing exports with `any` aliases.
         if not (entry.get("dependencyBoundary") or entry.get("vendor")):
             continue
-        restored_path = ROOT / restored_rel
-        if restored_path.is_dir():
+        public_path = ROOT / public_rel
+        if public_path.is_dir():
             for candidate in ("index.ts", "index.tsx"):
-                if (restored_path / candidate).exists():
-                    restored_path = restored_path / candidate
+                if (public_path / candidate).exists():
+                    public_path = public_path / candidate
                     break
-        if not restored_path.exists() or restored_path.is_dir():
-            print(f"[!] missing restored file: {restored_rel}")
+        if not public_path.exists() or public_path.is_dir():
+            print(f"[!] missing restored file: {public_rel}")
             continue
 
         exports = entry.get("exports", {})
         if not exports:
             continue
 
-        existing = resolve_barrel_exports(restored_path)
+        existing = resolve_barrel_exports(public_path)
         missing = [semantic for original, semantic in exports.items() if semantic not in existing]
         if not missing:
             continue
 
-        print(f"[*] {basename} ({restored_rel}) missing {len(missing)} alias(es): {missing}")
+        print(f"[*] {basename} ({public_rel}) missing {len(missing)} alias(es): {missing}")
         if dry_run:
             total_added += len(missing)
             files_modified += 1
             continue
         # Add aliases to the primary restored file (barrel or single file).
         # Place them at the end in a clearly marked block.
-        text = restored_path.read_text(encoding="utf-8")
+        text = public_path.read_text(encoding="utf-8")
         aliases = "\n".join(
             f"export const {name}: any = undefined;" for name in missing
         )
@@ -135,7 +135,7 @@ def main() -> int:
         else:
             # Append after existing marker
             text = text.rstrip() + "\n" + aliases + "\n"
-        restored_path.write_text(text, encoding="utf-8")
+        public_path.write_text(text, encoding="utf-8")
         total_added += len(missing)
         files_modified += 1
 

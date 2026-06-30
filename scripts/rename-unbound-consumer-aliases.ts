@@ -15,10 +15,10 @@ const generate = (
 ) as typeof babelGenerator;
 
 const ROOT = path.resolve(import.meta.dir, "..");
-const TARGET = path.join(ROOT, "restored");
+const TARGET = path.join(ROOT, "src");
 const MANIFEST = JSON.parse(
   fs.readFileSync(
-    path.join(TARGET, ".deobfuscate-javascript/_full/manifest.json"),
+    path.join(TARGET, "src/.deobfuscate-javascript/_full/manifest.json"),
     "utf-8",
   ),
 );

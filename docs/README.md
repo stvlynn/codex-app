@@ -6,7 +6,9 @@ This directory is the single source of truth for how `decode-codex` is built, or
 
 - [`project/`](project/README.md) — project overview, goals, architecture, and boundaries.
 - [`frontend/`](frontend/README.md) — conventions for restored React/TypeScript UI code.
+  - [`domain-folders.md`](frontend/domain-folders.md) — how semantic source folders map to FSD layers.
 - [`backend/`](backend/README.md) — conventions for the deobfuscation pipeline and domain scripts.
+  - [`layers.md`](backend/layers.md) — DDD layer responsibilities and dependency direction.
 - [`operations/`](operations/README.md) — local development, skill execution, and deployment.
 - [`quality/`](quality/README.md) — quality gates, testing expectations, and review rules.
 - [`decisions/`](decisions/README.md) — architecture decision records (ADRs).

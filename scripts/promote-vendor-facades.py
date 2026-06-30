@@ -4,11 +4,11 @@ import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-MANIFEST_PATH = ROOT / "restored" / ".deobfuscate-javascript" / "_full" / "manifest.json"
-IMPORT_MAP_PATH = ROOT / "restored" / "IMPORT_MAP.json"
+MANIFEST_PATH = ROOT / "src" / ".deobfuscate-javascript" / "_full" / "manifest.json"
+IMPORT_MAP_PATH = ROOT / "src" / "IMPORT_MAP.json"
 MAKE_FACADE = ROOT / ".agents" / "skills" / "deobfuscate-javascript" / "scripts" / "make-facade.ts"
 REF_DIR = ROOT / "ref" / "webview" / "assets"
-RESTORED_DIR = ROOT / "restored"
+RESTORED_DIR = ROOT / "src"
 
 STAGES = ["extracted", "renamed", "polished", "finalized", "organized", "promoted"]
 
@@ -20,7 +20,7 @@ vendor_chunks = []
 for basename, entry in im.get("chunks", {}).items():
     if entry.get("status") != "done":
         continue
-    restored = entry.get("restored")
+    restored = entry.get("path")
     if not restored:
         continue
     info = m["files"].get(basename, {})

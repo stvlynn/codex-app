@@ -12,8 +12,8 @@ Use when `detect.ts` identifies one or more obfuscation techniques: Packer/AAEnc
 cd <skill-dir>
 WS=<target-dir>/.deobfuscate-javascript/$(basename <input.js> .js)
 mkdir -p "$WS" && cp <input.js> "$WS/original.js"
-bun scripts/detect.ts "$WS/original.js"                                   # see what's there
-bun scripts/deobfuscate.ts "$WS/original.js" --out "$WS/stageA.js" --report "$WS/stageA.json"
+bun src/infrastructure/detect.ts "$WS/original.js"                                   # see what's there
+bun src/infrastructure/deobfuscate.ts "$WS/original.js" --out "$WS/stageA.js" --report "$WS/stageA.json"
 # (Read $WS/stageA.json. If control-flow-report flagged flatteners, rewrite them manually now.)
 ```
 
@@ -30,9 +30,9 @@ cd <skill-dir>
 WS=<target-dir>/.deobfuscate-javascript/$(basename <input.js> .js)
 mkdir -p "$WS" && cp <input.js> "$WS/original.js"
 
-bun scripts/unpack.ts "$WS/original.js" --no-eval                # confirms eval would be needed
+bun src/infrastructure/unpack.ts "$WS/original.js" --no-eval                # confirms eval would be needed
 # ... visually verify the packer wrapper looks legit ...
-bun scripts/deobfuscate.ts "$WS/original.js" --out "$WS/clean.js" # allow eval
+bun src/infrastructure/deobfuscate.ts "$WS/original.js" --out "$WS/clean.js" # allow eval
 ```
 
 `unpack.ts` uses `new Function(...)` to parse Packer arg lists and decode AAEncode. Sandboxed JS strings can't break out of `new Function` to read your filesystem, but it *does* execute the input. Stderr warns before each eval; `--no-eval` short-circuits all evaluation and exits 0 with `evalRefused: true` in the result.

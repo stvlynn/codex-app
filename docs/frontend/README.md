@@ -1,8 +1,8 @@
 # Frontend
 
-This section defines how restored React/TypeScript UI code in `./restored/` is organized.
+This section defines how restored React/TypeScript UI code in `./src/` is organized.
 
-`decode-codex` does not enforce strict Feature-Sliced Design, but the restored output uses semantic-domain folders that map closely to FSD concepts. When you edit or extend restored UI code, follow these conventions.
+`decode-codex` aligns the restored output with Feature-Sliced Design: code under `src/` is grouped into the standard FSD layers (`app`, `pages`, `widgets`, `features`, `entities`, `shared`). When you edit or extend restored UI code, follow these conventions.
 
 ## Documents
 

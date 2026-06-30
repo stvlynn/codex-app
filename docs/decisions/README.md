@@ -5,6 +5,7 @@ This section records architecture decision records (ADRs). Each ADR explains why
 ## Documents
 
 - [`adr-template.md`](adr-template.md) — template for new ADRs.
+- [`001-rename-restored-to-src-and-adopt-fsd-ddd.md`](001-rename-restored-to-src-and-adopt-fsd-ddd.md) — rename `restored/` to `src/`, adopt FSD for UI and DDD for pipeline scripts.
 
 ## When to write an ADR
 

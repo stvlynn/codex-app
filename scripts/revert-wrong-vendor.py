@@ -1,7 +1,7 @@
 import json, os, re
 
-m=json.load(open('restored/.deobfuscate-javascript/_full/manifest.json'))
-im=json.load(open('restored/IMPORT_MAP.json'))
+m=json.load(open("src/.deobfuscate-javascript/_full/manifest.json"))
+im=json.load(open('src/IMPORT_MAP.json'))
 
 # Revert basenames that were wrongly turned into vendor boundaries.
 wrong = [
@@ -25,16 +25,16 @@ for b in wrong:
             path='pull-request/pull-requests-page.tsx'
     elif low.startswith('get-skill-icon'):
         domain='utils'
-        path='utils/get-skill-icon.ts'
+        path='shared/utils/get-skill-icon.ts'
     elif low.startswith('first-run'):
         domain='utils'
-        path='utils/first-run.tsx'
+        path='shared/utils/first-run.tsx'
     elif low.startswith('split-items'):
         domain='utils'
-        path='utils/split-items-into-render-groups.ts'
+        path='shared/utils/split-items-into-render-groups.ts'
     else:
         domain='utils'
-        path='utils/'+re.sub(r'([A-Z])',r'-\1',b.split('-')[0]).lower().strip('-')+'.ts'
+        path='shared/utils/'+re.sub(r'([A-Z])',r'-\1',b.split('-')[0]).lower().strip('-')+'.ts'
     m['files'][b]['organization']={
         'domain':domain,
         'semanticPath':path,
@@ -43,10 +43,10 @@ for b in wrong:
         'source':'agent-reclassify'
     }
     m['files'][b]['stages']['faced']=False
-    im['chunks'][b]['restored']=path
+    im['chunks'][b]["path"]=path
     im['chunks'][b].pop('dependencyBoundary',None)
     im['chunks'][b].pop('vendor',None)
     print('reverted',b,'->',path)
 
-json.dump(m, open('restored/.deobfuscate-javascript/_full/manifest.json','w'), indent=2)
-json.dump(im, open('restored/IMPORT_MAP.json','w'), indent=2)
+json.dump(m, open("src/.deobfuscate-javascript/_full/manifest.json",'w'), indent=2)
+json.dump(im, open('src/IMPORT_MAP.json','w'), indent=2)

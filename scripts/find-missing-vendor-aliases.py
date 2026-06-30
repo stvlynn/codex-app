@@ -5,9 +5,9 @@ import json
 import re
 from pathlib import Path
 
-ROOT = Path("/Users/stvlynn/code/codex-reverse/restored")
+ROOT = Path(str(ROOT / "src"))
 IMPORT_MAP_PATH = ROOT / "IMPORT_MAP.json"
-MANIFEST_PATH = ROOT / ".deobfuscate-javascript/_full/manifest.json"
+MANIFEST_PATH = ROOT / "src/.deobfuscate-javascript/_full/manifest.json"
 
 IMPORT_RE = re.compile(r"import\s*\{([^}]+)\}\s*from\s*['\"]([^'\"]+)['\"]")
 
@@ -54,7 +54,7 @@ def main():
             if not src_entry:
                 continue
             if src_entry.get("dependencyBoundary") or src_entry.get("vendor"):
-                restored = src_entry.get("restored")
+                restored = src_entry.get("path")
                 if not restored:
                     continue
                 exports = set(src_entry.get("exports", {}).values())

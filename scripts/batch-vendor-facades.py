@@ -19,12 +19,12 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-MANIFEST_PATH = ROOT / "restored" / ".deobfuscate-javascript" / "_full" / "manifest.json"
-IMPORT_MAP_PATH = ROOT / "restored" / "IMPORT_MAP.json"
+MANIFEST_PATH = ROOT / "src" / ".deobfuscate-javascript" / "_full" / "manifest.json"
+IMPORT_MAP_PATH = ROOT / "src" / "IMPORT_MAP.json"
 SKILL_DIR = ROOT / ".agents" / "skills" / "deobfuscate-javascript" / "scripts"
 MAKE_FACADE = SKILL_DIR / "make-facade.ts"
 REF_DIR = ROOT / "ref" / "webview" / "assets"
-RESTORED_DIR = ROOT / "restored"
+RESTORED_DIR = ROOT / "src"
 
 
 def load_json(path: Path):
@@ -47,7 +47,7 @@ def find_missing_vendor_chunks(manifest: dict, import_map: dict):
     for basename, entry in chunks.items():
         if entry.get("status") != "done":
             continue
-        restored = entry.get("restored")
+        restored = entry.get("path")
         if not restored:
             continue
         public_path = RESTORED_DIR / restored

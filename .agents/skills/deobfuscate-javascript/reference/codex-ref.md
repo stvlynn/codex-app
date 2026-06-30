@@ -31,21 +31,21 @@ For a main app restore or continuation:
 SKILL_DIR=.agents/skills/deobfuscate-javascript
 # Auto-discover the entry from index.html (do NOT hard-code the hash — they
 # rotate every build). Falls back to globbing app-main-*.js if you prefer:
-ENTRY=$(bun "$SKILL_DIR/scripts/check-entry.ts" --discover --root ref/webview/assets)
-TARGET=restored
+ENTRY=$(bun "$SKILL_DIR/src/domain/check-entry.ts" --discover --root ref/webview/assets)
+TARGET=src
 FULL="$TARGET/.deobfuscate-javascript/_full"
 
-bun "$SKILL_DIR/scripts/sourcemap-check.ts" "$ENTRY" || true
+bun "$SKILL_DIR/src/infrastructure/sourcemap-check.ts" "$ENTRY" || true
 # --discover already confirmed the entry is the app, not a vendor leaf (exit 3 = leaf).
-bun "$SKILL_DIR/scripts/build-import-graph.ts" "$ENTRY" \
+bun "$SKILL_DIR/src/domain/build-import-graph.ts" "$ENTRY" \
   --target "$TARGET" \
   --root ref/webview/assets \
   --max-lines 0
-bun "$SKILL_DIR/scripts/build-symbol-ledger.ts" \
+bun "$SKILL_DIR/src/domain/build-symbol-ledger.ts" \
   --target "$TARGET" \
   --manifest "$FULL/manifest.json" \
   --out "$FULL/ledger.json"
-bun "$SKILL_DIR/scripts/auto-restore-full.ts" --target "$TARGET" --format
+bun "$SKILL_DIR/src/application/auto-restore-full.ts" --target "$TARGET" --format
 ```
 
 Always resolve the hashed entry from `ref/webview/index.html` or by globbing
@@ -60,13 +60,13 @@ Before running graph or auto-restore scripts, inspect existing restoration
 state:
 
 ```bash
-find restored -maxdepth 3 \( -name README.md -o -name 'IMPORT_MAP.json' \)
-find restored \( -path '*/.deobfuscate-javascript/_full/manifest.json' -o -path '*/.deobfuscate-javascript/_full/ledger.json' \)
+find src -maxdepth 3 \( -name README.md -o -name 'IMPORT_MAP.json' \)
+find src \( -path '*/.deobfuscate-javascript/_full/manifest.json' -o -path '*/.deobfuscate-javascript/_full/ledger.json' \)
 ```
 
 If `TARGET/.deobfuscate-javascript/_full/manifest.json` and `ledger.json`
 exist, resume from them unless the user explicitly asked to rebuild or the
-entry hash changed. Reuse the single shared `restored/IMPORT_MAP.json` (one map
+entry hash changed. Reuse the single shared `src/IMPORT_MAP.json` (one map
 at the restore root, regardless of entry).
 
 ## Boundary classification
@@ -120,7 +120,7 @@ asset-like chunk as a feature module:
     JSON, relabel optional).
   - **Mechanics in this restore:** there is no vendored `node_modules`; bare npm
     imports type-check via ambient `declare module "…"` stubs in
-    `restored/globals.d.ts` (alongside `clsx`, `zod`, `@radix-ui/*`). So
+    `src/globals.d.ts` (alongside `clsx`, `zod`, `@radix-ui/*`). So
     externalizing = add `@pierre/trees`/`@pierre/diffs`/`@pierre/diffs/*`/
     `@pierre/theme` ambient decls + reclassify the chunk in the IMPORT_MAP +
     provenance relabel — not a node_modules install.
@@ -174,7 +174,7 @@ Many Codex boundary chunks are stock npm packages the bundler renamed after an
 internal module (`isEqual-*`, `lib-*`, `single-value-*`, `chunk-XXXX-*`), so
 `CHUNK_NAME_REGISTRY`'s stem match misses them. Once identified, the deliverable is
 a **bare re-export shim** (`make-facade.ts <chunk> --reexport <specifier>`), not an
-`any`-facade — `boundaries/highlight-js-core.ts` is the model. The map seen in this
+`any`-facade — `src/shared/boundaries/highlight-code.ts` is the model. The map seen in this
 repo (record the package in IMPORT_MAP `vendor`; `classifyBoundary()` reads it):
 
 | Boundary file (chunk) | npm specifier | notes |
@@ -205,13 +205,13 @@ When converting checkpoints into public files:
   `app-shell`, `composer`, `conversations`, `threads`, `settings`, `plugins`,
   `mcp`, `native-apps`, `files`, `diff`, `sidebar`, `artifacts`, `popcorn`,
   `ui`, `icons`, `locales`, `markdown`, `queries`, `host`, `config`, and
-  `utils`. All directly under the shared `restored/` root — no per-entry folder.
+  `utils`. All directly under the shared `src/` root — no per-entry folder.
 - Preserve chunk identity only in provenance headers and import maps:
   `// Restored from ref/webview/assets/<basename>.js`. Public file and directory
   names are kebab-case and hash-free (React component identifiers stay
   PascalCase: `button.tsx` exports `Button`).
 - Prefer target-local barrels (`index.ts`) for split feature folders. Update the
-  shared `restored/IMPORT_MAP.json` at the same time as the public files so later
+  shared `src/IMPORT_MAP.json` at the same time as the public files so later
   chunks import the semantic path instead of the hashed chunk.
 - Reuse existing restored modules if the hash already maps to a semantic file.
   Do not create parallel modules with slightly different names for the same
@@ -232,7 +232,7 @@ and never pretend files passed without an actual read.
 After acceptance, run the final whole-target gate:
 
 ```bash
-bun .agents/skills/deobfuscate-javascript/scripts/quality-gate.ts restored
+bun .agents/skills/deobfuscate-javascript/src/domain/quality-gate.ts src
 ```
 
 This command understands this repo's legacy `IMPORT_MAP.json` sections
@@ -240,4 +240,4 @@ This command understands this repo's legacy `IMPORT_MAP.json` sections
 newer `publicOutputs`. It is the guard against the recurring failure where most
 files look mapped but many app chunks remain mechanical or placeholder outputs.
 Do not accept a boundary-only audit, a count of placeholder files under
-`boundaries/`, or `status: "done"` as proof of a complete deep restore.
+`src/shared/boundaries/`, or `status: "done"` as proof of a complete deep restore.

@@ -3,13 +3,13 @@ import * as path from "node:path";
 import {
   rewriteSemanticImports,
   type SemanticImportMapping,
-} from "../.agents/skills/deobfuscate-javascript/scripts/semantic-finalize.ts";
+} from "../.agents/skills/deobfuscate-javascript/src/application/semantic-finalize.ts";
 
 const ROOT = path.resolve(import.meta.dir, "..");
-const TARGET = path.join(ROOT, "restored");
+const TARGET = path.join(ROOT, "src");
 const MANIFEST = JSON.parse(
   fs.readFileSync(
-    path.join(TARGET, ".deobfuscate-javascript/_full/manifest.json"),
+    path.join(ROOT, "src/.deobfuscate-javascript/_full/manifest.json"),
     "utf-8",
   ),
 );
@@ -70,10 +70,10 @@ for (const file of files) {
     const cls = getClass(base);
     if (cls !== "app-feature" && cls !== "ui-component") continue;
     const entry = IM.chunks?.[base];
-    if (!entry || entry.status !== "done" || !entry.restored) continue;
+    if (!entry || entry.status !== "done" || !entry.path) continue;
     const exports: Record<string, string> = entry.exports ?? {};
     if (Object.keys(exports).length === 0) continue;
-    const tExports = targetExports(entry.restored as string);
+    const tExports = targetExports(entry.path as string);
     const renameMap: Record<string, string> = {};
     for (const spec of m[1].split(",")) {
       const trimmed = spec.trim();

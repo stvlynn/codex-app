@@ -2,8 +2,8 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-MANIFEST_PATH = ROOT / "restored" / ".deobfuscate-javascript" / "_full" / "manifest.json"
-IMPORT_MAP_PATH = ROOT / "restored" / "IMPORT_MAP.json"
+MANIFEST_PATH = ROOT / "src" / ".deobfuscate-javascript" / "_full" / "manifest.json"
+IMPORT_MAP_PATH = ROOT / "src" / "IMPORT_MAP.json"
 
 m = json.load(open(MANIFEST_PATH))
 im = json.load(open(IMPORT_MAP_PATH))

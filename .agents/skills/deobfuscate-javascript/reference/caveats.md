@@ -52,8 +52,8 @@ Each Stage 1 step has an *input shape* the previous step produced. Running them 
 
 ## Formatting
 
-- **Prettier 3 honours `.gitignore` by default — and restore deliverables are often gitignored.** Many projects gitignore the whole restore root (this repo gitignores `restored/` and `ref/`). Because Prettier 3 defaults `--ignore-path` to `[".gitignore", ".prettierignore"]`, a plain `prettier --write restored/` (or `bunx prettier`) **silently skips every file** and reports "All matched files use Prettier code style!" — the classic "format ran, changed nothing, looks done" trap. `scripts/format.ts` pins `--ignore-path .prettierignore` so `.gitignore` is bypassed; if you ever invoke prettier directly on a deliverable, pass the same flag. Symptom of the bug: a deliverable with 400-char lines and un-parenthesized multi-line JSX returns that prettier insists is already clean — copy it outside the gitignored tree and `prettier --check` will flag it.
-- **`promote-organized.ts` formats each deliverable as it lands** (via `format.ts`), so promoted files in `restored/` are never raw `@babel/generator` output (un-wrapped lines, no blank lines, `return <jsx>…</jsx>;` without parens). The multi-line-JSX-return-without-parens shape compiles, but prettier wraps it in `return ( … )` — run formatting rather than hand-inserting parens.
+- **Prettier 3 honours `.gitignore` by default — and restore deliverables are often gitignored.** Many projects gitignore the whole restore root (this repo gitignores `src/` and `ref/`). Because Prettier 3 defaults `--ignore-path` to `[".gitignore", ".prettierignore"]`, a plain `prettier --write src/` (or `bunx prettier`) **silently skips every file** and reports "All matched files use Prettier code style!" — the classic "format ran, changed nothing, looks done" trap. `src/application/format.ts` pins `--ignore-path .prettierignore` so `.gitignore` is bypassed; if you ever invoke prettier directly on a deliverable, pass the same flag. Symptom of the bug: a deliverable with 400-char lines and un-parenthesized multi-line JSX returns that prettier insists is already clean — copy it outside the gitignored tree and `prettier --check` will flag it.
+- **`promote-organized.ts` formats each deliverable as it lands** (via `format.ts`), so promoted files in `src/` are never raw `@babel/generator` output (un-wrapped lines, no blank lines, `return <jsx>…</jsx>;` without parens). The multi-line-JSX-return-without-parens shape compiles, but prettier wraps it in `return ( … )` — run formatting rather than hand-inserting parens.
 - **`quality-gate.ts --check-format`** runs `prettier --check` (same `.gitignore` bypass) and fails unformatted files; it soft-skips with a stderr note when prettier is unreachable. `format.ts` prefers a `prettier` already on `PATH` (offline-safe) before `bunx`/`npx`.
 
 ## Mechanical normalization (wakaru) — caveats
@@ -77,7 +77,7 @@ The detector requires the exact `(p, a, c, k, e, d|r)` parameter signature. If t
 
 ### "string-array replaced 0 references"
 
-Check stderr for `decoder-indirection`. If true, the obfuscator wraps array access behind a function. Run `bun scripts/simplify.ts <input>` first (it inlines small constant functions), then re-run `string-array`. If it's still 0, the array might be rotated *and* the rotation pattern is non-standard — file a fixture and we can extend the matcher.
+Check stderr for `decoder-indirection`. If true, the obfuscator wraps array access behind a function. Run `bun src/infrastructure/simplify.ts <input>` first (it inlines small constant functions), then re-run `string-array`. If it's still 0, the array might be rotated *and* the rotation pattern is non-standard — file a fixture and we can extend the matcher.
 
 ### "simplify inlined too aggressively, I lost a name I wanted"
 
@@ -117,7 +117,7 @@ Expected for an unfiltered extract on a huge bundle (10 000+ symbols × 500-char
 
 ### I can't possibly rename 5 000 symbols in one pass
 
-Don't. Use `scripts/plan.ts` to group them into batches and walk the checklist. Each batch is one focused rename session. See [huge-single-file.md](../workflows/huge-single-file.md) and [Example 7](examples.md#example-7-huge-bundle--plan-then-batch-with-a-checklist).
+Don't. Use `src/application/plan.ts` to group them into batches and walk the checklist. Each batch is one focused rename session. See [huge-single-file.md](../workflows/huge-single-file.md) and [Example 7](examples.md#example-7-huge-bundle--plan-then-batch-with-a-checklist).
 
 ### Apply renames 0 symbols but renames.json has entries
 
@@ -129,11 +129,11 @@ webcrack handles webpack-shaped bundles best. For non-webpack bundles (rollup, e
 
 ### Output still contains `(0, jsxRuntime.jsx)("svg", { ... })` calls / backtick string literals after rename
 
-You skipped Stage 2's polish phase. Run `bun scripts/polish.ts <renamed.js> --out <polished.js>` to convert JSX-runtime calls back to JSX, strip the `(0, fn)` IIFE wrapper, and collapse interpolation-free template literals. See [react-vite.md](../workflows/react-vite.md) and [Example 8](examples.md#example-8-reactvite-icon-chunk--rename--polish-to-recover-jsx).
+You skipped Stage 2's polish phase. Run `bun src/infrastructure/polish.ts <renamed.js> --out <polished.js>` to convert JSX-runtime calls back to JSX, strip the `(0, fn)` IIFE wrapper, and collapse interpolation-free template literals. See [react-vite.md](../workflows/react-vite.md) and [Example 8](examples.md#example-8-reactvite-icon-chunk--rename--polish-to-recover-jsx).
 
 ### Output still contains `cache[N]` references or a `let cache = react.c(N)` declaration
 
-You skipped `strip-react-compiler` (or you ran `polish.ts` with `--skip strip-react-compiler` / `--stop-after` upstream of it). Re-run `bun scripts/polish.ts <renamed.js>` without that skip — the strip pass is the first Stage 2 polish step. The cache scaffolding is React Compiler output; see [Example 9](examples.md#example-9-react-compiler-output-button--strip-cache-inline-defaults-recover-jsx).
+You skipped `strip-react-compiler` (or you ran `polish.ts` with `--skip strip-react-compiler` / `--stop-after` upstream of it). Re-run `bun src/infrastructure/polish.ts <renamed.js>` without that skip — the strip pass is the first Stage 2 polish step. The cache scaffolding is React Compiler output; see [Example 9](examples.md#example-9-react-compiler-output-button--strip-cache-inline-defaults-recover-jsx).
 
 ### After polish I still see `let X = p === undefined ? D : p` declarations
 

@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-m = json.load(open("restored/.deobfuscate-javascript/_full/manifest.json"))
+m = json.load(open("src/.deobfuscate-javascript/_full/manifest.json"))
 target = "thread-context-inputs-B6tQCr7t"
 consumers = []
 for b, info in m["files"].items():

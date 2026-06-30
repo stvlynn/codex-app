@@ -3,22 +3,22 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-MANIFEST_PATH = ROOT / "restored" / ".deobfuscate-javascript" / "_full" / "manifest.json"
-IMPORT_MAP_PATH = ROOT / "restored" / "IMPORT_MAP.json"
+MANIFEST_PATH = ROOT / "src" / ".deobfuscate-javascript" / "_full" / "manifest.json"
+IMPORT_MAP_PATH = ROOT / "src" / "IMPORT_MAP.json"
 
 def kebab(s):
     s = re.sub(r'([a-z0-9])([A-Z])', r'\1-\2', s)
     s = re.sub(r'[_.]+', '-', s)
     return s.lower().strip('-')
 
-# Basename -> (vendor family, semantic path relative to restored/)
+# Basename -> (vendor family, semantic path relative to src/)
 RECLASSIFY = {
-    "graphlib-Dk1ocXNC": ("dagre", "boundaries/dagre/graphlib.ts"),
-    "ishikawaDiagram-UXIWVN3A-C0OZiin8": ("mermaid", "boundaries/mermaid/ishikawa-diagram.ts"),
-    "kanban-definition-6JOO6SKY-cHI15BWA": ("mermaid", "boundaries/mermaid/kanban-definition.ts"),
-    "vennDiagram-DHZGUBPP-DQ5AHg0F": ("mermaid", "boundaries/mermaid/venn-diagram.ts"),
-    "kanban-definition-3W4ZIXB7-DvB9N6my": ("mermaid", "boundaries/mermaid/kanban-definition-v2.ts"),
-    "main-BDm-p1LA": ("lodash", "boundaries/lodash/main.ts"),
+    "graphlib-Dk1ocXNC": ("dagre", "shared/boundaries/dagre/graphlib.ts"),
+    "ishikawaDiagram-UXIWVN3A-C0OZiin8": ("mermaid", "shared/boundaries/mermaid/ishikawa-diagram.ts"),
+    "kanban-definition-6JOO6SKY-cHI15BWA": ("mermaid", "shared/boundaries/mermaid/kanban-definition.ts"),
+    "vennDiagram-DHZGUBPP-DQ5AHg0F": ("mermaid", "shared/boundaries/mermaid/venn-diagram.ts"),
+    "kanban-definition-3W4ZIXB7-DvB9N6my": ("mermaid", "shared/boundaries/mermaid/kanban-definition-v2.ts"),
+    "main-BDm-p1LA": ("lodash", "shared/boundaries/lodash/main.ts"),
 }
 
 m = json.load(open(MANIFEST_PATH))
@@ -35,7 +35,7 @@ for b, (family, new_path) in RECLASSIFY.items():
         "recipe": "manual",
         "source": "agent-reclassify",
     }
-    im["chunks"][b]["restored"] = new_path
+    im["chunks"][b]["path"] = new_path
     im["chunks"][b]["vendor"] = family
     im["chunks"][b]["dependencyBoundary"] = True
     print(f"✓ {b} -> {new_path} (family={family})")

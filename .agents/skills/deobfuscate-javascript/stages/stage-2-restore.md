@@ -18,7 +18,7 @@ The default one-shot does Phase A's mechanical bulk + Phase B's reading-aid subs
 ## Step 0a — Check for a sourcemap (always)
 
 ```bash
-bun <skill-dir>/scripts/sourcemap-check.ts <input.js>
+bun <skill-dir>/src/infrastructure/sourcemap-check.ts <input.js>
 ```
 
 If it prints `✓ sourcemap detected`, **stop and recover from the sourcemap instead** — it preserves original names, comments, and structure renaming can't recover (`npx source-map-explorer <input.js>`, or hand-decode the `.map`'s `sourcesContent`). If `✗ no sourcemap`, continue.
@@ -39,7 +39,7 @@ The rest of this doc calls that workspace `$WS`.
 On non-obfuscated minified/transpiled input, run wakaru as a pre-rename normalizer. It is a Rust transpiler/minifier decompiler (`@wakaru/cli`) that recovers ES6 classes, async/await from generator state-machines, optional chaining, `??`, for-of, destructuring, TS enums, template literals, and more (~66 rules the skill's polish lacks) — so the renamer reads cleaner code and hand-fixes less.
 
 ```bash
-bun <skill-dir>/scripts/wakaru-normalize.ts "$WS/original.js" -o "$WS/normalized.js" --level standard
+bun <skill-dir>/src/infrastructure/wakaru-normalize.ts "$WS/original.js" -o "$WS/normalized.js" --level standard
 ```
 
 - **Skip it when a usable `.map` exists** (Step 0a) — sourcemap recovery beats it. **On obfuscated input run Stage 1 first** — wakaru is not a deobfuscator.
@@ -60,7 +60,7 @@ Feed each interesting `modules/<id>.js` to the pipeline below as its own sub-res
 ## Step 1 — Extract symbols
 
 ```bash
-bun <skill-dir>/scripts/extract.ts <input.js|-> [--out $WS/symbols.json] [--context-size 500] \
+bun <skill-dir>/src/infrastructure/extract.ts <input.js|-> [--out $WS/symbols.json] [--context-size 500] \
   [--top N] [--min-refs N] [--scope-kind Program|FunctionDeclaration|...] \
   [--name <regex>] [--only-cryptic] [--no-context] [--max-same-scope N] [--compact]
 ```
@@ -95,12 +95,12 @@ Read `$WS/symbols.json`; for each symbol pick a replacement from its `context` a
 **Batching:** ≤ ~100 → one pass; 100–1000 → one pass with `--only-cryptic --min-refs 2`; 1000+ → webcrack-split (0c) or the **plan-then-batch** flow:
 
 ```bash
-bun <skill-dir>/scripts/extract.ts input.js --out $WS/symbols.json \
+bun <skill-dir>/src/infrastructure/extract.ts input.js --out $WS/symbols.json \
   --only-cryptic --min-refs 3 --top 200 --max-same-scope 5 --context-size 300
-bun <skill-dir>/scripts/plan.ts $WS/symbols.json --out-dir $WS/plan --input input.js --batch-size 50
+bun <skill-dir>/src/application/plan.ts $WS/symbols.json --out-dir $WS/plan --input input.js --batch-size 50
 # Read $WS/plan/CHECKLIST.md; per unchecked batch: read batch-N.json → name → Write renames-N.json → tick [x]
 cat $WS/plan/renames-*.json | jq -s 'add' > $WS/plan/renames.json
-bun <skill-dir>/scripts/apply.ts input.js $WS/plan/renames.json --out output.js
+bun <skill-dir>/src/infrastructure/apply.ts input.js $WS/plan/renames.json --out output.js
 ```
 
 `plan.ts` emits `CHECKLIST.md` (resumable progress), `plan.json` (every batch's `{index,scopeKind,scopeSize,symbolIds}`), and `batch-N.json` (the entries to name, `referenceCount`-desc). Batches are **largest-scope-first** — Batch 0 (usually `Program`) has the most leverage; stopping after Batch 0–2 gives ~80% of the readability win. Full flow: [../workflows/huge-single-file.md](../workflows/huge-single-file.md).
@@ -126,31 +126,31 @@ A Program-only output looks fine on a skim, falls apart on a real read. Keep goi
 
 ```bash
 # 1. ONE combined extract across all scopes, --min-refs 1 so single-use props params are in.
-bun <skill-dir>/scripts/extract.ts "$WS/original.js" --out "$WS/symbols.json" --only-cryptic --min-refs 1 --context-size 400
+bun <skill-dir>/src/infrastructure/extract.ts "$WS/original.js" --out "$WS/symbols.json" --only-cryptic --min-refs 1 --context-size 400
 # 2. Write "$WS/manual.json" with names ONLY for the residue smart-rename won't reach
 #    (domain nouns, lookup tables, JSX intermediates). Skip props/events/iteratees/hook returns.
 # 3. smart-rename merging your manual names (manual wins, smart fills the mechanical bulk):
-bun <skill-dir>/scripts/smart-rename.ts "$WS/original.js" --merge "$WS/manual.json" --out "$WS/renames.json"
+bun <skill-dir>/src/infrastructure/smart-rename.ts "$WS/original.js" --merge "$WS/manual.json" --out "$WS/renames.json"
 # 4. ONE apply.
-bun <skill-dir>/scripts/apply.ts "$WS/original.js" "$WS/renames.json" --out "$WS/renamed.js"
+bun <skill-dir>/src/infrastructure/apply.ts "$WS/original.js" "$WS/renames.json" --out "$WS/renamed.js"
 ```
 
-(Or skip the plumbing: `polish.ts <file> --rename --fast --out "$WS/draft.tsx" --format` into the `$WS` staging dir, then hand-name the residue in the draft. The draft is a staged checkpoint, not the deliverable — promote it into `restored/` only after it reads cleanly.)
+(Or skip the plumbing: `polish.ts <file> --rename --fast --out "$WS/draft.tsx" --format` into the `$WS` staging dir, then hand-name the residue in the draft. The draft is a staged checkpoint, not the deliverable — promote it into `src/` only after it reads cleanly.)
 
 **Thorough flow (deep mode / when density stays high):** fall back to explicit per-pass runs, re-extracting between passes so each pass's `context` quotes the _renamed_ prior code (`let A = useIntl()` reads as `intl` immediately). For deep/full restoration, repeat Pass 2/3 until `quality-gate.ts` stops reporting `cryptic-params` / `cryptic-bindings` / `short-identifier-density`.
 
 ```bash
 # Pass 1 — top-level
-bun <skill-dir>/scripts/extract.ts "$WS/original.js" --out "$WS/symbols-program.json" --scope-kind Program --context-size 500
-bun <skill-dir>/scripts/apply.ts "$WS/original.js" "$WS/renames-program.json" --out "$WS/pass1.js"
+bun <skill-dir>/src/infrastructure/extract.ts "$WS/original.js" --out "$WS/symbols-program.json" --scope-kind Program --context-size 500
+bun <skill-dir>/src/infrastructure/apply.ts "$WS/original.js" "$WS/renames-program.json" --out "$WS/pass1.js"
 # Pass 2 — function-body let/const/var (extract from pass1 so context shows Pass-1 names)
-bun <skill-dir>/scripts/extract.ts "$WS/pass1.js" --out "$WS/symbols-functions.json" --kind let,const,var,hoisted --only-cryptic --min-refs 2 --context-size 400
-bun <skill-dir>/scripts/apply.ts "$WS/pass1.js" "$WS/renames-functions.json" --out "$WS/pass2.js"
+bun <skill-dir>/src/infrastructure/extract.ts "$WS/pass1.js" --out "$WS/symbols-functions.json" --kind let,const,var,hoisted --only-cryptic --min-refs 2 --context-size 400
+bun <skill-dir>/src/infrastructure/apply.ts "$WS/pass1.js" "$WS/renames-functions.json" --out "$WS/pass2.js"
 # Pass 3 — params (auto-name first, then judgment-name the residue)
-bun <skill-dir>/scripts/smart-rename.ts "$WS/pass2.js" --out "$WS/renames-smart.json"
-bun <skill-dir>/scripts/extract.ts "$WS/pass2.js" --out "$WS/symbols-params.json" --kind param --only-cryptic --min-refs 1 --context-size 400
+bun <skill-dir>/src/infrastructure/smart-rename.ts "$WS/pass2.js" --out "$WS/renames-smart.json"
+bun <skill-dir>/src/infrastructure/extract.ts "$WS/pass2.js" --out "$WS/symbols-params.json" --kind param --only-cryptic --min-refs 1 --context-size 400
 jq -s '.[0] * .[1]' "$WS/renames-smart.json" "$WS/renames-params.json" > "$WS/renames-pass3.json"
-bun <skill-dir>/scripts/apply.ts "$WS/pass2.js" "$WS/renames-pass3.json" --out "$WS/renamed.js"
+bun <skill-dir>/src/infrastructure/apply.ts "$WS/pass2.js" "$WS/renames-pass3.json" --out "$WS/renamed.js"
 ```
 
 For ≥ 5 000 function-local bindings, batch Pass 2 via `plan.ts` ([huge-single-file.md](../workflows/huge-single-file.md)). **Naming shortcuts** (apply broadly): destructured prop alias `{ activatorRef: n }` → `activatorRef`; `let A = useX()` → name after the hook (`useIntl()`→`intl`); JSX intermediates → what they represent (`labelEl`, `closeButton`); loop counter → `index`, bound → `length`. The mechanical Pass-3 cases (props/events/iteratees/reducers/promise handlers/hook returns) are what `smart-rename.ts` automates — full table in [../reference/naming-heuristics.md](../reference/naming-heuristics.md).
@@ -158,7 +158,7 @@ For ≥ 5 000 function-local bindings, batch Pass 2 via `plan.ts` ([huge-single-
 ## Step 3 — Apply
 
 ```bash
-bun <skill-dir>/scripts/apply.ts <input.js|-> $WS/renames.json [--out <output.js>]
+bun <skill-dir>/src/infrastructure/apply.ts <input.js|-> $WS/renames.json [--out <output.js>]
 ```
 
 `-` reads stdin; without `--out` writes to stdout (`renamed N` → stderr). Output is reformatted by `@babel/generator`; Unicode identifiers round-trip as-is.
@@ -173,10 +173,10 @@ grep -oE '\b[a-zA-Z_$][a-zA-Z0-9_$]*\b' "$WS/renamed.js" \
   | awk 'length($0) <= 2 && $0 !~ /^(as|js|id|if|do|to|on|in|of|or|at|is|be|el|fs|os|tx|bg)$/' \
   | sort | uniq -c | sort -rn | head
 # B. Binding sweep — every cryptic *declaration* by kind.
-bun <skill-dir>/scripts/extract.ts "$WS/renamed.js" --only-cryptic --no-context --compact \
+bun <skill-dir>/src/infrastructure/extract.ts "$WS/renamed.js" --only-cryptic --no-context --compact \
   | jq -r '.[] | "\(.kind)\t\(.name)"' | sort | uniq -c | sort -rn | head -20
 # Executable gate (--allow-flat: Stage 2 runs before the split step).
-bun <skill-dir>/scripts/quality-gate.ts "$WS/renamed.js" --allow-flat
+bun <skill-dir>/src/domain/quality-gate.ts "$WS/renamed.js" --allow-flat
 ```
 
 - **Sweep A** (single-letter references): any > 50 means Pass 2 was skipped. `e ~10–30, t ~10–30` is fine (legit template-tag params); `e 338, t 322` is Program-only output.
@@ -201,7 +201,7 @@ Undo the bundler/compiler transforms that survive minification. Each pass is ide
 ## Strip React Compiler memoization
 
 ```bash
-bun <skill-dir>/scripts/strip-react-compiler.ts <input.js|-> [--out output.js]
+bun <skill-dir>/src/infrastructure/strip-react-compiler.ts <input.js|-> [--out output.js]
 ```
 
 React Compiler wraps function bodies in a per-render cache (`let cache = react.c(N); cache[0] === props ? (read…) : (compute…, cache[0]=props, …)`). The script detects `let cache = expr.c(N)` (or `(0, expr.c)(N)`), keeps each conditional's compute branch (stripped of `cache[i] = …` writes), removes the dead cache var, then merges `let X; X = expr;` → `let X = expr;` and drops unused locals. Handles the `!==` reversed test, multi-cache functions, and sequence-expression compute branches. Run before `simplify`.
@@ -209,7 +209,7 @@ React Compiler wraps function bodies in a per-render cache (`let cache = react.c
 ## Simplify (round 2)
 
 ```bash
-bun <skill-dir>/scripts/simplify.ts <input.js|-> [--out output.js] [--max-passes 10] [--no-inline]
+bun <skill-dir>/src/infrastructure/simplify.ts <input.js|-> [--out output.js] [--max-passes 10] [--no-inline]
 ```
 
 Same script as Stage 1's simplify; on renamed output the valuable passes are: `(0, fn)(args)` → `fn(args)` (Rollup's `this`-stripping wrapper — safe in typical bundles, but technically changes `this` from `undefined` to the receiver; `--no-inline` to skip if you rely on it); backtick-no-interpolation → `"…"`; `{a: a}` → `{a}` shorthand; `{true:"X",false:""}[c?"true":"false"]` → `c && "X"` (boolean-conditional class names; `false:"Y"` → `c ? "X" : "Y"`). Constant folding / dead-if / `obj["foo"]`→`obj.foo` also fire.
@@ -217,7 +217,7 @@ Same script as Stage 1's simplify; on renamed output the valuable passes are: `(
 ## JSX runtime un-transform
 
 ```bash
-bun <skill-dir>/scripts/jsx-runtime.ts <input.js|-> [--out output.js]
+bun <skill-dir>/src/infrastructure/jsx-runtime.ts <input.js|-> [--out output.js]
 ```
 
 Converts `<obj>.jsx/.jsxs/.jsxDEV(...)` and bare `jsx(...)` calls to JSX. 1st arg = type (string → intrinsic `<svg>`; identifier → component `<Button>`; member → `<Form.Field>`; `Fragment` → `<>…</>`). 2nd arg = props (keys → attributes, `children` → JSX children, spreads → `{...spread}`). 3rd arg = `key`. Unconvertible calls (non-string/identifier types, computed keys, kebab tags like `"my-element"`) are left intact and counted. **Detection is by name** (`.jsx`/`.jsxs`/`.jsxDEV`/`.Fragment`) regardless of receiver — a user-defined `.jsx` method would also convert; fix rare false positives by hand.
@@ -225,7 +225,7 @@ Converts `<obj>.jsx/.jsxs/.jsxDEV(...)` and bare `jsx(...)` calls to JSX. 1st ar
 ## Inline destructure defaults
 
 ```bash
-bun <skill-dir>/scripts/inline-defaults.ts <input.js|-> [--out output.js]
+bun <skill-dir>/src/infrastructure/inline-defaults.ts <input.js|-> [--out output.js]
 ```
 
 Two transforms: **(a)** merge `let A, B; ({A,B} = expr);` → `let { A, B } = expr;` when names match; **(b)** inline `let X = p === undefined ? D : p` (or `p ?? D`) as a destructure default `{ p = D }`, replacing `X` refs with `p`. Safety: `D` must be side-effect-free; `p` must be a simple identifier bound in a same-scope destructure; an existing default must match exactly; `X` must be unshadowed. Note `??` also fires on `null` (destructure defaults don't) — inconsequential for React props, but audit deliberately `null`-tolerant props.
@@ -233,7 +233,7 @@ Two transforms: **(a)** merge `let A, B; ({A,B} = expr);` → `let { A, B } = ex
 ## Export normalization
 
 ```bash
-bun <skill-dir>/scripts/normalize-exports.ts <input.js|-> [--out output.js] [--prefer exported|local]
+bun <skill-dir>/src/infrastructure/normalize-exports.ts <input.js|-> [--out output.js] [--prefer exported|local]
 ```
 
 Collapses single-use bindings aliased on export: `var X = expr; export { X as Y };` → `export const Y = expr;` (same for function/class; splits `var r=1, X=expr;`). Standalone defaults `--prefer exported` (the alias `Y`); `polish.ts` overrides to `--prefer local` since Phase A usually picks a more readable local (`ClockIcon` vs `t`). Only fires when the local has exactly one reference (the export specifier) and is top-level; re-exports from other modules are untouched.
@@ -241,7 +241,7 @@ Collapses single-use bindings aliased on export: `var X = expr; export { X as Y 
 ## Collapse React namespace shims (deep-mode tail)
 
 ```bash
-bun <skill-dir>/scripts/react-shim-elim.ts <input.tsx|-> [--out output.tsx] [--format]
+bun <skill-dir>/src/infrastructure/react-shim-elim.ts <input.tsx|-> [--out output.tsx] [--format]
 ```
 
 Collapses the Rollup/Rolldown CJS shim `var ReactNamespace = toESM(loadReact(), 1); ReactNamespace.createContext(...)` → `import React from "react"; React.createContext(...)`, pruning the now-unused helper imports. Fires only when the initializer is a top-level `toESM(loadReact())` with the helper from a runtime-helper chunk and the loader from a `jsx-runtime` chunk.
@@ -249,7 +249,7 @@ Collapses the Rollup/Rolldown CJS shim `var ReactNamespace = toESM(loadReact(), 
 ## Resolve npm-package imports (deep-mode tail)
 
 ```bash
-bun <skill-dir>/scripts/resolve-npm-imports.ts <input.js|-> [--out output.js] [--no-chunk-lookup] [--no-alias-lookup]
+bun <skill-dir>/src/infrastructure/resolve-npm-imports.ts <input.js|-> [--out output.js] [--no-chunk-lookup] [--no-alias-lookup]
 ```
 
 Rewrites vendored-npm chunk imports back to bare specifiers, two strategies in order:
@@ -263,7 +263,7 @@ Never resolves already-bare specifiers; leaves a specifier alone on rename colli
 ## Collapse npm CJS interop shims (deep-mode tail)
 
 ```bash
-bun <skill-dir>/scripts/npm-cjs-shim-elim.ts <input.js|-> [--out output.js]
+bun <skill-dir>/src/infrastructure/npm-cjs-shim-elim.ts <input.js|-> [--out output.js]
 ```
 
 After `resolve-npm-imports`, replaces `var ns = toESModule(ReactDOM(), 1); ns.createPortal(...)` with the resolved default import (`ReactDOM.createPortal(...)`) and drops the empty var. Fires only on `toESModule(defaultImport(), …)`; local CJS helper factories are left for manual handling. `dead-shim-elim` (run last by `polish.ts`) then drops any dead top-level lazy-getter vars + their orphaned imports.
@@ -271,7 +271,7 @@ After `resolve-npm-imports`, replaces `var ns = toESModule(ReactDOM(), 1); ns.cr
 ## Orchestrator (one-shot polish)
 
 ```bash
-bun <skill-dir>/scripts/polish.ts <input.js|-> [--out output.js] [--report report.json] \
+bun <skill-dir>/src/infrastructure/polish.ts <input.js|-> [--out output.js] [--report report.json] \
   [--rename] [--fast] [--skip step1,step2] [--stop-after step] [--no-inline] [--max-passes 10] \
   [--prefer local|exported] [--source <original-path>] [--description <one-line summary>] [--format]
 ```
@@ -288,7 +288,7 @@ Valid `--skip` / `--stop-after` names: `strip-react-compiler`, `simplify`, `jsx-
 ## Prettier formatting (final)
 
 ```bash
-bun <skill-dir>/scripts/format.ts <file-or-dir> [--check] [--glob '**/*.tsx']
+bun <skill-dir>/src/infrastructure/format.ts <file-or-dir> [--check] [--glob '**/*.tsx']
 ```
 
 Wraps `bunx prettier --write` (falls back to `npx`). Directory → every `.{ts,tsx,js,jsx,mjs,cjs}`; file → just that file; `--check` for a dry-run. Run **after** the multi-export split (otherwise the split overwrites prettier's work). Prettier is mandatory for hand-off — `@babel/generator` JSX spreads attributes across too many lines.

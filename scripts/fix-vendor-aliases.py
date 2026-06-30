@@ -3,10 +3,10 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-MANIFEST_PATH = ROOT / "restored" / ".deobfuscate-javascript" / "_full" / "manifest.json"
-IMPORT_MAP_PATH = ROOT / "restored" / "IMPORT_MAP.json"
-CHECKPOINTS_DIR = ROOT / "restored" / ".deobfuscate-javascript" / "_full" / "checkpoints"
-RESTORED_DIR = ROOT / "restored"
+MANIFEST_PATH = ROOT / "src" / ".deobfuscate-javascript" / "_full" / "manifest.json"
+IMPORT_MAP_PATH = ROOT / "src" / "IMPORT_MAP.json"
+CHECKPOINTS_DIR = ROOT / "src" / ".deobfuscate-javascript" / "_full" / "checkpoints"
+RESTORED_DIR = ROOT / "src"
 
 def load_json(path):
     return json.load(open(path))
@@ -72,19 +72,19 @@ def main():
         if not manifest_entry or not is_vendor(manifest_entry):
             continue
         im_entry = im["chunks"].get(basename)
-        if not im_entry or not im_entry.get("restored"):
+        if not im_entry or not im_entry.get("path"):
             continue
-        restored_rel = im_entry["restored"]
-        restored_path = RESTORED_DIR / restored_rel
-        if restored_path.is_dir():
+        public_rel = im_entry["path"]
+        public_path = RESTORED_DIR / public_rel
+        if public_path.is_dir():
             for cand in ("index.ts", "index.tsx"):
-                cand_path = restored_path / cand
+                cand_path = public_path / cand
                 if cand_path.exists():
-                    restored_path = cand_path
+                    public_path = cand_path
                     break
-        if not restored_path.exists():
+        if not public_path.exists():
             continue
-        src = restored_path.read_text()
+        src = public_path.read_text()
         existing = exported_names(src)
         original_tokens = {e["exported"] for e in manifest_entry.get("exports", []) if e.get("exported")}
 
@@ -99,10 +99,10 @@ def main():
                 )
             else:
                 src = src.rstrip() + "\n\n// Aliases used by consumer checkpoints\n" + block + "\n"
-            restored_path.write_text(src)
+            public_path.write_text(src)
             fixed_files += 1
             added_aliases += len(missing)
-            print(f"  + {basename}: added {len(missing)} aliases to {restored_rel}")
+            print(f"  + {basename}: added {len(missing)} aliases to {public_rel}")
 
         # Update IMPORT_MAP exports: identity for aliases, keep original token mappings
         exports_map = dict(im_entry.get("exports") or {})

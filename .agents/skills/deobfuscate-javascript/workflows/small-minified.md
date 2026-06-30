@@ -17,18 +17,18 @@ mkdir -p "$WS" && cp <input.js> "$WS/original.js"
 
 # Step 0a — sourcemap check. If a .map exists, recover originals from it instead;
 #           that beats any rename. A dangling //# sourceMappingURL with no .map is harmless.
-bun scripts/sourcemap-check.ts "$WS/original.js"
+bun src/infrastructure/sourcemap-check.ts "$WS/original.js"
 
 # Step 0b — detect. If this reports obfuscation, go to full-obfuscation.md FIRST,
 #           then come back here. If it's just minified, skip Stage 1.
-bun scripts/detect.ts "$WS/original.js"
+bun src/infrastructure/detect.ts "$WS/original.js"
 
 # Step 0c — wakaru mechanical normalization (default-on). Recovers ES6 classes,
 #           async/await, optional chaining, for-of, destructuring, TS enums, … so the
 #           rename starts from cleaner code. Byte-rewriting → from here on, work on
 #           normalized.js. Auto-skips (passthrough) if @wakaru/cli is unavailable, so
 #           normalized.js always exists. Skip this when a usable .map exists (Step 0a).
-bun scripts/wakaru-normalize.ts "$WS/original.js" -o "$WS/normalized.js" --level standard
+bun src/infrastructure/wakaru-normalize.ts "$WS/original.js" -o "$WS/normalized.js" --level standard
 
 # One-shot: smart-rename + apply + reading-aid polish (--fast) + prettier.
 #   File operand is the wakaru-normalized output; --source still points at the
@@ -37,7 +37,7 @@ bun scripts/wakaru-normalize.ts "$WS/original.js" -o "$WS/normalized.js" --level
 #   --fast runs the reading-aid subset only and skips the import-resolution tail
 #          (react-shim-elim, resolve-npm-imports, npm-cjs-shim-elim, dead-shim-elim) —
 #          that tail is deep mode only.
-bun scripts/polish.ts "$WS/normalized.js" --rename --fast \
+bun src/infrastructure/polish.ts "$WS/normalized.js" --rename --fast \
   --source <input.js> --out "$WS/draft.tsx" --format
 ```
 
@@ -52,10 +52,10 @@ bun scripts/polish.ts "$WS/normalized.js" --rename --fast \
 Keep going into the function bodies until single-letter density is low (see [stage-2-restore.md → Step 2.5](../stages/stage-2-restore.md#step-25--dont-stop-at-program-scope)). Refuse generated fallback names (`buttonValue3`, `contextParam14`). For a second rename pass, re-extract on the draft:
 
 ```bash
-bun scripts/extract.ts "$WS/draft.tsx" --out "$WS/symbols.json" --only-cryptic --min-refs 2
+bun src/infrastructure/extract.ts "$WS/draft.tsx" --out "$WS/symbols.json" --only-cryptic --min-refs 2
 # ... Write "$WS/renames.json" with the residue names ...
-bun scripts/apply.ts "$WS/draft.tsx" "$WS/renames.json" --out "$WS/draft.tsx"
-bun scripts/format.ts "$WS/draft.tsx"
+bun src/infrastructure/apply.ts "$WS/draft.tsx" "$WS/renames.json" --out "$WS/draft.tsx"
+bun src/infrastructure/format.ts "$WS/draft.tsx"
 ```
 
 ## Deliver

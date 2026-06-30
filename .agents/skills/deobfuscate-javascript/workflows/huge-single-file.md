@@ -18,11 +18,11 @@ WS=<target-dir>/.deobfuscate-javascript/$(basename <input.js> .js)
 mkdir -p "$WS" && cp <input.js> "$WS/original.js"
 
 # 1. Filtered extract — keep context, drop noise
-bun scripts/extract.ts "$WS/original.js" --out "$WS/symbols.json" \
+bun src/infrastructure/extract.ts "$WS/original.js" --out "$WS/symbols.json" \
   --only-cryptic --min-refs 3 --top 200 --max-same-scope 5 --context-size 300
 
 # 2. Plan: group + rank + split
-bun scripts/plan.ts "$WS/symbols.json" --out-dir "$WS/plan" --input "$WS/original.js" --batch-size 50
+bun src/application/plan.ts "$WS/symbols.json" --out-dir "$WS/plan" --input "$WS/original.js" --batch-size 50
 
 # 3. Iterate batches — Read $WS/plan/CHECKLIST.md to track progress.
 #    For each unchecked batch:
@@ -33,10 +33,10 @@ bun scripts/plan.ts "$WS/symbols.json" --out-dir "$WS/plan" --input "$WS/origina
 
 # 4. Merge and apply once
 cat "$WS"/plan/renames-*.json | jq -s 'add' > "$WS/plan/renames.json"
-bun scripts/apply.ts "$WS/original.js" "$WS/plan/renames.json" --out <output.js>
+bun src/infrastructure/apply.ts "$WS/original.js" "$WS/plan/renames.json" --out <output.js>
 
 # 5. (Optional) Re-extract on the renamed output to see what's left, re-plan, repeat
-bun scripts/extract.ts <output.js> --out "$WS/symbols-pass2.json" --only-cryptic --top 200 --max-same-scope 5
+bun src/infrastructure/extract.ts <output.js> --out "$WS/symbols-pass2.json" --only-cryptic --top 200 --max-same-scope 5
 ```
 
 ## Why filter first, then plan

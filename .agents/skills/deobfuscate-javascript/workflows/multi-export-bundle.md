@@ -16,7 +16,7 @@ Load this workflow if the input matches **all** of:
 
 - ESM syntax: contains `import` / `export` statements (not webpack `id: (e,t,n)=>{}`).
 - Size ≥ 10 KB **OR** the trailing `export { … }` declares ≥ 3 names **OR** there is a registry-object export (a `var Mr = { Name1: …, Name2: … }` followed by `export { … Mr … }`).
-- No detectable sourcemap (run `scripts/sourcemap-check.ts` first; if a `.map` exists, recover from that instead).
+- No detectable sourcemap (run `src/application/sourcemap-check.ts` first; if a `.map` exists, recover from that instead).
 
 If only one export survives Stage 2 and the file is < 5 KB, fall back to [react-vite.md](react-vite.md) — splitting adds ceremony for no gain.
 
@@ -25,7 +25,7 @@ If only one export survives Stage 2 and the file is < 5 KB, fall back to [react-
 Once the trigger conditions above match **and the user asked for deep/typed/production output**, the split step is part of the deliverable, not a stylistic upgrade. (In the default readable tier the flat file is a valid deliverable — see [small-minified.md](small-minified.md).) Common ways agents talk themselves out of it in deep mode (do not do these):
 
 - ❌ "The single polished file is already readable, so I'll skip the split." → Wrong. A 1 500-line file with 20 exports + a registry is not the same product as a directory of 20 files. Consumers read one component at a time; the single-file form forces them to scroll past 19 unrelated ones.
-- ❌ "The generated split plan is good enough, so I won't read it." → Wrong. `scripts/plan-split.ts` gives a starting point; you still need to rename files/groups and assign helpers based on the code's actual domain.
+- ❌ "The generated split plan is good enough, so I won't read it." → Wrong. `src/application/plan-split.ts` gives a starting point; you still need to rename files/groups and assign helpers based on the code's actual domain.
 - ❌ "I'll mark the split task complete because the deobfuscation is done." → A multi-export bundle that didn't get split has not finished this workflow. Report it as a partial result and ask the user whether to continue, don't silently complete.
 
 If you genuinely can't complete the split in the current session, leave the polished single-file output in `$WS/polished.tsx`, **don't** copy it to the user's target dir, and tell the user the split is pending. That makes the unfinished state visible instead of disguising it as a finished deliverable.
@@ -33,23 +33,23 @@ If you genuinely can't complete the split in the current session, leave the poli
 ## Pipeline order
 
 1. **Workspace setup** — same `$WS` convention as everything else (see [stages/workspace.md](../stages/workspace.md)).
-2. **Stage 1** (only if obfuscated — `scripts/detect.ts` says so). Otherwise skip.
+2. **Stage 1** (only if obfuscated — `src/application/detect.ts` says so). Otherwise skip.
 3. **Stage 2 rename** — extract → rename → apply, against the **whole file**. Do not split before rename: extract's symbols, scope analysis, and apply's collision-safety all need the full AST. Pick semantic names for every exported binding (`t` → `Tooltip`, `n` → `KBD`, `Mr` → `AppShell`).
-4. **Stage 2 polish** — polish the whole file if it's a React/Vite bundle (`bun scripts/polish.ts "$WS/renamed.js" --out "$WS/polished.tsx" --source "$INPUT"`). Don't pass `--format` here — the split in step 6 overwrites the formatted file. Format the directory in step 8 instead.
+4. **Stage 2 polish** — polish the whole file if it's a React/Vite bundle (`bun src/infrastructure/polish.ts "$WS/renamed.js" --out "$WS/polished.tsx" --source "$INPUT"`). Don't pass `--format` here — the split in step 6 overwrites the formatted file. Format the directory in step 8 instead.
 5. **Plan the split.** Agent reads the polished output and writes `$WS/split-plan.json` (schema below).
 6. **Execute the split.** Use the tool path by default:
    ```bash
-   bun <skill-dir>/scripts/plan-split.ts "$WS/polished.tsx" \
+   bun <skill-dir>/src/application/plan-split.ts "$WS/polished.tsx" \
      --out "$WS/split-plan.json" \
      --out-dir "$WS/candidate/<bundle>"
    # Read and edit split-plan.json for real semantic groups before executing.
-   bun <skill-dir>/scripts/split-bundle.ts "$WS/polished.tsx" "$WS/split-plan.json" \
+   bun <skill-dir>/src/infrastructure/split-bundle.ts "$WS/polished.tsx" "$WS/split-plan.json" \
      --out-dir "$WS/candidate/<bundle>"
    ```
    The generated plan is only a starting point. Rename files/groups and assign shared helpers based on the code's domain before running `split-bundle.ts`.
 7. **Verify** — `tsc --noEmit` if `.tsx`, or `node --check` per file; spot-read the entry `index.ts` to confirm re-exports match the original `export { … }` list.
-8. **Format** — `bun scripts/format.ts <target-dir>/<bundle>/` runs prettier across every split file.
-9. **Gate + promote, then Stage 3 acceptance** — `bun scripts/quality-gate.ts "$WS/candidate/<bundle>"` must exit 0. Then run `scripts/promote-final.ts "$WS/candidate/<bundle>" <target-dir>/<bundle>/ --report "$WS/final-quality-report.json"`. If either fails, the split still contains half-renamed files, residue, generated names, or an oversized flat subfile; do not copy it to the public target. A successful promote is still only the pre-filtered candidate; run the Stage 3 acceptance review next (the host agent reads the split directory end-to-end).
+8. **Format** — `bun src/infrastructure/format.ts <target-dir>/<bundle>/` runs prettier across every split file.
+9. **Gate + promote, then Stage 3 acceptance** — `bun src/domain/quality-gate.ts "$WS/candidate/<bundle>"` must exit 0. Then run `src/application/promote-final.ts "$WS/candidate/<bundle>" <target-dir>/<bundle>/ --report "$WS/final-quality-report.json"`. If either fails, the split still contains half-renamed files, residue, generated names, or an oversized flat subfile; do not copy it to the public target. A successful promote is still only the pre-filtered candidate; run the Stage 3 acceptance review next (the host agent reads the split directory end-to-end).
 
 ## `split-plan.json` schema
 
@@ -182,7 +182,7 @@ This is agent judgment work, not a strict algorithm:
 ## Worked sketches
 
 ```
-restored/tooltip/                            restored/app-shell/
+src/tooltip/                            src/app-shell/
 ├── index.ts                                 ├── index.ts
 ├── tooltip.tsx                              ├── shared.ts
 ├── tooltip-provider.tsx                     ├── layout/
@@ -201,7 +201,7 @@ restored/tooltip/                            restored/app-shell/
 
 Both directories land under the user's chosen `<target-dir>`, not the `$WS` workspace — same rule as the existing single-file output.
 
-### `restored/tooltip/index.ts` (small case)
+### `src/tooltip/index.ts` (small case)
 
 ```ts
 export { Tooltip } from "./tooltip";
@@ -209,7 +209,7 @@ export { TooltipProvider } from "./tooltip-provider";
 export { KBD } from "./kbd";
 ```
 
-### `restored/app-shell/index.ts` (registry case)
+### `src/app-shell/index.ts` (registry case)
 
 ```ts
 export { Root } from "./layout/root";
@@ -247,7 +247,7 @@ For each `sections[].files[]` entry, emit a file containing:
 3. **The exports** listed in `exports` — `export const Foo = …` or `export function Foo …` directly on the declarations. Don't emit a trailing `export { Foo }` aggregate per file; the barrel handles aggregation.
 4. **No re-export of helpers** — private helpers stay un-exported. Only `exports[]` names become named exports.
 
-Use `scripts/split-bundle.ts` to create the first pass whenever possible; hand-edit the candidate files after that for imports/types/names the splitter cannot infer. Use `tsc --noEmit` on the resulting directory to catch missing imports.
+Use `src/application/split-bundle.ts` to create the first pass whenever possible; hand-edit the candidate files after that for imports/types/names the splitter cannot infer. Use `tsc --noEmit` on the resulting directory to catch missing imports.
 
 ## Stage 3 rewrite — judgment-only touches that still apply
 
@@ -263,7 +263,7 @@ Stage 3's [TypeScript recipe](../stages/stage-3-finalize.md#d5--typescript-types
 - **The registry object is the source of truth for export _order_.** When the original bundle has `export const Mr = { Root, LeftPanel, … }`, the barrel must reconstruct that object in the same key order — downstream consumers may do `Object.keys(AppShell)` or rely on the visual grouping.
 - **Cross-file refs to private helpers force them to `shared.ts`.** If `bottom-panel.tsx` and `right-panel.tsx` both call `useResizeObserver`, lift it to `shared.ts` and import — don't duplicate.
 - **`tsc --noEmit` plus `quality-gate.ts` are the canonical verification.** Splitting can silently drop a binding if `bindings[]` is wrong; a clean `tsc` pass confirms every reference resolved. The quality gate confirms the output is actually split and not still full of cryptic locals.
-- **The splitter is conservative.** `scripts/plan-split.ts` and `scripts/split-bundle.ts` handle the mechanical extraction, barrel, registry, and simple cross-file helper imports. They do not replace semantic judgment: if the generated plan names a file `root.tsx` but the component is really a panel layout (`panel-layout.tsx` exporting `PanelLayout`), edit the plan and names before promoting.
+- **The splitter is conservative.** `src/application/plan-split.ts` and `src/application/split-bundle.ts` handle the mechanical extraction, barrel, registry, and simple cross-file helper imports. They do not replace semantic judgment: if the generated plan names a file `root.tsx` but the component is really a panel layout (`panel-layout.tsx` exporting `PanelLayout`), edit the plan and names before promoting.
 
 ## Stage 3 acceptance — deep mode only
 

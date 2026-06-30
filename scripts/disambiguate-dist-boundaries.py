@@ -4,21 +4,21 @@ import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-MANIFEST_PATH = ROOT / "restored" / ".deobfuscate-javascript" / "_full" / "manifest.json"
-IMPORT_MAP_PATH = ROOT / "restored" / "IMPORT_MAP.json"
-MAKE_FACADE = ROOT / ".agents" / "skills" / "deobfuscate-javascript" / "scripts" / "make-facade.ts"
+MANIFEST_PATH = ROOT / "src" / ".deobfuscate-javascript" / "_full" / "manifest.json"
+IMPORT_MAP_PATH = ROOT / "src" / "IMPORT_MAP.json"
+MAKE_FACADE = ROOT / ".agents" / "skills" / "deobfuscate-javascript" / "src" / "infrastructure" / "make-facade.ts"
 REF_DIR = ROOT / "ref" / "webview" / "assets"
-RESTORED_DIR = ROOT / "restored"
+RESTORED_DIR = ROOT / "src"
 
-# Map basename -> (vendor family, unique semantic path under restored/)
+# Map basename -> (vendor family, unique semantic path under src/)
 DISAMBIGUATION = {
-    "dist-eWHzKSsV": ("radix-ui", "boundaries/radix-ui/primitive.ts"),
-    "dist-8ofUNnGK": ("radix-ui", "boundaries/radix-ui/use-size.ts"),
-    "dist-kMWsZQu4": ("radix-ui", "boundaries/radix-ui/arrow.ts"),
-    "dist-BLGenw3M": ("cmdk", "boundaries/cmdk/dist.ts"),
-    "dist-DvbKegLw": ("radix-ui", "boundaries/radix-ui/context-menu.ts"),
-    "dist-uq8yzYFr": ("radix-ui", "boundaries/radix-ui/menu.ts"),
-    "dist-hw5CqF55": ("radix-ui", "boundaries/radix-ui/popover.ts"),
+    "dist-eWHzKSsV": ("radix-ui", "shared/boundaries/radix-ui/primitive.ts"),
+    "dist-8ofUNnGK": ("radix-ui", "shared/boundaries/radix-ui/use-size.ts"),
+    "dist-kMWsZQu4": ("radix-ui", "shared/boundaries/radix-ui/arrow.ts"),
+    "dist-BLGenw3M": ("cmdk", "shared/boundaries/cmdk/dist.ts"),
+    "dist-DvbKegLw": ("radix-ui", "shared/boundaries/radix-ui/context-menu.ts"),
+    "dist-uq8yzYFr": ("radix-ui", "shared/boundaries/radix-ui/menu.ts"),
+    "dist-hw5CqF55": ("radix-ui", "shared/boundaries/radix-ui/popover.ts"),
 }
 
 m = json.load(open(MANIFEST_PATH))
@@ -29,7 +29,7 @@ for b, (family, new_path) in DISAMBIGUATION.items():
         print("skip (not in import map):", b)
         continue
 
-    old_path = im["chunks"][b].get("restored")
+    old_path = im["chunks"][b].get("path")
     # Remove old facade file if it exists and is different
     if old_path and old_path != new_path:
         old_file = RESTORED_DIR / old_path
@@ -47,7 +47,7 @@ for b, (family, new_path) in DISAMBIGUATION.items():
     }
 
     # Update IMPORT_MAP
-    im["chunks"][b]["restored"] = new_path
+    im["chunks"][b]["path"] = new_path
     im["chunks"][b]["vendor"] = family
     im["chunks"][b]["dependencyBoundary"] = True
 

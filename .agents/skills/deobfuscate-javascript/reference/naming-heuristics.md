@@ -1,6 +1,6 @@
 # Naming heuristics
 
-The mechanical rename rules that catch ~80 % of cryptic identifiers in a typical React/Vite/Rollup bundle without any agent judgment. These are what `scripts/smart-rename.ts` automates; this doc is the spec the script implements (so you can extend it, override it, or apply it by hand when the script can't reach a case).
+The mechanical rename rules that catch ~80 % of cryptic identifiers in a typical React/Vite/Rollup bundle without any agent judgment. These are what `src/application/smart-rename.ts` automates; this doc is the spec the script implements (so you can extend it, override it, or apply it by hand when the script can't reach a case).
 
 ← Back to [SKILL.md](../SKILL.md). Used by [Stage 2 Pass 3](../stages/stage-2-restore.md#step-25--dont-stop-at-program-scope).
 
@@ -11,9 +11,9 @@ The mechanical rename rules that catch ~80 % of cryptic identifiers in a typical
 After Pass 1 (Program scope) and Pass 2 (function-body let/const/var) are done, run the smart renamer **before** asking the agent to make judgment calls. The smart renamer covers the boring cases (React component props, event handlers, iteratee callbacks, hook returns) deterministically; what's left is the genuinely judgment-driven naming (domain nouns, state-machine fields, helper-function semantics).
 
 ```bash
-bun <skill-dir>/scripts/smart-rename.ts "$WS/pass2.js" --out "$WS/renames-smart.json"
+bun <skill-dir>/src/infrastructure/smart-rename.ts "$WS/pass2.js" --out "$WS/renames-smart.json"
 # Optional: merge with an existing rename map (preserves your manual decisions on overlap)
-bun <skill-dir>/scripts/smart-rename.ts "$WS/pass2.js" --merge "$WS/renames-manual.json" --out "$WS/renames-smart.json"
+bun <skill-dir>/src/infrastructure/smart-rename.ts "$WS/pass2.js" --merge "$WS/renames-manual.json" --out "$WS/renames-smart.json"
 ```
 
 Output is the same id-keyed JSON shape `apply.ts` expects:
@@ -169,16 +169,16 @@ The renamer never produces a rename that would collide with an existing binding 
 If a heuristic gets the wrong name on a specific binding, override it manually after the smart pass:
 
 ```bash
-bun scripts/smart-rename.ts "$WS/pass2.js" --out "$WS/renames-smart.json"
+bun src/infrastructure/smart-rename.ts "$WS/pass2.js" --out "$WS/renames-smart.json"
 # Edit renames-smart.json: change the bad entry. Then:
-bun scripts/apply.ts "$WS/pass2.js" "$WS/renames-smart.json" --out "$WS/renamed.js"
+bun src/infrastructure/apply.ts "$WS/pass2.js" "$WS/renames-smart.json" --out "$WS/renamed.js"
 ```
 
 Or, more durably, merge your own decisions in with `--merge`:
 
 ```bash
 echo '{"e@1234": "kontext"}' > "$WS/manual-overrides.json"
-bun scripts/smart-rename.ts "$WS/pass2.js" --merge "$WS/manual-overrides.json" --out "$WS/renames-smart.json"
+bun src/infrastructure/smart-rename.ts "$WS/pass2.js" --merge "$WS/manual-overrides.json" --out "$WS/renames-smart.json"
 ```
 
 `--merge` precedence: the existing map wins on conflict, so your manual decisions are preserved.

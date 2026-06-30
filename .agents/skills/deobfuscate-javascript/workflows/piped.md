@@ -10,17 +10,17 @@ Skip temp files entirely when chaining tools. Every script accepts `-` as input 
 
 ```bash
 # Full Stage 1 in one pipe (warnings to stderr, code to stdout)
-cat obf.js | bun scripts/unpack.ts - | bun scripts/string-array.ts - \
-  | bun scripts/decode-strings.ts - | bun scripts/simplify.ts -
+cat obf.js | bun src/infrastructure/unpack.ts - | bun src/infrastructure/string-array.ts - \
+  | bun src/infrastructure/decode-strings.ts - | bun src/infrastructure/simplify.ts -
 
 # Stage 1 → extract (skip Stage 2's rename for now)
-bun scripts/deobfuscate.ts obf.js | bun scripts/extract.ts - | jq '[.[] | select(.referenceCount > 1)]'
+bun src/infrastructure/deobfuscate.ts obf.js | bun src/infrastructure/extract.ts - | jq '[.[] | select(.referenceCount > 1)]'
 
 # Apply renames to a piped bundle and post-process with prettier in one shot
-cat bundle.js | bun scripts/apply.ts - $WS/renames.json | npx prettier --stdin-filepath x.js > out.js
+cat bundle.js | bun src/infrastructure/apply.ts - $WS/renames.json | npx prettier --stdin-filepath x.js > out.js
 
 # Stage 2 rename + Stage 2 polish in one pipe (renamed → polished → prettier)
-bun scripts/apply.ts bundle.js $WS/renames.json | bun scripts/polish.ts - \
+bun src/infrastructure/apply.ts bundle.js $WS/renames.json | bun src/infrastructure/polish.ts - \
   | npx prettier --stdin-filepath x.tsx > out.tsx
 ```
 

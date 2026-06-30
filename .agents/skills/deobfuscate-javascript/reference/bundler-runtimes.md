@@ -8,7 +8,7 @@ the wrong form (e.g. esbuild's `__export` for a Rolldown chunk) and the restored
 module is subtly broken. Always read the chunk's own runtime preamble first —
 this doc tells you what to look for.
 
-← Back to [SKILL.md](../SKILL.md). Related: Stage 2 [`normalize-exports.ts`](../scripts/normalize-exports.ts), [`dead-shim-elim.ts`](../scripts/dead-shim-elim.ts), [`resolve-npm-imports.ts`](../scripts/resolve-npm-imports.ts).
+← Back to [SKILL.md](../SKILL.md). Related: Stage 2 [`normalize-exports.ts`](../src/infrastructure/normalize-exports.ts), [`dead-shim-elim.ts`](../src/infrastructure/dead-shim-elim.ts), [`resolve-npm-imports.ts`](../src/infrastructure/resolve-npm-imports.ts).
 
 ## Identify the bundler first
 

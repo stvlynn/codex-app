@@ -3,8 +3,8 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-MANIFEST_PATH = ROOT / "restored" / ".deobfuscate-javascript" / "_full" / "manifest.json"
-IMPORT_MAP_PATH = ROOT / "restored" / "IMPORT_MAP.json"
+MANIFEST_PATH = ROOT / "src" / ".deobfuscate-javascript" / "_full" / "manifest.json"
+IMPORT_MAP_PATH = ROOT / "src" / "IMPORT_MAP.json"
 
 def kebab(s):
     s = re.sub(r'([a-z0-9])([A-Z])', r'\1-\2', s)
@@ -13,19 +13,19 @@ def kebab(s):
 
 # Basename regex patterns -> (vendor family, semantic path template)
 PATTERNS = [
-    (r'^diagram-.*', 'mermaid', 'boundaries/mermaid/{base}.ts'),
-    (r'^wardleyDiagram-.*', 'mermaid', 'boundaries/mermaid/{base}.ts'),
-    (r'^graphlib-.*', 'dagre', 'boundaries/dagre/{base}.ts'),
-    (r'^isArrayLikeObject-.*', 'lodash', 'boundaries/lodash/is-array-like-object.ts'),
-    (r'^isEmpty-.*', 'lodash', 'boundaries/lodash/is-empty.ts'),
-    (r'^workbook-from-markdown-.*', 'mermaid', 'boundaries/mermaid/workbook-from-markdown.ts'),
-    (r'^spreadsheet-C5mWVSPz$', 'xlsx', 'boundaries/xlsx/spreadsheet.ts'),
-    (r'^chunk-AGHRB4JF-.*', 'esbuild-runtime', 'boundaries/esbuild-runtime/{base}.ts'),
-    (r'^chunk-CVBHYZKI-.*', 'esbuild-runtime', 'boundaries/esbuild-runtime/{base}.ts'),
-    (r'^chunk-FMBD7UC4-.*', 'esbuild-runtime', 'boundaries/esbuild-runtime/{base}.ts'),
-    (r'^chunk-KS23V3DP-.*', 'esbuild-runtime', 'boundaries/esbuild-runtime/{base}.ts'),
-    (r'^chunk-YZCP3GAM-.*', 'esbuild-runtime', 'boundaries/esbuild-runtime/{base}.ts'),
-    (r'^chunk-Cq_f4orQ$', 'esbuild-runtime', 'boundaries/esbuild-runtime/helpers.ts'),
+    (r'^diagram-.*', 'mermaid', 'shared/boundaries/mermaid/{base}.ts'),
+    (r'^wardleyDiagram-.*', 'mermaid', 'shared/boundaries/mermaid/{base}.ts'),
+    (r'^graphlib-.*', 'dagre', 'shared/boundaries/dagre/{base}.ts'),
+    (r'^isArrayLikeObject-.*', 'lodash', 'shared/boundaries/lodash/is-array-like-object.ts'),
+    (r'^isEmpty-.*', 'lodash', 'shared/boundaries/lodash/is-empty.ts'),
+    (r'^workbook-from-markdown-.*', 'mermaid', 'shared/boundaries/mermaid/workbook-from-markdown.ts'),
+    (r'^spreadsheet-C5mWVSPz$', 'xlsx', 'shared/boundaries/xlsx/spreadsheet.ts'),
+    (r'^chunk-AGHRB4JF-.*', 'esbuild-runtime', 'shared/boundaries/esbuild-runtime/{base}.ts'),
+    (r'^chunk-CVBHYZKI-.*', 'esbuild-runtime', 'shared/boundaries/esbuild-runtime/{base}.ts'),
+    (r'^chunk-FMBD7UC4-.*', 'esbuild-runtime', 'shared/boundaries/esbuild-runtime/{base}.ts'),
+    (r'^chunk-KS23V3DP-.*', 'esbuild-runtime', 'shared/boundaries/esbuild-runtime/{base}.ts'),
+    (r'^chunk-YZCP3GAM-.*', 'esbuild-runtime', 'shared/boundaries/esbuild-runtime/{base}.ts'),
+    (r'^chunk-Cq_f4orQ$', 'esbuild-runtime', 'shared/boundaries/esbuild-runtime/helpers.ts'),
 ]
 
 m = json.load(open(MANIFEST_PATH))
@@ -55,7 +55,7 @@ for b, info in sorted(m["files"].items()):
                 "recipe": "manual",
                 "source": "agent-reclassify",
             }
-            im["chunks"][b]["restored"] = new_path
+            im["chunks"][b]["path"] = new_path
             im["chunks"][b]["vendor"] = family
             im["chunks"][b]["dependencyBoundary"] = True
             reclassified.append((b, family, new_path))

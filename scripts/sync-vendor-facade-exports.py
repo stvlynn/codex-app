@@ -15,9 +15,9 @@ import re
 from pathlib import Path
 from typing import Dict, Set
 
-ROOT = Path("/Users/stvlynn/code/codex-reverse/restored")
+ROOT = Path(str(ROOT / "src"))
 IMPORT_MAP_PATH = ROOT / "IMPORT_MAP.json"
-MANIFEST_PATH = ROOT / ".deobfuscate-javascript/_full/manifest.json"
+MANIFEST_PATH = ROOT / "src/.deobfuscate-javascript/_full/manifest.json"
 
 EXPORT_RE = re.compile(
     r"export\s+(?:declare\s+)?(?:const|let|var|function|class|type|interface|enum)\s+([A-Za-z_$][A-Za-z0-9_$]*)"
@@ -49,14 +49,14 @@ def main() -> int:
     total_files = 0
 
     for basename, entry in im["chunks"].items():
-        restored_rel = entry.get("restored")
-        if not restored_rel:
+        public_rel = entry.get("path")
+        if not public_rel:
             continue
         # Treat anything in boundaries/ or with dependencyBoundary/vendor as a facade
         is_boundary = (
             entry.get("dependencyBoundary")
             or entry.get("vendor")
-            or restored_rel.startswith("boundaries/")
+            or public_rel.startswith("shared/boundaries/")
         )
         if not is_boundary:
             # Also check manifest classification
@@ -65,7 +65,7 @@ def main() -> int:
             if classification not in ("vendor-runtime", "boundary"):
                 continue
 
-        facade_path = ROOT / restored_rel
+        facade_path = ROOT / public_rel
         if facade_path.is_dir():
             idx = facade_path / "index.ts"
             if idx.exists():
@@ -82,7 +82,7 @@ def main() -> int:
         if not missing:
             continue
 
-        print(f"[*] {basename} ({restored_rel}): adding {len(missing)} alias(es)")
+        print(f"[*] {basename} ({public_rel}): adding {len(missing)} alias(es)")
         marker = "// Additional aliases exported for consumers mapped via IMPORT_MAP\n"
         aliases = "\n".join(f"export const {name}: any = undefined;" for name in sorted(missing))
         if marker.strip() not in text:

@@ -4,7 +4,7 @@ This project is a local reverse-engineering workspace. It does not have a tradit
 
 ## Distribution rules
 
-- Do not redistribute `./ref/` or `./restored/`.
+- Do not redistribute `./ref/` or `./src/`.
 - The extracted and restored code is © OpenAI and subject to the Codex app's license and terms of service.
 - Share only the pipeline scripts, documentation, and your own analysis notes.
 
@@ -12,7 +12,7 @@ This project is a local reverse-engineering workspace. It does not have a tradit
 
 If you add CI to validate the pipeline:
 
-- Do not commit `./ref/` or `./restored/`.
+- Do not commit `./ref/` or `./src/`.
 - Validate scripts with `bun test` in `.agents/skills/deobfuscate-javascript/`.
-- Run `bun scripts/quality-gate.ts restored --allow-flat` in CI to check the latest restored output.
+- Run `bun src/domain/quality-gate.ts restored --allow-flat` in CI to check the latest restored output.
 - Keep CI secrets separate from the repo; do not check in `CODEX_APP_ASAR` paths or app bundles.

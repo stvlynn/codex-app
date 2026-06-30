@@ -22,7 +22,7 @@
 
 ### Work on restored UI code
 
-- [`docs/frontend/README.md`](docs/frontend/README.md) — organization of React/TypeScript code in `./restored/`.
+- [`docs/frontend/README.md`](docs/frontend/README.md) — organization of React/TypeScript code in `./src/`.
 
 ### Work on the deobfuscation pipeline
 
@@ -62,11 +62,11 @@
 
 ## Restored UI code
 
-- Code in `./restored/` is organized by semantic domain (`app/`, `app-shell/`, `components/`, `composer/`, `threads/`, `utils/`, `hooks/`, `icons/`, `boundaries/`, etc.).
-- Imports go downward: app-level code may import from features and shared utilities; shared utilities must not import from app-level code.
+- Code in `./src/` follows Feature-Sliced Design: `app/`, `pages/`, `widgets/`, `features/`, `entities/`, `shared/`.
+- Imports go downward: upper layers may import from lower layers; shared code must not import from app/pages/widgets/features/entities.
 - Each feature exposes a public API through its barrel (`index.ts`). Do not import internals of another feature.
 - React components must have typed props; exported functions must have typed parameters in deep mode.
-- Vendored dependencies are represented by typed facades in `boundaries/` or left as bare npm imports.
+- Vendored dependencies are represented by typed facades in `shared/boundaries/` or left as bare npm imports.
 
 See [`docs/frontend/README.md`](docs/frontend/README.md) for the full rules.
 
@@ -76,7 +76,7 @@ See [`docs/frontend/README.md`](docs/frontend/README.md) for the full rules.
 
 - The pipeline is organized into layers: **domain** (symbols, import graph, quality rules), **application** (stage orchestration), **infrastructure** (parsing, formatting, file I/O), and **interfaces** (skill entry points and CLI scripts).
 - Dependencies point inward: interfaces → application → domain; infrastructure implements domain abstractions.
-- A chunk is promoted to `./restored/` only after passing `quality-gate.ts`.
+- A chunk is promoted to `./src/` only after passing `quality-gate.ts`.
 - The promotion frontier drains producers before consumers to keep `IMPORT_MAP.json` and relative imports consistent.
 - Vendored/npm-leaf chunks are not restored as files; they are either facaded in `boundaries/` or imported as bare npm specifiers.
 

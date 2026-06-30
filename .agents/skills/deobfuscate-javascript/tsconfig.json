@@ -3,6 +3,7 @@
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
@@ -12,5 +13,5 @@
     "noEmit": true,
     "types": ["bun-types"]
   },
-  "include": ["scripts/**/*.ts"]
+  "include": ["src/**/*.ts"]
 }

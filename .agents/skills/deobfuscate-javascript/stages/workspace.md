@@ -14,11 +14,11 @@ Put every intermediate file in a per-chunk subdirectory of a single shared hidde
 └── .deobfuscate-javascript/               # shared parent — one per target dir, all chunks underneath
     └── <basename>/                        # workspace — all intermediates for this chunk
         ├── original.js                    # archived pristine copy of the input
-        ├── symbols.json                   # scripts/extract.ts output
+        ├── symbols.json                   # src/infrastructure/extract.ts output
         ├── renames.json                   # agent-written (Stage 2 rename)
-        ├── renamed.js                     # scripts/apply.ts output
-        ├── polished.tsx                   # scripts/polish.ts output (Stage 2 polish)
-        └── polish-report.json             # scripts/polish.ts --report JSON
+        ├── renamed.js                     # src/infrastructure/apply.ts output
+        ├── polished.tsx                   # src/infrastructure/polish.ts output (Stage 2 polish)
+        └── polish-report.json             # src/infrastructure/polish.ts --report JSON
 ```
 
 `<basename>` is the input file name minus its directory and extension, **with the hash suffix kept** — for `ref/webview/assets/spinner-D37df5tU.js` use `spinner-D37df5tU`. The hash makes each workspace unique to its source chunk; the leading dot on the parent keeps it hidden from default `ls` and most file-tree views. The nested layout means a single `.gitignore` entry (`.deobfuscate-javascript/`) covers every chunk in the target.
@@ -27,7 +27,7 @@ Put every intermediate file in a per-chunk subdirectory of a single shared hidde
 
 ```bash
 INPUT=ref/webview/assets/spinner-D37df5tU.js   # the file to deobfuscate
-TARGET=restored                                 # the shared restore root; final .tsx lands here
+TARGET=src                                 # the shared restore root; final .tsx lands here
 WS="$TARGET/.deobfuscate-javascript/$(basename "$INPUT" .js)"
 
 mkdir -p "$WS"
@@ -68,18 +68,18 @@ Full-tree restoration (see [../workflows/full-restoration.md](../workflows/full-
                 └── polished.tsx
 ```
 
-`_full/files/<basename>/` follows the *same* layout as a single-chunk `$WS` — every existing Stage 1 + Stage 2 script (`extract.ts`, `apply.ts`, `polish.ts`, …) operates on a `_full/files/<basename>/` directory unchanged. The two new top-level files (`manifest.json`, `ledger.json`) are the coordination layer. The public import map is **not** here: it is the single shared `restored/IMPORT_MAP.json` at the restore root, reused regardless of entry.
+`_full/files/<basename>/` follows the *same* layout as a single-chunk `$WS` — every existing Stage 1 + Stage 2 script (`extract.ts`, `apply.ts`, `polish.ts`, …) operates on a `_full/files/<basename>/` directory unchanged. The two new top-level files (`manifest.json`, `ledger.json`) are the coordination layer. The public import map is **not** here: it is the single shared `src/IMPORT_MAP.json` at the restore root, reused regardless of entry.
 
 Pattern (the entry is auto-discovered from `index.html`; the positional is optional):
 
 ```bash
-TARGET=restored
+TARGET=src
 FULL="$TARGET/.deobfuscate-javascript/_full"
 
 mkdir -p "$FULL/files" "$FULL/locks"
-bun scripts/build-import-graph.ts --target "$TARGET" \
+bun src/domain/build-import-graph.ts --target "$TARGET" \
   --root ref/webview/assets --out "$FULL/manifest.json"
-bun scripts/build-symbol-ledger.ts --target "$TARGET" --out "$FULL/ledger.json"
+bun src/domain/build-symbol-ledger.ts --target "$TARGET" --out "$FULL/ledger.json"
 ```
 
 The leading `_` on `_full` keeps it sorted ahead of the per-chunk subdirectories (`spinner-D37df5tU/`, …) when both styles coexist under the same target. npm-leaf chunks (`clsx-XXXX.js`, `react-XXXX.js`, etc.) are recorded in `manifest.files` with `kind: "npm-leaf"` but **never** get a `files/<basename>/` workspace — they're terminal nodes that the existing `polish.ts` rewrites to bare specifiers.

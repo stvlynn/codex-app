@@ -3,7 +3,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-RESTORED_DIR = ROOT / "restored"
+RESTORED_DIR = ROOT / "src"
 IMPORT_MAP_PATH = RESTORED_DIR / "IMPORT_MAP.json"
 
 def load_json(path: Path):
@@ -29,12 +29,12 @@ def target_export_names(entry: dict, file_path: Path) -> set[str]:
 
 def main():
     im = load_json(IMPORT_MAP_PATH)
-    # Build reverse map: restored path -> basename
-    restored_to_basename: dict[str, str] = {}
+    # Build reverse map: public path -> basename
+    path_to_basename: dict[str, str] = {}
     for basename, entry in im.get("chunks", {}).items():
-        restored = entry.get("restored")
-        if restored:
-            restored_to_basename[restored] = basename
+        public_path = entry.get("path")
+        if public_path:
+            path_to_basename[public_path] = basename
 
     fixed_files = 0
     fixed_imports = 0
@@ -56,7 +56,7 @@ def main():
             source = m.group(3)
             if not source.startswith("."):
                 continue
-            # Resolve source relative to this file to a restored path
+            # Resolve source relative to this file to a public path
             from_dir = file_path.parent
             try:
                 resolved_abs = (from_dir / source).resolve()
@@ -72,14 +72,14 @@ def main():
             candidates.append(base + "/index.tsx")
             basename = None
             for cand in candidates:
-                basename = restored_to_basename.get(cand)
+                basename = path_to_basename.get(cand)
                 if basename:
                     break
             if not basename:
                 continue
             entry = im["chunks"][basename]
             exports_map = entry.get("exports") or {}
-            target_names = target_export_names(entry, RESTORED_DIR / entry["restored"])
+            target_names = target_export_names(entry, RESTORED_DIR / entry["path"])
             names_str = m.group(1)
             new_names_parts = []
             part_changed = False

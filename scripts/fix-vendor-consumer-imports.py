@@ -3,9 +3,9 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-MANIFEST_PATH = ROOT / "restored" / ".deobfuscate-javascript" / "_full" / "manifest.json"
-IMPORT_MAP_PATH = ROOT / "restored" / "IMPORT_MAP.json"
-CHECKPOINTS_DIR = ROOT / "restored" / ".deobfuscate-javascript" / "_full" / "checkpoints"
+MANIFEST_PATH = ROOT / "src" / ".deobfuscate-javascript" / "_full" / "manifest.json"
+IMPORT_MAP_PATH = ROOT / "src" / "IMPORT_MAP.json"
+CHECKPOINTS_DIR = ROOT / "src" / ".deobfuscate-javascript" / "_full" / "checkpoints"
 
 def load_json(path: Path):
     return json.load(open(path))
@@ -33,12 +33,12 @@ def target_exports_set(import_map_entry: dict, promoted_src: str | None) -> set[
                 names.add(part.split(" as ")[-1].strip())
     return names
 
-def is_facade(manifest_entry: dict, restored_path: str) -> bool:
+def is_facade(manifest_entry: dict, public_path: str) -> bool:
     cls = manifest_entry.get("organization", {}).get("classification")
     if cls in ("vendor", "vendor-runtime", "boundary"):
         return True
     # thread-context-inputs was hand-facaded under app/
-    if restored_path.endswith("thread-context-inputs/index.ts"):
+    if public_path.endswith("thread-context-inputs/index.ts"):
         return True
     return False
 
@@ -117,25 +117,25 @@ def main():
         if cls not in ("vendor", "vendor-runtime", "boundary") and basename not in RUNTIME_ALIAS_MODULES:
             continue
         im_entry = im["chunks"].get(basename)
-        if not im_entry or not im_entry.get("restored"):
+        if not im_entry or not im_entry.get("path"):
             continue
-        restored_rel = im_entry["restored"]
-        restored_path = ROOT / "restored" / restored_rel
+        public_rel = im_entry["path"]
+        public_path = ROOT / "src" / public_rel
         # For directory entries, look at index file
-        if restored_path.is_dir():
+        if public_path.is_dir():
             for cand in ("index.ts", "index.tsx", "index.js", "index.jsx"):
-                cand_path = restored_path / cand
+                cand_path = public_path / cand
                 if cand_path.exists():
-                    restored_path = cand_path
+                    public_path = cand_path
                     break
-        if not restored_path.exists():
+        if not public_path.exists():
             continue
-        promoted_src = restored_path.read_text()
+        promoted_src = public_path.read_text()
         tokens = exported_tokens(manifest_entry)
         exports_map = dict(im_entry.get("exports") or {})
         target_set = target_exports_set(im_entry, promoted_src)
 
-        facade = is_facade(manifest_entry, restored_rel) or basename not in RUNTIME_ALIAS_MODULES
+        facade = is_facade(manifest_entry, public_rel) or basename not in RUNTIME_ALIAS_MODULES
         new_mappings = {}
 
         for name in imported_names:
@@ -151,9 +151,9 @@ def main():
                     new_mappings[name] = semantic
                     continue
             # Fallback: add the alias to the promoted file and map identity
-            if add_alias_to_file(restored_path, name):
+            if add_alias_to_file(public_path, name):
                 added_aliases += 1
-                print(f"  + {basename}: added alias {name} in {restored_rel}")
+                print(f"  + {basename}: added alias {name} in {public_rel}")
             new_mappings[name] = name
 
         if new_mappings:

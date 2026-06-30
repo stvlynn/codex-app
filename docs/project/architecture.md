@@ -35,7 +35,7 @@ High-level architecture of `decode-codex`: how data flows from the installed app
                │ writes
                ▼
 ┌─────────────────────────────────────────┐
-│ ./restored/                             │
+│ ./src/                             │
 │  - semantic-domain folders              │
 │  - provenance headers                   │
 │  - IMPORT_MAP.json                      │
@@ -63,26 +63,26 @@ High-level architecture of `decode-codex`: how data flows from the installed app
   4. **Polish** — structural cleanup, import/export normalization.
   5. **Finalize** — optional typed `.tsx` rewrite in deep mode.
   6. **Organize** — assign semantic domains, paths, and recipes.
-  7. **Promote** — copy finalized files into `./restored/` after passing `quality-gate.ts`.
-- Intermediate artifacts live in `restored/.deobfuscate-javascript/_full/`; only promoted files appear in `./restored/`.
+  7. **Promote** — copy finalized files into `./src/` after passing `quality-gate.ts`.
+- Intermediate artifacts live in `src/.deobfuscate-javascript/_full/`; only promoted files appear in `./src/`.
 
 ## Data stores
 
 | File / Directory | Purpose |
 | ---------------- | ------- |
-| `restored/.deobfuscate-javascript/_full/manifest.json` | Central manifest: all local chunks, npm leaves, stages, organization, export maps. |
-| `restored/.deobfuscate-javascript/_full/ledger.json` | Cross-file symbol ledger and binding statuses. |
-| `restored/IMPORT_MAP.json` | Maps every promoted chunk to its restored path and public exports. |
-| `restored/.deobfuscate-javascript/_full/files/<basename>/` | Per-chunk workspace with original, checkpoints, and candidate files. |
+| `src/.deobfuscate-javascript/_full/manifest.json` | Central manifest: all local chunks, npm leaves, stages, organization, export maps. |
+| `src/.deobfuscate-javascript/_full/ledger.json` | Cross-file symbol ledger and binding statuses. |
+| `src/IMPORT_MAP.json` | Maps every promoted chunk to its public path and public exports. |
+| `src/.deobfuscate-javascript/_full/files/<basename>/` | Per-chunk workspace with original, checkpoints, and candidate files. |
 
 ## Module boundaries
 
 - **Skill scripts** must not hardcode project-specific behavior; they are generic pipeline machinery.
 - **Project-specific helpers** can live under `scripts/` or as one-off `.mjs` / `.ts` files at the repo root, but must be documented if they are reused.
-- **Restored code** in `./restored/` is a generated artifact. Do not edit it directly; fix the candidate or the pipeline instead.
+- **Restored code** in `./src/` is a generated artifact. Do not edit it directly; fix the candidate or the pipeline instead.
 
 ## Cross-cutting concerns
 
-- **Provenance**: every file in `./restored/` must carry a header pointing back to `ref/webview/assets/<chunk>.js`.
+- **Provenance**: every file in `./src/` must carry a header pointing back to `ref/webview/assets/<chunk>.js`.
 - **Import graph integrity**: promotions are ordered by the frontier so producers are promoted before consumers. `IMPORT_MAP.json` must stay consistent.
 - **Npm-leaf boundaries**: vendored code is represented by typed facades or bare imports, not restored file-by-file.

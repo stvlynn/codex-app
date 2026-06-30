@@ -3,16 +3,16 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-TARGET = ROOT / "restored"
-MANIFEST = json.load(open(TARGET / ".deobfuscate-javascript/_full/manifest.json"))
+TARGET = ROOT / "src"
+MANIFEST = json.load(open(TARGET / "src/.deobfuscate-javascript/_full/manifest.json"))
 IM = json.load(open(TARGET / "IMPORT_MAP.json"))
 
 def get_class(b):
     info = MANIFEST["files"].get(b, {})
     return info.get("organization", {}).get("classification")
 
-def target_exports(restored_path):
-    p = TARGET / restored_path
+def target_exports(public_path):
+    p = TARGET / public_path
     if p.is_dir():
         for name in ("index.ts", "index.tsx", "index.js", "index.jsx"):
             cand = p / name
@@ -60,12 +60,12 @@ for cp in sorted((TARGET / ".deobfuscate-javascript/_full/checkpoints").glob("*"
         if cls not in ("app-feature", "ui-component"):
             continue
         entry = IM.get("chunks", {}).get(base)
-        if not entry or entry.get("status") != "done" or not entry.get("restored"):
+        if not entry or entry.get("status") != "done" or not entry.get("path"):
             continue
         exports = entry.get("exports", {})
         if not exports:
             continue
-        t_exports = target_exports(entry["restored"])
+        t_exports = target_exports(entry["path"])
         # Build reverse map: lowercase original -> semantic
         rev = {k.lower(): v for k, v in exports.items()}
         replacements = {}

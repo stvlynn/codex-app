@@ -1,7 +1,7 @@
 import fs from "node:fs";
 
-const MANIFEST = "restored/.deobfuscate-javascript/_full/manifest.json";
-const LEDGER = "restored/.deobfuscate-javascript/_full/ledger.json";
+const MANIFEST = "src/.deobfuscate-javascript/_full/manifest.json";
+const LEDGER = "src/.deobfuscate-javascript/_full/ledger.json";
 
 const manifest = JSON.parse(fs.readFileSync(MANIFEST, "utf8"));
 const ledger = JSON.parse(fs.readFileSync(LEDGER, "utf8"));
@@ -45,52 +45,52 @@ const boundary = new Set([...pierre]);
 
 const semanticPaths = {
   // d3
-  "array-hqvMvHot": "utils/d3-array-helper.tsx",
-  "arc-D3MQZVTw": "utils/d3-shape-arc.tsx",
-  "defaultLocale-gPb_B8uX": "utils/d3-format-default-locale.tsx",
-  "init-B2r4ykR3": "utils/d3-scale-init.tsx",
-  "math-BO6C2O78": "utils/d3-shape-math.tsx",
-  "min-BVs4UoI0": "utils/d3-array-min.tsx",
-  "monotone-DKOUTWfZ": "utils/d3-shape-monotone-curve.tsx",
-  "path-BiIEs4Yy": "utils/d3-path.tsx",
-  "sankeyLinkHorizontal-DCfEjaVP": "utils/d3-sankey-link-horizontal.tsx",
-  "string-CKccV857": "utils/d3-color-string.tsx",
-  "invert-D9sJN2p1": "utils/d3-color-invert.tsx",
-  "line-DIsP-Yv_": "utils/d3-shape-line.tsx",
-  "linear-C3CxBvdt": "utils/d3-scale-linear.tsx",
-  "ordinal-jw163_Ud": "utils/d3-scale-ordinal.tsx",
-  "pie-ChHHloNp": "utils/d3-shape-pie.tsx",
-  "step-K6tEdR0Q": "utils/d3-shape-step-curve.tsx",
-  "channel-ykMIcoPi": "utils/d3-color-channel.tsx",
+  "array-hqvMvHot": "shared/utils/d3-array-helper.tsx",
+  "arc-D3MQZVTw": "shared/utils/d3-shape-arc.tsx",
+  "defaultLocale-gPb_B8uX": "shared/utils/d3-format-default-locale.tsx",
+  "init-B2r4ykR3": "shared/utils/d3-scale-init.tsx",
+  "math-BO6C2O78": "shared/utils/d3-shape-math.tsx",
+  "min-BVs4UoI0": "shared/utils/d3-array-min.tsx",
+  "monotone-DKOUTWfZ": "shared/utils/d3-shape-monotone-curve.tsx",
+  "path-BiIEs4Yy": "shared/utils/d3-path.tsx",
+  "sankeyLinkHorizontal-DCfEjaVP": "shared/utils/d3-sankey-link-horizontal.tsx",
+  "string-CKccV857": "shared/utils/d3-color-string.tsx",
+  "invert-D9sJN2p1": "shared/utils/d3-color-invert.tsx",
+  "line-DIsP-Yv_": "shared/utils/d3-shape-line.tsx",
+  "linear-C3CxBvdt": "shared/utils/d3-scale-linear.tsx",
+  "ordinal-jw163_Ud": "shared/utils/d3-scale-ordinal.tsx",
+  "pie-ChHHloNp": "shared/utils/d3-shape-pie.tsx",
+  "step-K6tEdR0Q": "shared/utils/d3-shape-step-curve.tsx",
+  "channel-ykMIcoPi": "shared/utils/d3-color-channel.tsx",
   // lodash
-  "isArrayLikeObject-1Hrr5Oll": "utils/lodash-is-array-like-object.tsx",
-  "isEmpty-CTfqpukK": "utils/lodash-is-empty.tsx",
-  "isEqual-DoHfXEc2": "utils/lodash-is-equal.tsx",
+  "isArrayLikeObject-1Hrr5Oll": "shared/utils/lodash-is-array-like-object.tsx",
+  "isEmpty-CTfqpukK": "shared/utils/lodash-is-empty.tsx",
+  "isEqual-DoHfXEc2": "shared/utils/lodash-is-equal.tsx",
   // npm utils
-  "ccount-BaJjvBGW": "utils/ccount.tsx",
-  "callback-BhdA_NIt": "utils/p-timeout.tsx",
+  "ccount-BaJjvBGW": "shared/utils/ccount.tsx",
+  "callback-BhdA_NIt": "shared/utils/p-timeout.tsx",
   // runtime
-  "chunk-Cq_f4orQ": "utils/esbuild-runtime-helpers.tsx",
-  "chunk-AGHRB4JF-Bxy73eEy": "utils/esbuild-runtime-umd-a.tsx",
-  "chunk-AGHRB4JF-DNCNxfKz": "utils/esbuild-runtime-umd-b.tsx",
-  "__vite-browser-external-EPeb3y57": "utils/vite-browser-external-shim.tsx",
+  "chunk-Cq_f4orQ": "shared/utils/esbuild-runtime-helpers.tsx",
+  "chunk-AGHRB4JF-Bxy73eEy": "shared/utils/esbuild-runtime-umd-a.tsx",
+  "chunk-AGHRB4JF-DNCNxfKz": "shared/utils/esbuild-runtime-umd-b.tsx",
+  "__vite-browser-external-EPeb3y57": "shared/utils/vite-browser-external-shim.tsx",
   // analytics
-  "auto-track-CVxnO46V": "utils/segment-auto-track.tsx",
-  "browser-BQH2qCja": "utils/segment-analytics-browser.tsx",
-  "client-C1mrATqU": "utils/segment-analytics-client.tsx",
-  "core-CpC1jq0N": "utils/segment-analytics-core.tsx",
+  "auto-track-CVxnO46V": "shared/utils/segment-auto-track.tsx",
+  "browser-BQH2qCja": "shared/utils/segment-analytics-browser.tsx",
+  "client-C1mrATqU": "shared/utils/segment-analytics-client.tsx",
+  "core-CpC1jq0N": "shared/utils/segment-analytics-core.tsx",
   // graph layout
-  "cytoscape-cose-bilkent-3yd98erd": "utils/cytoscape-cose-bilkent.tsx",
-  "cytoscape-fcose-CYmUq-SS": "utils/cytoscape-fcose.tsx",
+  "cytoscape-cose-bilkent-3yd98erd": "shared/utils/cytoscape-cose-bilkent.tsx",
+  "cytoscape-fcose-CYmUq-SS": "shared/utils/cytoscape-fcose.tsx",
   // third-party UI
-  "docx-preview-Mi4H0G1I": "utils/docx-preview.tsx",
-  "dist-eWHzKSsV": "utils/react-modal-dist.tsx",
-  "index.umd-CqGTwgME": "utils/umd-package-index.tsx",
+  "docx-preview-Mi4H0G1I": "shared/utils/docx-preview.tsx",
+  "dist-eWHzKSsV": "shared/utils/react-modal-dist.tsx",
+  "index.umd-CqGTwgME": "shared/utils/umd-package-index.tsx",
   // pierre boundaries
-  "parsePatchFiles-Dm7PKlLE": "boundaries/parse-patch-files.tsx",
-  "store-489E8Cj_": "boundaries/pierre-trees-store.tsx",
-  "iconResolver-DrMXO_qJ": "boundaries/pierre-trees-icon-resolver.tsx",
-  "score-query-match-DS2pZf_b": "boundaries/pierre-trees-score-query-match.tsx",
+  "parsePatchFiles-Dm7PKlLE": "shared/boundaries/parse-patch-files.tsx",
+  "store-489E8Cj_": "shared/boundaries/pierre-trees-store.tsx",
+  "iconResolver-DrMXO_qJ": "shared/boundaries/pierre-trees-icon-resolver.tsx",
+  "score-query-match-DS2pZf_b": "shared/boundaries/pierre-trees-score-query-match.tsx",
 };
 
 let changed = 0;

@@ -4,9 +4,9 @@ from pathlib import Path
 from collections import Counter
 
 ROOT = Path("/Users/stvlynn/code/codex-reverse")
-MANIFEST_PATH = ROOT / "restored/.deobfuscate-javascript/_full/manifest.json"
-PLAN_PATH = ROOT / "restored/.deobfuscate-javascript/_full/organize-plan.json"
-IMPORT_MAP_PATH = ROOT / "restored/IMPORT_MAP.json"
+MANIFEST_PATH = ROOT / "src/.deobfuscate-javascript/_full/manifest.json"
+PLAN_PATH = ROOT / ".deobfuscate-javascript/_full/organize-plan.json"
+IMPORT_MAP_PATH = ROOT / "src/IMPORT_MAP.json"
 
 
 def kebab(s: str) -> str:
@@ -288,11 +288,11 @@ def semantic_path(basename: str, domain: str, classification: str, note: str = "
 
     # Critical special cases
     if basename == "app-scope-CWE-zIhQ":
-        return "boundaries/app-scope.ts"
+        return "shared/boundaries/app-scope.ts"
     if basename == "index-4bSY0Qgs":
-        return "boundaries/index.tsx"
+        return "shared/boundaries/index.tsx"
     if basename == "modulepreload-polyfill-Cf3xff8G":
-        return "boundaries/modulepreload-polyfill.ts"
+        return "shared/boundaries/modulepreload-polyfill.ts"
 
     ext = ext_for(basename, classification, domain)
 
@@ -301,23 +301,23 @@ def semantic_path(basename: str, domain: str, classification: str, note: str = "
         lower = stem.lower()
         sub = vendor_subfolder(basename, note)
         if sub:
-            return f"boundaries/{sub}/{kb}.{ext}"
+            return f"shared/boundaries/{sub}/{kb}.{ext}"
         if lower.startswith("react-router"):
-            return "boundaries/react-router-dom.ts"
+            return "shared/boundaries/react-router-dom.ts"
         if lower.startswith("tanstack") or lower.startswith("usequeries") or lower.startswith("usequery"):
-            return f"boundaries/tanstack-query/{kb}.ts"
+            return f"shared/boundaries/tanstack-query/{kb}.ts"
         if lower.startswith("segment") or lower == "client":
-            return "boundaries/segment-analytics-client.ts"
+            return "shared/boundaries/segment-analytics-client.ts"
         if lower.startswith("statsig"):
-            return f"boundaries/statsig/{kb}.ts"
+            return f"shared/boundaries/statsig/{kb}.ts"
         if lower.startswith("vscode"):
-            return "boundaries/vscode-api.ts"
+            return "shared/boundaries/vscode-api.ts"
         if lower.startswith("zod") or lower == "src":
-            return f"boundaries/{kb}.ts"
-        return f"boundaries/{kb}.{ext}"
+            return f"shared/boundaries/{kb}.ts"
+        return f"shared/boundaries/{kb}.{ext}"
 
     if domain == "icons":
-        return f"icons/{kb}.tsx"
+        return f"shared/icons/{kb}.tsx"
     if domain == "locales":
         return f"locales/{kb}.ts"
     if domain == "themes":
@@ -474,7 +474,7 @@ def main():
             if basename == "app-scope-CWE-zIhQ":
                 domain = "boundaries"
                 classification = "vendor-runtime"
-                semantic = "boundaries/app-scope.ts"
+                semantic = "shared/boundaries/app-scope.ts"
                 faced = True
 
             # Keep vendor-runtime boundaries faced
@@ -500,7 +500,7 @@ def main():
         # Update IMPORT_MAP if promoted
         entry = import_map.get("chunks", {}).get(basename)
         if entry and entry.get("status") == "done":
-            entry["restored"] = semantic
+            entry["path"] = semantic
 
     MANIFEST_PATH.write_text(json.dumps(manifest, indent=2))
     IMPORT_MAP_PATH.write_text(json.dumps(import_map, indent=2))

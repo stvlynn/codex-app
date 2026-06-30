@@ -9,9 +9,9 @@
 | Skill | 作用 | 产物 |
 | ----- | ---- | ---- |
 | [`codex-app-ref-refresh`](.agents/skills/codex-app-ref-refresh/) | 解包已安装的 `Codex.app`（`app.asar`）到 `./ref` 并格式化 | `./ref/` |
-| [`deobfuscate-javascript`](.agents/skills/deobfuscate-javascript/) | 把 `ref/webview/assets` 里打包的 JS 反混淆成命名有意义的可读代码 | `./restored/` |
+| [`deobfuscate-javascript`](.agents/skills/deobfuscate-javascript/) | 把 `ref/webview/assets` 里打包的 JS 反混淆成命名有意义的可读代码 | `./src/` |
 
-典型流程：**先从 App 同步到 `./ref`，再把 `./ref` 反混淆到 `./restored`。**
+典型流程：**先从 App 同步到 `./ref`，再把 `./ref` 反混淆到 `./src`。**
 
 ---
 
@@ -68,7 +68,7 @@ node .agents/skills/codex-app-ref-refresh/scripts/refresh-codex-ref.mjs
 
 ## Skill 2 — 反混淆同步后的代码（`deobfuscate-javascript`）
 
-把解包进 `./ref` 的压缩、打包 JS 还原成可读代码。它是一条多阶段流水线（反混淆 → 智能重命名 → 润色 → 可选的带类型 `.tsx` 重写）。语义级的重命名由 Agent 本身完成，机械性的活由内置 `bun` 脚本处理。还原结果输出到 `./restored/`，带有有意义的命名、按语义领域分的子目录、出处头注释，以及共享的 `restored/IMPORT_MAP.json`。只有整理完成的文件才会进入 `./restored/`：脚本批量产出的机械中间产物会先放进隐藏的临时工作区（`restored/.deobfuscate-javascript/`），整理成可读性良好、命名友好、目录结构清晰（深度模式下还要类型完整）的代码后，才提升到 `./restored/`。
+把解包进 `./ref` 的压缩、打包 JS 还原成可读代码。它是一条多阶段流水线（反混淆 → 智能重命名 → 润色 → 可选的带类型 `.tsx` 重写）。语义级的重命名由 Agent 本身完成，机械性的活由内置 `bun` 脚本处理。还原结果输出到 `./src/`，带有有意义的命名、按语义领域分的子目录、出处头注释，以及共享的 `src/IMPORT_MAP.json`。只有整理完成的文件才会进入 `./src/`：脚本批量产出的机械中间产物会先放进隐藏的临时工作区（`src/.deobfuscate-javascript/`），整理成可读性良好、命名友好、目录结构清晰（深度模式下还要类型完整）的代码后，才提升到 `./src/`。
 
 ### 通过 Agent 使用
 
@@ -94,7 +94,7 @@ cd .agents/skills/deobfuscate-javascript
 bun install
 ```
 
-各个 `bun scripts/*.ts` 工具（detect、extract、smart-rename、polish、quality-gate 等）在该 Skill 的 [`SKILL.md`](.agents/skills/deobfuscate-javascript/SKILL.md) 中有说明。正常使用时你不需要手动调用——Agent 会自动编排它们。
+各个 `bun src/application/*.ts` 工具（detect、extract、smart-rename、polish、quality-gate 等）在该 Skill 的 [`SKILL.md`](.agents/skills/deobfuscate-javascript/SKILL.md) 中有说明。正常使用时你不需要手动调用——Agent 会自动编排它们。
 
 ---
 
@@ -104,16 +104,16 @@ bun install
 decode-codex/
 ├─ .agents/skills/
 │  ├─ codex-app-ref-refresh/      # Skill 1：同步 Codex.app → ./ref
-│  └─ deobfuscate-javascript/     # Skill 2：./ref → ./restored
+│  └─ deobfuscate-javascript/     # Skill 2：./ref → ./src
 ├─ docs/                          # 项目规范与架构文档
 ├─ scripts/                       # 共享流水线辅助脚本与检查
 ├─ AGENTS.md                      # 指向 CLAUDE.md 的软链接（Agent 入口）
 ├─ CLAUDE.md                      # Agent 准则、文档地图与进化规则
 ├─ ref/                           # 解包出的 Codex App 源码（由 Skill 1 生成）
-└─ restored/                      # 可读的反混淆产物（由 Skill 2 生成）
+└─ src/                           # 可读的反混淆产物（由 Skill 2 生成）
 ```
 
-`ref/` 和 `restored/` 都是生成物——请用 Skill 重新生成，而不是手动编辑。
+`ref/` 和 `src/` 都是生成物——请用 Skill 重新生成，而不是手动编辑。
 
 ## Agent 使用指南
 

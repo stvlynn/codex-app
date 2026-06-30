@@ -2,8 +2,8 @@ import json
 import os
 import re
 
-m=json.load(open('restored/.deobfuscate-javascript/_full/manifest.json'))
-im=json.load(open('restored/IMPORT_MAP.json'))
+m=json.load(open("src/.deobfuscate-javascript/_full/manifest.json"))
+im=json.load(open('src/IMPORT_MAP.json'))
 
 SHIMS = [
     'workbook-BEO_aVXz',
@@ -27,15 +27,15 @@ def kebab(s):
     return s.lower().strip('-')
 
 for b in SHIMS:
-    cp='restored/.deobfuscate-javascript/_full/checkpoints/'+b+'.tsx'
+    cp='.deobfuscate-javascript/_full/checkpoints/'+b+'.tsx'
     if not os.path.exists(cp):
-        cp='restored/.deobfuscate-javascript/_full/checkpoints/'+b+'.ts'
+        cp='.deobfuscate-javascript/_full/checkpoints/'+b+'.ts'
     deps=re.findall(r"from\s+['\"]([^'\"]+)['\"]", open(cp).read())
     dep = [d for d in deps if d.startswith('./')][0].lstrip('./')
     dep_entry = im['chunks'].get(dep,{})
     family = dep_entry.get('vendor','mermaid')
     base = kebab(b)
-    new_path = f'boundaries/{family}/{base}.ts'
+    new_path = f'shared/boundaries/{family}/{base}.ts'
     m['files'][b]['organization']={
         'domain':'boundaries',
         'semanticPath':new_path,
@@ -45,10 +45,10 @@ for b in SHIMS:
     }
     m['files'][b]['stages']['faced']=True
     m['files'][b]['stages']['promoted']=False
-    im['chunks'][b]['restored']=new_path
+    im['chunks'][b]["path"]=new_path
     im['chunks'][b]['dependencyBoundary']=True
     im['chunks'][b]['vendor']=family
     print(b,'->',new_path,'family=',family)
 
-json.dump(m, open('restored/.deobfuscate-javascript/_full/manifest.json','w'), indent=2)
-json.dump(im, open('restored/IMPORT_MAP.json','w'), indent=2)
+json.dump(m, open("src/.deobfuscate-javascript/_full/manifest.json",'w'), indent=2)
+json.dump(im, open('src/IMPORT_MAP.json','w'), indent=2)

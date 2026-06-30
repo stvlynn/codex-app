@@ -3,7 +3,7 @@
 
 import os
 
-BASE_DIR = "/Users/stvlynn/code/codex-reverse/restored/.deobfuscate-javascript/_full/files/onboarding-plugin-suggestions-DbMYi-zc/candidate"
+BASE_DIR = "/Users/stvlynn/code/codex-reverse/.deobfuscate-javascript/_full/files/onboarding-plugin-suggestions-DbMYi-zc/candidate"
 
 def read_lines(path):
     with open(path, "r") as f:

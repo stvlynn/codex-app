@@ -1,6 +1,6 @@
 import json
 
-m = json.load(open("restored/.deobfuscate-javascript/_full/manifest.json"))
+m = json.load(open("src/.deobfuscate-javascript/_full/manifest.json"))
 for b, info in m["files"].items():
     if info.get("kind") != "local":
         continue

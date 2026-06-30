@@ -4,11 +4,11 @@ import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-MANIFEST_PATH = ROOT / "restored" / ".deobfuscate-javascript" / "_full" / "manifest.json"
-IMPORT_MAP_PATH = ROOT / "restored" / "IMPORT_MAP.json"
+MANIFEST_PATH = ROOT / "src" / ".deobfuscate-javascript" / "_full" / "manifest.json"
+IMPORT_MAP_PATH = ROOT / "src" / "IMPORT_MAP.json"
 MAKE_FACADE = ROOT / ".agents" / "skills" / "deobfuscate-javascript" / "scripts" / "make-facade.ts"
 REF_DIR = ROOT / "ref" / "webview" / "assets"
-RESTORED_DIR = ROOT / "restored"
+RESTORED_DIR = ROOT / "src"
 
 b = "thread-context-inputs-B6tQCr7t"
 new_path = "app/thread-context-inputs/index.ts"
@@ -70,7 +70,7 @@ info["stages"] = {
 info["lastUpdated"] = subprocess.run(["date", "-u", "+%Y-%m-%dT%H:%M:%SZ"], capture_output=True, text=True).stdout.strip()
 
 # Update IMPORT_MAP.
-im["chunks"][b]["restored"] = new_path
+im["chunks"][b]["path"] = new_path
 im["chunks"][b]["vendor"] = family
 im["chunks"][b]["dependencyBoundary"] = True
 im["chunks"][b]["status"] = "done"

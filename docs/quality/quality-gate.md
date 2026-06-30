@@ -1,11 +1,11 @@
 # Quality Gate
 
-The deobfuscation skill uses `.agents/skills/deobfuscate-javascript/scripts/quality-gate.ts` to decide whether a candidate can be promoted into `./restored/`.
+The deobfuscation skill uses `.agents/skills/deobfuscate-javascript/src/domain/quality-gate.ts` to decide whether a candidate can be promoted into `./src/`.
 
 Run it with:
 
 ```bash
-bun .agents/skills/deobfuscate-javascript/scripts/quality-gate.ts restored
+bun .agents/skills/deobfuscate-javascript/src/domain/quality-gate.ts src
 ```
 
 ## Default checks
@@ -16,7 +16,7 @@ bun .agents/skills/deobfuscate-javascript/scripts/quality-gate.ts restored
 | `mechanical-names` | Public names must be semantic, not minified or mechanical. |
 | `mechanical-import-bindings` | Imports from boundaries must use semantic aliases. |
 | `missing-relative-exports` | Relative named imports/exports must reference names that exist in the target file. |
-| `unresolved-relative-imports` | Relative imports must resolve inside `./restored/`. |
+| `unresolved-relative-imports` | Relative imports must resolve inside `./src/`. |
 | `unbound-identifiers` | No referenced identifiers without local bindings. |
 | `untyped-component-props` | Exported component props need explicit TypeScript types. |
 | `untyped-public-function-params` | Exported function parameters need explicit types. |

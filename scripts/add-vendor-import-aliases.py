@@ -15,9 +15,9 @@ import re
 from pathlib import Path
 from typing import Dict, List, Set, Tuple
 
-ROOT = Path("/Users/stvlynn/code/codex-reverse/restored")
+ROOT = Path(str(ROOT / "src"))
 IMPORT_MAP_PATH = ROOT / "IMPORT_MAP.json"
-MANIFEST_PATH = ROOT / ".deobfuscate-javascript/_full/manifest.json"
+MANIFEST_PATH = ROOT / "src/.deobfuscate-javascript/_full/manifest.json"
 
 IMPORT_RE = re.compile(r"import\s*\{([^}]+)\}\s*from\s*['\"]([^'\"]+)['\"]")
 
@@ -69,7 +69,7 @@ def collect_missing_aliases() -> Dict[Tuple[str, str], Set[str]]:
             if not src_entry:
                 continue
             if src_entry.get("dependencyBoundary") or src_entry.get("vendor"):
-                restored = src_entry.get("restored")
+                restored = src_entry.get("path")
                 if not restored:
                     continue
                 exports = set(src_entry.get("exports", {}).values())
@@ -81,10 +81,10 @@ def collect_missing_aliases() -> Dict[Tuple[str, str], Set[str]]:
     return missing_by_source
 
 
-def add_aliases_to_facade(restored_rel: str, aliases: Set[str]) -> None:
-    facade_path = ROOT / restored_rel
+def add_aliases_to_facade(public_rel: str, aliases: Set[str]) -> None:
+    facade_path = ROOT / public_rel
     if not facade_path.exists():
-        print(f"[!] facade missing: {restored_rel}")
+        print(f"[!] facade missing: {public_rel}")
         return
     text = facade_path.read_text(encoding="utf-8")
     marker = "// Additional aliases exported for consumers mapped via IMPORT_MAP\n"
@@ -126,9 +126,9 @@ def main() -> int:
         return 0
 
     total_aliases = 0
-    for (source_base, restored_rel), aliases in sorted(missing.items()):
-        print(f"[*] {source_base} ({restored_rel}): adding {len(aliases)} alias(es)")
-        add_aliases_to_facade(restored_rel, aliases)
+    for (source_base, public_rel), aliases in sorted(missing.items()):
+        print(f"[*] {source_base} ({public_rel}): adding {len(aliases)} alias(es)")
+        add_aliases_to_facade(public_rel, aliases)
         update_import_map(source_base, aliases)
         total_aliases += len(aliases)
 

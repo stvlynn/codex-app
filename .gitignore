@@ -3,12 +3,14 @@ ref/
 node_modules/
 
 # Deobfuscation workspace: intermediate checkpoints, manifest, ledger, symbols.
-# The promoted output under restored/ is committed; the hidden workspace is not.
-restored/.deobfuscate-javascript/
+# The promoted output under src/ is committed; the hidden workspace is not.
+src/.deobfuscate-javascript/
 
 # Large data-asset folders that can be regenerated from the app bundle.
-restored/locales/
-restored/themes/
+src/shared/locales/
+src/shared/themes/
+
+.agents/skills/deobfuscate-javascript/.deobfuscate-javascript/
 
 # Deobfuscation skill dependencies
 .agents/skills/deobfuscate-javascript/node_modules/

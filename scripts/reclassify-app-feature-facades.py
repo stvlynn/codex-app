@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-MANIFEST_PATH = ROOT / "restored" / ".deobfuscate-javascript" / "_full" / "manifest.json"
+MANIFEST_PATH = ROOT / "src" / ".deobfuscate-javascript" / "_full" / "manifest.json"
 
 def main():
     m = json.load(open(MANIFEST_PATH))
@@ -11,11 +11,11 @@ def main():
         cls = info.get("organization", {}).get("classification")
         if cls not in ("app-feature", "ui-component", "single-util", "icon"):
             continue
-        im = json.load(open(ROOT / "restored" / "IMPORT_MAP.json"))
+        im = json.load(open(ROOT / "src" / "IMPORT_MAP.json"))
         entry = im["chunks"].get(b)
-        if not entry or not entry.get("restored"):
+        if not entry or not entry.get("path"):
             continue
-        p = ROOT / "restored" / entry["restored"]
+        p = ROOT / "src" / entry["path"]
         if p.is_dir():
             for cand in ("index.ts", "index.tsx"):
                 cp = p / cand
@@ -42,7 +42,7 @@ def main():
         info["organization"]["classification"] = "vendor-runtime"
         # Keep domain as-is to avoid moving files; vendor-runtime gets vendored gate options.
         reclassified += 1
-        print(f"✓ {b} -> vendor-runtime ({entry['restored']})")
+        print(f"✓ {b} -> vendor-runtime ({entry["path"]})")
     json.dump(m, open(MANIFEST_PATH, "w"), indent=2)
     print(f"\nReclassified {reclassified} app-feature facades to vendor-runtime.")
 

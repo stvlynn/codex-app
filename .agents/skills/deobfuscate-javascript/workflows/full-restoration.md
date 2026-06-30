@@ -16,7 +16,7 @@ The two tables together make the work **resumable across sessions** (everything 
 **This is the default path** whenever the input is an app — an `index.html` plus a sibling-chunk asset tree (Vite/Rollup-style content-hashed graph). Load it when:
 
 - There is an `index.html` + asset tree (many `import` / `export … from "./xxx-HASH.js"` statements pointing at sibling chunks). The entry is **auto-discovered** from `index.html` — you no longer need it named explicitly.
-- No detectable sourcemap (run `scripts/sourcemap-check.ts` first; if a `.map` is recoverable, use it instead — orders of magnitude higher fidelity).
+- No detectable sourcemap (run `src/application/sourcemap-check.ts` first; if a `.map` is recoverable, use it instead — orders of magnitude higher fidelity).
 
 Restoration runs at **readable depth by default**; the deep keywords ("完整", "深度", "production", "typed", "restore everything") add the Stage 3 typed-`.tsx` + acceptance depth on top — they no longer gate _scope_.
 
@@ -35,8 +35,8 @@ vendor/data chunks in the extracted Codex.app tree.
 ## Pipeline order
 
 ```
-0.   (Always)  scripts/sourcemap-check.ts on the entry — bail out if a sourcemap is recoverable.
-0.5. (Always)  scripts/check-entry.ts --discover --root <assets-dir> — read index.html, auto-discover the entry, and confirm it is the app, not a vendor leaf (exit 3). build-import-graph.ts auto-discovers too when the positional entry is omitted.
+0.   (Always)  src/infrastructure/sourcemap-check.ts on the entry — bail out if a sourcemap is recoverable.
+0.5. (Always)  src/domain/check-entry.ts --discover --root <assets-dir> — read index.html, auto-discover the entry, and confirm it is the app, not a vendor leaf (exit 3). build-import-graph.ts auto-discovers too when the positional entry is omitted.
 1. Build the import graph        → _full/manifest.json
 1.5. Facade the huge vendor/runtime boundaries (optional):
      make-facade.ts <chunk>          →  typed `any` boundary so consumers compile
@@ -48,23 +48,23 @@ vendor/data chunks in the extracted Codex.app tree.
      run existing stage scripts (extract → write renames → apply → polish)
      ledger.ts mark-done <basename> <stage>
      ledger.ts propagate-cross-file   →  push restored names to downstream consumers
-4. ORGANIZE → PROMOTE (this is what carries the restore out of `_full/` into `restored/`):
+4. ORGANIZE → PROMOTE (this is what carries the restore out of `_full/` into `src/`):
      plan-organize.ts --target            →  propose a domain + kebab public path for every chunk (organize-plan.json)
      review/override the plan, then --apply  →  write approved entries into manifest.organization (stages.organized)
      promote-organized.ts --target --dry-run →  preview every move + gate verdict
-     promote-organized.ts --target           →  drain the promote frontier: build typed deliverable, prettier-format it, gate, copy to restored/<domain>/, update IMPORT_MAP.json, rewrite imports, set stages.promoted
+     promote-organized.ts --target           →  drain the promote frontier: build typed deliverable, prettier-format it, gate, copy to src/<domain>/, update IMPORT_MAP.json, rewrite imports, set stages.promoted
 5. Stage 3 acceptance review (deep mode): the host agent reads each delivered file end-to-end and reworks any `NEEDS_FIX` file until all pass (no sub-agent required; optional one for extra eyes).
-6. Final target audit (the completion proof): run `quality-gate.ts <target-dir> --check-format` over the whole public target. It now also fails the "checkpoints built but `restored/` empty" stall (`full-restoration-checkpoints-not-drained` / `-organize-incomplete`), a public file left in a hash-named dir (`-public-file-in-hash-dir`), a third-party npm boundary still left as an `any`-facade (`full-restoration-npm-boundary-not-resolved`), and any unformatted file (`--check-format`), in addition to mechanical / `@ts-nocheck` / facade / placeholder app-feature chunks.
+6. Final target audit (the completion proof): run `quality-gate.ts <target-dir> --check-format` over the whole public target. It now also fails the "checkpoints built but `src/` empty" stall (`full-restoration-checkpoints-not-drained` / `-organize-incomplete`), a public file left in a hash-named dir (`-public-file-in-hash-dir`), a third-party npm boundary still left as an `any`-facade (`full-restoration-npm-boundary-not-resolved`), and any unformatted file (`--check-format`), in addition to mechanical / `@ts-nocheck` / facade / placeholder app-feature chunks.
 ```
 
-**Completion definition (whole-tree).** The restore is done **iff** all three hold: `quality-gate.ts <target-dir>` exits 0 · every reachable local chunk has `stages.promoted` (deep mode also requires `stages.finalized`) · `ledger.ts frontier --stage promote --target <dir>` is empty. While checkpoints sit in `_full/checkpoints/` and `restored/` is empty, all three fail — so "mechanical checkpoint = done" is not a reachable state.
+**Completion definition (whole-tree).** The restore is done **iff** all three hold: `quality-gate.ts <target-dir>` exits 0 · every reachable local chunk has `stages.promoted` (deep mode also requires `stages.finalized`) · `ledger.ts frontier --stage promote --target <dir>` is empty. While checkpoints sit in `_full/checkpoints/` and `src/` is empty, all three fail — so "mechanical checkpoint = done" is not a reachable state.
 
 Step 3 is where most of the work lives. Each iteration is one **file × stage**; multiple agents can iterate in parallel as long as they `claim` different `(file, stage)` tuples. Use `ledger.ts frontier` (not just `next`) to see the whole restorable batch — every file whose local dependencies are all `done` or `faced` — and fan agents out across it, deepest first. `next` returns the single best of the same set.
 
 For very large trees, use the batch checkpoint executor after Step 2:
 
 ```bash
-bun <skill-dir>/scripts/auto-restore-full.ts --target "$TARGET" --format
+bun <skill-dir>/src/application/auto-restore-full.ts --target "$TARGET" --format
 ```
 
 This writes a flat `.tsx` checkpoint for every `kind: local` file under `_full/checkpoints/` by default, plus per-file `auto-renames.json` / `auto-renamed.js` / `auto-polished.tsx` under `_full/files/<basename>/`. It is intentionally a checkpoint accelerator, not a substitute for Stage 3: the host agent must rewrite/split into semantic public files, pre-filter with `quality-gate.ts`, and pass Stage 3 acceptance before declaring completion. Use `--write-target-checkpoints` only for explicit legacy/debug output; those files are still not deliverables.
@@ -72,7 +72,7 @@ This writes a flat `.tsx` checkpoint for every `kind: local` file under `_full/c
 ## Step 0 — always: check the entry for a sourcemap
 
 ```bash
-bun <skill-dir>/scripts/sourcemap-check.ts ref/webview/assets/app-shell-JLpboL12.js
+bun <skill-dir>/src/infrastructure/sourcemap-check.ts ref/webview/assets/app-shell-JLpboL12.js
 ```
 
 If `✓ sourcemap detected` and the `.map` exists, **stop**. Recover from the map; renaming is wasted work.
@@ -80,7 +80,7 @@ If `✓ sourcemap detected` and the `.map` exists, **stop**. Recover from the ma
 ## Step 0.5 — always: confirm the entry is the app, not a vendor leaf
 
 ```bash
-bun <skill-dir>/scripts/check-entry.ts "$ENTRY" --root ref/webview/assets
+bun <skill-dir>/src/domain/check-entry.ts "$ENTRY" --root ref/webview/assets
 ```
 
 Exit `3` means the entry is a **transitive dependency** (a vendored package or
@@ -99,13 +99,13 @@ the wrong tree.
 ## Step 1 — build the import graph
 
 ```bash
-TARGET=restored
+TARGET=src
 FULL="$TARGET/.deobfuscate-javascript/_full"
 mkdir -p "$FULL/files" "$FULL/locks"
 
 # Entry auto-discovered from index.html (omit the positional). To pin it:
-#   ENTRY=$(bun <skill-dir>/scripts/check-entry.ts --discover --root ref/webview/assets)
-bun <skill-dir>/scripts/build-import-graph.ts \
+#   ENTRY=$(bun <skill-dir>/src/domain/check-entry.ts --discover --root ref/webview/assets)
+bun <skill-dir>/src/domain/build-import-graph.ts \
   --target "$TARGET" \
   --root ref/webview/assets \
   --out "$FULL/manifest.json"
@@ -116,7 +116,7 @@ What the script does:
 1. Parses the entry as ESM, walks every `import`/`export … from "./…"` statement, classifies each import target as either
    - **`local`** — `./xxx-HASH.js` whose stripped basename is _not_ in `resolve-npm-imports.ts`'s `CHUNK_NAME_REGISTRY` → push onto BFS queue, copy the source into `_full/files/<basename>/original.js`. This is the default for every reachable project-local sibling, regardless of size.
    - **`oversized-local`** — only when you explicitly pass a positive `--max-lines N` and a non-entry local file exceeds that cap → record imports/exports for cross-file binding lookup but **don't BFS into it** and **don't restore it**. This is a quick/targeted-mode boundary, not deep restoration.
-   - **`npm-leaf`** — basename matches a known npm package (`clsx`, `react`, `jsx-runtime`, `tslib.es6`, `marked.esm`, `floating-ui.react-dom`, `core.esm`, …) **or its _content_ is bundled vendor data** (a Shiki TextMate grammar, a Shiki/VSCode theme, or a known data lib like 3Dmol — detected by `classifyVendorDataChunk` in `chunk-classification.ts`) → record terminal node, do not descend, **do not stage or restore it**. The manifest stores a `vendorSpecifier` (`@shikijs/langs/<id>`, `@shikijs/themes/<id>`, `3dmol`) and `promote-organized.ts` rewrites consumers' `./rust-HASH.js` imports to it. This is why `restored/` holds app code only — the ~200 grammar + ~60 theme chunks never land in `utils/`.
+   - **`npm-leaf`** — basename matches a known npm package (`clsx`, `react`, `jsx-runtime`, `tslib.es6`, `marked.esm`, `floating-ui.react-dom`, `core.esm`, …) **or its _content_ is bundled vendor data** (a Shiki TextMate grammar, a Shiki/VSCode theme, or a known data lib like 3Dmol — detected by `classifyVendorDataChunk` in `chunk-classification.ts`) → record terminal node, do not descend, **do not stage or restore it**. The manifest stores a `vendorSpecifier` (`@shikijs/langs/<id>`, `@shikijs/themes/<id>`, `3dmol`) and `promote-organized.ts` rewrites consumers' `./rust-HASH.js` imports to it. This is why `src/` holds app code only — the ~200 grammar + ~60 theme chunks never land in `utils/`.
    - **`external`** — bare specifiers like `"react"` (rare in this kind of bundle) → record as terminal.
 2. Repeats BFS until every reachable local chunk is recorded.
 3. Writes `_full/manifest.json` with the schema in the next section.
@@ -136,19 +136,19 @@ Typical opening run for a fresh restoration:
 
 ```bash
 # Deep/full: no line cap; every reachable project-local sibling is in scope
-bun scripts/build-import-graph.ts "$ENTRY" --target "$TARGET" --root ref/webview/assets
+bun src/domain/build-import-graph.ts "$ENTRY" --target "$TARGET" --root ref/webview/assets
 
 # Quick/targeted: skip huge siblings after recording their import/export boundary
-bun scripts/build-import-graph.ts "$ENTRY" --target "$TARGET" --root ref/webview/assets --max-lines 5000
+bun src/domain/build-import-graph.ts "$ENTRY" --target "$TARGET" --root ref/webview/assets --max-lines 5000
 
 # Targeted: skip almost all deps but pull in two specific ones
-bun scripts/build-import-graph.ts "$ENTRY" --target "$TARGET" --root ref/webview/assets \
+bun src/domain/build-import-graph.ts "$ENTRY" --target "$TARGET" --root ref/webview/assets \
   --max-lines 500 --include score-query-match-BVCuhDNS,thread-env-icon-HLFXTgnn
 ```
 
 Read the manifest console summary (`X local · Y oversized-local (skipped) · Z npm-leaf · E edges`) before proceeding. In a deep/full task, `Y oversized-local` must be `0`; if it is non-zero, rebuild with `--max-lines 0` or explicitly report that you are producing a partial restore.
 
-> **wakaru in full-restoration is guarded, not default-on.** `wakaru --unpack` is **forbidden** here — the on-disk chunk tree _is_ the module graph, and unpacking re-derives its own filenames matching nothing in the manifest/ledger/`CHUNK_NAME_REGISTRY`. You may run wakaru's _rule_ pipeline (no `--unpack`) on a chunk **body** (`scripts/wakaru-normalize.ts "$WS/original.js" -o "$WS/original.js"`), but only **before** Step 2's `build-symbol-ledger.ts` extracts that chunk's symbols (it is byte-rewriting), and treat any import/export specifiers it emits as untrusted — `build-import-graph.ts` derives the graph from the real chunk files and `resolve-npm-imports.ts` + the Codex registry remain the authoritative import rewriter; wakaru's `un_esm` does not substitute for them.
+> **wakaru in full-restoration is guarded, not default-on.** `wakaru --unpack` is **forbidden** here — the on-disk chunk tree _is_ the module graph, and unpacking re-derives its own filenames matching nothing in the manifest/ledger/`CHUNK_NAME_REGISTRY`. You may run wakaru's _rule_ pipeline (no `--unpack`) on a chunk **body** (`src/infrastructure/wakaru-normalize.ts "$WS/original.js" -o "$WS/original.js"`), but only **before** Step 2's `build-symbol-ledger.ts` extracts that chunk's symbols (it is byte-rewriting), and treat any import/export specifiers it emits as untrusted — `build-import-graph.ts` derives the graph from the real chunk files and `resolve-npm-imports.ts` + the Codex registry remain the authoritative import rewriter; wakaru's `un_esm` does not substitute for them.
 
 ### `manifest.json` schema
 
@@ -157,7 +157,7 @@ Read the manifest console summary (`X local · Y oversized-local (skipped) · Z 
   "version": 1,
   "entry": "app-shell-JLpboL12",
   "rootDir": "ref/webview/assets",
-  "targetDir": "restored",
+  "targetDir": "src",
   "createdAt": "2026-05-22T21:09:00.000Z",
   "updatedAt": "2026-05-22T21:09:00.000Z",
   "files": {
@@ -239,10 +239,10 @@ genuinely vendor/runtime).
 
 ```bash
 CHUNK=ref/webview/assets/src-C7fSIbpz.js
-bun <skill-dir>/scripts/make-facade.ts "$CHUNK" \
+bun <skill-dir>/src/infrastructure/make-facade.ts "$CHUNK" \
   --provenance "ref/webview/assets/$(basename "$CHUNK")" \
   --out "$TARGET/boundaries/zod.facade.ts"
-bun <skill-dir>/scripts/ledger.ts mark-faced "$(basename "$CHUNK" .js)" --target "$TARGET"
+bun <skill-dir>/src/domain/ledger.ts mark-faced "$(basename "$CHUNK" .js)" --target "$TARGET"
 ```
 
 `make-facade.ts` is reserved-word-safe (the Zod chunk literally exports `in`,
@@ -257,7 +257,7 @@ with `--vendored`), since a wall of `any` boundary stubs is intentional.
 ## Step 2 — initialize the symbol ledger
 
 ```bash
-bun <skill-dir>/scripts/build-symbol-ledger.ts \
+bun <skill-dir>/src/domain/build-symbol-ledger.ts \
   --target "$TARGET" \
   --manifest "$FULL/manifest.json" \
   --out "$FULL/ledger.json"
@@ -265,7 +265,7 @@ bun <skill-dir>/scripts/build-symbol-ledger.ts \
 
 What the script does, **for each `kind: local` file**:
 
-1. Run `extractSymbols(source)` (the same library as `scripts/extract.ts`) → write `symbols.json` into the file's workspace.
+1. Run `extractSymbols(source)` (the same library as `src/application/extract.ts`) → write `symbols.json` into the file's workspace.
 2. Walk the AST's `import`/`export` declarations to map every `localName` → `{ producer, exportedAs }`. This is what populates `crossFileBindings`.
 3. Tag each symbol with `isExport`/`exportedAs` (matched against the file's own `export { local as exported }` list) and `importedFrom` (matched against the file's `import { imported as local }` list).
 4. Initialize every symbol's `status` to `"pending"` and persist into `ledger.json`.
@@ -343,12 +343,12 @@ For each pass (single agent or one of N parallel agents):
 ```bash
 # See the whole restorable batch (deps all done or faced), deepest-first — fan
 # N agents across these rows. `next` returns just the single best of the same set.
-bun <skill-dir>/scripts/ledger.ts frontier --stage rename --target "$TARGET"
+bun <skill-dir>/src/domain/ledger.ts frontier --stage rename --target "$TARGET"
 # Output (one per line): AnimatePresence-BMR_rf2Q  rename  depth=2  pending=47
-bun <skill-dir>/scripts/ledger.ts next --target "$TARGET"   # single suggestion
+bun <skill-dir>/src/domain/ledger.ts next --target "$TARGET"   # single suggestion
 
 # Claim one — creates _full/locks/AnimatePresence-BMR_rf2Q.rename.lock with O_EXCL
-bun <skill-dir>/scripts/ledger.ts claim AnimatePresence-BMR_rf2Q rename --target "$TARGET" --owner agent-1
+bun <skill-dir>/src/domain/ledger.ts claim AnimatePresence-BMR_rf2Q rename --target "$TARGET" --owner agent-1
 ```
 
 If `claim` exits non-zero, another agent already holds the lock. Pick a different file with `next --skip <basename>` or `next --filter-stage rename --not-claimed`.
@@ -362,13 +362,13 @@ cat "$WS/symbols.json" | jq '.[].name' | head
 # (b) Decide names → write renames.json (one entry per id you've claimed)
 #     Use Write tool to author the JSON; reference symbols in pending status only.
 # (c) Apply
-bun <skill-dir>/scripts/apply.ts "$WS/original.js" "$WS/renames.json" --out "$WS/renamed.js"
+bun <skill-dir>/src/infrastructure/apply.ts "$WS/original.js" "$WS/renames.json" --out "$WS/renamed.js"
 # (d) Polish if it's a React/Vite chunk
-bun <skill-dir>/scripts/polish.ts "$WS/renamed.js" --source "${manifest.files[…].path}" --out "$WS/polished.tsx"
+bun <skill-dir>/src/infrastructure/polish.ts "$WS/renamed.js" --source "${manifest.files[…].path}" --out "$WS/polished.tsx"
 # (e) Mark each renamed symbol done in the ledger (script reads renames.json and toggles status)
-bun <skill-dir>/scripts/ledger.ts mark-done AnimatePresence-BMR_rf2Q rename --target "$TARGET" --renames "$WS/renames.json"
+bun <skill-dir>/src/domain/ledger.ts mark-done AnimatePresence-BMR_rf2Q rename --target "$TARGET" --renames "$WS/renames.json"
 # (f) Propagate this file's exported renames to downstream consumers' ledgers
-bun <skill-dir>/scripts/ledger.ts propagate-cross-file --target "$TARGET" --from AnimatePresence-BMR_rf2Q
+bun <skill-dir>/src/domain/ledger.ts propagate-cross-file --target "$TARGET" --from AnimatePresence-BMR_rf2Q
 # (g) Lock auto-released by mark-done; or: bun ledger.ts release AnimatePresence-BMR_rf2Q rename
 ```
 
@@ -376,7 +376,7 @@ Then loop. `ledger.ts next` will skip files where the requested stage is already
 
 ## Step 4 — organize → promote (carry the restore out of `_full/`)
 
-When `ledger.ts status --target "$TARGET"` reports `0 pending across N files`, the rename pass is done — but the deliverables are still **mechanical checkpoints in `_full/checkpoints/`, and `restored/` is empty.** Step 4 is the phase that actually produces the public tree. It is a drainable, resumable, gated loop — not per-file eyeballing.
+When `ledger.ts status --target "$TARGET"` reports `0 pending across N files`, the rename pass is done — but the deliverables are still **mechanical checkpoints in `_full/checkpoints/`, and `src/` is empty.** Step 4 is the phase that actually produces the public tree. It is a drainable, resumable, gated loop — not per-file eyeballing.
 
 **Recursion check first:** `status` counts a `faced` chunk as _satisfied_, not pending, so "0 pending" does **not** prove every project chunk was restored. Confirm `ledger.ts frontier` is empty **and** that no project-local feature chunk remains `faced` — only genuine third-party vendor/runtime boundaries (Zod, Statsig, the host/runtime bridge) may remain, and each must be reported as an open boundary in the README/import map. A referenced `app-shell-*` / feature chunk left as a facade means the restore is **not done**.
 
@@ -385,17 +385,17 @@ When `ledger.ts status --target "$TARGET"` reports `0 pending across N files`, t
 ### 4.1 — Plan the organization (one batch pass)
 
 ```bash
-bun <skill-dir>/scripts/plan-organize.ts --target "$TARGET"
+bun <skill-dir>/src/application/plan-organize.ts --target "$TARGET"
 ```
 
-This reads the manifest + each chunk's checkpoint + `auto-restore-report.json` and writes `_full/organize-plan.json` proposing, for every local chunk, a `{ domain, semanticPath, recipe, classification, status, fallbackRenameRatio }`. It uses **project-agnostic shape heuristics**: icon-shaped → `icons/`, button-shaped → `ui/`, single-export → `utils/<kebab>.ts`, known vendor/runtime → `boundaries/`. Everything else is an `app-feature` left `status: "needs-review"` with **no domain** — a generic planner can't know your domain layout. Colliding public paths are auto-downgraded to `needs-review` so a promote never silently overwrites. `fallbackRenameRatio` surfaces the 62–91 %-fallback checkpoints to hand-clean first.
+This reads the manifest + each chunk's checkpoint + `auto-restore-report.json` and writes `_full/organize-plan.json` proposing, for every local chunk, a `{ domain, semanticPath, recipe, classification, status, fallbackRenameRatio }`. It uses **project-agnostic shape heuristics**: icon-shaped → `shared/icons/`, button-shaped → `shared/ui/`, single-export → `shared/utils/<kebab>.ts`, known vendor/runtime → `shared/boundaries/`. Everything else is an `app-feature` left `status: "needs-review"` with **no domain** — a generic planner can't know your domain layout. Colliding public paths are auto-downgraded to `needs-review` so a promote never silently overwrites. `fallbackRenameRatio` surfaces the 62–91 %-fallback checkpoints to hand-clean first.
 
 ### 4.2 — Review / override the plan, then apply
 
 Read `organize-plan.json`. For every `needs-review` app-feature chunk, decide its domain + semantic kebab path (a component file is kebab, e.g. `composer/composer-footer.tsx` exporting `ComposerFooter`). Either edit the plan's `status`/`domain`/`semanticPath` in place, or override one chunk at a time:
 
 ```bash
-bun <skill-dir>/scripts/ledger.ts set-organization composer-footer-DyRbFsKV \
+bun <skill-dir>/src/domain/ledger.ts set-organization composer-footer-DyRbFsKV \
   --domain composer --semantic-path composer/composer-footer.tsx \
   --recipe manual --classification app-feature --target "$TARGET"
 ```
@@ -403,7 +403,7 @@ bun <skill-dir>/scripts/ledger.ts set-organization composer-footer-DyRbFsKV \
 Then write the approved entries into the manifest (idempotent; only `status: "approved"` rows land):
 
 ```bash
-bun <skill-dir>/scripts/plan-organize.ts --target "$TARGET" --apply
+bun <skill-dir>/src/application/plan-organize.ts --target "$TARGET" --apply
 ```
 
 A project may supply an optional `--domain-map map.json` (`{ "<basename-prefix>": "<domain>" }`) to auto-assign app chunks; the planner core stays generic.
@@ -415,21 +415,21 @@ A project may supply an optional `--domain-map map.json` (`{ "<basename-prefix>"
 ### 4.4 — Drain the promote frontier
 
 ```bash
-bun <skill-dir>/scripts/promote-organized.ts --target "$TARGET" --dry-run   # preview moves + gate verdicts
-bun <skill-dir>/scripts/promote-organized.ts --target "$TARGET"             # do it
+bun <skill-dir>/src/application/promote-organized.ts --target "$TARGET" --dry-run   # preview moves + gate verdicts
+bun <skill-dir>/src/application/promote-organized.ts --target "$TARGET"             # do it
 ```
 
-For each organized chunk whose local deps are already promoted (producers before consumers), this builds the typed deliverable (recipe or candidate), writes it at its semantic path, runs the **same quality gate** through `analyzeSource`, and on pass: upserts `restored/IMPORT_MAP.json` (`restored` path, `exports`, `status: "done"`), rewrites this chunk's imports of already-promoted producers to their semantic names/paths, and sets `stages.promoted`. On gate fail it rolls the file back, records the issues, and **continues** — one bad chunk never blocks the batch. It is resumable (skips `promoted`, idempotent IMPORT_MAP upsert) and fleet-safe (per-chunk `promote` lock). Fan multiple agents across the frontier; each claims a different chunk. Re-run after hand-fixing the chunks it reported.
+For each organized chunk whose local deps are already promoted (producers before consumers), this builds the typed deliverable (recipe or candidate), writes it at its semantic path, runs the **same quality gate** through `analyzeSource`, and on pass: upserts `src/IMPORT_MAP.json` (`src` path, `exports`, `status: "done"`), rewrites this chunk's imports of already-promoted producers to their semantic names/paths, and sets `stages.promoted`. On gate fail it rolls the file back, records the issues, and **continues** — one bad chunk never blocks the batch. It is resumable (skips `promoted`, idempotent IMPORT_MAP upsert) and fleet-safe (per-chunk `promote` lock). Fan multiple agents across the frontier; each claims a different chunk. Re-run after hand-fixing the chunks it reported.
 
-It writes only into `restored/`; promote into `restored/` is never a manual `cp`. The legacy single-file `promote-final.ts "$WS/candidate/<basename>" "<target>/<path>"` gate-before-copy primitive is still available for a one-off delta.
+It writes only into `src/`; promote into `src/` is never a manual `cp`. The legacy single-file `promote-final.ts "$WS/candidate/<basename>" "<target>/<path>"` gate-before-copy primitive is still available for a one-off delta.
 
 ### 4.5 — Quality gate over the whole target before acceptance
 
 ```bash
-bun <skill-dir>/scripts/quality-gate.ts <target-dir>
+bun <skill-dir>/src/domain/quality-gate.ts <target-dir>
 ```
 
-A non-zero exit means the target is not ready for review. Fix the named issues (replace mechanical names, hand-clean another chunk's candidate, split a large flat file, or delete residue) and re-run promote + the gate. This must be the whole target, not only `boundaries/`, because app chunks have semantic public paths outside `boundaries/` while still failing the deep bar. The gate also fails the **stall** — `full-restoration-checkpoints-not-drained` / `-organize-incomplete` when checkpoints exist but chunks aren't `promoted`, and `-public-file-in-hash-dir` when a deliverable still sits in a hash-named dir. Pass `--allow-organize-incomplete` only for an intermediate mid-drain run.
+A non-zero exit means the target is not ready for review. Fix the named issues (replace mechanical names, hand-clean another chunk's candidate, split a large flat file, or delete residue) and re-run promote + the gate. This must be the whole target, not only `src/shared/boundaries/`, because app chunks have semantic public paths outside `src/shared/boundaries/` while still failing the deep bar. The gate also fails the **stall** — `full-restoration-checkpoints-not-drained` / `-organize-incomplete` when checkpoints exist but chunks aren't `promoted`, and `-public-file-in-hash-dir` when a deliverable still sits in a hash-named dir. Pass `--allow-organize-incomplete` only for an intermediate mid-drain run.
 
 ### 4.6 — Stage 3 acceptance review (deep mode)
 
@@ -438,7 +438,7 @@ The host agent reads each delivered file end-to-end against the quality bar — 
 ### 4.7 — Final target audit after acceptance (completion proof)
 
 ```bash
-bun <skill-dir>/scripts/quality-gate.ts <target-dir>
+bun <skill-dir>/src/domain/quality-gate.ts <target-dir>
 ```
 
 This final run is the completion proof. It reads `_full/manifest.json` plus the shared import map and rejects reachable app-feature chunks whose public output is a boundary/facade, `mechanical-readable-restored`, `@ts-nocheck`, empty `export {}`, `export declare const`, `oversized-local`, or lacks `manifest.stages.finalized=true` / an explicit Stage 3 acceptance record — and the stall checks above. `IMPORT_MAP.status === "done"` by itself is not completion evidence. Done **iff** this exits 0, every reachable local chunk is `stages.promoted` (deep: + `stages.finalized`), and `ledger.ts frontier --stage promote` is empty.
@@ -462,12 +462,12 @@ Before marking a file's `finalize` stage `done`, confirm:
 - [ ] Variant prop unions use `keyof typeof <table>` rather than hand-rolled string unions.
 - [ ] `displayName` set on every exported component; `forwardRef` recovered if the bundle had a ref shim.
 - [ ] Consumers import semantic producer names (`DownloadIcon`, `Button`, `ExpandIcon`) rather than bundle aliases (`t`, `n`), and split chunks import from semantic barrels.
-- [ ] Final `bun scripts/format.ts <file-or-dir>` pass run (`promote-organized.ts` already formats each deliverable; this catches hand-edited files).
-- [ ] Every `boundaries/*.ts` is either a bare third-party re-export shim (`make-facade.ts --reexport`), a tracked runtime facade/passthrough, or already restored out of `boundaries/` — no third-party npm chunk left as an `any`-facade.
-- [ ] `scripts/promote-final.ts` or an equivalent gate-before-copy path promoted the candidate; no direct copy from `$WS`; Stage 3 acceptance still follows.
-- [ ] Final `bun scripts/quality-gate.ts <file-or-dir>` pass exits 0.
+- [ ] Final `bun src/infrastructure/format.ts <file-or-dir>` pass run (`promote-organized.ts` already formats each deliverable; this catches hand-edited files).
+- [ ] Every `src/shared/boundaries/*.ts` is either a bare third-party re-export shim (`make-facade.ts --reexport`), a tracked runtime facade/passthrough, or already restored out of `src/shared/boundaries/` — no third-party npm chunk left as an `any`-facade.
+- [ ] `src/application/promote-final.ts` or an equivalent gate-before-copy path promoted the candidate; no direct copy from `$WS`; Stage 3 acceptance still follows.
+- [ ] Final `bun src/domain/quality-gate.ts <file-or-dir>` pass exits 0.
 - [ ] Stage 3 acceptance review passed every delivered file (host self-review, or an optional sub-agent).
-- [ ] Final target-level `bun scripts/quality-gate.ts <target-dir> --check-format` pass exits 0 after acceptance; no boundary-only or import-map-status-only substitute.
+- [ ] Final target-level `bun src/domain/quality-gate.ts <target-dir> --check-format` pass exits 0 after acceptance; no boundary-only or import-map-status-only substitute.
 
 ## Locking & parallelism rules
 
@@ -486,7 +486,7 @@ Before marking a file's `finalize` stage `done`, confirm:
 
 ## Caveats
 
-- **`extractChunkBasename` is the source of truth for npm-leaf detection.** [scripts/resolve-npm-imports.ts](../scripts/resolve-npm-imports.ts) defines `CHUNK_NAME_REGISTRY`. If a vendored package shows up that's not in the registry, it'll be incorrectly classified as `local` and the BFS will descend into it. Either add it to the registry first, or pass `--treat-as-npm <basename>` to `build-import-graph.ts` for that one run.
+- **`extractChunkBasename` is the source of truth for npm-leaf detection.** [src/infrastructure/resolve-npm-imports.ts](../src/infrastructure/resolve-npm-imports.ts) defines `CHUNK_NAME_REGISTRY`. If a vendored package shows up that's not in the registry, it'll be incorrectly classified as `local` and the BFS will descend into it. Either add it to the registry first, or pass `--treat-as-npm <basename>` to `build-import-graph.ts` for that one run.
 - **Cycles are tolerated** — the BFS skips already-visited basenames. Re-exports through a `shared.js` chunk are common and don't break anything.
 - **Dynamic `import("…")`** is recorded as a local edge if its argument is a literal string; non-literal dynamic imports are reported in `manifest.unresolved[]` for manual review.
 - **`new URL("./asset.svg", import.meta.url)`** is _not_ an import — the script ignores it. Asset chunks (woff2, wasm, png) are filtered out before BFS by extension.

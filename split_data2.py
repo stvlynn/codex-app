@@ -7,7 +7,7 @@ with semantic names, then split into files under 1000 lines each.
 import re
 import os
 
-BASE_DIR = "/Users/stvlynn/code/codex-reverse/restored/.deobfuscate-javascript/_full/files/onboarding-plugin-suggestions-DbMYi-zc/candidate"
+BASE_DIR = "/Users/stvlynn/code/codex-reverse/.deobfuscate-javascript/_full/files/onboarding-plugin-suggestions-DbMYi-zc/candidate"
 
 def read_file(path):
     with open(path, "r") as f:
@@ -20,7 +20,7 @@ def write_file(path, content):
     print(f"Wrote {line_count} lines to {os.path.basename(path)}")
 
 def main():
-    src = read_file("/Users/stvlynn/code/codex-reverse/restored/.deobfuscate-javascript/_full/files/onboarding-plugin-suggestions-DbMYi-zc/auto-polished.tsx")
+    src = read_file("/Users/stvlynn/code/codex-reverse/.deobfuscate-javascript/_full/files/onboarding-plugin-suggestions-DbMYi-zc/auto-polished.tsx")
 
     # Step 1: Fix imports
     src = src.replace('import { libR } from "./lib-BWT6A3Q0";',

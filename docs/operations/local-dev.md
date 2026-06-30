@@ -50,14 +50,14 @@ You can also run `pnpm run <script>` directly; see `package.json` for the script
 | Path | What it is | How to regenerate |
 | ---- | ---------- | ----------------- |
 | `./ref/` | Extracted Codex app source | `codex-app-ref-refresh` skill |
-| `./restored/` | Promoted deobfuscated output | `deobfuscate-javascript` skill |
-| `restored/.deobfuscate-javascript/_full/` | Hidden workspace: checkpoints, candidates, manifest, ledger | Produced during deobfuscation |
+| `./src/` | Promoted deobfuscated output | `deobfuscate-javascript` skill |
+| `src/.deobfuscate-javascript/_full/` | Hidden workspace: checkpoints, candidates, manifest, ledger | Produced during deobfuscation |
 
-Do not hand-edit `./ref/` or `./restored/`. Regenerate them with the skills.
+Do not hand-edit `./ref/` or `./src/`. Regenerate them with the skills.
 
 ## Operational notes
 
-- Always run skills from the repo root so `./ref` and `./restored` resolve correctly.
+- Always run skills from the repo root so `./ref` and `./src` resolve correctly.
 - `make dev` expects `./ref` to exist and contain the extracted Electron app. Use `make electron-smoke` for a short launch test that exits automatically.
 - The launcher rejects a stale `./ref` when its package version does not match the installed Codex.app version.
 - The launcher creates `.tmp-electron/CodexDev.app` with an APFS clone of the installed app, removes the cloned `app.asar`, and starts the cloned runtime with `./ref` as its application directory. Set `CODEX_APP_PATH` to use a non-default installed app path.

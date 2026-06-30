@@ -34,7 +34,7 @@ Options:
 ## Run the deobfuscation quality gate
 
 ```bash
-bun .agents/skills/deobfuscate-javascript/scripts/quality-gate.ts restored
+bun .agents/skills/deobfuscate-javascript/src/domain/quality-gate.ts src
 ```
 
 Use `--allow-flat` to suppress the split-required check on large data-asset files.
@@ -42,7 +42,7 @@ Use `--allow-flat` to suppress the split-required check on large data-asset file
 ## Promote the current frontier
 
 ```bash
-bun .agents/skills/deobfuscate-javascript/scripts/promote-organized.ts --target restored
+bun .agents/skills/deobfuscate-javascript/src/application/promote-organized.ts --target src
 ```
 
 Use `--tier readable` to allow untyped public parameters.

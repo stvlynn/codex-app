@@ -1,8 +1,8 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const MANIFEST = "restored/.deobfuscate-javascript/_full/manifest.json";
-const LEDGER = "restored/.deobfuscate-javascript/_full/ledger.json";
+const MANIFEST = "src/.deobfuscate-javascript/_full/manifest.json";
+const LEDGER = "src/.deobfuscate-javascript/_full/ledger.json";
 
 const manifest = JSON.parse(fs.readFileSync(MANIFEST, "utf8"));
 const ledger = JSON.parse(fs.readFileSync(LEDGER, "utf8"));
@@ -38,27 +38,27 @@ const boundary = new Set([
 ]);
 
 const boundaryPaths = {
-  "parsePatchFiles-Dm7PKlLE": "boundaries/parse-patch-files.tsx",
-  "store-489E8Cj_": "boundaries/pierre-trees-store.tsx",
-  "iconResolver-DrMXO_qJ": "boundaries/pierre-trees-icon-resolver.tsx",
-  "score-query-match-DS2pZf_b": "boundaries/pierre-trees-score-query-match.tsx",
+  "parsePatchFiles-Dm7PKlLE": "shared/boundaries/parse-patch-files.tsx",
+  "store-489E8Cj_": "shared/boundaries/pierre-trees-store.tsx",
+  "iconResolver-DrMXO_qJ": "shared/boundaries/pierre-trees-icon-resolver.tsx",
+  "score-query-match-DS2pZf_b": "shared/boundaries/pierre-trees-score-query-match.tsx",
 };
 
 const vendorPaths = {
-  "array-hqvMvHot": "utils/d3-array-helper.tsx",
-  "defaultLocale-gPb_B8uX": "utils/d3-format-default-locale.tsx",
-  "init-B2r4ykR3": "utils/d3-scale-init.tsx",
-  "math-BO6C2O78": "utils/d3-shape-math.tsx",
-  "min-BVs4UoI0": "utils/d3-array-min.tsx",
-  "monotone-DKOUTWfZ": "utils/d3-shape-monotone-curve.tsx",
-  "path-BiIEs4Yy": "utils/d3-path.tsx",
-  "sankeyLinkHorizontal-DCfEjaVP": "utils/d3-sankey-link-horizontal.tsx",
-  "string-CKccV857": "utils/d3-color-string.tsx",
-  "invert-D9sJN2p1": "utils/d3-color-invert.tsx",
-  "isArrayLikeObject-1Hrr5Oll": "utils/lodash-is-array-like-object.tsx",
-  "ccount-BaJjvBGW": "utils/ccount.tsx",
-  "callback-BhdA_NIt": "utils/p-timeout.tsx",
-  "chunk-Cq_f4orQ": "utils/esbuild-runtime-helpers.tsx",
+  "array-hqvMvHot": "shared/utils/d3-array-helper.tsx",
+  "defaultLocale-gPb_B8uX": "shared/utils/d3-format-default-locale.tsx",
+  "init-B2r4ykR3": "shared/utils/d3-scale-init.tsx",
+  "math-BO6C2O78": "shared/utils/d3-shape-math.tsx",
+  "min-BVs4UoI0": "shared/utils/d3-array-min.tsx",
+  "monotone-DKOUTWfZ": "shared/utils/d3-shape-monotone-curve.tsx",
+  "path-BiIEs4Yy": "shared/utils/d3-path.tsx",
+  "sankeyLinkHorizontal-DCfEjaVP": "shared/utils/d3-sankey-link-horizontal.tsx",
+  "string-CKccV857": "shared/utils/d3-color-string.tsx",
+  "invert-D9sJN2p1": "shared/utils/d3-color-invert.tsx",
+  "isArrayLikeObject-1Hrr5Oll": "shared/utils/lodash-is-array-like-object.tsx",
+  "ccount-BaJjvBGW": "shared/utils/ccount.tsx",
+  "callback-BhdA_NIt": "shared/utils/p-timeout.tsx",
+  "chunk-Cq_f4orQ": "shared/utils/esbuild-runtime-helpers.tsx",
 };
 
 let changed = 0;
