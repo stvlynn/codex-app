@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+import { spawn, spawnSync } from "node:child_process";
 import {
   existsSync,
   lstatSync,
@@ -10,12 +11,13 @@ import {
   symlinkSync,
   writeFileSync,
 } from "node:fs";
-import { dirname, join, resolve } from "node:path";
-import { spawn, spawnSync } from "node:child_process";
+import { createServer } from "node:http";
+import { dirname, extname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const refDir = join(root, "ref");
+const webviewDir = join(refDir, "webview");
 const packageJsonPath = join(refDir, "package.json");
 const tempDir = join(root, ".tmp-electron");
 const devAppPath = join(tempDir, "CodexDev.app");
@@ -23,6 +25,28 @@ const runtimeMarkerPath = join(tempDir, "runtime.json");
 const sourceAppPath = resolve(process.env.CODEX_APP_PATH?.trim() || "/Applications/Codex.app");
 const args = new Set(process.argv.slice(2));
 const mode = args.has("--doctor") ? "doctor" : args.has("--smoke") ? "smoke" : "dev";
+
+const MIME_TYPES = {
+  ".html": "text/html",
+  ".htm": "text/html",
+  ".js": "text/javascript",
+  ".mjs": "text/javascript",
+  ".css": "text/css",
+  ".json": "application/json",
+  ".svg": "image/svg+xml",
+  ".png": "image/png",
+  ".jpg": "image/jpeg",
+  ".jpeg": "image/jpeg",
+  ".gif": "image/gif",
+  ".webp": "image/webp",
+  ".ico": "image/x-icon",
+  ".woff": "font/woff",
+  ".woff2": "font/woff2",
+  ".ttf": "font/ttf",
+  ".otf": "font/otf",
+  ".eot": "application/vnd.ms-fontobject",
+  ".wasm": "application/wasm",
+};
 
 function fail(message) {
   console.error(`electron dev: ${message}`);
@@ -70,7 +94,7 @@ function validateRefProject() {
   }
 
   requirePath(join(refDir, manifest.main), "Electron main entry");
-  const webviewEntry = join(refDir, "webview", "index.html");
+  const webviewEntry = join(webviewDir, "index.html");
   requirePath(webviewEntry, "webview entry");
 
   const indexHtml = readFileSync(webviewEntry, "utf8");
@@ -79,7 +103,7 @@ function validateRefProject() {
     .filter((value) => value.startsWith("/assets/") || value.startsWith("./assets/") || value.startsWith("assets/"));
 
   for (const assetPath of assetMatches) {
-    requirePath(join(refDir, "webview", assetPath.replace(/^\.?\//, "")), `webview asset ${assetPath}`);
+    requirePath(join(webviewDir, assetPath.replace(/^\.?\//, "")), `webview asset ${assetPath}`);
   }
 
   for (const dependency of ["better-sqlite3", "node-pty", "objc-js"]) {
@@ -188,17 +212,91 @@ function prepareDevRuntime(runtime, refManifest) {
   return { executablePath, resourcesPath };
 }
 
-function buildLaunchConfig(localRuntime) {
+function mimeTypeForPath(filePath) {
+  const ext = extname(filePath).toLowerCase();
+  return MIME_TYPES[ext] || "application/octet-stream";
+}
+
+function startStaticServer() {
+  return new Promise((resolvePromise, reject) => {
+    const server = createServer((req, res) => {
+      const sanitize = (raw) => {
+        const normalized = decodeURIComponent(raw)
+          .replace(/\\/g, "/")
+          .split("/")
+          .filter((segment) => segment !== "" && segment !== "..");
+        return join(webviewDir, ...normalized);
+      };
+
+      const requestedPath = new URL(req.url || "/", `http://localhost`).pathname;
+      const filePath = sanitize(requestedPath);
+
+      if (!filePath.startsWith(webviewDir)) {
+        res.writeHead(403, { "Content-Type": "text/plain" });
+        res.end("Forbidden");
+        return;
+      }
+
+      const serveFile = (targetPath) => {
+        if (!existsSync(targetPath)) {
+          return false;
+        }
+        const stats = lstatSync(targetPath);
+        if (stats.isDirectory()) {
+          const indexPath = join(targetPath, "index.html");
+          return existsSync(indexPath) ? serveFile(indexPath) : false;
+        }
+        res.writeHead(200, {
+          "Content-Type": mimeTypeForPath(targetPath),
+          "Access-Control-Allow-Origin": "*",
+        });
+        res.end(readFileSync(targetPath));
+        return true;
+      };
+
+      if (serveFile(filePath)) {
+        return;
+      }
+
+      // Fall back to the SPA shell for non-asset routes so client-side routing works.
+      const hasAssetExtension = /\.[a-zA-Z0-9]+$/.test(requestedPath);
+      if (!hasAssetExtension && serveFile(join(webviewDir, "index.html"))) {
+        return;
+      }
+
+      res.writeHead(404, { "Content-Type": "text/plain" });
+      res.end("Not found");
+    });
+
+    server.on("error", (error) => reject(error));
+    server.listen(0, "127.0.0.1", () => {
+      const address = server.address();
+      const url = `http://127.0.0.1:${address.port}/`;
+      console.log(`electron dev: renderer static server listening on ${url}`);
+      resolvePromise({
+        url,
+        close: () =>
+          new Promise((resolveClose) => {
+            server.close(() => resolveClose());
+          }),
+      });
+    });
+  });
+}
+
+function buildLaunchConfig(localRuntime, rendererUrl) {
   const userDataPath =
     process.env.CODEX_ELECTRON_USER_DATA_PATH?.trim() ||
     join(tempDir, mode === "smoke" ? `smoke-${process.pid}` : "dev-user-data");
   mkdirSync(userDataPath, { recursive: true });
 
+  const extraArgs = process.env.CODEX_ELECTRON_EXTRA_ARGS?.split(/\s+/)?.filter(Boolean) ?? [];
   return {
-    args: [refDir, `--user-data-dir=${userDataPath}`],
+    args: [refDir, `--user-data-dir=${userDataPath}`, ...extraArgs],
     env: {
       ...process.env,
       NODE_ENV: "development",
+      ELECTRON_RENDERER_URL: rendererUrl,
       CODEX_ELECTRON_USER_DATA_PATH: userDataPath,
       CODEX_ELECTRON_RESOURCES_PATH: localRuntime.resourcesPath,
       CODEX_ELECTRON_BUNDLED_PLUGINS_RESOURCES_PATH: localRuntime.resourcesPath,
@@ -207,8 +305,8 @@ function buildLaunchConfig(localRuntime) {
   };
 }
 
-function launchDev(localRuntime) {
-  const launch = buildLaunchConfig(localRuntime);
+async function launchDev(localRuntime, rendererUrl) {
+  const launch = buildLaunchConfig(localRuntime, rendererUrl);
   const child = spawn(localRuntime.executablePath, launch.args, {
     cwd: root,
     env: launch.env,
@@ -227,8 +325,8 @@ function launchDev(localRuntime) {
   });
 }
 
-function launchSmoke(localRuntime) {
-  const launch = buildLaunchConfig(localRuntime);
+async function launchSmoke(localRuntime, rendererUrl) {
+  const launch = buildLaunchConfig(localRuntime, rendererUrl);
   const child = spawn(localRuntime.executablePath, launch.args, {
     cwd: root,
     env: launch.env,
@@ -283,8 +381,10 @@ if (mode === "doctor") {
 }
 
 const localRuntime = prepareDevRuntime(sourceRuntime, refProject.manifest);
+const server = await startStaticServer();
+
 if (mode === "smoke") {
-  launchSmoke(localRuntime);
+  launchSmoke(localRuntime, server.url);
 } else {
-  launchDev(localRuntime);
+  launchDev(localRuntime, server.url);
 }
