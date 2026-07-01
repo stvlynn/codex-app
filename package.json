@@ -12,7 +12,9 @@
     "electron:doctor": "node scripts/dev-electron.mjs --doctor",
     "electron:dev": "node scripts/dev-electron.mjs",
     "electron:smoke": "node scripts/dev-electron.mjs --smoke",
-    "check": "pnpm run typecheck && pnpm run test && pnpm run docs:check"
+    "check:fsd": "node scripts/check-fsd.mjs",
+    "check:ddd": "node scripts/check-ddd.mjs",
+    "check": "pnpm run check:fsd && pnpm run check:ddd && pnpm run typecheck && pnpm run test && pnpm run docs:check"
   },
   "engines": {
     "node": ">=20.0.0"

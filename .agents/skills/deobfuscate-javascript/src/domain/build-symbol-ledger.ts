@@ -1,7 +1,7 @@
 import * as fs from "node:fs";
 import * as path from "node:path";
 import { parseArgs } from "node:util";
-import { extractSymbols, type SymbolEntry } from "../infrastructure/extract.ts";
+import { extractSymbols, type SymbolEntry } from "./parsing.ts";
 import {
   writeJsonAtomic,
   type ImportEdge,
@@ -9,7 +9,7 @@ import {
   type Manifest,
   type ManifestFile,
 } from "./build-import-graph.ts";
-import { Progress } from "../infrastructure/progress.ts";
+import { Progress } from "./progress.ts";
 
 export type SymbolStatus = "pending" | "claimed" | "done";
 

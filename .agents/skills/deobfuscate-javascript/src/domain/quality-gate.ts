@@ -3,7 +3,7 @@ import * as path from "node:path";
 import { parseArgs } from "node:util";
 import babelTraverse from "@babel/traverse";
 import * as t from "@babel/types";
-import { extractSymbols, parseSource, type SymbolEntry } from "../infrastructure/extract.ts";
+import { extractSymbols, parseSource, type SymbolEntry } from "./parsing.ts";
 import {
   classifyBoundary,
   isKnownTerminalBoundaryChunk,

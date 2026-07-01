@@ -11,7 +11,7 @@ The deobfuscation pipeline is organized into Domain-Driven Design layers under `
 
 ## Key files by layer
 
-- **Domain**: `build-import-graph.ts`, `build-symbol-ledger.ts`, `chunk-classification.ts`, `quality-gate.ts`, `ledger.ts`, `check-entry.ts`
+- **Domain**: `build-import-graph.ts`, `build-symbol-ledger.ts`, `chunk-classification.ts`, `chunk-registry.ts`, `quality-gate.ts`, `ledger.ts`, `check-entry.ts`, `parsing.ts`, `progress.ts`
 - **Application**: `auto-restore-full.ts`, `plan-organize.ts`, `promote-organized.ts`, `semantic-finalize.ts`, `prepare-stage-e-review.ts`
 - **Infrastructure**: `extract.ts`, `format.ts`, `polish.ts`, `apply.ts`, `smart-rename.ts`, `detect.ts`, `split-bundle.ts`
 - **Interfaces**: `regen-import-map.mjs`, `bulk-facade-one.mjs`, `find-consumers.mjs`, `find-duplicate.mjs`
@@ -19,6 +19,10 @@ The deobfuscation pipeline is organized into Domain-Driven Design layers under `
 ## Dependencies point inward
 
 - Interface scripts depend on application services.
-- Application services depend on domain models and rules.
+- Application services depend on domain models and rules, and may invoke infrastructure adapters (e.g., parsing, formatting) that implement those rules.
 - Domain models have no dependency on infrastructure or interface details.
 - Infrastructure implements parsing, file I/O, and formatting used by the application layer.
+
+Run `node scripts/check-ddd.mjs` to verify that inward-dependency rules are not
+regressing. The checker uses `scripts/check-ddd-baseline.json` to record any
+remaining legacy violations.

@@ -7,7 +7,7 @@ The root `Makefile` delegates to `pnpm` scripts and keeps common tasks in one pl
 ```bash
 make dev      # Install dependencies, validate, and start the extracted Electron app
 make electron-smoke # Validate and smoke-test the extracted Electron app launch
-make check    # Run typecheck + test + docs:check
+make check    # Run FSD/DDD architecture checks + typecheck + test + docs:check
 make test     # Run deobfuscation skill tests
 make typecheck
 make lint
@@ -15,6 +15,24 @@ make format
 make docs     # Validate docs/ structure
 make deploy   # Show deployment pointer
 make help     # Show all targets
+```
+
+## Architecture checks
+
+Two checker scripts enforce layer boundaries and use baseline files to track
+known legacy debt:
+
+```bash
+node scripts/check-fsd.mjs   # Feature-Sliced Design import-direction rules for ./src
+node scripts/check-ddd.mjs   # DDD inward-dependency rules for the deobfuscation skill
+```
+
+Use `--update-baseline` after a deliberate refactor to refresh the accepted
+violation list:
+
+```bash
+node scripts/check-fsd.mjs --update-baseline
+node scripts/check-ddd.mjs --update-baseline
 ```
 
 ## Refresh `./ref` from the installed app

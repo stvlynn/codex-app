@@ -7,11 +7,11 @@ import * as t from "@babel/types";
 import {
   CHUNK_NAME_REGISTRY,
   extractChunkBasename,
-} from "../infrastructure/resolve-npm-imports.ts";
-import { PARSER_PLUGINS } from "../infrastructure/extract.ts";
+} from "./chunk-registry.ts";
+import { PARSER_PLUGINS } from "./parsing.ts";
+import { Progress } from "./progress.ts";
 import { checkEntry, discoverEntry } from "./check-entry.ts";
 import { classifyVendorDataChunk } from "./chunk-classification.ts";
-import { Progress } from "../infrastructure/progress.ts";
 
 const traverse = ((
   babelTraverse as unknown as { default?: typeof babelTraverse }

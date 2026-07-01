@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "clean-ddd-hexagonal": {
+      "source": "ccheney/robust-skills",
+      "sourceType": "github",
+      "skillPath": "skills/clean-ddd-hexagonal/SKILL.md",
+      "computedHash": "223df951adb9adf655b139221d4a3b68a314f5a0c24c8bc137a754ce9dee5713"
+    },
+    "feature-sliced-design": {
+      "source": "aiko-atami/fsd",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "cab9ad83719e4c4cc85fff64bf84707c0ca4b1f730370e4694136d8ec5750347"
+    }
+  }
+}

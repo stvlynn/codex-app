@@ -6,8 +6,8 @@ import * as t from "@babel/types";
 import {
   CHUNK_NAME_REGISTRY,
   extractChunkBasename,
-} from "../infrastructure/resolve-npm-imports.ts";
-import { PARSER_PLUGINS } from "../infrastructure/extract.ts";
+} from "./chunk-registry.ts";
+import { PARSER_PLUGINS } from "./parsing.ts";
 
 /**
  * check-entry.ts — sanity-check a restoration entry BEFORE building the graph.
